@@ -838,7 +838,7 @@ section,
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  /*background: url(../img/hero-bg.png) top center no-repeat;*/
   background-size: cover;
 }
 

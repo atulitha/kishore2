@@ -110,10 +110,7 @@
     <section id="hero" class="hero section">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">Making Your Career and the World Better</h1>
-                    <p data-aos="fade-up" data-aos-delay="100">Your next career leap starts with our expert
-                        consultants.</p>
+                <div class="col-lg-6 order-2 order-lg-10 d-flex flex-column justify-content-center">
                     <div class="d-flex flex-column flex-md-row align-items-center gap-3" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="card shadow-sm p-3 bg-white rounded w-100" style="max-width: 400px;">
@@ -133,7 +130,6 @@
                             </form>
                         </div>
                     </div>
-                    <!--              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>-->
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
                     <!-- Replace static image with slider -->
@@ -156,8 +152,6 @@
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
-<!--                        <div class="swiper-button-prev"></div>-->
-<!--                        <div class="swiper-button-next"></div>-->
                     </div>
                 </div>
             </div>
@@ -1819,21 +1813,21 @@
 <script src="assets/js/main.js"></script>
 <!-- Add slider initialization below -->
 <script>
-  var heroSwiper = new Swiper('.hero-slider', {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
-  });
+    var heroSwiper = new Swiper('.hero-slider', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
 </script>
 </body>
 

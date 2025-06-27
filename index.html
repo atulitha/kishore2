@@ -28,10 +28,15 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
     <style>
+        /* Existing image styling */
         img.img-fluid {
             border-radius: 500px;
             display: block;
             margin: 0 auto;
+            /* Added fixed height and uniform aspect ratio */
+            height: 500px;
+            /* adjust as needed */
+            object-fit: cover;
         }
 
         .shadow-lg {
@@ -54,7 +59,7 @@
 </head>
 
 <body class="index-page">
-<header id="header" class="header d-flex align-items-center fixed-top">
+<header id="header" class="header d-flex align-items-center fixed-top ">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="index.html" class="logo d-flex align-items-center ">
             <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -121,55 +126,59 @@
 </header>
 
 <main class="main">
-
     <!-- Hero Section -->
     <section id="hero" class="hero section">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-12 order-1 order-lg-2 hero-img align-items-center" data-aos="zoom-out">
+                <div class="col-lg-12 order-1 order-lg-2 hero-img   align-items-center" data-aos="zoom-out">
                     <!-- Replace static image with slider -->
                     <div class="swiper hero-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="\assets\countries-pics\RUSSIA1.jpg" class="img-fluid animated" alt="Hero Image 1">
+                                <img src="\assets\countries-pics\RUSSIA1.jpg" class="img-fluid animated"
+                                     alt="Hero Image 1">
                             </div>
                             <div class="swiper-slide">
-                                <img src="\assets\countries-pics\russia2.jpg" class="img-fluid animated" alt="Hero Image 2">
+                                <img src="\assets\countries-pics\russia2.jpg" class="img-fluid animated"
+                                     alt="Hero Image 2">
                             </div>
                             <div class="swiper-slide">
-                                <img src="\assets\countries-pics\russia3.jpg" class="img-fluid animated" alt="Hero Image 3">
+                                <img src="\assets\countries-pics\russia3.jpg" class="img-fluid animated"
+                                     alt="Hero Image 3">
                             </div>
                             <div class="swiper-slide">
-                                <img src="\assets\countries-pics\GEORGIA.jpg" class="img-fluid animated" alt="Hero Image 3">
+                                <img src="\assets\countries-pics\GEORGIA.jpg" class="img-fluid animated"
+                                     alt="Hero Image 3">
                             </div>
                             <div class="swiper-slide">
-                                <img src="\assets\countries-pics\Georgia1.jpg" class="img-fluid animated" alt="Hero Image 3">
+                                <img src="\assets\countries-pics\Uzbekistan.webp" class="img-fluid animated"
+                                     alt="Hero Image 3">
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-<!--                <div class="col-lg-6 order-2 order-lg-10 d-flex flex-column justify-content-center">-->
-<!--                    <div class="d-flex flex-column flex-md-row align-items-center gap-3" data-aos="fade-up"-->
-<!--                         data-aos-delay="200">-->
-<!--                        <div class="card shadow-sm p-3 bg-white rounded w-100" style="max-width: 400px;">-->
-<!--                            <h4 class="mb-3 text-center">Get in touch</h4>-->
-<!--                            <form action="forms/newsletter.php" method="post" class="php-email-form">-->
-<!--                                <div class="input-group mb-2">-->
-<!--                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>-->
-<!--                                    <input type="tel" name="phone" class="form-control"-->
-<!--                                           placeholder="Enter your phone number" required style="font-size: 1.1rem;">-->
-<!--                                </div>-->
-<!--                                <div class="d-grid">-->
-<!--                                    <input type="submit" value="Submit" class="btn btn-primary btn-block">-->
-<!--                                </div>-->
-<!--                                <div class="loading mt-2">Loading</div>-->
-<!--                                <div class="error-message mt-2"></div>-->
-<!--                                <div class="sent-message mt-2">Your subscription request has been sent. Thank you!</div>-->
-<!--                            </form>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="col-lg-6 order-2 order-lg-10 d-flex flex-column justify-content-center">-->
+                <!--                    <div class="d-flex flex-column flex-md-row align-items-center gap-3" data-aos="fade-up"-->
+                <!--                         data-aos-delay="200">-->
+                <!--                        <div class="card shadow-sm p-3 bg-white rounded w-100" style="max-width: 400px;">-->
+                <!--                            <h4 class="mb-3 text-center">Get in touch</h4>-->
+                <!--                            <form action="forms/newsletter.php" method="post" class="php-email-form">-->
+                <!--                                <div class="input-group mb-2">-->
+                <!--                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>-->
+                <!--                                    <input type="tel" name="phone" class="form-control"-->
+                <!--                                           placeholder="Enter your phone number" required style="font-size: 1.1rem;">-->
+                <!--                                </div>-->
+                <!--                                <div class="d-grid">-->
+                <!--                                    <input type="submit" value="Submit" class="btn btn-primary btn-block">-->
+                <!--                                </div>-->
+                <!--                                <div class="loading mt-2">Loading</div>-->
+                <!--                                <div class="error-message mt-2"></div>-->
+                <!--                                <div class="sent-message mt-2">Your subscription request has been sent. Thank you!</div>-->
+                <!--                            </form>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
             </div>
         </div>
         </div>
@@ -745,130 +754,130 @@
 
 
         <!-- Faq Section -->
-<!--        <section id="faq" class="faq section">-->
-<!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-<!--            <div class="container section-title" data-aos="fade-up">-->
-<!--                <h2>F.A.Q</h2>-->
-<!--                <p>Frequently Asked Questions</p>-->
-<!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-<!--            <div class="container">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">-->
-<!--                        <div class="faq-container">-->
-<!--                            <div class="faq-item faq-active">-->
-<!--                                <h3>What Are the Eligibility Criteria for MBBS in Russia for Indian Students?</h3>-->
-<!--                                <div class="faq-content">-->
-<!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
-<!--                                        eligibility </P>-->
-<!--                                    <P>requirements:</P>-->
-<!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
-<!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
-<!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
-<!--                                        categories) in these core science subjects. </p>-->
-<!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
-<!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
-<!--                                        medical universities abroad. </p>-->
-<!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
-<!--                                        at-->
-<!--                                        recognized medical universities in Russia. </p>-->
-<!--                                </div>-->
-<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+        <!--        <section id="faq" class="faq section">-->
+        <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+        <!--            <div class="container section-title" data-aos="fade-up">-->
+        <!--                <h2>F.A.Q</h2>-->
+        <!--                <p>Frequently Asked Questions</p>-->
+        <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+        <!--            <div class="container">-->
+        <!--                <div class="row">-->
+        <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">-->
+        <!--                        <div class="faq-container">-->
+        <!--                            <div class="faq-item faq-active">-->
+        <!--                                <h3>What Are the Eligibility Criteria for MBBS in Russia for Indian Students?</h3>-->
+        <!--                                <div class="faq-content">-->
+        <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
+        <!--                                        eligibility </P>-->
+        <!--                                    <P>requirements:</P>-->
+        <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
+        <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
+        <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
+        <!--                                        categories) in these core science subjects. </p>-->
+        <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
+        <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
+        <!--                                        medical universities abroad. </p>-->
+        <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
+        <!--                                        at-->
+        <!--                                        recognized medical universities in Russia. </p>-->
+        <!--                                </div>-->
+        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-<!--                            <div class="faq-item faq-active">-->
-<!--                                <h3>What is the Duration of the MBBS Program in Russia?</h3>-->
-<!--                                <div class="faq-content">-->
-<!--                                    <p>The MBBS program in Russia typically spans 6 years, which includes 5 years of-->
-<!--                                        academic-->
-<!--                                        study followed by a 1-year mandatory internship. This comprehensive structure-->
-<!--                                        ensures-->
-<!--                                        students gain both strong theoretical knowledge and practical clinical-->
-<!--                                        experience, preparing-->
-<!--                                        them to become competent medical professionals..</p>-->
-<!--                                </div>-->
-<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+        <!--                            <div class="faq-item faq-active">-->
+        <!--                                <h3>What is the Duration of the MBBS Program in Russia?</h3>-->
+        <!--                                <div class="faq-content">-->
+        <!--                                    <p>The MBBS program in Russia typically spans 6 years, which includes 5 years of-->
+        <!--                                        academic-->
+        <!--                                        study followed by a 1-year mandatory internship. This comprehensive structure-->
+        <!--                                        ensures-->
+        <!--                                        students gain both strong theoretical knowledge and practical clinical-->
+        <!--                                        experience, preparing-->
+        <!--                                        them to become competent medical professionals..</p>-->
+        <!--                                </div>-->
+        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-<!--                            <div class="faq-item faq-active">-->
-<!--                                <h3>What Are the Tuition Fees for MBBS in Russia?</h3>-->
-<!--                                <div class="faq-content">-->
-<!--                                    <p>Tuition fees for MBBS programs in Russia vary depending on the university and-->
-<!--                                        city. On-->
-<!--                                        average, Indian students can expect to pay between ₹3 to ₹4 lakhs per year,-->
-<!--                                        making Russia-->
-<!--                                        one of the most cost-effective destinations for quality medical education.</p>-->
-<!--                                </div>-->
-<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+        <!--                            <div class="faq-item faq-active">-->
+        <!--                                <h3>What Are the Tuition Fees for MBBS in Russia?</h3>-->
+        <!--                                <div class="faq-content">-->
+        <!--                                    <p>Tuition fees for MBBS programs in Russia vary depending on the university and-->
+        <!--                                        city. On-->
+        <!--                                        average, Indian students can expect to pay between ₹3 to ₹4 lakhs per year,-->
+        <!--                                        making Russia-->
+        <!--                                        one of the most cost-effective destinations for quality medical education.</p>-->
+        <!--                                </div>-->
+        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-<!--                        </div>-->
+        <!--                        </div>-->
 
-<!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
+        <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
 
-<!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">-->
-<!--                        <div class="faq-container">-->
-<!--                            <div class="faq-item faq-active">-->
-<!--                                <h3>What are the requirements for MBBS in Georgia? </h3>-->
-<!--                                <div class="faq-content">-->
-<!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
-<!--                                        eligibility </P>-->
-<!--                                    <P>requirements:</P>-->
-<!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
-<!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
-<!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
-<!--                                        categories) in these core science subjects. </p>-->
-<!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
-<!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
-<!--                                        medical universities abroad. </p>-->
-<!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
-<!--                                        at-->
-<!--                                        recognized medical universities in Russia. </p>-->
-<!--                                </div>-->
-<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+        <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">-->
+        <!--                        <div class="faq-container">-->
+        <!--                            <div class="faq-item faq-active">-->
+        <!--                                <h3>What are the requirements for MBBS in Georgia? </h3>-->
+        <!--                                <div class="faq-content">-->
+        <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
+        <!--                                        eligibility </P>-->
+        <!--                                    <P>requirements:</P>-->
+        <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
+        <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
+        <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
+        <!--                                        categories) in these core science subjects. </p>-->
+        <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
+        <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
+        <!--                                        medical universities abroad. </p>-->
+        <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
+        <!--                                        at-->
+        <!--                                        recognized medical universities in Russia. </p>-->
+        <!--                                </div>-->
+        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-<!--                            <div class="faq-item faq-active">-->
-<!--                                <h3>What are the requirements for MBBS in Georgia?</h3>-->
-<!--                                <div class="faq-content">-->
-<!--                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse-->
-<!--                                        in-->
-<!--                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl-->
-<!--                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus-->
-<!--                                        in</p>-->
-<!--                                </div>-->
-<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+        <!--                            <div class="faq-item faq-active">-->
+        <!--                                <h3>What are the requirements for MBBS in Georgia?</h3>-->
+        <!--                                <div class="faq-content">-->
+        <!--                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse-->
+        <!--                                        in-->
+        <!--                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl-->
+        <!--                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus-->
+        <!--                                        in</p>-->
+        <!--                                </div>-->
+        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-<!--                            <div class="faq-item faq-active">-->
-<!--                                <h3>Is an MBBS from Georgia Recognized in India? </h3>-->
-<!--                                <div class="faq-content">-->
-<!--                                    <p>Yes, pursuing an MBBS degree in Georgia is recognized in India. The National-->
-<!--                                        Medical </p>-->
-<!--                                    <p>Commission (NMC)—formerly known as the Medical Council of India (MCI)—has-->
-<!--                                        approved a number of medical universities in Georgia.</p>-->
-<!--                                    <p>Graduates from these recognized institutions are eligible to return to India and-->
-<!--                                        practice-->
-<!--                                    <p>-->
-<!--                                    <p>medicine, provided they meet the necessary requirements, such as passing the-->
-<!--                                        Foreign</p>-->
-<!--                                    <p>Medical Graduate Examination (FMGE) or NEXT, as applicable.-->
-<!--                                        Before enrolling, students are advised to verify that the chosen university is-->
-<!--                                        included in theofficial list of NMC-approved institutions to ensure eligibility-->
-<!--                                        for future-->
-<!--                                        medical practice in India.</p>-->
-<!--                                </div>-->
-<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+        <!--                            <div class="faq-item faq-active">-->
+        <!--                                <h3>Is an MBBS from Georgia Recognized in India? </h3>-->
+        <!--                                <div class="faq-content">-->
+        <!--                                    <p>Yes, pursuing an MBBS degree in Georgia is recognized in India. The National-->
+        <!--                                        Medical </p>-->
+        <!--                                    <p>Commission (NMC)—formerly known as the Medical Council of India (MCI)—has-->
+        <!--                                        approved a number of medical universities in Georgia.</p>-->
+        <!--                                    <p>Graduates from these recognized institutions are eligible to return to India and-->
+        <!--                                        practice-->
+        <!--                                    <p>-->
+        <!--                                    <p>medicine, provided they meet the necessary requirements, such as passing the-->
+        <!--                                        Foreign</p>-->
+        <!--                                    <p>Medical Graduate Examination (FMGE) or NEXT, as applicable.-->
+        <!--                                        Before enrolling, students are advised to verify that the chosen university is-->
+        <!--                                        included in theofficial list of NMC-approved institutions to ensure eligibility-->
+        <!--                                        for future-->
+        <!--                                        medical practice in India.</p>-->
+        <!--                                </div>-->
+        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-<!--                        </div>-->
+        <!--                        </div>-->
 
-<!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
+        <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
 
-<!--                </div>-->
+        <!--                </div>-->
 
-<!--            </div>-->
+        <!--            </div>-->
 
-<!--        </section>&lt;!&ndash; /Faq Section &ndash;&gt;-->
+        <!--        </section>&lt;!&ndash; /Faq Section &ndash;&gt;-->
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio section">

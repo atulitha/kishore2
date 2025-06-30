@@ -1,0 +1,242 @@
+.about-box {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h3 {
+    color: #0d6efd;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.about-section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-section:last-child {
+    margin-bottom: 0;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>About Us - KYX PROJECT K1 INTERNATIONAL</title>
+    <meta name="description" content="Learn more about KYX PROJECT K1 INTERNATIONAL, a trusted consulting firm for international education in Medicine, Engineering, and Business Management.">
+    <meta name="keywords" content="about us, education consulting, international education, medical education, engineering education">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .about-container {
+            padding: 40px 0;
+            background: linear-gradient(135deg, #f8fafc 60%, #e3e9f7 100%);
+        }
+
+        .about-box {
+            background: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            padding: 45px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            margin-bottom: 35px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .about-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h3 {
+            color: #0d6efd;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 8px;
+        }
+
+        .about-section p {
+            color: #444;
+            line-height: 1.9;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/kxy-logo.png" width="70" height="200" alt="">
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html" class="active">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li class="listing-dropdown"><a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="universities/russia.html">Russia</a></li>
+                            <li><a href="universities/georgia.html">Georgia</a></li>
+                            <li><a href="universities/kazakhstan.html">Kazakhstan</a></li>
+                            <li><a href="universities/egypt.html">Egypt</a></li>
+                            <li><a href="universities/nepal.html">Nepal</a></li>
+                            <li><a href="universities/bangladesh.html">Bangladesh</a></li>
+                            <li><a href="universities/china.html">China</a></li>
+                            <li><a href="universities/uzbekistan.html">Uzbekistan</a></li>
+                            <li><a href="universities/germany.html">Germany</a></li>
+                            <li><a href="universities/italy.html">Italy</a></li>
+                            <li><a href="universities/france.html">France</a></li>
+                            <li><a href="universities/belarus.html">Belarus</a></li>
+                            <li><a href="universities/latvia.html">Latvia</a></li>
+                            <li><a href="universities/lithuania.html">Lithuania</a></li>
+                            <li><a href="universities/hungary.html">Hungary</a></li>
+                            <li><a href="study-in-germany.html">Study in Germany</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="about-container">
+            <div class="container">
+                <div class="about-box">
+                    <div class="about-content">
+                        <h1 class="text-center mb-5">About us</h1>
+                        <div class="about-section">
+                            <h3>Mission Statement</h3>
+                            <p>KYX PROJECT K1 INTERNATIONAL is a trusted consulting firm dedicated to guiding
+                                students who aspire to pursue higher education abroad, particularly in the fields of
+                                Medicine, Engineering and Business Management with both Bachelor's & Master's programs.
+                                As an authorized partner of reputable universities and colleges across Central Asia and
+                                European countries, the organization offers expert services in educational counselling,
+                                admission guidance, and documentation support.</p>
+                        </div>
+                        <div class="about-section">
+                            <h3>Our Experience</h3>
+                            <p>With years of experience in international higher education, KYX PROJECT K1 INTERNATIONAL has
+                                helped numerous students achieve their dreams of becoming doctors and engineers.</p>
+                        </div>
+                        <div class="about-section">
+                            <h3>Our Commitment</h3>
+                            <p>The company is committed to transparency, honesty, and delivering affordable, high-quality
+                                education options. Its team of professional and well-trained counsellors provides
+                                personalized advice, helping students choose the best-suited university and course according
+                                to their academic goals.</p>
+                            <p>Every step of the consulting process is handled with integrity and clarity, ensuring that
+                                students and their families are fully informed and confident in their decisions. By
+                                prioritizing honest communication and ethical practices, the company builds lasting trust
+                                with its clients.</p>
+                            <p>Its mission is to make international education accessible and attainable without
+                                compromising on quality. With a focus on student success, the company works diligently to
+                                match each individual with institutions that offer not only academic excellence but also
+                                financial feasibility, making the dream of studying abroad a reality for many.</p>
+                        </div>
+                        <div class="about-section">
+                            <h3>Our Expertise</h3>
+                            <p>With deep insights into academic structures, lifestyle, and socio-economic conditions in
+                                various countries, KYX PROJECT K1 INTERNATIONAL ensures a smooth transition and successful
+                                journey for students pursuing graduate and postgraduate medical studies (MBBS/MD/MS),
+                                engineering and business degrees abroad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer">
+        <!-- Existing footer content -->
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

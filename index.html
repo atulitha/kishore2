@@ -47,6 +47,93 @@
         .hero-slider img.img-fluid {
             border-radius: 0 !important;
         }
+
+        /* Hero section styling */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .swiper-wrapper {
+            padding: 0;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Countries dropdown styling */
+        .countries-list {
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .country-group {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .country-item {
+            flex: 0 1 20%;
+            min-width: 150px;
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .country-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+
+        .country-item a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .country-item a:hover {
+            color: #007bff;
+        }
+
+        .country-item a + a {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* Commented out countries styling */
+        .country-item a[title] {
+            opacity: 0.7;
+        }
     </style>
 
     <!-- =======================================================
@@ -91,28 +178,66 @@
                 <!--          </li>-->
                 <li class="listing-dropdown"><a href="#"><span>Countries</span> <i
                         class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="universities/russia.html" title="Russia">Russia</a>
-                            <a href="universities/georgia.html" title="Georgia">Georgia</a>
-                            <a href="universities/kazakhstan.html" title="Kazakhstan">Kazakhstan</a></li>
-
-                        <li><a href="universities/egypt.html" title="Egypt">Egypt</a>
-                            <a href="universities/nepal.html" title="Nepal">Nepal</a>
-                            <a href="universities/bangladesh.html" title="Bangladesh">Bangladesh</a></li>
-
-                        <li><a href="universities/china.html" title="China">China</a>
-                            <a href="universities/uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
-                            <a href="universities/germany.html" title="Germany">Germany</a></li>
-
-                        <li><a href="universities/italy.html" title="Italy">Italy</a>
-                            <a href="universities/france.html" title="France">France</a>
-                            <a href="universities/belarus.html" title="Belarus">Belarus</a></li>
-
-                        <li><a href="universities/latvia.html" title="Latvia">Latvia</a>
-                            <a href="universities/lithuania.html" title="Lithuania">Lithuania</a>
-                            <a href="universities/hungary.html" title="Hungary">Hungary</a>
-                        <li><a href="study-in-germany.html" title="Germany">Study in Germany</a></li>
-
+                    <ul class="countries-list">
+                        <li class="country-group">
+                            <div class="country-item">
+                                <a href="universities/russia.html" title="Russia">Russia</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/georgia.html" title="Georgia">Georgia</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
+                            </div>
+                        </li>
+                        <!-- Commented out countries -->
+                        <!-- <li class="country-group">
+                            <div class="country-item">
+                                <a href="universities/kazakhstan.html" title="Kazakhstan">Kazakhstan</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/egypt.html" title="Egypt">Egypt</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/nepal.html" title="Nepal">Nepal</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/bangladesh.html" title="Bangladesh">Bangladesh</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/china.html" title="China">China</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/germany.html" title="Germany">Germany</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/italy.html" title="Italy">Italy</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/france.html" title="France">France</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/belarus.html" title="Belarus">Belarus</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/latvia.html" title="Latvia">Latvia</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/lithuania.html" title="Lithuania">Lithuania</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/hungary.html" title="Hungary">Hungary</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="study-in-germany.html" title="Germany">Study in Germany</a>
+                            </div>
+                            <div class="country-item">
+                                <a href="universities/russia2.html" title="Russia">Russia 2</a>
+                            </div>
+                        </li> -->
                     </ul>
                 </li>
                 <li><a href="#contact">Contact</a></li>

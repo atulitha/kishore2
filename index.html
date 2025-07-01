@@ -134,6 +134,25 @@
         .country-item a[title] {
             opacity: 0.7;
         }
+        
+        /* Navigation spacing */
+        #navmenu > ul {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        #navmenu > ul > li {
+            flex: 1;
+            text-align: center;
+        }
+        
+        #navmenu .dropdown-menu {
+            text-align: left;
+        }
     </style>
 
     <!-- =======================================================
@@ -147,12 +166,12 @@
 
 <body class="index-page">
 <header id="header" class="header d-flex align-items-center fixed-top ">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-        <a href="index.html" class="logo d-flex align-items-center ">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-center">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="assets/img/kxy-logo.png" width="70" height="200" alt=""> </a>
-        <nav id="navmenu" class="navmenu">
-            <ul>
+        <nav id="navmenu" class="navmenu w-100">
+            <ul class="list-unstyled mb-0">
                 <li><a href="index.html" class="active">Home<br></a></li>
                 <li><a href="about-us.html">About</a></li>
 <!--                <li><a href="#services">Services</a></li>-->

@@ -89,39 +89,128 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .country-group {
+        /* Header and Navigation Styling */
+        #header {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        #header .container-fluid {
+            justify-content: space-between;
+        }
+        
+        #navmenu {
+            margin: 0 auto;
+            width: auto;
+        }
+        
+        #navmenu > ul {
             display: flex;
             justify-content: space-between;
-            padding: 1rem;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 700px;
+            list-style: none;
+        }
+        
+        #navmenu > ul > li {
+            position: relative;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+        
+        #navmenu > ul > li > a {
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        #navmenu > ul > li > a:hover,
+        #navmenu > ul > li > a.active {
+            color: #0d6efd;
+            background: rgba(13, 110, 253, 0.1);
         }
 
+        .navmenu > ul > li > a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #0d6efd;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .navmenu > ul > li > a:hover:after,
+        .navmenu > ul > li > a.active:after {
+            width: 100%;
+        }
+
+        /* Countries Dropdown Styling */
+        .countries-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px !important;
+            min-width: 500px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .listing-dropdown:hover .countries-list {
+            display: flex;
+        }
+        
+        .country-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+        }
+        
         .country-item {
-            flex: 0 1 20%;
-            min-width: 150px;
-            text-align: center;
-            padding: 1rem;
+            flex: 1 1 calc(25% - 10px);
+            min-width: 120px;
             background: #f8f9fa;
             border-radius: 8px;
             transition: all 0.3s ease;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-
+        
         .country-item:hover {
             background: #e9ecef;
             transform: translateY(-2px);
         }
-
+        
         .country-item a {
-            display: block;
             color: #333;
             text-decoration: none;
             font-weight: 500;
-            line-height: 1.5;
+            display: block;
+            padding: 5px 0;
+            transition: color 0.2s ease;
         }
-
-        .country-item a:hover {
-            color: #007bff;
+        
+        .country-item a:hover,
+        .country-item a.active {
+            color: #0d6efd;
         }
 
         .country-item a + a {
@@ -165,42 +254,20 @@
 </head>
 
 <body class="index-page">
-<header id="header" class="header d-flex align-items-center fixed-top ">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-center">
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="assets/img/kxy-logo.png" width="70" height="200" alt=""> </a>
-        <nav id="navmenu" class="navmenu w-100">
-            <ul class="list-unstyled mb-0">
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/kxy-logo.png" width="70" height="200" alt="">
+        </a>
+        <nav id="navmenu" class="navmenu">
+            <ul>
                 <li><a href="index.html" class="active">Home<br></a></li>
                 <li><a href="about-us.html">About</a></li>
-<!--                <li><a href="#services">Services</a></li>-->
-<!--                <li><a href="#portfolio">Portfolio</a></li>-->
-<!--                <li><a href="#team">Team</a></li>-->
-<!--                <li><a href="blog.html">Blog</a></li>-->
-                <!--          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>-->
-                <!--            <ul>-->
-                <!--              <li><a href="#">Dropdown 1</a></li>-->
-                <!--              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>-->
-                <!--                <ul>-->
-                <!--                  <li><a href="#">Deep Dropdown 1</a></li>-->
-                <!--                  <li><a href="#">Deep Dropdown 2</a></li>-->
-                <!--                  <li><a href="#">Deep Dropdown 3</a></li>-->
-                <!--                  <li><a href="#">Deep Dropdown 4</a></li>-->
-                <!--                  <li><a href="#">Deep Dropdown 5</a></li>-->
-                <!--                </ul>-->
-                <!--              </li>-->
-                <!--              <li><a href="#">Dropdown 2</a></li>-->
-                <!--              <li><a href="#">Dropdown 3</a></li>-->
-                <!--              <li><a href="#">Dropdown 4</a></li>-->
-                <!--            </ul>-->
-                <!--          </li>-->
-                <li class="listing-dropdown"><a href="#"><span>Countries</span>
-                    <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li class="listing-dropdown"><a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul class="countries-list">
                         <li class="country-group">
                             <div class="country-item">
-                                <a href="universities/russia.html" title="Russia">Russia</a>
+                                <a href="universities/russia.html" title="Russia" class="active">Russia</a>
                             </div>
                             <div class="country-item">
                                 <a href="universities/georgia.html" title="Georgia">Georgia</a>
@@ -215,7 +282,7 @@
                         <!-- Commented out countries -->
                         <!-- <li class="country-group">
                             <div class="country-item">
-                                <a href="universities/kazakhstan.html" title="Kazakhstan">Kazakhstan</a>
+                                <a href="kazakhstan.html" title="Kazakhstan">Kazakhstan</a>
                             </div>
                             <div class="country-item">
                                 <a href="universities/egypt.html" title="Egypt">Egypt</a>

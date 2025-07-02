@@ -28,15 +28,15 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
     <style>
-        /* Existing image styling */
-        img.img-fluid1 {
-            border-radius: 500px;
+        /* Flag image styling */
+        .portfolio-item img.img-fluid1 {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0;
             display: block;
             margin: 0 auto;
-            /* Added fixed height and uniform aspect ratio */
-            height: 500px;
-            /* adjust as needed */
-            object-fit: cover;
+            border: 1px solid #dee2e6;
         }
 
         .shadow-lg {
@@ -1068,34 +1068,58 @@
             <div class="container">
                 <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                        <li data-filter="*" class="filter-active">Contries</li>
+                        <li data-filter="*" class="filter-active">Countries</li>
                         <!--                        <li data-filter=".filter-app">App</li>-->
-                        <!--                        <li data-filter=".filter-product">Product</li>-->
-                        <!--                        <li data-filter=".filter-branding">Branding</li>-->
-                        <!--                        <li data-filter=".filter-books">Books</li>-->
-                    </ul><!-- End Portfolio Filters -->
-
                     <div class="row gy-4 isotope-container justify-content-center" data-aos="fade-up"
                          data-aos-delay="200">
 
+                        <!-- Russia Flag -->
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                             <div class="portfolio-content h-100">
                                 <img src="assets/img/flag/Russia.jpg"
                                      class="img-fluid1 shadow-lg border border-1 border-primary" alt="Russia">
                             </div>
-                        </div><!-- End Portfolio Item -->
+                        </div><!-- End Russia Flag -->
+
+                        <!-- Georgia Flag -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/flag/Georgia.jpg"
+                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Georgia">
+                            </div>
+                        </div><!-- End Georgia Flag -->
+
+                        <!-- Kyrgyzstan Flag -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/flag/Kyrgyzstan.jpg"
+                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kyrgyzstan">
+                            </div>
+                        </div><!-- End Kyrgyzstan Flag -->
+
+                        <!-- Uzbekistan Flag -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/flag/uzbekistan_png.png"
+                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Uzbekistan">
+                            </div>
+                        </div><!-- End Uzbekistan Flag -->
+
+                        <!-- Commented out other country flags
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                             <div class="portfolio-content h-100">
                                 <img src="assets/img/flag/albania_png.png"
                                      class="img-fluid1 shadow-lg border border-1 border-primary" alt="Albania">
                             </div>
                         </div>
+                        
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                             <div class="portfolio-content h-100">
                                 <img src="assets/img/flag/am-flag.jpg"
                                      class="img-fluid1 shadow-lg border border-1 border-primary" alt="Armenia">
                             </div>
                         </div>
+                        
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                             <div class="portfolio-content h-100">
                                 <img src="assets/img/flag/Bangladesh-Flag.jpg"
@@ -1194,12 +1218,6 @@
                         </div>
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                             <div class="portfolio-content h-100">
-                                <img src="assets/img/flag/Georgia.jpg"
-                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Georgia">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <div class="portfolio-content h-100">
                                 <img src="assets/img/flag/Germany.jpg"
                                      class="img-fluid1 shadow-lg border border-1 border-primary" alt="Germany">
                             </div>
@@ -1232,12 +1250,6 @@
                             <div class="portfolio-content h-100">
                                 <img src="assets/img/flag/Kazhakhsthan.jpg"
                                      class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kazakhstan">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <div class="portfolio-content h-100">
-                                <img src="assets/img/flag/Kyrgyzstan.jpg"
-                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kyrgyzstan">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">

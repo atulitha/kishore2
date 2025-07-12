@@ -34,6 +34,107 @@
             --spain-dark: #1B1B1B;
         }
         
+        /* Header and Navigation Styling */
+        #header {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        #header .container-fluid {
+            justify-content: space-between;
+        }
+        
+        #navmenu {
+            margin: 0 auto;
+            width: auto;
+        }
+        
+        #navmenu > ul {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            white-space: nowrap;
+        }
+        
+        #navmenu > ul > li {
+            position: relative;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+        
+        #navmenu > ul > li > a {
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        #navmenu > ul > li > a:hover,
+        #navmenu > ul > li > a.active {
+            color: var(--spain-red);
+            background: rgba(170, 21, 27, 0.1);
+        }
+        
+        .logo {
+            margin-right: 30px;
+        }
+        
+        /* Countries Dropdown Styling */
+        .countries-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px !important;
+            min-width: 500px;
+        }
+        
+        .country-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .country-item {
+            flex: 1 1 calc(25% - 10px);
+            min-width: 120px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .country-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .country-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .country-item a:hover {
+            color: var(--spain-red);
+        }
+        
+        .country-item a.active {
+            color: var(--spain-red);
+            font-weight: 600;
+        }
+        
         .spain-hero {
             background: linear-gradient(135deg, #f8f9fa 60%, #f0f0f0 100%);
             padding: 80px 0 50px 0;
@@ -234,11 +335,12 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-            <a class="btn-getstarted" href="#contact">Get Started</a>
+
+            <a class="btn-getstarted flex-md-shrink-0" href="../index.html#about">Get Started</a>
         </div>
     </header>
 

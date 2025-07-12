@@ -83,10 +83,40 @@
 
         /* Countries dropdown styling */
         .countries-list {
-            padding: 1rem;
+            padding: 0.5rem 0;
             background: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-width: 240px;
+            max-width: 280px;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .country-item {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .country-item a {
+            white-space: nowrap;
+            display: block;
+            width: 100%;
+            padding: 8px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .country-item a:hover {
+            background-color: #f8f9fa;
+            color: #0d6efd;
+            padding-left: 25px;
         }
 
         /* Header and Navigation Styling */

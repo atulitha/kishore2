@@ -27,6 +27,83 @@
 
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
+    <style>
+        /* Countries Dropdown Styling */
+        .countries-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px !important;
+            min-width: 500px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 1000;
+            margin-top: 5px;
+        }
+        
+        .country-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .country-item {
+            flex: 1 1 calc(25% - 10px);
+            min-width: 120px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .country-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .country-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .country-item a:hover {
+            color: #0d6efd;
+        }
+        
+        .country-item a.active {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+        
+        .listing-dropdown {
+            position: relative;
+        }
+        
+        .listing-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .listing-dropdown .bi-chevron-down {
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        
+        .listing-dropdown:hover .bi-chevron-down {
+            transform: rotate(180deg);
+        }
+    </style>
 
     <style>
         .uzbekistan-hero {

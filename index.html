@@ -9,25 +9,28 @@
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/favicon.png" rel="icon" loading="lazy">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" loading="lazy">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet">
+    <!-- Google Fonts with preconnect and preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.rel='stylesheet'">
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <style>
+    <!-- Main CSS File with preload -->
+    <link rel="preload" href="assets/css/main.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/main.css"></noscript>
+    <style type="text/css">
         /* Flag image styling */
         .portfolio-item img.img-fluid1 {
             width: 200px;
@@ -302,6 +305,45 @@
             width: 100%;
         }
     </style>
+    <noscript><style>.lazyload { display: none !important; }</style></noscript>
+    <script>
+    // Performance monitoring
+    window.addEventListener('load', function() {
+        // Log performance metrics
+        if (window.performance) {
+            const timing = performance.timing;
+            const loadTime = timing.loadEventEnd - timing.navigationStart;
+            console.log('Page load time: ' + loadTime + 'ms');
+            
+            // Log any resources that took too long to load
+            performance.getEntriesByType('resource').forEach(resource => {
+                if (resource.duration > 1000) {
+                    console.warn('Slow resource load:', resource.name, 'took', Math.round(resource.duration) + 'ms');
+                }
+            });
+        }
+        
+        // Load non-critical resources after page load
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        const lazyLoad = function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        };
+        
+        const imageObserver = new IntersectionObserver(lazyLoad, {
+            root: null,
+            threshold: 0.1
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    });
+    </script>
 
     <!-- =======================================================
     * Template Name: FlexStart

@@ -46,6 +46,256 @@
             box-shadow: none !important;
         }
 
+        /* Consultation Section Styles */
+        .consultation {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .consultation h2 {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .consultation .lead {
+            color: #6c757d;
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .feature-box {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 10px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: #f0f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #0d6efd;
+            font-size: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover .icon-box {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+        .feature-box h4 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .btn-talk-to-counselor {
+            display: inline-flex;
+            align-items: center;
+            background: #0d6efd;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+        }
+
+        .btn-talk-to-counselor:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4);
+            color: #fff;
+        }
+
+        .btn-talk-to-counselor i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .consultation {
+                padding: 60px 0;
+            }
+            
+            .consultation .lead {
+                font-size: 1.1rem;
+            }
+            
+            .feature-box {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Pricing Section Styles */
+        .pricing {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #0d6efd;
+            position: relative;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: #0d6efd;
+            color: #fff;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-size: 12px;
+            font-weight: 600;
+            width: 150px;
+            text-align: center;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .pricing-header h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-bottom: 10px;
+        }
+
+        .currency {
+            font-size: 20px;
+            vertical-align: super;
+            margin-right: 2px;
+        }
+
+        .period {
+            display: block;
+            font-size: 14px;
+            color: #6c757d;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .pricing-features {
+            margin: 30px 0;
+        }
+
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: #495057;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .pricing-features .bi-check {
+            color: #28a745;
+        }
+
+        .pricing-features .bi-x {
+            color: #dc3545;
+        }
+
+        .pricing-features .text-muted {
+            color: #adb5bd !important;
+            text-decoration: line-through;
+        }
+
+        .pricing-cta {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .pricing-note {
+            margin-top: 30px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .pricing-note p {
+            margin-bottom: 5px;
+            color: #6c757d;
+        }
+
+        .pricing-note a {
+            color: #0d6efd;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .pricing-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 991.98px) {
+            .pricing-card {
+                margin-bottom: 30px;
+            }
+        }
+
         /* Override: Do not apply border radius in hero slider section */
         .hero-slider img.img-fluid {
             border-radius: 0 !important;
@@ -570,34 +820,55 @@
 
         </section><!-- /Values Section -->
 
-        <!-- Pricing Section -->
-        <section id="pricing" class="pricing section">
-
-            <!-- Section Title -->
-
-            <div class="container section-title" data-aos="fade-up" data-aos-delay="100">
-                <h2>Pricing</h2>
-                <p>Want to get a free consultation?<br></p>
-            </div><!-- End Section Title -->
-
-
-<!--            <div class="container " data-aos="fade-up" data-aos-delay="100">-->
-<!--                <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">-->
-<!--                    <div style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 20px; margin-bottom: 30px; font-size: 1.08rem;">-->
-<!--                        <ul style="margin-bottom: 18px;">-->
-<!--                            <li><strong>English Medium Programs:</strong> Many universities offer MBBS programs in-->
-<!--                                English,-->
-<!--                                facilitating easier adaptation for international students.-->
-<!--                            </li>-->
-<!--                            <li><strong>MCI Recognized:</strong> Graduates are eligible to appear for the Medical-->
-<!--                                Council of India-->
-<!--                                (MCI) screening test to practice in India.-->
-<!--                            </li>-->
-<!--                            <li><strong>Affordable Living:</strong> Russia offers a relatively low cost of living-->
-<!--                                compared to other-->
-<!--                                European countries.-->
-<!--                            </li>-->
-<!--                        </ul>-->
+        <!-- Consultation Section -->
+        <section id="consultation" class="consultation section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center" data-aos="fade-up">
+                        <h2>Ready to Start Your Journey?</h2>
+                        <p class="lead mb-5">Get personalized guidance from our expert counselors to make your study abroad dream a reality</p>
+                        
+                        <div class="consultation-features mb-5">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="feature-box">
+                                        <div class="icon-box">
+                                            <i class="bi bi-search"></i>
+                                        </div>
+                                        <h4>University Selection</h4>
+                                        <p>Find the perfect university that matches your profile and aspirations</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="feature-box">
+                                        <div class="icon-box">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                        </div>
+                                        <h4>Application Support</h4>
+                                        <p>Get expert help with all your application requirements and documents</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="feature-box">
+                                        <div class="icon-box">
+                                            <i class="bi bi-headset"></i>
+                                        </div>
+                                        <h4>Visa Guidance</h4>
+                                        <p>Professional assistance for a smooth visa application process</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn-talk-to-counselor">
+                            <i class="bi bi-chat-dots me-2"></i> Talk to a Counselor Now
+                        </a>
+                        
+                        <p class="mt-3 small text-muted">Schedule a free consultation at your convenience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 <!--                        <div style="font-weight: bold; margin-bottom: 8px;">💰 Estimated Additional Expenses (Per Year)-->
 <!--                        </div>-->
 <!--                        <table style="width:100%; background: #fff; border-collapse: collapse;">-->
@@ -1850,7 +2121,7 @@
                                     <i class="bi bi-envelope"></i>
                                     <h3>Email Us</h3>
                                     <p>projectk1international@gmail.com</p>
-                                    <p>projectk1international@gmail.com</p>
+                                    <!-- <p>projectk1international@gmail.com</p> -->
 
                                 </div>
                             </div><!-- End Info Item -->

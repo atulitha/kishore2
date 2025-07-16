@@ -1,36 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Kyx</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" loading="lazy">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" loading="lazy">
-
-    <!-- Google Fonts with preconnect and preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.rel='stylesheet'">
-    
-    <!-- Defer non-critical CSS -->
-    <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
-
-    <!-- Main CSS File with preload -->
-    <link rel="preload" href="assets/css/main.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/main.css"></noscript>
-    <style type="text/css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kyx</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Favicons -->
+<link href="assets/img/favicon.png" loading="lazy" rel="icon"/>
+<link href="assets/img/apple-touch-icon.png" loading="lazy" rel="apple-touch-icon"/>
+<!-- Google Fonts with preconnect and preload -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<!-- Preload critical CSS -->
+<link as="style" href="assets/vendor/bootstrap/css/bootstrap.min.css" onload="this.rel='stylesheet'" rel="preload"/>
+<link as="style" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" onload="this.rel='stylesheet'" rel="preload"/>
+<!-- Defer non-critical CSS -->
+<link as="style" href="assets/vendor/aos/aos.css" onload="this.rel='stylesheet'" rel="preload"/>
+<link as="style" href="assets/vendor/glightbox/css/glightbox.min.css" onload="this.rel='stylesheet'" rel="preload"/>
+<link as="style" href="assets/vendor/swiper/swiper-bundle.min.css" onload="this.rel='stylesheet'" rel="preload"/>
+<!-- Main CSS File with preload -->
+<link as="style" href="assets/css/main.css" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="assets/css/main.css" rel="stylesheet"/></noscript>
+<style type="text/css">
         /* Flag image styling */
         .portfolio-item img.img-fluid1 {
             width: 200px;
@@ -554,9 +549,53 @@
         .university-card .btn {
             width: 100%;
         }
-    </style>
-    <noscript><style>.lazyload { display: none !important; }</style></noscript>
-    <script>
+    
+        /* Mobile menu visibility fix */
+        .mobile-nav-toggle {
+            display: none !important; /* Hide by default */
+        }
+        
+        @media (max-width: 1199.98px) {
+            .mobile-nav-toggle {
+                display: flex !important; /* Show only on mobile */
+            }
+            
+            /* Ensure desktop menu is hidden on mobile */
+            #navmenu > ul {
+                display: none !important;
+            }
+            
+            /* Show menu when active */
+            .mobile-nav-active #navmenu > ul {
+                display: flex !important;
+            }
+        }
+        
+        /* Dropdown positioning fix */
+        .listing-dropdown {
+            position: relative;
+        }
+        
+        .listing-dropdown .countries-list {
+            position: absolute;
+            right: 0;
+            left: auto;
+            min-width: 500px;
+            max-width: 90vw;
+        }
+        
+        @media (max-width: 1199.98px) {
+            .listing-dropdown .countries-list {
+                position: static !important;
+                min-width: auto !important;
+                max-width: 100%;
+                padding: 0 15px !important;
+                margin: 0 !important;
+            }
+        }
+        </style>
+<noscript><style>.lazyload { display: none !important; }</style></noscript>
+<script>
     // Performance monitoring
     window.addEventListener('load', function() {
         // Log performance metrics
@@ -594,8 +633,7 @@
         lazyImages.forEach(img => imageObserver.observe(img));
     });
     </script>
-
-    <!-- =======================================================
+<!-- =======================================================
     * Template Name: FlexStart
     * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
     * Updated: Nov 01 2024 with Bootstrap v5.3.3
@@ -603,133 +641,119 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 </head>
-
 <body class="index-page">
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/kxy-logo.png" width="70" height="200" alt="">
-        </a>
-        <nav id="navmenu" class="navmenu">
-            <ul>
-                <li><a href="index.html" class="active">Home<br></a></li>
-                <li><a href="about-us.html">About</a></li>
-                <li class="listing-dropdown"><a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul class="countries-list">
-                        <li class="country-group">
-                            <div class="country-item">
-                                <a href="universities/russia.html" title="Russia" class="active">Russia</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/georgia.html" title="Georgia">Georgia</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/ireland.html" title="Ireland">Ireland</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/netherlands.html" title="Netherlands">Netherlands</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/spain.html" title="Spain">Spain</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/uk.html" title="United Kingdom">United Kingdom</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/usa.html" title="United States">United States</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/canada.html" title="Canada">Canada</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/france.html" title="France">France</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/germany.html" title="Germany">Germany</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-        <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
-
-    </div>
+<header class="header d-flex align-items-center fixed-top" id="header">
+<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<a class="logo d-flex align-items-center" href="index.html">
+<img alt="" height="200" src="assets/img/kxy-logo.png" width="70"/>
+</a>
+<nav class="navmenu" id="navmenu">
+<ul>
+<li><a class="active" href="index.html">Home<br/></a></li>
+<li><a href="about-us.html">About</a></li>
+<li class="listing-dropdown"><a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+<ul class="countries-list">
+<li class="country-group">
+<div class="country-item">
+<a class="active" href="universities/russia.html" title="Russia">Russia</a>
+</div>
+<div class="country-item">
+<a href="universities/georgia.html" title="Georgia">Georgia</a>
+</div>
+<div class="country-item">
+<a href="universities/kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
+</div>
+<div class="country-item">
+<a href="universities/uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
+</div>
+<div class="country-item">
+<a href="universities/ireland.html" title="Ireland">Ireland</a>
+</div>
+<div class="country-item">
+<a href="universities/netherlands.html" title="Netherlands">Netherlands</a>
+</div>
+<div class="country-item">
+<a href="universities/spain.html" title="Spain">Spain</a>
+</div>
+<div class="country-item">
+<a href="universities/uk.html" title="United Kingdom">United Kingdom</a>
+</div>
+<div class="country-item">
+<a href="universities/usa.html" title="United States">United States</a>
+</div>
+<div class="country-item">
+<a href="universities/canada.html" title="Canada">Canada</a>
+</div>
+<div class="country-item">
+<a href="universities/france.html" title="France">France</a>
+</div>
+<div class="country-item">
+<a href="universities/germany.html" title="Germany">Germany</a>
+</div>
+</li>
+</ul>
+</li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+<a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
+</div>
 </header>
-
 <main class="main">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-12 order-1 order-lg-2 hero-img   align-items-center" data-aos="zoom-out">
-                    <!-- Replace static image with slider -->
-                    <div class="swiper hero-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/countries-pics/RUSSIA1.jpg" class="img-fluid animated"
-                                     alt="Hero Image 1">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/countries-pics/russia2.jpg" class="img-fluid animated"
-                                     alt="Hero Image 2">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/countries-pics/russia3.jpg" class="img-fluid animated"
-                                     alt="Hero Image 3">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/countries-pics/GEORGIA.jpg" class="img-fluid animated"
-                                     alt="Hero Image 3">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/countries-pics/Uzbekistan.webp" class="img-fluid animated"
-                                     alt="Hero Image 3">
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-                <!--                <div class="col-lg-6 order-2 order-lg-10 d-flex flex-column justify-content-center">-->
-                <!--                    <div class="d-flex flex-column flex-md-row align-items-center gap-3" data-aos="fade-up"-->
-                <!--                         data-aos-delay="200">-->
-                <!--                        <div class="card shadow-sm p-3 bg-white rounded w-100" style="max-width: 400px;">-->
-                <!--                            <h4 class="mb-3 text-center">Get in touch</h4>-->
-                <!--                            <form action="forms/newsletter.php" method="post" class="php-email-form">-->
-                <!--                                <div class="input-group mb-2">-->
-                <!--                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>-->
-                <!--                                    <input type="tel" name="phone" class="form-control"-->
-                <!--                                           placeholder="Enter your phone number" required style="font-size: 1.1rem;">-->
-                <!--                                </div>-->
-                <!--                                <div class="d-grid">-->
-                <!--                                    <input type="submit" value="Submit" class="btn btn-primary btn-block">-->
-                <!--                                </div>-->
-                <!--                                <div class="loading mt-2">Loading</div>-->
-                <!--                                <div class="error-message mt-2"></div>-->
-                <!--                                <div class="sent-message mt-2">Your subscription request has been sent. Thank you!</div>-->
-                <!--                            </form>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-            </div>
-        </div>
-        </div>
-        </div>
-    </section><!-- /Hero Section -->
-
-
+<!-- Hero Section -->
+<section class="hero section" id="hero">
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-12 order-1 order-lg-2 hero-img align-items-center" data-aos="zoom-out">
+<!-- Replace static image with slider -->
+<div class="swiper hero-slider">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<img alt="Hero Image 1" class="img-fluid animated" src="assets/countries-pics/RUSSIA1.jpg"/>
+</div>
+<div class="swiper-slide">
+<img alt="Hero Image 2" class="img-fluid animated" src="assets/countries-pics/russia2.jpg"/>
+</div>
+<div class="swiper-slide">
+<img alt="Hero Image 3" class="img-fluid animated" src="assets/countries-pics/russia3.jpg"/>
+</div>
+<div class="swiper-slide">
+<img alt="Hero Image 3" class="img-fluid animated" src="assets/countries-pics/GEORGIA.jpg"/>
+</div>
+<div class="swiper-slide">
+<img alt="Hero Image 3" class="img-fluid animated" src="assets/countries-pics/Uzbekistan.webp"/>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+<!--                <div class="col-lg-6 order-2 order-lg-10 d-flex flex-column justify-content-center">-->
+<!--                    <div class="d-flex flex-column flex-md-row align-items-center gap-3" data-aos="fade-up"-->
+<!--                         data-aos-delay="200">-->
+<!--                        <div class="card shadow-sm p-3 bg-white rounded w-100" style="max-width: 400px;">-->
+<!--                            <h4 class="mb-3 text-center">Get in touch</h4>-->
+<!--                            <form action="forms/newsletter.php" method="post" class="php-email-form">-->
+<!--                                <div class="input-group mb-2">-->
+<!--                                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>-->
+<!--                                    <input type="tel" name="phone" class="form-control"-->
+<!--                                           placeholder="Enter your phone number" required style="font-size: 1.1rem;">-->
+<!--                                </div>-->
+<!--                                <div class="d-grid">-->
+<!--                                    <input type="submit" value="Submit" class="btn btn-primary btn-block">-->
+<!--                                </div>-->
+<!--                                <div class="loading mt-2">Loading</div>-->
+<!--                                <div class="error-message mt-2"></div>-->
+<!--                                <div class="sent-message mt-2">Your subscription request has been sent. Thank you!</div>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+</div>
+</div>
+</section><!-- /Hero Section -->
 <!--    &lt;!&ndash; About Section &ndash;&gt;-->
 <!--    <section id="about" class="about section">-->
-
 <!--        <div class="container" data-aos="fade-up">-->
 <!--            <div class="row gx-0">-->
 <!--                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up"-->
@@ -759,116 +783,92 @@
 <!--                        </div>-->
 <!--                    </div>-->
 <!--                </div>-->
-
 <!--                <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">-->
 <!--                    <img src="assets/img/about.jpg" class="img-fluid" alt="">-->
 <!--                </div>-->
-
 <!--            </div>-->
 <!--        </div>-->
-
 <!--    </section>&lt;!&ndash; /About Section &ndash;&gt;-->
-
-   
-
-
-        <!-- Values Section -->
-        <section id="values" class="values section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Our Values</h2>
-                <p>Why Choose Us?<br></p>
-            </div><!-- End Section Title -->
-
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Our Values</h2>
-                <p>Where would you like to study?<br></p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <img src="assets/img/values-1.png" class="img-fluid" alt="">
-                            <h3>Personalized Counselling</h3>
-
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card">
-                            <img src="assets/img/hero-img-4.jpg" class="img-fluid" alt="">
-                            <h3>Study in Engineering</h3>
-
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card">
-                            <img src="assets/img/values-3.png" class="img-fluid" alt="">
-                            <h3>End-to-End Application Support</h3>
-
-                        </div>
-                    </div><!-- End Card Item -->
-
-                </div>
-
-            </div>
-
-        </section><!-- /Values Section -->
-
-        <!-- Consultation Section -->
-        <section id="consultation" class="consultation section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center" data-aos="fade-up">
-                        <h2>Ready to Start Your Journey?</h2>
-                        <p class="lead mb-5">Get personalized guidance from our expert counselors to make your study abroad dream a reality</p>
-                        
-                        <div class="consultation-features mb-5">
-                            <div class="row g-4">
-                                <div class="col-md-4">
-                                    <div class="feature-box">
-                                        <div class="icon-box">
-                                            <i class="bi bi-search"></i>
-                                        </div>
-                                        <h4>University Selection</h4>
-                                        <p>Find the perfect university that matches your profile and aspirations</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="feature-box">
-                                        <div class="icon-box">
-                                            <i class="bi bi-file-earmark-text"></i>
-                                        </div>
-                                        <h4>Application Support</h4>
-                                        <p>Get expert help with all your application requirements and documents</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="feature-box">
-                                        <div class="icon-box">
-                                            <i class="bi bi-headset"></i>
-                                        </div>
-                                        <h4>Visa Guidance</h4>
-                                        <p>Professional assistance for a smooth visa application process</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="#contact" class="btn-talk-to-counselor">
-                            <i class="bi bi-chat-dots me-2"></i> Talk to a Counselor Now
+<!-- Values Section -->
+<section class="values section" id="values">
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Our Values</h2>
+<p>Why Choose Us?<br/></p>
+</div><!-- End Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Our Values</h2>
+<p>Where would you like to study?<br/></p>
+</div><!-- End Section Title -->
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+<div class="card">
+<img alt="" class="img-fluid" src="assets/img/values-1.png"/>
+<h3>Personalized Counselling</h3>
+</div>
+</div><!-- End Card Item -->
+<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+<div class="card">
+<img alt="" class="img-fluid" src="assets/img/hero-img-4.jpg"/>
+<h3>Study in Engineering</h3>
+</div>
+</div><!-- End Card Item -->
+<div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+<div class="card">
+<img alt="" class="img-fluid" src="assets/img/values-3.png"/>
+<h3>End-to-End Application Support</h3>
+</div>
+</div><!-- End Card Item -->
+</div>
+</div>
+</section><!-- /Values Section -->
+<!-- Consultation Section -->
+<section class="consultation section" id="consultation">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center" data-aos="fade-up">
+<h2>Ready to Start Your Journey?</h2>
+<p class="lead mb-5">Get personalized guidance from our expert counselors to make your study abroad dream a reality</p>
+<div class="consultation-features mb-5">
+<div class="row g-4">
+<div class="col-md-4">
+<div class="feature-box">
+<div class="icon-box">
+<i class="bi bi-search"></i>
+</div>
+<h4>University Selection</h4>
+<p>Find the perfect university that matches your profile and aspirations</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="feature-box">
+<div class="icon-box">
+<i class="bi bi-file-earmark-text"></i>
+</div>
+<h4>Application Support</h4>
+<p>Get expert help with all your application requirements and documents</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="feature-box">
+<div class="icon-box">
+<i class="bi bi-headset"></i>
+</div>
+<h4>Visa Guidance</h4>
+<p>Professional assistance for a smooth visa application process</p>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-talk-to-counselor" href="#contact">
+<i class="bi bi-chat-dots me-2"></i> Talk to a Counselor Now
                         </a>
-                        
-                        <p class="mt-3 small text-muted">Schedule a free consultation at your convenience</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<p class="mt-3 small text-muted">Schedule a free consultation at your convenience</p>
+</div>
+</div>
+</div>
+</section>
 <!--                        <div style="font-weight: bold; margin-bottom: 8px;">💰 Estimated Additional Expenses (Per Year)-->
 <!--                        </div>-->
 <!--                        <table style="width:100%; background: #fff; border-collapse: collapse;">-->
@@ -909,7 +909,6 @@
 <!--                            </tr>-->
 <!--                            </tbody>-->
 <!--                        </table>-->
-
 <!--                        &lt;!&ndash;                        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            <div class="pricing-tem">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                                <h3 style="color: #20c997;">Free Plan</h3>&ndash;&gt;-->
@@ -927,7 +926,6 @@
 <!--                        &lt;!&ndash;                                <a href="#" class="btn-buy">Buy Now</a>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            </div>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                        </div>&lt;!&ndash; End Pricing Item &ndash;&gt;&ndash;&gt;-->
-
 <!--                        &lt;!&ndash;                        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            <div class="pricing-tem">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                                <span class="featured">Featured</span>&ndash;&gt;-->
@@ -946,7 +944,6 @@
 <!--                        &lt;!&ndash;                                <a href="#" class="btn-buy">Buy Now</a>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            </div>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                        </div>&lt;!&ndash; End Pricing Item &ndash;&gt;&ndash;&gt;-->
-
 <!--                        &lt;!&ndash;                        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            <div class="pricing-tem">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                                <h3 style="color: #fd7e14;">Business Plan</h3>&ndash;&gt;-->
@@ -964,7 +961,6 @@
 <!--                        &lt;!&ndash;                                <a href="#" class="btn-buy">Buy Now</a>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            </div>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                        </div>&lt;!&ndash; End Pricing Item &ndash;&gt;&ndash;&gt;-->
-
 <!--                        &lt;!&ndash;                        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            <div class="pricing-tem">&ndash;&gt;-->
 <!--                        &lt;!&ndash;                                <h3 style="color: #0d6efd;">Ultimate Plan</h3>&ndash;&gt;-->
@@ -982,237 +978,210 @@
 <!--                        &lt;!&ndash;                                <a href="#" class="btn-buy">Buy Now</a>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                            </div>&ndash;&gt;-->
 <!--                        &lt;!&ndash;                        </div>&lt;!&ndash; End Pricing Item &ndash;&gt;&ndash;&gt;-->
-
 <!--                    </div>&lt;!&ndash; End pricing row &ndash;&gt;-->
-
 <!--                </div>-->
-
 <!--        </section>&lt;!&ndash; /Pricing Section &ndash;&gt;-->
-
-        <!-- Stats Section -->
-        <!--        <section id="stats" class="stats section">-->
-
-        <!--            <div class="container" data-aos="fade-up" data-aos-delay="100">-->
-
-        <!--                <div class="row gy-4">-->
-
-        <!--                    <div class="col-lg-3 col-md-6">-->
-        <!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
-        <!--                            <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>-->
-        <!--                            <div>-->
-        <!--                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"-->
-        <!--                                  class="purecounter"></span>-->
-        <!--                                <p>Happy Clients</p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
-
-        <!--                    <div class="col-lg-3 col-md-6">-->
-        <!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
-        <!--                            <i class="bi bi-journal-richtext color-orange flex-shrink-0" style="color: #ee6c20;"></i>-->
-        <!--                            <div>-->
-        <!--                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"-->
-        <!--                                  class="purecounter"></span>-->
-        <!--                                <p>Projects</p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
-
-        <!--                    <div class="col-lg-3 col-md-6">-->
-        <!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
-        <!--                            <i class="bi bi-headset color-green flex-shrink-0" style="color: #15be56;"></i>-->
-        <!--                            <div>-->
-        <!--                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"-->
-        <!--                                  class="purecounter"></span>-->
-        <!--                                <p>Hours Of Support</p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
-
-        <!--                    <div class="col-lg-3 col-md-6">-->
-        <!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
-        <!--                            <i class="bi bi-people color-pink flex-shrink-0" style="color: #bb0852;"></i>-->
-        <!--                            <div>-->
-        <!--                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"-->
-        <!--                                  class="purecounter"></span>-->
-        <!--                                <p>Hard Workers</p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
-
-        <!--                </div>-->
-
-        <!--            </div>-->
-
-        <!--        </section>&lt;!&ndash; /Stats Section &ndash;&gt;-->
-
+<!-- Stats Section -->
+<!--        <section id="stats" class="stats section">-->
+<!--            <div class="container" data-aos="fade-up" data-aos-delay="100">-->
+<!--                <div class="row gy-4">-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
+<!--                            <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>-->
+<!--                            <div>-->
+<!--                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"-->
+<!--                                  class="purecounter"></span>-->
+<!--                                <p>Happy Clients</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
+<!--                            <i class="bi bi-journal-richtext color-orange flex-shrink-0" style="color: #ee6c20;"></i>-->
+<!--                            <div>-->
+<!--                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"-->
+<!--                                  class="purecounter"></span>-->
+<!--                                <p>Projects</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
+<!--                            <i class="bi bi-headset color-green flex-shrink-0" style="color: #15be56;"></i>-->
+<!--                            <div>-->
+<!--                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"-->
+<!--                                  class="purecounter"></span>-->
+<!--                                <p>Hours Of Support</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="stats-item d-flex align-items-center w-100 h-100">-->
+<!--                            <i class="bi bi-people color-pink flex-shrink-0" style="color: #bb0852;"></i>-->
+<!--                            <div>-->
+<!--                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"-->
+<!--                                  class="purecounter"></span>-->
+<!--                                <p>Hard Workers</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Stats Item &ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>&lt;!&ndash; /Stats Section &ndash;&gt;-->
 <!--         Features Section-->
 <!--        <section id="features" class="features section">-->
-
 <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
 <!--            <div class="container section-title" data-aos="fade-up">-->
 <!--                <h2>Features</h2>-->
 <!--                <p>Popular Study Abroad Courses<br></p>-->
 <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
 <!--            <div class="container">-->
-
 <!--                <div class="row gy-5">-->
-
 <!--                    <div class="col-xl-6" data-aos="zoom-out" data-aos-delay="100">-->
 <!--                        <img src="assets/img/features.png" class="img-fluid" alt="">-->
 <!--                    </div>-->
-
 <!--                    <div class="col-xl-6 d-flex">-->
 <!--                        <div class="row align-self-center gy-4">-->
-
 <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">-->
 <!--                                <div class="feature-box d-flex align-items-center">-->
 <!--                                    <i class="bi bi-check"></i>-->
 <!--                                    <h3>Medicine</h3>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">-->
 <!--                                <div class="feature-box d-flex align-items-center">-->
 <!--                                    <i class="bi bi-check"></i>-->
 <!--                                    <h3>live practical</h3>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">-->
 <!--                                <div class="feature-box d-flex align-items-center">-->
 <!--                                    <i class="bi bi-check"></i>-->
 <!--                                    <h3>need slider for images and alinge the medicine colunm to one  </h3>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--&lt;!&ndash;                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">&ndash;&gt;-->
 <!--&lt;!&ndash;                                <div class="feature-box d-flex align-items-center">&ndash;&gt;-->
 <!--&lt;!&ndash;                                    <i class="bi bi-check"></i>&ndash;&gt;-->
 <!--&lt;!&ndash;                                    <h3>Rerum omnis sint</h3>&ndash;&gt;-->
 <!--&lt;!&ndash;                                </div>&ndash;&gt;-->
 <!--&lt;!&ndash;                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;&ndash;&gt;-->
-
 <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">-->
 <!--                                <div class="feature-box d-flex align-items-center">-->
 <!--                                    <i class="bi bi-check"></i>-->
 <!--                                    <h3>Alias possimus</h3>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!-- Popular Study Abroad Courses Section -->
 <section class="popular-courses-section py-5">
-  <div class="container">
-    <div class="section-title text-center mb-4">
-      <h2>Popular Study Abroad Courses</h2>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-3">
-        <div class="course-box text-center p-4 shadow-sm rounded h-100">
-          <i class="bi bi-heart-pulse display-4 text-primary mb-3"></i>
-          <h5 class="fw-bold">Medicine</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="course-box text-center p-4 shadow-sm rounded h-100">
-          <i class="bi bi-gear-wide-connected display-4 text-success mb-3"></i>
-          <h5 class="fw-bold">Engineering</h5>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="course-box text-center p-4 shadow-sm rounded h-100">
-          <i class="bi bi-briefcase display-4 text-warning mb-3"></i>
-          <h5 class="fw-bold">Business Management</h5>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-title text-center mb-4">
+<h2>Popular Study Abroad Courses</h2>
+</div>
+<div class="row justify-content-center">
+<div class="col-md-3">
+<div class="course-box text-center p-4 shadow-sm rounded h-100">
+<i class="bi bi-heart-pulse display-4 text-primary mb-3"></i>
+<h5 class="fw-bold">Medicine</h5>
+</div>
+</div>
+<div class="col-md-3">
+<div class="course-box text-center p-4 shadow-sm rounded h-100">
+<i class="bi bi-gear-wide-connected display-4 text-success mb-3"></i>
+<h5 class="fw-bold">Engineering</h5>
+</div>
+</div>
+<div class="col-md-3">
+<div class="course-box text-center p-4 shadow-sm rounded h-100">
+<i class="bi bi-briefcase display-4 text-warning mb-3"></i>
+<h5 class="fw-bold">Business Management</h5>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- Where would you like to study? Section -->
 <section class="study-countries-section py-5">
-  <div class="container">
-    <div class="section-title text-center mb-4">
-      <h2>Where would you like to study?</h2>
-    </div>
-    <div class="row justify-content-center g-4">
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/O-Canada-O-flag-arts-entertainment-history-2010.jpg" alt="Canada" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Canada</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/france-country-flag.jpg" alt="France" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">France</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/Georgia.jpg" alt="Georgia" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Georgia</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/Germany.jpg" alt="Germany" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Germany</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/ireland_flag.jpg" alt="Ireland" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Ireland</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/Kyrgyzstan.jpg" alt="Kyrgyzstan" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Kyrgyzstan</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/Netherlands.png" alt="Netherlands" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Netherlands</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/Russia.jpg" alt="Russia" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Russia</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/Spain-Flag.jpg" alt="Spain" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Spain</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/uk-country-flag.jpg" alt="UK" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">UK</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/USA.jpg" alt="USA" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">USA</div>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="country-box text-center p-3 shadow-sm rounded h-100">
-          <img src="assets/img/flag/uzbekistan_png.png" alt="Uzbekistan" class="img-fluid mb-2" style="height:40px;">
-          <div class="fw-semibold">Uzbekistan</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-title text-center mb-4">
+<h2>Where would you like to study?</h2>
+</div>
+<div class="row justify-content-center g-4">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Canada" class="img-fluid mb-2" src="assets/img/flag/O-Canada-O-flag-arts-entertainment-history-2010.jpg" style="height:40px;"/>
+<div class="fw-semibold">Canada</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="France" class="img-fluid mb-2" src="assets/img/flag/france-country-flag.jpg" style="height:40px;"/>
+<div class="fw-semibold">France</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Georgia" class="img-fluid mb-2" src="assets/img/flag/Georgia.jpg" style="height:40px;"/>
+<div class="fw-semibold">Georgia</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Germany" class="img-fluid mb-2" src="assets/img/flag/Germany.jpg" style="height:40px;"/>
+<div class="fw-semibold">Germany</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Ireland" class="img-fluid mb-2" src="assets/img/flag/ireland_flag.jpg" style="height:40px;"/>
+<div class="fw-semibold">Ireland</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Kyrgyzstan" class="img-fluid mb-2" src="assets/img/flag/Kyrgyzstan.jpg" style="height:40px;"/>
+<div class="fw-semibold">Kyrgyzstan</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Netherlands" class="img-fluid mb-2" src="assets/img/flag/Netherlands.png" style="height:40px;"/>
+<div class="fw-semibold">Netherlands</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Russia" class="img-fluid mb-2" src="assets/img/flag/Russia.jpg" style="height:40px;"/>
+<div class="fw-semibold">Russia</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Spain" class="img-fluid mb-2" src="assets/img/flag/Spain-Flag.jpg" style="height:40px;"/>
+<div class="fw-semibold">Spain</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="UK" class="img-fluid mb-2" src="assets/img/flag/uk-country-flag.jpg" style="height:40px;"/>
+<div class="fw-semibold">UK</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="USA" class="img-fluid mb-2" src="assets/img/flag/USA.jpg" style="height:40px;"/>
+<div class="fw-semibold">USA</div>
+</div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+<div class="country-box text-center p-3 shadow-sm rounded h-100">
+<img alt="Uzbekistan" class="img-fluid mb-2" src="assets/img/flag/uzbekistan_png.png" style="height:40px;"/>
+<div class="fw-semibold">Uzbekistan</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <style>
 .study-countries-section .country-box {
   transition: transform 0.2s, box-shadow 0.2s;
@@ -1240,7 +1209,6 @@
   transform: scale(1.08);
 }
 </style>
-
 <style>
 .popular-courses-section .course-box {
   transition: transform 0.2s, box-shadow 0.2s;
@@ -1251,35 +1219,23 @@
   box-shadow: 0 8px 32px rgba(0,0,0,0.10);
 }
 </style>
-
-
 <!--&lt;!&ndash;                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">&ndash;&gt;-->
 <!--&lt;!&ndash;                                <div class="feature-box d-flex align-items-center">&ndash;&gt;-->
 <!--&lt;!&ndash;                                    <i class="bi bi-check"></i>&ndash;&gt;-->
 <!--&lt;!&ndash;                                    <h3>Repellendus molli</h3>&ndash;&gt;-->
 <!--&lt;!&ndash;                                </div>&ndash;&gt;-->
 <!--&lt;!&ndash;                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;&ndash;&gt;-->
-
 <!--                        </div>-->
 <!--                    </div>-->
-
 <!--                </div>-->
-
 <!--            </div>-->
-
 <!--        </section>&lt;!&ndash; /Features Section &ndash;&gt;-->
-
 <!--        &lt;!&ndash; Alt Features Section &ndash;&gt;-->
 <!--        &lt;!&ndash; <section id="alt-features" class="alt-features section">-->
-
 <!--            <div class="container">-->
-
 <!--                <div class="row gy-5">-->
-
 <!--                    <div class="col-xl-7 d-flex order-2 order-xl-1" data-aos="fade-up" data-aos-delay="200">-->
-
 <!--                        <div class="row align-self-center gy-5">-->
-
 <!--                            <div class="col-md-6 icon-box">-->
 <!--                                <i class="bi bi-award"></i>-->
 <!--                                <div>-->
@@ -1288,7 +1244,6 @@
 <!--                                        aliquip</p>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                            <div class="col-md-6 icon-box">-->
 <!--                                <i class="bi bi-card-checklist"></i>-->
 <!--                                <div>-->
@@ -1297,7 +1252,6 @@
 <!--                                        deserunt</p>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                            <div class="col-md-6 icon-box">-->
 <!--                                <i class="bi bi-dribbble"></i>-->
 <!--                                <div>-->
@@ -1306,7 +1260,6 @@
 <!--                                        facere</p>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                            <div class="col-md-6 icon-box">-->
 <!--                                <i class="bi bi-filter-circle"></i>-->
 <!--                                <div>-->
@@ -1314,7 +1267,6 @@
 <!--                                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                            <div class="col-md-6 icon-box">-->
 <!--                                <i class="bi bi-lightning-charge"></i>-->
 <!--                                <div>-->
@@ -1322,7 +1274,6 @@
 <!--                                    <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                            <div class="col-md-6 icon-box">-->
 <!--                                <i class="bi bi-patch-check"></i>-->
 <!--                                <div>-->
@@ -1330,248 +1281,207 @@
 <!--                                    <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>-->
 <!--                                </div>-->
 <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
 <!--                        </div>-->
-
 <!--                    </div>-->
-
 <!--                    <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2" data-aos="fade-up"-->
 <!--                         data-aos-delay="100">-->
 <!--                        <img src="assets/img/alt-features.png" class="img-fluid" alt="">-->
 <!--                    </div>-->
-
 <!--                </div>-->
-
 <!--            </div>-->
-
 <!--        </section>&lt;!&ndash; /Alt Features Section &ndash;&gt;-->
-
-        <!-- Services Section -->
-        <section id="services" class="services section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Services</h2>
-                <p>Reliable MOKSH Services<br></p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item item-cyan position-relative">
-                            <i class="bi bi-activity icon"></i>
-                            <h3>Nesciunt Mete</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores
+<!-- Services Section -->
+<section class="services section" id="services">
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Services</h2>
+<p>Reliable MOKSH Services<br/></p>
+</div><!-- End Section Title -->
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+<div class="service-item item-cyan position-relative">
+<i class="bi bi-activity icon"></i>
+<h3>Nesciunt Mete</h3>
+<p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores
                                 iure
                                 perferendis tempore et consequatur.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item item-orange position-relative">
-                            <i class="bi bi-broadcast icon"></i>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum
+<a class="read-more stretched-link" href="#"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+</div>
+</div><!-- End Service Item -->
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+<div class="service-item item-orange position-relative">
+<i class="bi bi-broadcast icon"></i>
+<h3>Eosle Commodi</h3>
+<p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum
                                 hic
                                 non ut nesciunt dolorem.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item item-teal position-relative">
-                            <i class="bi bi-easel icon"></i>
-                            <h3>Ledo Markt</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id
+<a class="read-more stretched-link" href="#"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+</div>
+</div><!-- End Service Item -->
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-item item-teal position-relative">
+<i class="bi bi-easel icon"></i>
+<h3>Ledo Markt</h3>
+<p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id
                                 voluptas
                                 adipisci eos earum corrupti.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-item item-red position-relative">
-                            <i class="bi bi-bounding-box-circles icon"></i>
-                            <h3>Asperiores Commodi</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga
+<a class="read-more stretched-link" href="#"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+</div>
+</div><!-- End Service Item -->
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+<div class="service-item item-red position-relative">
+<i class="bi bi-bounding-box-circles icon"></i>
+<h3>Asperiores Commodi</h3>
+<p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga
                                 sit
                                 provident adipisci neque.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-item item-indigo position-relative">
-                            <i class="bi bi-calendar4-week icon"></i>
-                            <h3>Velit Doloremque.</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed
+<a class="read-more stretched-link" href="#"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+</div>
+</div><!-- End Service Item -->
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+<div class="service-item item-indigo position-relative">
+<i class="bi bi-calendar4-week icon"></i>
+<h3>Velit Doloremque.</h3>
+<p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed
                                 animi
                                 at autem alias eius labore.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-item item-pink position-relative">
-                            <i class="bi bi-chat-square-text icon"></i>
-                            <h3>Dolori Architecto</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure.
+<a class="read-more stretched-link" href="#"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+</div>
+</div><!-- End Service Item -->
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+<div class="service-item item-pink position-relative">
+<i class="bi bi-chat-square-text icon"></i>
+<h3>Dolori Architecto</h3>
+<p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure.
                                 Corrupti recusandae ducimus enim.</p>
-                            <a href="#" class="read-more stretched-link"><span>Read More</span> <i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                </div>
-
-            </div> -->
+<a class="read-more stretched-link" href="#"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+</div>
+</div><!-- End Service Item -->
+</div>
+</div> --&gt;
 
         </section><!-- /Services Section -->
-
-
-        <!-- Faq Section -->
-        <!--        <section id="faq" class="faq section">-->
-        <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-        <!--            <div class="container section-title" data-aos="fade-up">-->
-        <!--                <h2>F.A.Q</h2>-->
-        <!--                <p>Frequently Asked Questions</p>-->
-        <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-        <!--            <div class="container">-->
-        <!--                <div class="row">-->
-        <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">-->
-        <!--                        <div class="faq-container">-->
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What Are the Eligibility Criteria for MBBS in Russia for Indian Students?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
-        <!--                                        eligibility </P>-->
-        <!--                                    <P>requirements:</P>-->
-        <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
-        <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
-        <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
-        <!--                                        categories) in these core science subjects. </p>-->
-        <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
-        <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
-        <!--                                        medical universities abroad. </p>-->
-        <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
-        <!--                                        at-->
-        <!--                                        recognized medical universities in Russia. </p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
-
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What is the Duration of the MBBS Program in Russia?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>The MBBS program in Russia typically spans 6 years, which includes 5 years of-->
-        <!--                                        academic-->
-        <!--                                        study followed by a 1-year mandatory internship. This comprehensive structure-->
-        <!--                                        ensures-->
-        <!--                                        students gain both strong theoretical knowledge and practical clinical-->
-        <!--                                        experience, preparing-->
-        <!--                                        them to become competent medical professionals..</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
-
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What Are the Tuition Fees for MBBS in Russia?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Tuition fees for MBBS programs in Russia vary depending on the university and-->
-        <!--                                        city. On-->
-        <!--                                        average, Indian students can expect to pay between ₹3 to ₹4 lakhs per year,-->
-        <!--                                        making Russia-->
-        <!--                                        one of the most cost-effective destinations for quality medical education.</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
-
-        <!--                        </div>-->
-
-        <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
-
-        <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">-->
-        <!--                        <div class="faq-container">-->
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What are the requirements for MBBS in Georgia? </h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
-        <!--                                        eligibility </P>-->
-        <!--                                    <P>requirements:</P>-->
-        <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
-        <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
-        <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
-        <!--                                        categories) in these core science subjects. </p>-->
-        <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
-        <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
-        <!--                                        medical universities abroad. </p>-->
-        <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
-        <!--                                        at-->
-        <!--                                        recognized medical universities in Russia. </p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
-
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What are the requirements for MBBS in Georgia?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse-->
-        <!--                                        in-->
-        <!--                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl-->
-        <!--                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus-->
-        <!--                                        in</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
-
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>Is an MBBS from Georgia Recognized in India? </h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Yes, pursuing an MBBS degree in Georgia is recognized in India. The National-->
-        <!--                                        Medical </p>-->
-        <!--                                    <p>Commission (NMC)—formerly known as the Medical Council of India (MCI)—has-->
-        <!--                                        approved a number of medical universities in Georgia.</p>-->
-        <!--                                    <p>Graduates from these recognized institutions are eligible to return to India and-->
-        <!--                                        practice-->
-        <!--                                    <p>-->
-        <!--                                    <p>medicine, provided they meet the necessary requirements, such as passing the-->
-        <!--                                        Foreign</p>-->
-        <!--                                    <p>Medical Graduate Examination (FMGE) or NEXT, as applicable.-->
-        <!--                                        Before enrolling, students are advised to verify that the chosen university is-->
-        <!--                                        included in theofficial list of NMC-approved institutions to ensure eligibility-->
-        <!--                                        for future-->
-        <!--                                        medical practice in India.</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
-
-        <!--                        </div>-->
-
-        <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
-
-        <!--                </div>-->
-
-        <!--            </div>-->
-
-        <!--        </section>&lt;!&ndash; /Faq Section &ndash;&gt;-->
-
-        <!-- Portfolio Section -->
+<!-- Faq Section -->
+<!--        <section id="faq" class="faq section">-->
+<!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+<!--            <div class="container section-title" data-aos="fade-up">-->
+<!--                <h2>F.A.Q</h2>-->
+<!--                <p>Frequently Asked Questions</p>-->
+<!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">-->
+<!--                        <div class="faq-container">-->
+<!--                            <div class="faq-item faq-active">-->
+<!--                                <h3>What Are the Eligibility Criteria for MBBS in Russia for Indian Students?</h3>-->
+<!--                                <div class="faq-content">-->
+<!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
+<!--                                        eligibility </P>-->
+<!--                                    <P>requirements:</P>-->
+<!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
+<!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
+<!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
+<!--                                        categories) in these core science subjects. </p>-->
+<!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
+<!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
+<!--                                        medical universities abroad. </p>-->
+<!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
+<!--                                        at-->
+<!--                                        recognized medical universities in Russia. </p>-->
+<!--                                </div>-->
+<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+<!--                            <div class="faq-item faq-active">-->
+<!--                                <h3>What is the Duration of the MBBS Program in Russia?</h3>-->
+<!--                                <div class="faq-content">-->
+<!--                                    <p>The MBBS program in Russia typically spans 6 years, which includes 5 years of-->
+<!--                                        academic-->
+<!--                                        study followed by a 1-year mandatory internship. This comprehensive structure-->
+<!--                                        ensures-->
+<!--                                        students gain both strong theoretical knowledge and practical clinical-->
+<!--                                        experience, preparing-->
+<!--                                        them to become competent medical professionals..</p>-->
+<!--                                </div>-->
+<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+<!--                            <div class="faq-item faq-active">-->
+<!--                                <h3>What Are the Tuition Fees for MBBS in Russia?</h3>-->
+<!--                                <div class="faq-content">-->
+<!--                                    <p>Tuition fees for MBBS programs in Russia vary depending on the university and-->
+<!--                                        city. On-->
+<!--                                        average, Indian students can expect to pay between ₹3 to ₹4 lakhs per year,-->
+<!--                                        making Russia-->
+<!--                                        one of the most cost-effective destinations for quality medical education.</p>-->
+<!--                                </div>-->
+<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
+<!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">-->
+<!--                        <div class="faq-container">-->
+<!--                            <div class="faq-item faq-active">-->
+<!--                                <h3>What are the requirements for MBBS in Georgia? </h3>-->
+<!--                                <div class="faq-content">-->
+<!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
+<!--                                        eligibility </P>-->
+<!--                                    <P>requirements:</P>-->
+<!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
+<!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
+<!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
+<!--                                        categories) in these core science subjects. </p>-->
+<!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
+<!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
+<!--                                        medical universities abroad. </p>-->
+<!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
+<!--                                        at-->
+<!--                                        recognized medical universities in Russia. </p>-->
+<!--                                </div>-->
+<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+<!--                            <div class="faq-item faq-active">-->
+<!--                                <h3>What are the requirements for MBBS in Georgia?</h3>-->
+<!--                                <div class="faq-content">-->
+<!--                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse-->
+<!--                                        in-->
+<!--                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl-->
+<!--                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus-->
+<!--                                        in</p>-->
+<!--                                </div>-->
+<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+<!--                            <div class="faq-item faq-active">-->
+<!--                                <h3>Is an MBBS from Georgia Recognized in India? </h3>-->
+<!--                                <div class="faq-content">-->
+<!--                                    <p>Yes, pursuing an MBBS degree in Georgia is recognized in India. The National-->
+<!--                                        Medical </p>-->
+<!--                                    <p>Commission (NMC)—formerly known as the Medical Council of India (MCI)—has-->
+<!--                                        approved a number of medical universities in Georgia.</p>-->
+<!--                                    <p>Graduates from these recognized institutions are eligible to return to India and-->
+<!--                                        practice-->
+<!--                                    <p>-->
+<!--                                    <p>medicine, provided they meet the necessary requirements, such as passing the-->
+<!--                                        Foreign</p>-->
+<!--                                    <p>Medical Graduate Examination (FMGE) or NEXT, as applicable.-->
+<!--                                        Before enrolling, students are advised to verify that the chosen university is-->
+<!--                                        included in theofficial list of NMC-approved institutions to ensure eligibility-->
+<!--                                        for future-->
+<!--                                        medical practice in India.</p>-->
+<!--                                </div>-->
+<!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+<!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>&lt;!&ndash; /Faq Section &ndash;&gt;-->
+<!-- Portfolio Section -->
 <!--        <section id="portfolio" class="portfolio section">-->
-
 <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
 <!--            <div class="container section-title" data-aos="fade-up">-->
 <!--                <h2>Portfolio</h2>-->
 <!--                <p>Our Global FootPrint </p>-->
 <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
 <!--            <div class="container">-->
 <!--                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">-->
 <!--                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">-->
@@ -1579,7 +1489,6 @@
 <!--                        &lt;!&ndash;                        <li data-filter=".filter-app">App</li>&ndash;&gt;-->
 <!--                    <div class="row gy-4 isotope-container justify-content-center" data-aos="fade-up"-->
 <!--                         data-aos-delay="200">-->
-
 <!--                        &lt;!&ndash; Russia Flag &ndash;&gt;-->
 <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
 <!--                            <div class="portfolio-content h-100">-->
@@ -1587,7 +1496,6 @@
 <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Russia">-->
 <!--                            </div>-->
 <!--                        </div>&lt;!&ndash; End Russia Flag &ndash;&gt;-->
-
 <!--                        &lt;!&ndash; Georgia Flag &ndash;&gt;-->
 <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
 <!--                            <div class="portfolio-content h-100">-->
@@ -1595,7 +1503,6 @@
 <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Georgia">-->
 <!--                            </div>-->
 <!--                        </div>&lt;!&ndash; End Georgia Flag &ndash;&gt;-->
-
 <!--                        &lt;!&ndash; Kyrgyzstan Flag &ndash;&gt;-->
 <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
 <!--                            <div class="portfolio-content h-100">-->
@@ -1603,7 +1510,6 @@
 <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kyrgyzstan">-->
 <!--                            </div>-->
 <!--                        </div>&lt;!&ndash; End Kyrgyzstan Flag &ndash;&gt;-->
-
 <!--                        &lt;!&ndash; Uzbekistan Flag &ndash;&gt;-->
 <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
 <!--                            <div class="portfolio-content h-100">-->
@@ -1611,7 +1517,6 @@
 <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Uzbekistan">-->
 <!--                            </div>-->
 <!--                        </div>&lt;!&ndash; End Uzbekistan Flag &ndash;&gt;-->
-
 <!--                        &lt;!&ndash; Commented out other country flags-->
 <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
 <!--                            <div class="portfolio-content h-100">-->
@@ -1619,14 +1524,14 @@
 <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Albania">-->
 <!--                            </div>-->
 <!--                        </div>-->
-<!--                        -->
+<!-- -->
 <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
 <!--                            <div class="portfolio-content h-100">-->
 <!--                                <img src="assets/img/flag/am-flag.jpg"-->
 <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Armenia">-->
 <!--                            </div>-->
 <!--                        </div>-->
-<!--                        -->
+<!-- -->
 <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
 <!--                            <div class="portfolio-content h-100">-->
 <!--                                <img src="assets/img/flag/Bangladesh-Flag.jpg"-->
@@ -1875,26 +1780,19 @@
 <!--                            </div>-->
 <!--                        </div>-->
 <!--                    </div>&lt;!&ndash; End Portfolio Container &ndash;&gt;-->
-
 <!--                </div>-->
-
 <!--            </div>-->
-
 <!--        </section>&lt;!&ndash; /Portfolio Section &ndash;&gt;-->
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Testimonials</h2>
-                <p>What they are saying about us<br></p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="swiper init-swiper">
-                    <script type="application/json" class="swiper-config">
+<!-- Testimonials Section -->
+<section class="testimonials section" id="testimonials">
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Testimonials</h2>
+<p>What they are saying about us<br/></p>
+</div><!-- End Section Title -->
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+<div class="swiper init-swiper">
+<script class="swiper-config" type="application/json">
                         {
                             "loop": true,
                             "speed": 600,
@@ -1919,135 +1817,107 @@
                             }
                         }
                     </script>
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="stars">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+</div>
+<p>
                                     Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
                                     rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
                                     risus at semper.
                                 </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
+<div class="profile mt-auto">
+<img alt="" class="testimonial-img" src="assets/img/testimonials/testimonials-1.jpg"/>
+<h3>Saul Goodman</h3>
+<h4>Ceo &amp; Founder</h4>
+</div>
+</div>
+</div><!-- End testimonial item -->
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="stars">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+</div>
+<p>
                                     Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
                                     cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
                                     legam anim culpa.
                                 </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
+<div class="profile mt-auto">
+<img alt="" class="testimonial-img" src="assets/img/testimonials/testimonials-2.jpg"/>
+<h3>Sara Wilsson</h3>
+<h4>Designer</h4>
+</div>
+</div>
+</div><!-- End testimonial item -->
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="stars">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+</div>
+<p>
                                     Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
                                     veniam
                                     duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                                 </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
+<div class="profile mt-auto">
+<img alt="" class="testimonial-img" src="assets/img/testimonials/testimonials-3.jpg"/>
+<h3>Jena Karlis</h3>
+<h4>Store Owner</h4>
+</div>
+</div>
+</div><!-- End testimonial item -->
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="stars">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+</div>
+<p>
                                     Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
                                     fugiat
                                     minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
                                     labore illum veniam.
                                 </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
+<div class="profile mt-auto">
+<img alt="" class="testimonial-img" src="assets/img/testimonials/testimonials-4.jpg"/>
+<h3>Matt Brandon</h3>
+<h4>Freelancer</h4>
+</div>
+</div>
+</div><!-- End testimonial item -->
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="stars">
+<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+</div>
+<p>
                                     Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
                                     veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
                                     culpa fore nisi cillum quid.
                                 </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-
-        </section><!-- /Testimonials Section -->
-
-        <!-- Team Section -->
+<div class="profile mt-auto">
+<img alt="" class="testimonial-img" src="assets/img/testimonials/testimonials-5.jpg"/>
+<h3>John Larson</h3>
+<h4>Entrepreneur</h4>
+</div>
+</div>
+</div><!-- End testimonial item -->
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+</section><!-- /Testimonials Section -->
+<!-- Team Section -->
 <!--        <section id="team" class="team section">-->
-
 <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
 <!--            <div class="container section-title" data-aos="fade-up">-->
 <!--                <h2>Team</h2>-->
 <!--                <p>Our hard working team</p>-->
 <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
 <!--            <div class="container">-->
-
 <!--                <div class="row gy-4">-->
-
 <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">-->
 <!--                        <div class="team-member">-->
 <!--                            <div class="member-img">-->
@@ -2068,7 +1938,6 @@
 <!--                            </div>-->
 <!--                        </div>-->
 <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
-
 <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">-->
 <!--                        <div class="team-member">-->
 <!--                            <div class="member-img">-->
@@ -2089,7 +1958,6 @@
 <!--                            </div>-->
 <!--                        </div>-->
 <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
-
 <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">-->
 <!--                        <div class="team-member">-->
 <!--                            <div class="member-img">-->
@@ -2110,7 +1978,6 @@
 <!--                            </div>-->
 <!--                        </div>-->
 <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
-
 <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">-->
 <!--                        <div class="team-member">-->
 <!--                            <div class="member-img">-->
@@ -2131,279 +1998,235 @@
 <!--                            </div>-->
 <!--                        </div>-->
 <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
-
 <!--                </div>-->
-
 <!--            </div>-->
-
 <!--        </section>&lt;!&ndash; /Team Section &ndash;&gt;-->
-
-        <!-- Universities Section -->
-        <section id="universities" class="universities section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Study Abroad Destinations</h2>
-                <p>Explore our partner universities around the world</p>
-            </div>
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row gy-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Russia</h3>
-                            <p>World-class medical education with affordable tuition fees</p>
-                            <a href="universities/russia.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Georgia</h3>
-                            <p>High-quality education with international recognition</p>
-                            <a href="universities/georgia.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Kyrgyzstan</h3>
-                            <p>Affordable medical education with global standards</p>
-                            <a href="universities/kyrgyzstan.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Uzbekistan</h3>
-                            <p>Quality education with modern facilities</p>
-                            <a href="universities/uzbekistan.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Germany</h3>
-                            <p>Excellence in engineering and technology</p>
-                            <a href="universities/germany.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>France</h3>
-                            <p>World-renowned business and management programs</p>
-                            <a href="universities/france.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Canada</h3>
-                            <p>Top-ranked engineering and technology programs</p>
-                            <a href="universities/canada.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Ireland</h3>
-                            <p>Innovative research and academic excellence</p>
-                            <a href="universities/ireland.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Netherlands</h3>
-                            <p>International environment with English-taught programs</p>
-                            <a href="universities/netherlands.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>Spain</h3>
-                            <p>Vibrant culture with quality education</p>
-                            <a href="universities/spain.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>United Kingdom</h3>
-                            <p>World-class education with rich history</p>
-                            <a href="universities/uk.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="university-card">
-                            <h3>United States</h3>
-                            <p>Diverse programs with global recognition</p>
-                            <a href="universities/usa.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Contact Us</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p>rajuvolu </p>
-                                    <p>russian tuppalu, 535022</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>+91-6304705445</p>
-                                    <p>+91-8125423017</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>projectk1international@gmail.com</p>
-                                    <!-- <p>projectk1international@gmail.com</p> -->
-
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday</p>
-                                    <p>9:00AM - 05:00PM</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                              data-aos-delay="200">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                           required="">
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                           required="">
-                                </div>
-
-                                <div class="col-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                           required="">
-                                </div>
-
-                                <div class="col-12">
-                                <textarea class="form-control" name="message" rows="6" placeholder="Message"
-                                          required=""></textarea>
-                                </div>
-
-                                <div class="col-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div><!-- End Contact Form -->
-
-                </div>
-
-            </div>
-        </section><!-- /Contact Section -->
-    </div><!-- End Main Content -->
-
-
+<!-- Universities Section -->
+<section class="universities section" id="universities">
+<div class="container section-title" data-aos="fade-up">
+<h2>Study Abroad Destinations</h2>
+<p>Explore our partner universities around the world</p>
+</div>
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+<div class="row gy-4">
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Russia</h3>
+<p>World-class medical education with affordable tuition fees</p>
+<a class="btn btn-primary" href="universities/russia.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Georgia</h3>
+<p>High-quality education with international recognition</p>
+<a class="btn btn-primary" href="universities/georgia.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Kyrgyzstan</h3>
+<p>Affordable medical education with global standards</p>
+<a class="btn btn-primary" href="universities/kyrgyzstan.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Uzbekistan</h3>
+<p>Quality education with modern facilities</p>
+<a class="btn btn-primary" href="universities/uzbekistan.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Germany</h3>
+<p>Excellence in engineering and technology</p>
+<a class="btn btn-primary" href="universities/germany.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>France</h3>
+<p>World-renowned business and management programs</p>
+<a class="btn btn-primary" href="universities/france.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Canada</h3>
+<p>Top-ranked engineering and technology programs</p>
+<a class="btn btn-primary" href="universities/canada.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Ireland</h3>
+<p>Innovative research and academic excellence</p>
+<a class="btn btn-primary" href="universities/ireland.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Netherlands</h3>
+<p>International environment with English-taught programs</p>
+<a class="btn btn-primary" href="universities/netherlands.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>Spain</h3>
+<p>Vibrant culture with quality education</p>
+<a class="btn btn-primary" href="universities/spain.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>United Kingdom</h3>
+<p>World-class education with rich history</p>
+<a class="btn btn-primary" href="universities/uk.html">Learn More</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="university-card">
+<h3>United States</h3>
+<p>Diverse programs with global recognition</p>
+<a class="btn btn-primary" href="universities/usa.html">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="contact section" id="contact">
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Contact</h2>
+<p>Contact Us</p>
+</div><!-- End Section Title -->
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+<div class="row gy-4">
+<div class="col-lg-6">
+<div class="row gy-4">
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="200">
+<i class="bi bi-geo-alt"></i>
+<h3>Address</h3>
+<p>rajuvolu </p>
+<p>russian tuppalu, 535022</p>
+</div>
+</div><!-- End Info Item -->
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="300">
+<i class="bi bi-telephone"></i>
+<h3>Call Us</h3>
+<p>+91-6304705445</p>
+<p>+91-8125423017</p>
+</div>
+</div><!-- End Info Item -->
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="400">
+<i class="bi bi-envelope"></i>
+<h3>Email Us</h3>
+<p>projectk1international@gmail.com</p>
+<!-- <p>projectk1international@gmail.com</p> -->
+</div>
+</div><!-- End Info Item -->
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="500">
+<i class="bi bi-clock"></i>
+<h3>Open Hours</h3>
+<p>Monday - Friday</p>
+<p>9:00AM - 05:00PM</p>
+</div>
+</div><!-- End Info Item -->
+</div>
+</div>
+<div class="col-lg-6">
+<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
+<div class="row gy-4">
+<div class="col-md-6">
+<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="col-md-6">
+<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
+</div>
+<div class="col-12">
+<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
+</div>
+<div class="col-12">
+<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
+</div>
+<div class="col-12 text-center">
+<div class="loading">Loading</div>
+<div class="error-message"></div>
+<div class="sent-message">Your message has been sent. Thank you!</div>
+<button type="submit">Send Message</button>
+</div>
+</div>
+</form>
+</div><!-- End Contact Form -->
+</div>
+</div>
+</section><!-- /Contact Section -->
+<!-- End Main Content -->
 </main>
-
-<footer id="footer" class="footer">
-
-    <!--    <div class="footer-newsletter">-->
-    <!--        <div class="container">-->
-    <!--            <div class="row justify-content-center text-center">-->
-    <!--                <div class="col-lg-6">-->
-    <!--                    <h4>Join Our Newsletter</h4>-->
-    <!--                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>-->
-    <!--                    <form action="forms/newsletter.php" method="post" class="php-email-form">-->
-    <!--                        <div class="newsletter-form"><input type="email" name="email"><input type="submit"-->
-    <!--                                                                                             value="Subscribe"></div>-->
-    <!--                        <div class="loading">Loading</div>-->
-    <!--                        <div class="error-message"></div>-->
-    <!--                        <div class="sent-message">Your subscription request has been sent. Thank you!</div>-->
-    <!--                    </form>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-
-    <div class="container footer-top">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="d-flex align-items-center">
-                    <span class="sitename">kyx</span>
-                </a>
-                <div class="footer-contact pt-3">
-                    <p>rajuvolu </p>
-                    <p>russian tuppalu</p>
-                    <p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
-                    <p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
-                    <p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-12">
-                <h4>Follow Us</h4>
-                <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-                <div class="social-links d-flex">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
-        </p>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-
-        </div>
-    </div>
-
+<footer class="footer" id="footer">
+<!--    <div class="footer-newsletter">-->
+<!--        <div class="container">-->
+<!--            <div class="row justify-content-center text-center">-->
+<!--                <div class="col-lg-6">-->
+<!--                    <h4>Join Our Newsletter</h4>-->
+<!--                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>-->
+<!--                    <form action="forms/newsletter.php" method="post" class="php-email-form">-->
+<!--                        <div class="newsletter-form"><input type="email" name="email"><input type="submit"-->
+<!--                                                                                             value="Subscribe"></div>-->
+<!--                        <div class="loading">Loading</div>-->
+<!--                        <div class="error-message"></div>-->
+<!--                        <div class="sent-message">Your subscription request has been sent. Thank you!</div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<div class="container footer-top">
+<div class="row gy-4">
+<div class="col-lg-4 col-md-6 footer-about">
+<a class="d-flex align-items-center" href="index.html">
+<span class="sitename">kyx</span>
+</a>
+<div class="footer-contact pt-3">
+<p>rajuvolu </p>
+<p>russian tuppalu</p>
+<p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
+<p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
+<p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<h4>Follow Us</h4>
+<p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+<div class="social-links d-flex">
+<a href=""><i class="bi bi-twitter-x"></i></a>
+<a href=""><i class="bi bi-facebook"></i></a>
+<a href=""><i class="bi bi-instagram"></i></a>
+<a href=""><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="container copyright text-center mt-4">
+<p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
+</p>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you've purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+</div>
+</div>
 </footer>
-
 <!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -2432,6 +2255,60 @@
       }
     });
 </script>
-</body>
 
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to close all dropdowns except the current one
+            function closeOtherDropdowns(currentDropdown) {
+                document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
+                    if (dropdown !== currentDropdown) {
+                        dropdown.classList.remove('active');
+                        const menu = dropdown.querySelector('.countries-list');
+                        if (menu) menu.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Update dropdown toggle functionality
+            document.querySelectorAll('.listing-dropdown > a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const parent = this.parentElement;
+                    const isActive = parent.classList.contains('active');
+                    const dropdownMenu = parent.querySelector('.countries-list');
+                    
+                    // Close all other dropdowns first
+                    closeOtherDropdowns(parent);
+                    
+                    // Toggle current dropdown
+                    if (!isActive) {
+                        parent.classList.add('active');
+                        if (dropdownMenu) dropdownMenu.style.display = 'block';
+                    } else {
+                        parent.classList.remove('active');
+                        if (dropdownMenu) dropdownMenu.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.listing-dropdown')) {
+                    closeOtherDropdowns(null);
+                }
+            });
+            
+            // Close dropdowns on window resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    closeOtherDropdowns(null);
+                }, 250);
+            });
+        });
+        </script>
+</body>
 </html>

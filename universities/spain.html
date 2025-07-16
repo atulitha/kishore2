@@ -1,33 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Study in Spain | Business Management in Spain</title>
-    <meta name="description" content="Study Business Management in Spain - World-class business schools, vibrant culture, and excellent career opportunities in the heart of Europe.">
-    <meta name="keywords" content="Study in Spain, Business Management Spain, MBA in Spain, Spanish business schools, Study abroad Spain">
-
-    <!-- Favicons -->
-    <link href="../assets/img/favicon.png" rel="icon">
-    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Main CSS File -->
-    <link href="../assets/css/main.css" rel="stylesheet">
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Study in Spain | Business Management in Spain</title>
+<meta content="Study Business Management in Spain - World-class business schools, vibrant culture, and excellent career opportunities in the heart of Europe." name="description"/>
+<meta content="Study in Spain, Business Management Spain, MBA in Spain, Spanish business schools, Study abroad Spain" name="keywords"/>
+<!-- Favicons -->
+<link href="../assets/img/favicon.png" rel="icon"/>
+<link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Poppins:wght@300;400;500;600;700&amp;family=Nunito:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Vendor CSS Files -->
+<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+<link href="../assets/vendor/aos/aos.css" rel="stylesheet"/>
+<link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+<link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- Main CSS File -->
+<link href="../assets/css/main.css" rel="stylesheet"/>
+<style>
         :root {
             --spain-red: #AA151B;
             --spain-yellow: #F1BF00;
@@ -278,444 +273,689 @@
             background-color: var(--spain-red);
             color: white;
         }
-    </style>
+    
+        /* Mobile Menu Toggle Button */
+        .mobile-nav-toggle {
+            display: flex !important; /* Force display */
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            z-index: 1001;
+            position: relative;
+            background: rgba(13, 110, 253, 0.1);
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 1199px) {
+            .mobile-nav-toggle {
+                display: flex !important;
+            }
+
+            #navmenu > ul {
+                display: none !important;
+                position: fixed;
+                top: 80px;
+                left: 15px;
+                right: 15px;
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+                padding: 15px 0;
+                z-index: 1000;
+                max-height: calc(100vh - 120px);
+                overflow-y: auto;
+                flex-direction: column;
+                gap: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .mobile-nav-active #navmenu > ul,
+            #navmenu > ul.mobile-nav-active {
+                display: flex !important;
+                animation: fadeInDown 0.3s ease-out;
+            }
+
+            #navmenu > ul > li {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            #navmenu > ul > li:last-child {
+                border-bottom: none;
+            }
+
+            #navmenu > ul > li > a {
+                padding: 14px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #2c3e50;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.2s ease;
+            }
+
+            #navmenu > ul > li > a:hover,
+            #navmenu > ul > li > a:focus {
+                background-color: rgba(13, 110, 253, 0.05);
+                color: #0d6efd;
+            }
+
+            .listing-dropdown > a::after {
+                content: '\f282';
+                font-family: 'bootstrap-icons';
+                font-size: 12px;
+                margin-left: 8px;
+                transition: transform 0.3s ease;
+            }
+
+            .listing-dropdown.active > a::after {
+                transform: rotate(180deg);
+            }
+
+            .listing-dropdown .countries-list {
+                position: static !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 0 0 15px !important;
+                min-width: auto !important;
+                display: none;
+                animation: fadeIn 0.3s ease-out;
+                background-color: #f8f9fa;
+                border-radius: 0 0 8px 8px;
+            }
+
+            .listing-dropdown.active .countries-list {
+                display: block;
+                padding: 10px 15px 10px 30px !important;
+            }
+
+            .country-group {
+                flex-direction: column;
+                gap: 8px;
+                margin: 0;
+            }
+        }
+
+        /* Mobile menu visibility fix */
+        .mobile-nav-toggle {
+            display: none !important; /* Hide by default */
+        }
+        
+        @media (max-width: 1199.98px) {
+            .mobile-nav-toggle {
+                display: flex !important; /* Show only on mobile */
+            }
+            
+            /* Ensure desktop menu is hidden on mobile */
+            #navmenu > ul {
+                display: none !important;
+            }
+            
+            /* Show menu when active */
+            .mobile-nav-active #navmenu > ul {
+                display: flex !important;
+            }
+        }
+        
+        /* Dropdown positioning fix */
+        .listing-dropdown {
+            position: relative;
+        }
+        
+        .listing-dropdown .countries-list {
+            position: absolute;
+            right: 0;
+            left: auto;
+            min-width: 500px;
+            max-width: 90vw;
+        }
+        
+        @media (max-width: 1199.98px) {
+            .listing-dropdown .countries-list {
+                position: static !important;
+                min-width: auto !important;
+                max-width: 100%;
+                padding: 0 15px !important;
+                margin: 0 !important;
+            }
+        }
+        
+        /* Country-specific styles for Spain */
+        .country-hero {
+            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
+            padding: 100px 0 60px;
+            margin-top: 80px;
+        }
+        
+        .country-section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            padding: 32px 28px;
+            margin-bottom: 32px;
+        }
+        
+        .country-section h2 {
+            color: #0d6efd;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .country-section ul, 
+        .country-section ol {
+            padding-left: 20px;
+        }
+        
+        .country-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .country-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        
+        .country-table th, 
+        .country-table td {
+            padding: 12px 15px;
+            border: 1px solid #dee2e6;
+            text-align: left;
+        }
+        
+        .country-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .country-hero {
+                padding: 80px 0 40px;
+                margin-top: 70px;
+                text-align: center;
+            }
+            
+            .country-section {
+                padding: 20px 15px;
+            }
+        }
+        </style>
 </head>
-
-<body class="index-page">
-    <!-- Header -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-            <a href="../index.html" class="logo d-flex align-items-center">
-                <img src="../assets/img/kxy-logo.png" width="70" height="200" alt="">
-            </a>
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about-us.html">About</a></li>
-                    <li class="listing-dropdown">
-                        <a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul class="countries-list">
-                            <li class="country-group">
-                                <div class="country-item">
-                                    <a href="russia.html" title="Russia">Russia</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="georgia.html" title="Georgia">Georgia</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="ireland.html" title="Ireland">Ireland</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="netherlands.html" title="Netherlands">Netherlands</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="spain.html" title="Spain" class="active">Spain</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="uk.html" title="United Kingdom">United Kingdom</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="usa.html" title="United States">United States</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="canada.html" title="Canada">Canada</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="france.html" title="France">France</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="germany.html" title="Germany">Germany</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-
-            <a class="btn-getstarted flex-md-shrink-0" href="../index.html#about">Get Started</a>
-        </div>
-    </header>
-
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="spain-hero">
-            <div class="container">
-                <h1 class="display-4 fw-bold mb-4">Study Business Management in Spain</h1>
-                <p class="lead">World-class business education in one of Europe's most vibrant destinations</p>
-                <a href="#programs" class="btn btn-spain mt-3">Explore Programs</a>
-            </div>
-        </section>
-
-        <!-- Main Content -->
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Introduction -->
-                        <div class="spain-section">
-                            <h2 class="spain-title">Spain: A Premier Destination for Business Education</h2>
-                            <p>Spain has emerged as one of the top destinations for international students pursuing business management. Known for its vibrant culture, globally recognized business schools, and strong connections to European and global markets, Spain is home to some of the best management programs in the world, producing thousands of skilled managers, entrepreneurs, and business leaders every year.</p>
-                            
-                            <div class="highlight-box">
-                                <h5>Why Choose Spain for Business Management?</h5>
-                                <ul class="feature-list">
-                                    <li>High-quality education with focus on international business, strategy, and leadership</li>
-                                    <li>Globally recognized degrees, many programs triple-accredited (AACSB, EQUIS, AMBA)</li>
-                                    <li>Strong ties to European Union companies and global corporations</li>
-                                    <li>Paid internships and placement opportunities during and after study</li>
-                                    <li>Post-study stay-back options to work in Spain or Europe</li>
-                                    <li>Multicultural, warm, and student-friendly environment</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Quick Facts -->
-                        <div class="spain-section" id="programs">
-                            <h2 class="spain-title">Quick Facts</h2>
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                            <th>Course Duration</th>
-                                            <td>3–4 years (Bachelor's), 1–2 years (Master's/MBA)</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Medium of Instruction</th>
-                                            <td>English (or Spanish for some programs)</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Top Accreditations</th>
-                                            <td>AACSB, EQUIS, AMBA</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Tuition Fees</th>
-                                            <td>€8,000–€20,000/year (approx. ₹7–₹18 lakhs)</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Living Expenses</th>
-                                            <td>€7,000–€12,000/year (approx. ₹6–₹10 lakhs)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                            <div class="accreditation-badges">
-                                <h5>Top Accreditations:</h5>
-                                <span class="badge">AACSB</span>
-                                <span class="badge">EQUIS</span>
-                                <span class="badge">AMBA</span>
-                            </div>
-                        </div>
-
-                        <!-- Top Business Schools -->
-                        <div class="spain-section">
-                            <h2 class="spain-title">Top Business Schools in Spain (2025–26)</h2>
-                            <div class="university-list">
-                                <ul class="list-unstyled">
-                                    <li>• IE Business School, Madrid</li>
-                                    <li>• ESADE Business School, Barcelona</li>
-                                    <li>• IESE Business School, Barcelona</li>
-                                    <li>• EAE Business School</li>
-                                    <li>• EADA Business School, Barcelona</li>
-                                    <li>• ESIC Business & Marketing School</li>
-                                    <li>• Universidad Católica De Murcia Business School</li>
-                                    <li>• Universidad Carlos III de Madrid</li>
-                                    <li>• Universitat Pompeu Fabra, Barcelona</li>
-                                    <li>• Deusto Business School, Bilbao</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Eligibility Criteria -->
-                        <div class="spain-section">
-                            <h2 class="spain-title">Eligibility Criteria</h2>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4>Undergraduate (Bachelor's)</h4>
+<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Spain</h1><p class="lead">Discover top medical universities in Spain with affordable fees and world-class education</p></div></div></div></section>
+<!-- Header -->
+<header class="header d-flex align-items-center fixed-top" id="header">
+<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<a class="logo d-flex align-items-center" href="../index.html">
+<img alt="" height="200" src="../assets/img/kxy-logo.png" width="70"/>
+</a>
+<nav class="navmenu" id="navmenu">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../about-us.html">About</a></li>
+<li class="listing-dropdown">
+<a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+<ul class="countries-list">
+<li class="country-group">
+<div class="country-item">
+<a href="russia.html" title="Russia">Russia</a>
+</div>
+<div class="country-item">
+<a href="georgia.html" title="Georgia">Georgia</a>
+</div>
+<div class="country-item">
+<a href="kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
+</div>
+<div class="country-item">
+<a href="uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
+</div>
+<div class="country-item">
+<a href="ireland.html" title="Ireland">Ireland</a>
+</div>
+<div class="country-item">
+<a href="netherlands.html" title="Netherlands">Netherlands</a>
+</div>
+<div class="country-item">
+<a class="active" href="spain.html" title="Spain">Spain</a>
+</div>
+<div class="country-item">
+<a href="uk.html" title="United Kingdom">United Kingdom</a>
+</div>
+<div class="country-item">
+<a href="usa.html" title="United States">United States</a>
+</div>
+<div class="country-item">
+<a href="canada.html" title="Canada">Canada</a>
+</div>
+<div class="country-item">
+<a href="france.html" title="France">France</a>
+</div>
+<div class="country-item">
+<a href="germany.html" title="Germany">Germany</a>
+</div>
+</li>
+</ul>
+</li>
+<li><a href="../index.html#contact">Contact</a></li>
+</ul>
+<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+<a class="btn-getstarted flex-md-shrink-0" href="../index.html#about">Get Started</a>
+</div>
+</header>
+<main class="main">
+<!-- Hero Section -->
+<section class="spain-hero country-section">
+<div class="container">
+<h1 class="display-4 fw-bold mb-4">Study Business Management in Spain</h1>
+<p class="lead">World-class business education in one of Europe's most vibrant destinations</p>
+<a class="btn btn-spain mt-3" href="#programs">Explore Programs</a>
+</div>
+</section>
+<!-- Main Content -->
+<section class="section country-section">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<!-- Introduction -->
+<div class="spain-section">
+<h2 class="spain-title">Spain: A Premier Destination for Business Education</h2>
+<p>Spain has emerged as one of the top destinations for international students pursuing business management. Known for its vibrant culture, globally recognized business schools, and strong connections to European and global markets, Spain is home to some of the best management programs in the world, producing thousands of skilled managers, entrepreneurs, and business leaders every year.</p>
+<div class="highlight-box">
+<h5>Why Choose Spain for Business Management?</h5>
+<ul class="feature-list">
+<li>High-quality education with focus on international business, strategy, and leadership</li>
+<li>Globally recognized degrees, many programs triple-accredited (AACSB, EQUIS, AMBA)</li>
+<li>Strong ties to European Union companies and global corporations</li>
+<li>Paid internships and placement opportunities during and after study</li>
+<li>Post-study stay-back options to work in Spain or Europe</li>
+<li>Multicultural, warm, and student-friendly environment</li>
+</ul>
+</div>
+</div>
+<!-- Quick Facts -->
+<div class="spain-section" id="programs">
+<h2 class="spain-title">Quick Facts</h2>
+<div class="table-responsive">
+<table class="table table-bordered country-table table table-striped">
+<tbody>
+<tr>
+<th>Course Duration</th>
+<td>3–4 years (Bachelor's), 1–2 years (Master's/MBA)</td>
+</tr>
+<tr>
+<th>Medium of Instruction</th>
+<td>English (or Spanish for some programs)</td>
+</tr>
+<tr>
+<th>Top Accreditations</th>
+<td>AACSB, EQUIS, AMBA</td>
+</tr>
+<tr>
+<th>Tuition Fees</th>
+<td>€8,000–€20,000/year (approx. ₹7–₹18 lakhs)</td>
+</tr>
+<tr>
+<th>Living Expenses</th>
+<td>€7,000–€12,000/year (approx. ₹6–₹10 lakhs)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="accreditation-badges">
+<h5>Top Accreditations:</h5>
+<span class="badge">AACSB</span>
+<span class="badge">EQUIS</span>
+<span class="badge">AMBA</span>
+</div>
+</div>
+<!-- Top Business Schools -->
+<div class="spain-section">
+<h2 class="spain-title">Top Business Schools in Spain (2025–26)</h2>
+<div class="university-list">
+<ul class="list-unstyled">
+<li>• IE Business School, Madrid</li>
+<li>• ESADE Business School, Barcelona</li>
+<li>• IESE Business School, Barcelona</li>
+<li>• EAE Business School</li>
+<li>• EADA Business School, Barcelona</li>
+<li>• ESIC Business &amp; Marketing School</li>
+<li>• Universidad Católica De Murcia Business School</li>
+<li>• Universidad Carlos III de Madrid</li>
+<li>• Universitat Pompeu Fabra, Barcelona</li>
+<li>• Deusto Business School, Bilbao</li>
+</ul>
+</div>
+</div>
+<!-- Eligibility Criteria -->
+<div class="spain-section">
+<h2 class="spain-title">Eligibility Criteria</h2>
+<div class="row">
+<div class="col-md-6">
+<h4>Undergraduate (Bachelor's)</h4>
+<ul>
+<li>Minimum 17 years old by start of course</li>
+<li>12th grade with good academic record (70%+ preferred)</li>
+<li>IELTS 6.0+ or TOEFL iBT 80+</li>
+<li>No entrance exam for most universities</li>
+<li>Some competitive programs may require SAT/essay/SOP</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4>Postgraduate (Master's/MBA)</h4>
+<ul>
+<li>Bachelor's degree in any field (business-related preferred)</li>
+<li>GPA equivalent to 3.0/4.0 or 75%+</li>
+<li>IELTS 6.5–7.0 or TOEFL iBT 90+</li>
+<li>Work experience (2–3 years) preferred for MBA</li>
+<li>GMAT/GRE not always required but recommended</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Application Process -->
+<div class="spain-section">
+<h2 class="spain-title">How to Apply</h2>
+<ol>
+<li>Research and shortlist universities &amp; programs</li>
+<li>Check eligibility and application deadlines (Fall intake preferred)</li>
+<li>Take required English proficiency test (IELTS/TOEFL)</li>
+<li>Prepare application documents:
                                     <ul>
-                                        <li>Minimum 17 years old by start of course</li>
-                                        <li>12th grade with good academic record (70%+ preferred)</li>
-                                        <li>IELTS 6.0+ or TOEFL iBT 80+</li>
-                                        <li>No entrance exam for most universities</li>
-                                        <li>Some competitive programs may require SAT/essay/SOP</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h4>Postgraduate (Master's/MBA)</h4>
-                                    <ul>
-                                        <li>Bachelor's degree in any field (business-related preferred)</li>
-                                        <li>GPA equivalent to 3.0/4.0 or 75%+</li>
-                                        <li>IELTS 6.5–7.0 or TOEFL iBT 90+</li>
-                                        <li>Work experience (2–3 years) preferred for MBA</li>
-                                        <li>GMAT/GRE not always required but recommended</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Application Process -->
-                        <div class="spain-section">
-                            <h2 class="spain-title">How to Apply</h2>
-                            <ol>
-                                <li>Research and shortlist universities & programs</li>
-                                <li>Check eligibility and application deadlines (Fall intake preferred)</li>
-                                <li>Take required English proficiency test (IELTS/TOEFL)</li>
-                                <li>Prepare application documents:
-                                    <ul>
-                                        <li>Academic transcripts & certificates</li>
-                                        <li>Statement of Purpose (SOP)</li>
-                                        <li>Letters of Recommendation (2–3)</li>
-                                        <li>Resume/CV (for Master's/MBA)</li>
-                                        <li>Proof of English proficiency</li>
-                                        <li>Passport copy</li>
-                                    </ul>
-                                </li>
-                                <li>Submit online application</li>
-                                <li>Receive admission offer</li>
-                                <li>Apply for Spanish student visa</li>
-                                <li>Book travel and attend pre-departure orientation</li>
-                            </ol>
-                        </div>
-
-                        <!-- FAQ Section -->
-                        <div class="spain-section">
-                            <h2 class="spain-title">Frequently Asked Questions</h2>
-                            
-                            <div class="faq-item">
-                                <div class="faq-question">What is the cost of studying Business Management in Spain?</div>
-                                <div class="faq-answer">
-                                    <p>• Bachelor's in Business: €8,000–€20,000/year (approx. ₹7–₹18 lakhs)</p>
-                                    <p>• Master's/MBA: €15,000–€40,000/year (approx. ₹13–₹35 lakhs)</p>
-                                    <p>• Living expenses: €7,000–€12,000/year (approx. ₹6–₹10 lakhs)</p>
-                                    <p>• Scholarships and financial aid are available at most institutions</p>
-                                </div>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <div class="faq-question">What are the job prospects after studying in Spain?</div>
-                                <div class="faq-answer">
-                                    <p>Spain and the EU have a strong demand for management professionals in:</p>
-                                    <ul>
-                                        <li>Finance & Banking</li>
-                                        <li>Marketing & Sales</li>
-                                        <li>Consulting & Strategy</li>
-                                        <li>International Business</li>
-                                        <li>Entrepreneurship</li>
-                                    </ul>
-                                    <p><strong>Post-Study Work Options:</strong></p>
-                                    <p>• 1-year post-study visa to find employment</p>
-                                    <p>• Opportunity to work in Spain or elsewhere in the EU</p>
-                                    <p>• Average starting salaries: €25,000–€45,000/year for graduates</p>
-                                </div>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <div class="faq-question">Is a Business degree from Spain recognized in India?</div>
-                                <div class="faq-answer">
-                                    <p>✅ Yes — Degrees from accredited Spanish universities are globally recognized, including in India.</p>
-                                    <p>✅ For government jobs or further studies in India, you may need an equivalence certificate from AIU.</p>
-                                    <p>✅ Triple-accredited programs (AACSB, EQUIS, AMBA) are highly valued by employers worldwide.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <div class="faq-question">Do I need to know Spanish to study in Spain?</div>
-                                <div class="faq-answer">
-                                    <p>• <strong>For English-taught programs:</strong> No Spanish is required for admission, but basic Spanish is recommended for daily life.</p>
-                                    <p>• <strong>For Spanish-taught programs:</strong> DELE B2 or equivalent is typically required.</p>
-                                    <p>• Many schools offer free Spanish language courses for international students.</p>
-                                    <p>• Learning Spanish enhances your experience and job prospects in Spain.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="faq-item">
-                                <div class="faq-question">What is student life like in Spain?</div>
-                                <div class="faq-answer">
-                                    <p>• Vibrant and social atmosphere with many cultural activities</p>
-                                    <p>• Excellent weather and outdoor lifestyle</p>
-                                    <p>• Rich cultural heritage and diverse international community</p>
-                                    <p>• Affordable cost of living compared to other Western European countries</p>
-                                    <p>• Well-connected to the rest of Europe for travel opportunities</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p>Contact Us</p>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row gy-4">
-                <div class="col-lg-6">
-                    <div class="row gy-4">
-                        <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                <i class="bi bi-geo-alt"></i>
-                                <h3>Address</h3>
-                                <p>rajuvolu</p>
-                                <p>russian tuppalu, 535022</p>
-                            </div>
-                        </div><!-- End Info Item -->
-
-                        <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                <i class="bi bi-telephone"></i>
-                                <h3>Call Us</h3>
-                                <p>+91-6304705445</p>
-                                <p>+91-8125423017</p>
-                            </div>
-                        </div><!-- End Info Item -->
-
-                        <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="400">
-                                <i class="bi bi-envelope"></i>
-                                <h3>Email Us</h3>
-                                <p>projectk1international@gmail.com</p>
-                                <p>projectk1international@gmail.com</p>
-                            </div>
-                        </div><!-- End Info Item -->
-
-                        <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="500">
-                                <i class="bi bi-clock"></i>
-                                <h3>Open Hours</h3>
-                                <p>Monday - Friday</p>
-                                <p>9:00AM - 05:00PM</p>
-                            </div>
-                        </div><!-- End Info Item -->
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                            </div>
-
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                            </div>
-
-                            <div class="col-12">
-                                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                            </div>
-
-                            <div class="col-12">
-                                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                            </div>
-
-                            <div class="col-12 text-center">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                                <button type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div><!-- End Contact Form -->
-            </div>
-        </div>
-    </section><!-- /Contact Section -->
-
-    <!-- Footer -->
-    <footer id="footer" class="footer">
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">Study Abroad</span>
-                    </a>
-                    <p>Your trusted partner for international education and career guidance. We help students achieve their dreams of studying at top universities worldwide.</p>
-                    <div class="social-links d-flex mt-4">
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About us</a></li>
-                        <li><a href="../courses.html">Courses</a></li>
-                        <li><a href="../universities.html">Universities</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Popular Courses</h4>
-                    <ul>
-                        <li><a href="#">Business Management</a></li>
-                        <li><a href="#">International Business</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Finance</a></li>
-                        <li><a href="#">MBA Programs</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
-                    <p>
-                        <strong>Address:</strong> 123 Education Street, Madrid, Spain<br>
-                        <strong>Phone:</strong> +34 91 123 45 67<br>
-                        <strong>Email:</strong> spain@studyabroad.com<br>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1">Study Abroad</strong> <span>All Rights Reserved</span></p>
-        </div>
-    </footer>
-
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
-    <!-- Vendor JS Files -->
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/php-email-form/validate.js"></script>
-    <script src="../assets/vendor/aos/aos.js"></script>
-    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-    <!-- Main JS File -->
-    <script src="../assets/js/main.js"></script>
+<li>Academic transcripts &amp; certificates</li>
+<li>Statement of Purpose (SOP)</li>
+<li>Letters of Recommendation (2–3)</li>
+<li>Resume/CV (for Master's/MBA)</li>
+<li>Proof of English proficiency</li>
+<li>Passport copy</li>
+</ul>
+</li>
+<li>Submit online application</li>
+<li>Receive admission offer</li>
+<li>Apply for Spanish student visa</li>
+<li>Book travel and attend pre-departure orientation</li>
+</ol>
+</div>
+<!-- FAQ Section -->
+<div class="spain-section">
+<h2 class="spain-title">Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-question">What is the cost of studying Business Management in Spain?</div>
+<div class="faq-answer">
+<p>• Bachelor's in Business: €8,000–€20,000/year (approx. ₹7–₹18 lakhs)</p>
+<p>• Master's/MBA: €15,000–€40,000/year (approx. ₹13–₹35 lakhs)</p>
+<p>• Living expenses: €7,000–€12,000/year (approx. ₹6–₹10 lakhs)</p>
+<p>• Scholarships and financial aid are available at most institutions</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What are the job prospects after studying in Spain?</div>
+<div class="faq-answer">
+<p>Spain and the EU have a strong demand for management professionals in:</p>
+<ul>
+<li>Finance &amp; Banking</li>
+<li>Marketing &amp; Sales</li>
+<li>Consulting &amp; Strategy</li>
+<li>International Business</li>
+<li>Entrepreneurship</li>
+</ul>
+<p><strong>Post-Study Work Options:</strong></p>
+<p>• 1-year post-study visa to find employment</p>
+<p>• Opportunity to work in Spain or elsewhere in the EU</p>
+<p>• Average starting salaries: €25,000–€45,000/year for graduates</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Is a Business degree from Spain recognized in India?</div>
+<div class="faq-answer">
+<p>✅ Yes — Degrees from accredited Spanish universities are globally recognized, including in India.</p>
+<p>✅ For government jobs or further studies in India, you may need an equivalence certificate from AIU.</p>
+<p>✅ Triple-accredited programs (AACSB, EQUIS, AMBA) are highly valued by employers worldwide.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Do I need to know Spanish to study in Spain?</div>
+<div class="faq-answer">
+<p>• <strong>For English-taught programs:</strong> No Spanish is required for admission, but basic Spanish is recommended for daily life.</p>
+<p>• <strong>For Spanish-taught programs:</strong> DELE B2 or equivalent is typically required.</p>
+<p>• Many schools offer free Spanish language courses for international students.</p>
+<p>• Learning Spanish enhances your experience and job prospects in Spain.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What is student life like in Spain?</div>
+<div class="faq-answer">
+<p>• Vibrant and social atmosphere with many cultural activities</p>
+<p>• Excellent weather and outdoor lifestyle</p>
+<p>• Rich cultural heritage and diverse international community</p>
+<p>• Affordable cost of living compared to other Western European countries</p>
+<p>• Well-connected to the rest of Europe for travel opportunities</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Contact Section -->
+<section class="contact section country-section" id="contact">
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+<h2>Contact</h2>
+<p>Contact Us</p>
+</div><!-- End Section Title -->
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+<div class="row gy-4">
+<div class="col-lg-6">
+<div class="row gy-4">
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="200">
+<i class="bi bi-geo-alt"></i>
+<h3>Address</h3>
+<p>rajuvolu</p>
+<p>russian tuppalu, 535022</p>
+</div>
+</div><!-- End Info Item -->
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="300">
+<i class="bi bi-telephone"></i>
+<h3>Call Us</h3>
+<p>+91-6304705445</p>
+<p>+91-8125423017</p>
+</div>
+</div><!-- End Info Item -->
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="400">
+<i class="bi bi-envelope"></i>
+<h3>Email Us</h3>
+<p>projectk1international@gmail.com</p>
+<p>projectk1international@gmail.com</p>
+</div>
+</div><!-- End Info Item -->
+<div class="col-md-6">
+<div class="info-item" data-aos="fade" data-aos-delay="500">
+<i class="bi bi-clock"></i>
+<h3>Open Hours</h3>
+<p>Monday - Friday</p>
+<p>9:00AM - 05:00PM</p>
+</div>
+</div><!-- End Info Item -->
+</div>
+</div>
+<div class="col-lg-6">
+<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
+<div class="row gy-4">
+<div class="col-md-6">
+<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="col-md-6">
+<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
+</div>
+<div class="col-12">
+<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
+</div>
+<div class="col-12">
+<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
+</div>
+<div class="col-12 text-center">
+<div class="loading">Loading</div>
+<div class="error-message"></div>
+<div class="sent-message">Your message has been sent. Thank you!</div>
+<button type="submit">Send Message</button>
+</div>
+</div>
+</form>
+</div><!-- End Contact Form -->
+</div>
+</div>
+</section><!-- /Contact Section -->
+<!-- Footer -->
+<footer class="footer" id="footer">
+<div class="container footer-top">
+<div class="row gy-4">
+<div class="col-lg-5 col-md-12 footer-about">
+<a class="logo d-flex align-items-center" href="index.html">
+<span class="sitename">Study Abroad</span>
+</a>
+<p>Your trusted partner for international education and career guidance. We help students achieve their dreams of studying at top universities worldwide.</p>
+<div class="social-links d-flex mt-4">
+<a href="#"><i class="bi bi-twitter"></i></a>
+<a href="#"><i class="bi bi-facebook"></i></a>
+<a href="#"><i class="bi bi-instagram"></i></a>
+<a href="#"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-6 footer-links">
+<h4>Useful Links</h4>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../about.html">About us</a></li>
+<li><a href="../courses.html">Courses</a></li>
+<li><a href="../universities.html">Universities</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-lg-2 col-6 footer-links">
+<h4>Popular Courses</h4>
+<ul>
+<li><a href="#">Business Management</a></li>
+<li><a href="#">International Business</a></li>
+<li><a href="#">Marketing</a></li>
+<li><a href="#">Finance</a></li>
+<li><a href="#">MBA Programs</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+<h4>Contact Us</h4>
+<p>
+<strong>Address:</strong> 123 Education Street, Madrid, Spain<br/>
+<strong>Phone:</strong> +34 91 123 45 67<br/>
+<strong>Email:</strong> spain@studyabroad.com<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="container copyright text-center mt-4">
+<p>© <span>Copyright</span> <strong class="px-1">Study Abroad</strong> <span>All Rights Reserved</span></p>
+</div>
+</footer>
+<!-- Scroll Top -->
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top">
+<i class="bi bi-arrow-up-short"></i>
+</a>
+<!-- Preloader -->
+<div id="preloader">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/php-email-form/validate.js"></script>
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+<!-- Main JS File -->
+<script src="../assets/js/main.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to close all dropdowns except the current one
+            function closeOtherDropdowns(currentDropdown) {
+                document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
+                    if (dropdown !== currentDropdown) {
+                        dropdown.classList.remove('active');
+                        const menu = dropdown.querySelector('.countries-list');
+                        if (menu) menu.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Update dropdown toggle functionality
+            document.querySelectorAll('.listing-dropdown > a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const parent = this.parentElement;
+                    const isActive = parent.classList.contains('active');
+                    const dropdownMenu = parent.querySelector('.countries-list');
+                    
+                    // Close all other dropdowns first
+                    closeOtherDropdowns(parent);
+                    
+                    // Toggle current dropdown
+                    if (!isActive) {
+                        parent.classList.add('active');
+                        if (dropdownMenu) dropdownMenu.style.display = 'block';
+                    } else {
+                        parent.classList.remove('active');
+                        if (dropdownMenu) dropdownMenu.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.listing-dropdown')) {
+                    closeOtherDropdowns(null);
+                }
+            });
+            
+            // Close dropdowns on window resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    closeOtherDropdowns(null);
+                }, 250);
+            });
+        });
+        </script>
 </body>
-
 </html>

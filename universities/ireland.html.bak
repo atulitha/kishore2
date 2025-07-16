@@ -4,11 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Study in Spain | Business Management in Spain</title>
-<meta content="Study Business Management in Spain - World-class business schools, vibrant culture, and excellent career opportunities in the heart of Europe." name="description"/>
-<meta content="Study in Spain, Business Management Spain, MBA in Spain, Spanish business schools, Study abroad Spain" name="keywords"/>
+<title>Study in Ireland | Engineering &amp; Business Management in Ireland</title>
+<meta content="Study Engineering &amp; Business Management in Ireland - World-class education, excellent career prospects, and a welcoming multicultural environment in the heart of Europe." name="description"/>
+<meta content="Study in Ireland, Engineering Ireland, Business Management Ireland, Irish universities, Study abroad Ireland" name="keywords"/>
 <!-- Favicons -->
-<link href="../assets/img/kxy-logo.png" rel="icon"/>
+<link href="../assets/img/favicon.png" rel="icon"/>
 <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -24,9 +24,9 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
         :root {
-            --spain-red: #AA151B;
-            --spain-yellow: #F1BF00;
-            --spain-dark: #1B1B1B;
+            --ireland-green: #169B62;
+            --ireland-orange: #FF883E;
+            --ireland-white: #FFFFFF;
         }
         
         /* Header and Navigation Styling */
@@ -73,8 +73,8 @@
         
         #navmenu > ul > li > a:hover,
         #navmenu > ul > li > a.active {
-            color: var(--spain-red);
-            background: rgba(170, 21, 27, 0.1);
+            color: var(--ireland-green);
+            background: rgba(22, 155, 98, 0.1);
         }
         
         .logo {
@@ -122,63 +122,63 @@
         }
         
         .country-item a:hover {
-            color: var(--spain-red);
+            color: var(--ireland-green);
         }
         
         .country-item a.active {
-            color: var(--spain-red);
+            color: var(--ireland-green);
             font-weight: 600;
         }
         
-        .spain-hero {
+        .ireland-hero {
             background: linear-gradient(135deg, #f8f9fa 60%, #f0f0f0 100%);
             padding: 80px 0 50px 0;
             text-align: center;
-            border-bottom: 4px solid var(--spain-red);
+            border-bottom: 4px solid var(--ireland-green);
             position: relative;
             overflow: hidden;
         }
         
-        .spain-hero:after {
+        .ireland-hero:after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--spain-yellow);
+            background: var(--ireland-orange);
         }
         
-        .spain-section {
+        .ireland-section {
             background: #fff;
             border-radius: 16px;
             box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
             padding: 32px 28px;
             margin-bottom: 32px;
-            border-top: 3px solid var(--spain-red);
+            border-top: 3px solid var(--ireland-green);
         }
         
-        .spain-title {
-            color: var(--spain-red);
+        .ireland-title {
+            color: var(--ireland-green);
             font-weight: 700;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
         
-        .spain-title:after {
+        .ireland-title:after {
             content: '';
             position: absolute;
             left: 0;
             bottom: 0;
             width: 60px;
             height: 4px;
-            background: var(--spain-yellow);
+            background: var(--ireland-orange);
         }
         
         .highlight-box {
             background: #f8f9fa;
-            border-left: 4px solid var(--spain-red);
+            border-left: 4px solid var(--ireland-green);
             padding: 15px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
@@ -196,7 +196,7 @@
         
         .feature-list li:before {
             content: "✓";
-            color: var(--spain-red);
+            color: var(--ireland-green);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -225,18 +225,18 @@
         
         .faq-question {
             font-weight: 600;
-            color: var(--spain-red);
+            color: var(--ireland-green);
             margin-bottom: 8px;
             font-size: 1.1rem;
         }
         
         .table th {
             background-color: #f8f9fa;
-            color: var(--spain-red);
+            color: var(--ireland-green);
         }
         
-        .btn-spain {
-            background-color: var(--spain-red);
+        .btn-ireland {
+            background-color: var(--ireland-green);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -245,16 +245,42 @@
             transition: all 0.3s;
         }
         
-        .btn-spain:hover {
-            background-color: var(--spain-yellow);
-            color: var(--spain-dark);
+        .btn-ireland:hover {
+            background-color: var(--ireland-orange);
+            color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
+        .program-tabs {
+            margin: 30px 0;
+        }
+        
+        .nav-tabs .nav-link {
+            color: var(--ireland-green);
+            font-weight: 600;
+            border: none;
+            padding: 12px 25px;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: var(--ireland-green);
+            color: white;
+            border: none;
+        }
+        
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        
         .badge {
             background-color: #f0f4f8;
-            color: var(--spain-red);
+            color: var(--ireland-green);
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -270,7 +296,7 @@
         }
         
         .accreditation-badges .badge {
-            background-color: var(--spain-red);
+            background-color: var(--ireland-green);
             color: white;
         }
     
@@ -429,7 +455,7 @@
             }
         }
         
-        /* Country-specific styles for Spain */
+        /* Country-specific styles for Ireland */
         .country-hero {
             background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
             padding: 100px 0 60px;
@@ -502,7 +528,7 @@
         }
         </style>
 </head>
-<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Spain</h1><p class="lead">Discover top medical universities in Spain with affordable fees and world-class education</p></div></div></div></section>
+<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Ireland</h1><p class="lead">Discover top medical universities in Ireland with affordable fees and world-class education</p></div></div></div></section>
 <!-- Header -->
 <header class="header d-flex align-items-center fixed-top" id="header">
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -530,13 +556,13 @@
 <a href="uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
 </div>
 <div class="country-item">
-<a href="ireland.html" title="Ireland">Ireland</a>
+<a class="active" href="ireland.html" title="Ireland">Ireland</a>
 </div>
 <div class="country-item">
 <a href="netherlands.html" title="Netherlands">Netherlands</a>
 </div>
 <div class="country-item">
-<a class="active" href="spain.html" title="Spain">Spain</a>
+<a href="spain.html" title="Spain">Spain</a>
 </div>
 <div class="country-item">
 <a href="uk.html" title="United Kingdom">United Kingdom</a>
@@ -565,11 +591,11 @@
 </header>
 <main class="main">
 <!-- Hero Section -->
-<section class="spain-hero country-section">
+<section class="ireland-hero country-section">
 <div class="container">
-<h1 class="display-4 fw-bold mb-4">Study Business Management in Spain</h1>
-<p class="lead">World-class business education in one of Europe's most vibrant destinations</p>
-<a class="btn btn-spain mt-3" href="#programs">Explore Programs</a>
+<h1 class="display-4 fw-bold mb-4">Study in Ireland</h1>
+<p class="lead">World-class education in Engineering &amp; Business Management with excellent career prospects</p>
+<a class="btn btn-ireland mt-3" href="#programs">Explore Programs</a>
 </div>
 </section>
 <!-- Main Content -->
@@ -578,104 +604,197 @@
 <div class="row">
 <div class="col-lg-12">
 <!-- Introduction -->
-<div class="spain-section">
-<h2 class="spain-title">Spain: A Premier Destination for Business Education</h2>
-<p>Spain has emerged as one of the top destinations for international students pursuing business management. Known for its vibrant culture, globally recognized business schools, and strong connections to European and global markets, Spain is home to some of the best management programs in the world, producing thousands of skilled managers, entrepreneurs, and business leaders every year.</p>
+<div class="ireland-section">
+<h2 class="ireland-title">Ireland: Excellence in Education</h2>
+<p>Ireland has rapidly emerged as one of the top destinations for international students pursuing Engineering and Business Management. Known for its high academic standards, innovation-driven economy, and globally connected campuses, Ireland is home to some of Europe's best universities and business schools, producing skilled engineers, managers, and entrepreneurs every year.</p>
+<div class="row mt-4">
+<div class="col-md-6">
 <div class="highlight-box">
-<h5>Why Choose Spain for Business Management?</h5>
+<h5>Why Choose Ireland for Engineering?</h5>
 <ul class="feature-list">
-<li>High-quality education with focus on international business, strategy, and leadership</li>
-<li>Globally recognized degrees, many programs triple-accredited (AACSB, EQUIS, AMBA)</li>
-<li>Strong ties to European Union companies and global corporations</li>
-<li>Paid internships and placement opportunities during and after study</li>
-<li>Post-study stay-back options to work in Spain or Europe</li>
-<li>Multicultural, warm, and student-friendly environment</li>
+<li>World-class research facilities and industry partnerships</li>
+<li>Degrees accredited by Engineers Ireland</li>
+<li>Strong focus on innovation and technology</li>
+<li>2-year post-study work visa for international graduates</li>
+<li>Home to major tech and engineering companies</li>
 </ul>
 </div>
 </div>
+<div class="col-md-6">
+<div class="highlight-box">
+<h5>Why Choose Ireland for Business Management?</h5>
+<ul class="feature-list">
+<li>Globally recognized business schools</li>
+<li>Triple-accredited programs (AACSB, EQUIS, AMBA)</li>
+<li>Strong connections with global corporations</li>
+<li>2-year post-study work visa</li>
+<li>Gateway to European business markets</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <!-- Quick Facts -->
-<div class="spain-section" id="programs">
-<h2 class="spain-title">Quick Facts</h2>
+<div class="ireland-section" id="programs">
+<h2 class="ireland-title">Quick Facts</h2>
 <div class="table-responsive">
 <table class="table table-bordered country-table table table-striped">
 <tbody>
 <tr>
 <th>Course Duration</th>
-<td>3–4 years (Bachelor's), 1–2 years (Master's/MBA)</td>
+<td>3–4 years (Bachelor's), 1–2 years (Master's)</td>
 </tr>
 <tr>
 <th>Medium of Instruction</th>
-<td>English (or Spanish for some programs)</td>
+<td>English</td>
 </tr>
 <tr>
 <th>Top Accreditations</th>
-<td>AACSB, EQUIS, AMBA</td>
+<td>Engineers Ireland, AACSB, EQUIS, AMBA</td>
 </tr>
 <tr>
 <th>Tuition Fees</th>
-<td>€8,000–€20,000/year (approx. ₹7–₹18 lakhs)</td>
+<td>€12,000–€25,000/year (approx. ₹10–₹22 lakhs)</td>
 </tr>
 <tr>
 <th>Living Expenses</th>
-<td>€7,000–€12,000/year (approx. ₹6–₹10 lakhs)</td>
+<td>€8,000–€12,000/year (approx. ₹7–₹10 lakhs)</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="accreditation-badges">
 <h5>Top Accreditations:</h5>
+<span class="badge">Engineers Ireland</span>
 <span class="badge">AACSB</span>
 <span class="badge">EQUIS</span>
 <span class="badge">AMBA</span>
 </div>
 </div>
-<!-- Top Business Schools -->
-<div class="spain-section">
-<h2 class="spain-title">Top Business Schools in Spain (2025–26)</h2>
+<!-- Top Universities -->
+<div class="ireland-section">
+<h2 class="ireland-title">Top Irish Universities (2025–26)</h2>
 <div class="university-list">
 <ul class="list-unstyled">
-<li>• IE Business School, Madrid</li>
-<li>• ESADE Business School, Barcelona</li>
-<li>• IESE Business School, Barcelona</li>
-<li>• EAE Business School</li>
-<li>• EADA Business School, Barcelona</li>
-<li>• ESIC Business &amp; Marketing School</li>
-<li>• Universidad Católica De Murcia Business School</li>
-<li>• Universidad Carlos III de Madrid</li>
-<li>• Universitat Pompeu Fabra, Barcelona</li>
-<li>• Deusto Business School, Bilbao</li>
+<li>• Trinity College Dublin</li>
+<li>• University College Dublin</li>
+<li>• University College Cork</li>
+<li>• National University of Ireland, Galway</li>
+<li>• Dublin City University</li>
+<li>• University of Limerick</li>
+<li>• Maynooth University</li>
+<li>• Technological University Dublin</li>
+<li>• Atlantic Technological University</li>
+<li>• Munster Technological University</li>
 </ul>
 </div>
 </div>
-<!-- Eligibility Criteria -->
-<div class="spain-section">
-<h2 class="spain-title">Eligibility Criteria</h2>
+<!-- Program Tabs -->
+<div class="ireland-section">
+<h2 class="ireland-title">Program Details</h2>
+<ul class="nav nav-tabs" id="programTabs" role="tablist">
+<li class="nav-item" role="presentation">
+<button aria-controls="engineering" aria-selected="true" class="nav-link active" data-bs-target="#engineering" data-bs-toggle="tab" id="engineering-tab" role="tab" type="button">Engineering</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="business" aria-selected="false" class="nav-link" data-bs-target="#business" data-bs-toggle="tab" id="business-tab" role="tab" type="button">Business Management</button>
+</li>
+</ul>
+<div class="tab-content" id="programTabsContent">
+<!-- Engineering Tab -->
+<div aria-labelledby="engineering-tab" class="tab-pane fade show active" id="engineering" role="tabpanel">
+<h4>Engineering Programs in Ireland</h4>
+<p>Ireland offers world-class engineering education with strong industry connections and excellent career prospects. Irish engineering degrees are recognized globally and accredited by Engineers Ireland.</p>
+<h5 class="mt-4">Popular Engineering Disciplines:</h5>
 <div class="row">
 <div class="col-md-6">
-<h4>Undergraduate (Bachelor's)</h4>
 <ul>
-<li>Minimum 17 years old by start of course</li>
-<li>12th grade with good academic record (70%+ preferred)</li>
-<li>IELTS 6.0+ or TOEFL iBT 80+</li>
-<li>No entrance exam for most universities</li>
-<li>Some competitive programs may require SAT/essay/SOP</li>
+<li>Mechanical Engineering</li>
+<li>Civil Engineering</li>
+<li>Electrical &amp; Electronic Engineering</li>
+<li>Computer Science &amp; IT</li>
 </ul>
 </div>
 <div class="col-md-6">
-<h4>Postgraduate (Master's/MBA)</h4>
 <ul>
-<li>Bachelor's degree in any field (business-related preferred)</li>
-<li>GPA equivalent to 3.0/4.0 or 75%+</li>
-<li>IELTS 6.5–7.0 or TOEFL iBT 90+</li>
-<li>Work experience (2–3 years) preferred for MBA</li>
-<li>GMAT/GRE not always required but recommended</li>
+<li>Biomedical Engineering</li>
+<li>Chemical Engineering</li>
+<li>Energy Engineering</li>
+<li>Data Science</li>
 </ul>
+</div>
+</div>
+<h5 class="mt-4">Eligibility Criteria</h5>
+<div class="row">
+<div class="col-md-6">
+<h6>Undergraduate (BEng/BSc):</h6>
+<ul>
+<li>12th grade with Physics, Chemistry &amp; Mathematics</li>
+<li>Minimum 70-75% in 12th grade</li>
+<li>IELTS 6.0-6.5 or equivalent</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h6>Postgraduate (MEng/MSc):</h6>
+<ul>
+<li>Bachelor's degree in relevant engineering field</li>
+<li>Minimum 60-70% in bachelor's degree</li>
+<li>IELTS 6.5 or equivalent</li>
+<li>Statement of Purpose &amp; Letters of Recommendation</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Business Management Tab -->
+<div aria-labelledby="business-tab" class="tab-pane fade" id="business" role="tabpanel">
+<h4>Business Management Programs in Ireland</h4>
+<p>Ireland's business schools are globally recognized for their excellence in management education, with strong industry connections and triple accreditation (AACSB, EQUIS, AMBA).</p>
+<h5 class="mt-4">Popular Business Programs:</h5>
+<div class="row">
+<div class="col-md-6">
+<ul>
+<li>Bachelor of Business Studies (BBS)</li>
+<li>BSc in Business &amp; Management</li>
+<li>Master of Business Administration (MBA)</li>
+<li>MSc in International Business</li>
+</ul>
+</div>
+<div class="col-md-6">
+<ul>
+<li>MSc in Finance</li>
+<li>MSc in Marketing</li>
+<li>MSc in Data Analytics</li>
+<li>MSc in Digital Business</li>
+</ul>
+</div>
+</div>
+<h5 class="mt-4">Eligibility Criteria</h5>
+<div class="row">
+<div class="col-md-6">
+<h6>Undergraduate (BBA/BBS):</h6>
+<ul>
+<li>12th grade in any stream (Commerce/Science/Arts)</li>
+<li>Minimum 65-70% in 12th grade</li>
+<li>IELTS 6.0-6.5 or equivalent</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h6>Postgraduate (MBA/MSc):</h6>
+<ul>
+<li>Bachelor's degree in any discipline</li>
+<li>Minimum 60-70% in bachelor's degree</li>
+<li>IELTS 6.5 or equivalent</li>
+<li>2-3 years work experience (for MBA)</li>
+<li>GMAT (may be required for top MBA programs)</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
 <!-- Application Process -->
-<div class="spain-section">
-<h2 class="spain-title">How to Apply</h2>
+<div class="ireland-section">
+<h2 class="ireland-title">How to Apply</h2>
 <ol>
 <li>Research and shortlist universities &amp; programs</li>
 <li>Check eligibility and application deadlines (Fall intake preferred)</li>
@@ -684,72 +803,74 @@
                                     <ul>
 <li>Academic transcripts &amp; certificates</li>
 <li>Statement of Purpose (SOP)</li>
-<li>Letters of Recommendation (2–3)</li>
-<li>Resume/CV (for Master's/MBA)</li>
+<li>Letters of Recommendation (2-3)</li>
+<li>Resume/CV (for Master's applicants)</li>
 <li>Proof of English proficiency</li>
 <li>Passport copy</li>
 </ul>
 </li>
-<li>Submit online application</li>
+<li>Submit online application through university portal</li>
 <li>Receive admission offer</li>
-<li>Apply for Spanish student visa</li>
-<li>Book travel and attend pre-departure orientation</li>
+<li>Pay tuition deposit (if required)</li>
+<li>Apply for Irish student visa (Stamp 2)</li>
+<li>Arrange accommodation and travel</li>
+<li>Attend pre-departure orientation</li>
 </ol>
 </div>
 <!-- FAQ Section -->
-<div class="spain-section">
-<h2 class="spain-title">Frequently Asked Questions</h2>
+<div class="ireland-section">
+<h2 class="ireland-title">Frequently Asked Questions</h2>
 <div class="faq-item">
-<div class="faq-question">What is the cost of studying Business Management in Spain?</div>
+<div class="faq-question">What is the cost of studying in Ireland?</div>
 <div class="faq-answer">
-<p>• Bachelor's in Business: €8,000–€20,000/year (approx. ₹7–₹18 lakhs)</p>
-<p>• Master's/MBA: €15,000–€40,000/year (approx. ₹13–₹35 lakhs)</p>
-<p>• Living expenses: €7,000–€12,000/year (approx. ₹6–₹10 lakhs)</p>
-<p>• Scholarships and financial aid are available at most institutions</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">What are the job prospects after studying in Spain?</div>
-<div class="faq-answer">
-<p>Spain and the EU have a strong demand for management professionals in:</p>
-<ul>
-<li>Finance &amp; Banking</li>
-<li>Marketing &amp; Sales</li>
-<li>Consulting &amp; Strategy</li>
-<li>International Business</li>
-<li>Entrepreneurship</li>
-</ul>
-<p><strong>Post-Study Work Options:</strong></p>
-<p>• 1-year post-study visa to find employment</p>
-<p>• Opportunity to work in Spain or elsewhere in the EU</p>
-<p>• Average starting salaries: €25,000–€45,000/year for graduates</p>
+<p><strong>Tuition Fees:</strong></p>
+<p>• Bachelor's: €12,000–€20,000/year (approx. ₹10–₹18 lakhs)</p>
+<p>• Master's: €14,000–€25,000/year (approx. ₹12–₹22 lakhs)</p>
+<p>• MBA: €18,000–€35,000/year (approx. ₹16–₹31 lakhs)</p>
+<p><strong>Living Expenses:</strong> €8,000–€12,000/year (approx. ₹7–₹10 lakhs)</p>
+<p>Scholarships are available for meritorious students at most universities.</p>
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question">Is a Business degree from Spain recognized in India?</div>
+<div class="faq-question">What are the job prospects after graduation?</div>
 <div class="faq-answer">
-<p>✅ Yes — Degrees from accredited Spanish universities are globally recognized, including in India.</p>
-<p>✅ For government jobs or further studies in India, you may need an equivalence certificate from AIU.</p>
-<p>✅ Triple-accredited programs (AACSB, EQUIS, AMBA) are highly valued by employers worldwide.</p>
+<p>Ireland hosts the European headquarters of many global companies, offering excellent job opportunities for graduates:</p>
+<p><strong>For Engineering Graduates:</strong></p>
+<p>• High demand in technology, pharma, and engineering sectors</p>
+<p>• Average starting salary: €35,000–€45,000/year</p>
+<p><strong>For Business Graduates:</strong></p>
+<p>• Opportunities in finance, consulting, and technology sectors</p>
+<p>• Average starting salary: €30,000–€50,000/year (higher for MBA graduates)</p>
+<p>International students can stay in Ireland for up to 2 years after graduation to seek employment (Stamp 1G).</p>
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question">Do I need to know Spanish to study in Spain?</div>
+<div class="faq-question">Are degrees from Ireland recognized in India?</div>
 <div class="faq-answer">
-<p>• <strong>For English-taught programs:</strong> No Spanish is required for admission, but basic Spanish is recommended for daily life.</p>
-<p>• <strong>For Spanish-taught programs:</strong> DELE B2 or equivalent is typically required.</p>
-<p>• Many schools offer free Spanish language courses for international students.</p>
-<p>• Learning Spanish enhances your experience and job prospects in Spain.</p>
+<p>✅ Yes — Irish degrees are globally recognized and highly regarded.</p>
+<p>✅ For government jobs in India, you may need to get your degree evaluated by the Association of Indian Universities (AIU).</p>
+<p>✅ Professional accreditations (like Engineers Ireland, AACSB, etc.) are recognized worldwide.</p>
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question">What is student life like in Spain?</div>
+<div class="faq-question">Can I work while studying in Ireland?</div>
 <div class="faq-answer">
-<p>• Vibrant and social atmosphere with many cultural activities</p>
-<p>• Excellent weather and outdoor lifestyle</p>
-<p>• Rich cultural heritage and diverse international community</p>
-<p>• Affordable cost of living compared to other Western European countries</p>
-<p>• Well-connected to the rest of Europe for travel opportunities</p>
+<p>• <strong>During term time:</strong> Up to 20 hours per week</p>
+<p>• <strong>During holidays:</strong> Up to 40 hours per week</p>
+<p>• <strong>Minimum wage:</strong> €11.30 per hour (as of 2025)</p>
+<p>• Part-time jobs are available in retail, hospitality, and on-campus positions</p>
+<p>• Many universities have dedicated career services to help students find part-time work</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What is the student life like in Ireland?</div>
+<div class="faq-answer">
+<p>• Welcoming and friendly environment for international students</p>
+<p>• Vibrant campus life with numerous clubs and societies</p>
+<p>• Rich cultural heritage and beautiful landscapes</p>
+<p>• Excellent sports facilities and activities</p>
+<p>• Strong Indian student community with cultural associations</p>
+<p>• Safe and English-speaking environment</p>
 </div>
 </div>
 </div>
@@ -859,19 +980,19 @@
 <div class="col-lg-2 col-6 footer-links">
 <h4>Popular Courses</h4>
 <ul>
+<li><a href="#">Engineering</a></li>
 <li><a href="#">Business Management</a></li>
-<li><a href="#">International Business</a></li>
-<li><a href="#">Marketing</a></li>
-<li><a href="#">Finance</a></li>
+<li><a href="#">Computer Science</a></li>
+<li><a href="#">Data Science</a></li>
 <li><a href="#">MBA Programs</a></li>
 </ul>
 </div>
 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
 <h4>Contact Us</h4>
 <p>
-<strong>Address:</strong> 123 Education Street, Madrid, Spain<br/>
-<strong>Phone:</strong> +34 91 123 45 67<br/>
-<strong>Email:</strong> spain@studyabroad.com<br/>
+<strong>Address:</strong> 123 Education Street, Dublin, Ireland<br/>
+<strong>Phone:</strong> +353 1 234 5678<br/>
+<strong>Email:</strong> ireland@studyabroad.com<br/>
 </p>
 </div>
 </div>
@@ -903,6 +1024,14 @@
 <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
 <!-- Main JS File -->
 <script src="../assets/js/main.js"></script>
+<script>
+        // Initialize Bootstrap tabs
+        var firstTabEl = document.querySelector('#programTabs li:first-child a');
+        var firstTab = new bootstrap.Tab(firstTabEl);
+        
+        // Show first tab by default
+        firstTab.show();
+    </script>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Function to close all dropdowns except the current one

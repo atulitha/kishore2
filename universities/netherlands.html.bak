@@ -4,11 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Study in Spain | Business Management in Spain</title>
-<meta content="Study Business Management in Spain - World-class business schools, vibrant culture, and excellent career opportunities in the heart of Europe." name="description"/>
-<meta content="Study in Spain, Business Management Spain, MBA in Spain, Spanish business schools, Study abroad Spain" name="keywords"/>
+<title>Study in Netherlands | Business Management in Netherlands</title>
+<meta content="Study Business Management in the Netherlands - World-class education, innovative teaching methods, and excellent career prospects in the heart of Europe." name="description"/>
+<meta content="Study in Netherlands, Business Management Netherlands, Dutch business schools, Study abroad Netherlands" name="keywords"/>
 <!-- Favicons -->
-<link href="../assets/img/kxy-logo.png" rel="icon"/>
+<link href="../assets/img/favicon.png" rel="icon"/>
 <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -24,9 +24,9 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
         :root {
-            --spain-red: #AA151B;
-            --spain-yellow: #F1BF00;
-            --spain-dark: #1B1B1B;
+            --netherlands-red: #AE1C28;
+            --netherlands-blue: #21468B;
+            --netherlands-white: #FFFFFF;
         }
         
         /* Header and Navigation Styling */
@@ -73,8 +73,8 @@
         
         #navmenu > ul > li > a:hover,
         #navmenu > ul > li > a.active {
-            color: var(--spain-red);
-            background: rgba(170, 21, 27, 0.1);
+            color: var(--netherlands-red);
+            background: rgba(174, 28, 40, 0.1);
         }
         
         .logo {
@@ -122,63 +122,63 @@
         }
         
         .country-item a:hover {
-            color: var(--spain-red);
+            color: var(--netherlands-red);
         }
         
         .country-item a.active {
-            color: var(--spain-red);
+            color: var(--netherlands-red);
             font-weight: 600;
         }
         
-        .spain-hero {
+        .netherlands-hero {
             background: linear-gradient(135deg, #f8f9fa 60%, #f0f0f0 100%);
             padding: 80px 0 50px 0;
             text-align: center;
-            border-bottom: 4px solid var(--spain-red);
+            border-bottom: 4px solid var(--netherlands-red);
             position: relative;
             overflow: hidden;
         }
         
-        .spain-hero:after {
+        .netherlands-hero:after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--spain-yellow);
+            background: var(--netherlands-blue);
         }
         
-        .spain-section {
+        .netherlands-section {
             background: #fff;
             border-radius: 16px;
             box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
             padding: 32px 28px;
             margin-bottom: 32px;
-            border-top: 3px solid var(--spain-red);
+            border-top: 3px solid var(--netherlands-red);
         }
         
-        .spain-title {
-            color: var(--spain-red);
+        .netherlands-title {
+            color: var(--netherlands-red);
             font-weight: 700;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
         
-        .spain-title:after {
+        .netherlands-title:after {
             content: '';
             position: absolute;
             left: 0;
             bottom: 0;
             width: 60px;
             height: 4px;
-            background: var(--spain-yellow);
+            background: var(--netherlands-blue);
         }
         
         .highlight-box {
             background: #f8f9fa;
-            border-left: 4px solid var(--spain-red);
+            border-left: 4px solid var(--netherlands-red);
             padding: 15px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
@@ -196,7 +196,7 @@
         
         .feature-list li:before {
             content: "✓";
-            color: var(--spain-red);
+            color: var(--netherlands-red);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -225,18 +225,18 @@
         
         .faq-question {
             font-weight: 600;
-            color: var(--spain-red);
+            color: var(--netherlands-red);
             margin-bottom: 8px;
             font-size: 1.1rem;
         }
         
         .table th {
             background-color: #f8f9fa;
-            color: var(--spain-red);
+            color: var(--netherlands-red);
         }
         
-        .btn-spain {
-            background-color: var(--spain-red);
+        .btn-netherlands {
+            background-color: var(--netherlands-red);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -245,16 +245,42 @@
             transition: all 0.3s;
         }
         
-        .btn-spain:hover {
-            background-color: var(--spain-yellow);
-            color: var(--spain-dark);
+        .btn-netherlands:hover {
+            background-color: var(--netherlands-blue);
+            color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
+        .program-tabs {
+            margin: 30px 0;
+        }
+        
+        .nav-tabs .nav-link {
+            color: var(--netherlands-red);
+            font-weight: 600;
+            border: none;
+            padding: 12px 25px;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: var(--netherlands-red);
+            color: white;
+            border: none;
+        }
+        
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        
         .badge {
             background-color: #f0f4f8;
-            color: var(--spain-red);
+            color: var(--netherlands-red);
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -270,7 +296,7 @@
         }
         
         .accreditation-badges .badge {
-            background-color: var(--spain-red);
+            background-color: var(--netherlands-red);
             color: white;
         }
     
@@ -429,7 +455,7 @@
             }
         }
         
-        /* Country-specific styles for Spain */
+        /* Country-specific styles for Netherlands */
         .country-hero {
             background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
             padding: 100px 0 60px;
@@ -502,7 +528,7 @@
         }
         </style>
 </head>
-<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Spain</h1><p class="lead">Discover top medical universities in Spain with affordable fees and world-class education</p></div></div></div></section>
+<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Netherlands</h1><p class="lead">Discover top medical universities in Netherlands with affordable fees and world-class education</p></div></div></div></section>
 <!-- Header -->
 <header class="header d-flex align-items-center fixed-top" id="header">
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -533,10 +559,10 @@
 <a href="ireland.html" title="Ireland">Ireland</a>
 </div>
 <div class="country-item">
-<a href="netherlands.html" title="Netherlands">Netherlands</a>
+<a class="active" href="netherlands.html" title="Netherlands">Netherlands</a>
 </div>
 <div class="country-item">
-<a class="active" href="spain.html" title="Spain">Spain</a>
+<a href="spain.html" title="Spain">Spain</a>
 </div>
 <div class="country-item">
 <a href="uk.html" title="United Kingdom">United Kingdom</a>
@@ -565,11 +591,11 @@
 </header>
 <main class="main">
 <!-- Hero Section -->
-<section class="spain-hero country-section">
+<section class="netherlands-hero country-section">
 <div class="container">
-<h1 class="display-4 fw-bold mb-4">Study Business Management in Spain</h1>
-<p class="lead">World-class business education in one of Europe's most vibrant destinations</p>
-<a class="btn btn-spain mt-3" href="#programs">Explore Programs</a>
+<h1 class="display-4 fw-bold mb-4">Study Business Management in the Netherlands</h1>
+<p class="lead">World-class education with innovative teaching methods and excellent career prospects in Europe's business hub</p>
+<a class="btn btn-netherlands mt-3" href="#programs">Explore Programs</a>
 </div>
 </section>
 <!-- Main Content -->
@@ -578,34 +604,34 @@
 <div class="row">
 <div class="col-lg-12">
 <!-- Introduction -->
-<div class="spain-section">
-<h2 class="spain-title">Spain: A Premier Destination for Business Education</h2>
-<p>Spain has emerged as one of the top destinations for international students pursuing business management. Known for its vibrant culture, globally recognized business schools, and strong connections to European and global markets, Spain is home to some of the best management programs in the world, producing thousands of skilled managers, entrepreneurs, and business leaders every year.</p>
+<div class="netherlands-section">
+<h2 class="netherlands-title">The Netherlands: A Premier Business Education Destination</h2>
+<p>The Netherlands has consistently ranked among the top destinations for international students pursuing business management. Known for its innovative teaching methods, globally accredited business schools, and strong links to European industry, the Netherlands is home to some of the best management programs worldwide, producing thousands of future business leaders every year.</p>
 <div class="highlight-box">
-<h5>Why Choose Spain for Business Management?</h5>
+<h5>Why Choose the Netherlands for Business Management?</h5>
 <ul class="feature-list">
-<li>High-quality education with focus on international business, strategy, and leadership</li>
-<li>Globally recognized degrees, many programs triple-accredited (AACSB, EQUIS, AMBA)</li>
-<li>Strong ties to European Union companies and global corporations</li>
-<li>Paid internships and placement opportunities during and after study</li>
-<li>Post-study stay-back options to work in Spain or Europe</li>
-<li>Multicultural, warm, and student-friendly environment</li>
+<li>High-quality education with a focus on innovation and entrepreneurship</li>
+<li>Globally accredited business schools (AACSB, EQUIS, AMBA)</li>
+<li>Practical-oriented programs with internships &amp; company projects</li>
+<li>English-taught programs at both Bachelor's and Master's levels</li>
+<li>Post-graduation orientation year (zoekjaar) to find employment</li>
+<li>Gateway to careers across Europe thanks to EU mobility</li>
 </ul>
 </div>
 </div>
 <!-- Quick Facts -->
-<div class="spain-section" id="programs">
-<h2 class="spain-title">Quick Facts</h2>
+<div class="netherlands-section" id="programs">
+<h2 class="netherlands-title">Quick Facts</h2>
 <div class="table-responsive">
 <table class="table table-bordered country-table table table-striped">
 <tbody>
 <tr>
 <th>Course Duration</th>
-<td>3–4 years (Bachelor's), 1–2 years (Master's/MBA)</td>
+<td>3–4 years (Bachelor's), 1–2 years (Master's)</td>
 </tr>
 <tr>
 <th>Medium of Instruction</th>
-<td>English (or Spanish for some programs)</td>
+<td>English</td>
 </tr>
 <tr>
 <th>Top Accreditations</th>
@@ -613,11 +639,11 @@
 </tr>
 <tr>
 <th>Tuition Fees</th>
-<td>€8,000–€20,000/year (approx. ₹7–₹18 lakhs)</td>
+<td>€8,000–€15,000/year (approx. ₹7–₹14 lakhs)</td>
 </tr>
 <tr>
 <th>Living Expenses</th>
-<td>€7,000–€12,000/year (approx. ₹6–₹10 lakhs)</td>
+<td>€10,000–€12,000/year (approx. ₹9–₹11 lakhs)</td>
 </tr>
 </tbody>
 </table>
@@ -629,127 +655,197 @@
 <span class="badge">AMBA</span>
 </div>
 </div>
-<!-- Top Business Schools -->
-<div class="spain-section">
-<h2 class="spain-title">Top Business Schools in Spain (2025–26)</h2>
+<!-- Top Universities -->
+<div class="netherlands-section">
+<h2 class="netherlands-title">Top Dutch Business Schools (2025–26)</h2>
 <div class="university-list">
 <ul class="list-unstyled">
-<li>• IE Business School, Madrid</li>
-<li>• ESADE Business School, Barcelona</li>
-<li>• IESE Business School, Barcelona</li>
-<li>• EAE Business School</li>
-<li>• EADA Business School, Barcelona</li>
-<li>• ESIC Business &amp; Marketing School</li>
-<li>• Universidad Católica De Murcia Business School</li>
-<li>• Universidad Carlos III de Madrid</li>
-<li>• Universitat Pompeu Fabra, Barcelona</li>
-<li>• Deusto Business School, Bilbao</li>
+<li>• Tio Business School</li>
+<li>• Rotterdam School of Management (Erasmus University)</li>
+<li>• Amsterdam Business School (University of Amsterdam)</li>
+<li>• Nyenrode Business Universiteit</li>
+<li>• TIAS School for Business &amp; Society</li>
+<li>• Maastricht University School of Business &amp; Economics</li>
+<li>• Tilburg School of Economics &amp; Management</li>
+<li>• Hanze University of Applied Sciences</li>
+<li>• The Hague University of Applied Sciences</li>
 </ul>
 </div>
 </div>
-<!-- Eligibility Criteria -->
-<div class="spain-section">
-<h2 class="spain-title">Eligibility Criteria</h2>
+<!-- Program Details -->
+<div class="netherlands-section">
+<h2 class="netherlands-title">Program Details</h2>
+<div class="program-tabs">
+<ul class="nav nav-tabs" id="programTabs" role="tablist">
+<li class="nav-item" role="presentation">
+<button aria-controls="bachelor" aria-selected="true" class="nav-link active" data-bs-target="#bachelor" data-bs-toggle="tab" id="bachelor-tab" role="tab" type="button">Bachelor's Programs</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="master" aria-selected="false" class="nav-link" data-bs-target="#master" data-bs-toggle="tab" id="master-tab" role="tab" type="button">Master's Programs</button>
+</li>
+</ul>
+<div class="tab-content" id="programTabsContent">
+<!-- Bachelor's Tab -->
+<div aria-labelledby="bachelor-tab" class="tab-pane fade show active" id="bachelor" role="tabpanel">
+<h4>Bachelor's in Business Management</h4>
+<p>Dutch universities offer innovative Bachelor's programs in Business Management that combine theoretical knowledge with practical experience through internships and company projects.</p>
+<h5 class="mt-4">Popular Specializations:</h5>
 <div class="row">
 <div class="col-md-6">
-<h4>Undergraduate (Bachelor's)</h4>
 <ul>
-<li>Minimum 17 years old by start of course</li>
-<li>12th grade with good academic record (70%+ preferred)</li>
-<li>IELTS 6.0+ or TOEFL iBT 80+</li>
-<li>No entrance exam for most universities</li>
-<li>Some competitive programs may require SAT/essay/SOP</li>
+<li>International Business</li>
+<li>Business Administration</li>
+<li>Economics and Business Economics</li>
+<li>International Business Administration</li>
 </ul>
 </div>
 <div class="col-md-6">
-<h4>Postgraduate (Master's/MBA)</h4>
 <ul>
-<li>Bachelor's degree in any field (business-related preferred)</li>
+<li>Business Analytics</li>
+<li>Entrepreneurship</li>
+<li>Marketing</li>
+<li>Finance</li>
+</ul>
+</div>
+</div>
+<h5 class="mt-4">Eligibility Criteria</h5>
+<ul>
+<li>Minimum 17 years old by start of course</li>
+<li>12th grade with good GPA (70%+ recommended)</li>
+<li>IELTS 6.0–6.5 or TOEFL iBT 80+</li>
+<li>Mathematics in 12th grade (often required)</li>
+<li>Motivation letter and sometimes an interview</li>
+</ul>
+</div>
+<!-- Master's Tab -->
+<div aria-labelledby="master-tab" class="tab-pane fade" id="master" role="tabpanel">
+<h4>Master's in Business Management</h4>
+<p>Dutch business schools offer world-class Master's programs with a strong focus on practical application, research, and international perspective.</p>
+<h5 class="mt-4">Popular Specializations:</h5>
+<div class="row">
+<div class="col-md-6">
+<ul>
+<li>MSc in Business Administration</li>
+<li>MSc in International Business</li>
+<li>MSc in Finance</li>
+<li>MSc in Marketing</li>
+</ul>
+</div>
+<div class="col-md-6">
+<ul>
+<li>MSc in Strategic Management</li>
+<li>MSc in Entrepreneurship</li>
+<li>MSc in Business Analytics</li>
+<li>MBA (Master of Business Administration)</li>
+</ul>
+</div>
+</div>
+<h5 class="mt-4">Eligibility Criteria</h5>
+<ul>
+<li>Bachelor's degree in business or related discipline</li>
 <li>GPA equivalent to 3.0/4.0 or 75%+</li>
 <li>IELTS 6.5–7.0 or TOEFL iBT 90+</li>
-<li>Work experience (2–3 years) preferred for MBA</li>
-<li>GMAT/GRE not always required but recommended</li>
+<li>GMAT or GRE may be required for competitive programs</li>
+<li>Work experience (2–3 years) preferred for MBA but not mandatory for MSc</li>
+<li>Motivation letter and letters of recommendation</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
 <!-- Application Process -->
-<div class="spain-section">
-<h2 class="spain-title">How to Apply</h2>
+<div class="netherlands-section">
+<h2 class="netherlands-title">How to Apply</h2>
 <ol>
 <li>Research and shortlist universities &amp; programs</li>
-<li>Check eligibility and application deadlines (Fall intake preferred)</li>
+<li>Check eligibility and deadlines (September intake preferred)</li>
 <li>Take required English proficiency test (IELTS/TOEFL)</li>
 <li>Prepare application documents:
                                     <ul>
 <li>Academic transcripts &amp; certificates</li>
-<li>Statement of Purpose (SOP)</li>
-<li>Letters of Recommendation (2–3)</li>
-<li>Resume/CV (for Master's/MBA)</li>
+<li>CV/Resume</li>
+<li>Motivation letter/Statement of Purpose</li>
+<li>Letters of Recommendation (2-3)</li>
 <li>Proof of English proficiency</li>
 <li>Passport copy</li>
+<li>GMAT/GRE scores (if required)</li>
 </ul>
 </li>
-<li>Submit online application</li>
+<li>Submit online application through university portal</li>
+<li>Attend interview if required</li>
 <li>Receive admission offer</li>
-<li>Apply for Spanish student visa</li>
-<li>Book travel and attend pre-departure orientation</li>
+<li>Pay tuition deposit (if required)</li>
+<li>Apply for MVV visa and residence permit for study</li>
+<li>Arrange accommodation and book travel</li>
+<li>Attend orientation program</li>
 </ol>
 </div>
 <!-- FAQ Section -->
-<div class="spain-section">
-<h2 class="spain-title">Frequently Asked Questions</h2>
+<div class="netherlands-section">
+<h2 class="netherlands-title">Frequently Asked Questions</h2>
 <div class="faq-item">
-<div class="faq-question">What is the cost of studying Business Management in Spain?</div>
+<div class="faq-question">What is the cost of studying Business in the Netherlands?</div>
 <div class="faq-answer">
-<p>• Bachelor's in Business: €8,000–€20,000/year (approx. ₹7–₹18 lakhs)</p>
-<p>• Master's/MBA: €15,000–€40,000/year (approx. ₹13–₹35 lakhs)</p>
-<p>• Living expenses: €7,000–€12,000/year (approx. ₹6–₹10 lakhs)</p>
-<p>• Scholarships and financial aid are available at most institutions</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">What are the job prospects after studying in Spain?</div>
-<div class="faq-answer">
-<p>Spain and the EU have a strong demand for management professionals in:</p>
-<ul>
-<li>Finance &amp; Banking</li>
-<li>Marketing &amp; Sales</li>
-<li>Consulting &amp; Strategy</li>
-<li>International Business</li>
-<li>Entrepreneurship</li>
-</ul>
-<p><strong>Post-Study Work Options:</strong></p>
-<p>• 1-year post-study visa to find employment</p>
-<p>• Opportunity to work in Spain or elsewhere in the EU</p>
-<p>• Average starting salaries: €25,000–€45,000/year for graduates</p>
+<p><strong>Tuition Fees:</strong></p>
+<p>• Bachelor's: €8,000–€12,000/year (approx. ₹7–₹11 lakhs)</p>
+<p>• Master's: €12,000–€20,000/year (approx. ₹11–₹18 lakhs)</p>
+<p>• MBA: €15,000–€25,000/year (approx. ₹14–₹23 lakhs)</p>
+<p><strong>Living Expenses:</strong> €10,000–€12,000/year (approx. ₹9–₹11 lakhs)</p>
+<p>Scholarships (like Holland Scholarship) are available for international students.</p>
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question">Is a Business degree from Spain recognized in India?</div>
+<div class="faq-question">What are the job prospects after graduation?</div>
 <div class="faq-answer">
-<p>✅ Yes — Degrees from accredited Spanish universities are globally recognized, including in India.</p>
-<p>✅ For government jobs or further studies in India, you may need an equivalence certificate from AIU.</p>
-<p>✅ Triple-accredited programs (AACSB, EQUIS, AMBA) are highly valued by employers worldwide.</p>
+<p>The Netherlands has a thriving economy with strong demand in various business sectors:</p>
+<p><strong>Key Industries:</strong></p>
+<p>• Finance and Banking (Amsterdam is a major European financial hub)</p>
+<p>• Logistics and Supply Chain (Rotterdam has Europe's largest port)</p>
+<p>• Technology and Startups (Amsterdam is a growing tech hub)</p>
+<p>• Consulting and Professional Services</p>
+<p>• Marketing and E-commerce</p>
+<p>International graduates can apply for a 1-year "zoekjaar" (orientation year) residence permit to find work after graduation. After finding a job, you can switch to a work permit.</p>
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question">Do I need to know Spanish to study in Spain?</div>
+<div class="faq-question">Are Dutch business degrees recognized in India?</div>
 <div class="faq-answer">
-<p>• <strong>For English-taught programs:</strong> No Spanish is required for admission, but basic Spanish is recommended for daily life.</p>
-<p>• <strong>For Spanish-taught programs:</strong> DELE B2 or equivalent is typically required.</p>
-<p>• Many schools offer free Spanish language courses for international students.</p>
-<p>• Learning Spanish enhances your experience and job prospects in Spain.</p>
+<p>✅ Yes — Degrees from accredited Dutch universities are globally recognized, including in India.</p>
+<p>✅ For government jobs in India, you may need to get your degree evaluated by the Association of Indian Universities (AIU).</p>
+<p>✅ Professional accreditations (AACSB, EQUIS, AMBA) are recognized worldwide and add significant value to your degree.</p>
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question">What is student life like in Spain?</div>
+<div class="faq-question">Can I work while studying in the Netherlands?</div>
 <div class="faq-answer">
-<p>• Vibrant and social atmosphere with many cultural activities</p>
-<p>• Excellent weather and outdoor lifestyle</p>
-<p>• Rich cultural heritage and diverse international community</p>
-<p>• Affordable cost of living compared to other Western European countries</p>
-<p>• Well-connected to the rest of Europe for travel opportunities</p>
+<p>• <strong>During studies:</strong> Non-EU/EEA students can work up to 16 hours per week during the academic year, or full-time during June, July, and August</p>
+<p>• <strong>Minimum wage:</strong> €11.30 per hour (as of 2025) for employees aged 21 and over</p>
+<p>• <strong>Types of jobs:</strong> Part-time jobs are available in retail, hospitality, call centers, and on-campus positions</p>
+<p>• <strong>Internships:</strong> Many business programs include mandatory internships which can be paid or unpaid</p>
+<p>• <strong>Student services:</strong> Most universities have career centers that help students find part-time work</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What is the student life like in the Netherlands?</div>
+<div class="faq-answer">
+<p>• <strong>International environment:</strong> The Netherlands has one of the highest percentages of English speakers in Europe, making it easy to adapt</p>
+<p>• <strong>Student cities:</strong> Amsterdam, Rotterdam, Utrecht, and Maastricht are popular student cities with vibrant campus life</p>
+<p>• <strong>Student associations:</strong> Many business schools have active student associations that organize events, case competitions, and networking opportunities</p>
+<p>• <strong>Cultural activities:</strong> The Netherlands offers rich cultural experiences, from museums to music festivals</p>
+<p>• <strong>Travel opportunities:</strong> Excellent train connections make it easy to explore other European countries during breaks</p>
+<p>• <strong>Sports and recreation:</strong> Universities offer various sports facilities and student discounts for gyms and activities</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What is the "zoekjaar" (orientation year) visa?</div>
+<div class="faq-answer">
+<p>The orientation year permit (zoekjaar) is a residence permit for graduates to find work in the Netherlands after completing their studies. Key features include:</p>
+<p>• Valid for 1 year after graduation</p>
+<p>• No work permit needed during this period</p>
+<p>• Can work without salary requirements</p>
+<p>• Can be used to start your own business</p>
+<p>• After finding a job, you can switch to a work permit (highly skilled migrant visa if you meet the salary requirements)</p>
+<p>• Available to graduates from Dutch universities and international students who have completed a Master's or PhD in the Netherlands</p>
 </div>
 </div>
 </div>
@@ -857,21 +953,21 @@
 </ul>
 </div>
 <div class="col-lg-2 col-6 footer-links">
-<h4>Popular Courses</h4>
+<h4>Popular Programs</h4>
 <ul>
-<li><a href="#">Business Management</a></li>
+<li><a href="#">Business Administration</a></li>
 <li><a href="#">International Business</a></li>
-<li><a href="#">Marketing</a></li>
-<li><a href="#">Finance</a></li>
 <li><a href="#">MBA Programs</a></li>
+<li><a href="#">Finance &amp; Economics</a></li>
+<li><a href="#">Marketing</a></li>
 </ul>
 </div>
 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
 <h4>Contact Us</h4>
 <p>
-<strong>Address:</strong> 123 Education Street, Madrid, Spain<br/>
-<strong>Phone:</strong> +34 91 123 45 67<br/>
-<strong>Email:</strong> spain@studyabroad.com<br/>
+<strong>Address:</strong> 123 Business Street, Amsterdam, Netherlands<br/>
+<strong>Phone:</strong> +31 20 123 4567<br/>
+<strong>Email:</strong> netherlands@studyabroad.com<br/>
 </p>
 </div>
 </div>
@@ -903,6 +999,14 @@
 <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
 <!-- Main JS File -->
 <script src="../assets/js/main.js"></script>
+<script>
+        // Initialize Bootstrap tabs
+        var firstTabEl = document.querySelector('#programTabs li:first-child a');
+        var firstTab = new bootstrap.Tab(firstTabEl);
+        
+        // Show first tab by default
+        firstTab.show();
+    </script>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Function to close all dropdowns except the current one

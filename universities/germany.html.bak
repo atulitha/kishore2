@@ -4,11 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Study in Spain | Business Management in Spain</title>
-<meta content="Study Business Management in Spain - World-class business schools, vibrant culture, and excellent career opportunities in the heart of Europe." name="description"/>
-<meta content="Study in Spain, Business Management Spain, MBA in Spain, Spanish business schools, Study abroad Spain" name="keywords"/>
+<title>Study in Germany | Engineering &amp; Business Management in Germany</title>
+<meta content="Study Engineering &amp; Business Management in Germany - World-class education, low tuition fees, and excellent career prospects in Europe's strongest economy." name="description"/>
+<meta content="Study in Germany, Engineering in Germany, Business Management Germany, German universities, Study abroad Germany" name="keywords"/>
 <!-- Favicons -->
-<link href="../assets/img/kxy-logo.png" rel="icon"/>
+<link href="../assets/img/favicon.png" rel="icon"/>
 <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -24,9 +24,9 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
         :root {
-            --spain-red: #AA151B;
-            --spain-yellow: #F1BF00;
-            --spain-dark: #1B1B1B;
+            --germany-black: #000000;
+            --germany-red: #DD0000;
+            --germany-gold: #FFCC00;
         }
         
         /* Header and Navigation Styling */
@@ -73,8 +73,8 @@
         
         #navmenu > ul > li > a:hover,
         #navmenu > ul > li > a.active {
-            color: var(--spain-red);
-            background: rgba(170, 21, 27, 0.1);
+            color: var(--germany-black);
+            background: rgba(0, 0, 0, 0.1);
         }
         
         .logo {
@@ -122,63 +122,63 @@
         }
         
         .country-item a:hover {
-            color: var(--spain-red);
+            color: var(--germany-black);
         }
         
         .country-item a.active {
-            color: var(--spain-red);
+            color: var(--germany-black);
             font-weight: 600;
         }
         
-        .spain-hero {
+        .germany-hero {
             background: linear-gradient(135deg, #f8f9fa 60%, #f0f0f0 100%);
             padding: 80px 0 50px 0;
             text-align: center;
-            border-bottom: 4px solid var(--spain-red);
+            border-bottom: 4px solid var(--germany-black);
             position: relative;
             overflow: hidden;
         }
         
-        .spain-hero:after {
+        .germany-hero:after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--spain-yellow);
+            background: var(--germany-red);
         }
         
-        .spain-section {
+        .germany-section {
             background: #fff;
             border-radius: 16px;
             box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
             padding: 32px 28px;
             margin-bottom: 32px;
-            border-top: 3px solid var(--spain-red);
+            border-top: 3px solid var(--germany-gold);
         }
         
-        .spain-title {
-            color: var(--spain-red);
+        .germany-title {
+            color: var(--germany-black);
             font-weight: 700;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
         
-        .spain-title:after {
+        .germany-title:after {
             content: '';
             position: absolute;
             left: 0;
             bottom: 0;
             width: 60px;
             height: 4px;
-            background: var(--spain-yellow);
+            background: var(--germany-red);
         }
         
         .highlight-box {
             background: #f8f9fa;
-            border-left: 4px solid var(--spain-red);
+            border-left: 4px solid var(--germany-black);
             padding: 15px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
@@ -196,7 +196,7 @@
         
         .feature-list li:before {
             content: "✓";
-            color: var(--spain-red);
+            color: var(--germany-red);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -225,18 +225,18 @@
         
         .faq-question {
             font-weight: 600;
-            color: var(--spain-red);
+            color: var(--germany-black);
             margin-bottom: 8px;
             font-size: 1.1rem;
         }
         
         .table th {
             background-color: #f8f9fa;
-            color: var(--spain-red);
+            color: var(--germany-black);
         }
         
-        .btn-spain {
-            background-color: var(--spain-red);
+        .btn-germany {
+            background-color: var(--germany-black);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -245,16 +245,42 @@
             transition: all 0.3s;
         }
         
-        .btn-spain:hover {
-            background-color: var(--spain-yellow);
-            color: var(--spain-dark);
+        .btn-germany:hover {
+            background-color: var(--germany-red);
+            color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
+        .program-tabs {
+            margin: 30px 0;
+        }
+        
+        .nav-tabs .nav-link {
+            color: var(--germany-black);
+            font-weight: 600;
+            border: none;
+            padding: 12px 25px;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: var(--germany-red);
+            color: white;
+            border: none;
+        }
+        
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        
         .badge {
             background-color: #f0f4f8;
-            color: var(--spain-red);
+            color: var(--germany-black);
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -263,15 +289,6 @@
             margin-right: 8px;
             margin-bottom: 8px;
             display: inline-block;
-        }
-        
-        .accreditation-badges {
-            margin: 15px 0;
-        }
-        
-        .accreditation-badges .badge {
-            background-color: var(--spain-red);
-            color: white;
         }
     
         /* Mobile Menu Toggle Button */
@@ -429,7 +446,7 @@
             }
         }
         
-        /* Country-specific styles for Spain */
+        /* Country-specific styles for Germany */
         .country-hero {
             background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
             padding: 100px 0 60px;
@@ -502,7 +519,7 @@
         }
         </style>
 </head>
-<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Spain</h1><p class="lead">Discover top medical universities in Spain with affordable fees and world-class education</p></div></div></div></section>
+<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Germany</h1><p class="lead">Discover top medical universities in Germany with affordable fees and world-class education</p></div></div></div></section>
 <!-- Header -->
 <header class="header d-flex align-items-center fixed-top" id="header">
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -536,7 +553,7 @@
 <a href="netherlands.html" title="Netherlands">Netherlands</a>
 </div>
 <div class="country-item">
-<a class="active" href="spain.html" title="Spain">Spain</a>
+<a href="spain.html" title="Spain">Spain</a>
 </div>
 <div class="country-item">
 <a href="uk.html" title="United Kingdom">United Kingdom</a>
@@ -551,7 +568,7 @@
 <a href="france.html" title="France">France</a>
 </div>
 <div class="country-item">
-<a href="germany.html" title="Germany">Germany</a>
+<a class="active" href="germany.html" title="Germany">Germany</a>
 </div>
 </li>
 </ul>
@@ -565,11 +582,11 @@
 </header>
 <main class="main">
 <!-- Hero Section -->
-<section class="spain-hero country-section">
+<section class="germany-hero country-section">
 <div class="container">
-<h1 class="display-4 fw-bold mb-4">Study Business Management in Spain</h1>
-<p class="lead">World-class business education in one of Europe's most vibrant destinations</p>
-<a class="btn btn-spain mt-3" href="#programs">Explore Programs</a>
+<h1 class="display-4 fw-bold mb-4">Study in Germany</h1>
+<p class="lead">World-class education in Engineering &amp; Business Management with low tuition fees</p>
+<a class="btn btn-germany mt-3" href="#programs">Explore Programs</a>
 </div>
 </section>
 <!-- Main Content -->
@@ -578,24 +595,146 @@
 <div class="row">
 <div class="col-lg-12">
 <!-- Introduction -->
-<div class="spain-section">
-<h2 class="spain-title">Spain: A Premier Destination for Business Education</h2>
-<p>Spain has emerged as one of the top destinations for international students pursuing business management. Known for its vibrant culture, globally recognized business schools, and strong connections to European and global markets, Spain is home to some of the best management programs in the world, producing thousands of skilled managers, entrepreneurs, and business leaders every year.</p>
+<div class="germany-section">
+<h2 class="germany-title">Germany: Excellence in Higher Education</h2>
+<p>Germany has consistently ranked among the top destinations for international students, offering world-class education, cutting-edge research facilities, and strong industry connections. Known for its engineering prowess and business innovation, Germany provides an ideal environment for academic and professional growth.</p>
+<div class="row mt-4">
+<div class="col-md-6">
 <div class="highlight-box">
-<h5>Why Choose Spain for Business Management?</h5>
+<h5>Why Study Engineering in Germany?</h5>
 <ul class="feature-list">
-<li>High-quality education with focus on international business, strategy, and leadership</li>
-<li>Globally recognized degrees, many programs triple-accredited (AACSB, EQUIS, AMBA)</li>
-<li>Strong ties to European Union companies and global corporations</li>
-<li>Paid internships and placement opportunities during and after study</li>
-<li>Post-study stay-back options to work in Spain or Europe</li>
-<li>Multicultural, warm, and student-friendly environment</li>
+<li>Low or no tuition fees at public universities</li>
+<li>Globally recognized, high-quality education</li>
+<li>Strong research and internship opportunities</li>
+<li>18-month post-study job seeker visa</li>
+<li>Pathway to EU Blue Card &amp; permanent residency</li>
 </ul>
 </div>
 </div>
-<!-- Quick Facts -->
-<div class="spain-section" id="programs">
-<h2 class="spain-title">Quick Facts</h2>
+<div class="col-md-6">
+<div class="highlight-box">
+<h5>Why Study Business in Germany?</h5>
+<ul class="feature-list">
+<li>Affordable education at public universities</li>
+<li>Degrees recognized globally by employers</li>
+<li>Strong connections with German industries</li>
+<li>18-month post-study work visa</li>
+<li>Europe's largest economy with diverse opportunities</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Program Tabs -->
+<div class="germany-section" id="programs">
+<h2 class="germany-title">Programs in Germany</h2>
+<ul class="nav nav-tabs" id="programTabs" role="tablist">
+<li class="nav-item" role="presentation">
+<button aria-controls="engineering" aria-selected="true" class="nav-link active" data-bs-target="#engineering" data-bs-toggle="tab" id="engineering-tab" role="tab" type="button">Engineering</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="business" aria-selected="false" class="nav-link" data-bs-target="#business" data-bs-toggle="tab" id="business-tab" role="tab" type="button">Business Management</button>
+</li>
+</ul>
+<div class="tab-content" id="programTabsContent">
+<!-- Engineering Tab -->
+<div aria-labelledby="engineering-tab" class="tab-pane fade show active" id="engineering" role="tabpanel">
+<!-- Engineering Quick Facts -->
+<div class="mb-4">
+<h4>Engineering in Germany - Quick Facts</h4>
+<div class="table-responsive">
+<table class="table table-bordered country-table table table-striped">
+<tbody>
+<tr>
+<th>Course Duration</th>
+<td>3–4 years (Bachelor's), 1.5–2 years (Master's)</td>
+</tr>
+<tr>
+<th>Medium of Instruction</th>
+<td>English or German (depending on program)</td>
+</tr>
+<tr>
+<th>Top Accreditation</th>
+<td>EUR-ACE</td>
+</tr>
+<tr>
+<th>Tuition Fees</th>
+<td>€0–€3,000/year (public); €10,000–€20,000/year (private)</td>
+</tr>
+<tr>
+<th>Living Expenses</th>
+<td>€10,000–€12,000/year (approx. ₹9–₹11 lakhs)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Top Engineering Universities -->
+<div class="mb-4">
+<h4>Top Engineering Universities</h4>
+<div class="university-list">
+<ul class="list-unstyled">
+<li>• Technical University of Munich (TUM)</li>
+<li>• RWTH Aachen University</li>
+<li>• Karlsruhe Institute of Technology (KIT)</li>
+<li>• Technical University of Berlin</li>
+<li>• University of Stuttgart</li>
+<li>• Hamburg University of Technology (TUHH)</li>
+<li>• Technical University of Darmstadt</li>
+<li>• TU Dresden</li>
+</ul>
+</div>
+</div>
+<!-- Engineering Eligibility -->
+<div class="mb-4">
+<h4>Eligibility Criteria</h4>
+<div class="row">
+<div class="col-md-6">
+<h5>Undergraduate (Bachelor's)</h5>
+<ul>
+<li>Minimum 17 years old</li>
+<li>12th grade with PCM (75%+ recommended)</li>
+<li>IELTS 6.0+/TOEFL or German proficiency</li>
+<li>May require Studienkolleg</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h5>Postgraduate (Master's)</h5>
+<ul>
+<li>Bachelor's in engineering or related field</li>
+<li>GPA equivalent to 2.5/5 or ~70%+</li>
+<li>IELTS 6.5+/TOEFL or German proficiency</li>
+<li>GRE not mandatory but recommended</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Engineering FAQ -->
+<div>
+<h4>Frequently Asked Questions</h4>
+<div class="faq-item">
+<div class="faq-question">What is the cost of studying Engineering in Germany?</div>
+<div class="faq-answer">
+<p>• Public universities: Tuition-free or nominal semester fee (€250–500/semester)</p>
+<p>• Private universities: €10,000–€20,000/year</p>
+<p>• Living costs: €850–€1,000/month</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What are the job prospects for Engineering graduates?</div>
+<div class="faq-answer">
+<p>• High demand in mechanical, automotive, electrical, civil, and IT fields</p>
+<p>• 18-month job search visa after graduation</p>
+<p>• Starting salaries: €45,000–€55,000 annually</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Business Management Tab -->
+<div aria-labelledby="business-tab" class="tab-pane fade" id="business" role="tabpanel">
+<!-- Business Quick Facts -->
+<div class="mb-4">
+<h4>Business Management in Germany - Quick Facts</h4>
 <div class="table-responsive">
 <table class="table table-bordered country-table table table-striped">
 <tbody>
@@ -605,151 +744,127 @@
 </tr>
 <tr>
 <th>Medium of Instruction</th>
-<td>English (or Spanish for some programs)</td>
+<td>English or German</td>
 </tr>
 <tr>
 <th>Top Accreditations</th>
-<td>AACSB, EQUIS, AMBA</td>
+<td>FIBAA, AACSB, AMBA, EQUIS</td>
 </tr>
 <tr>
 <th>Tuition Fees</th>
-<td>€8,000–€20,000/year (approx. ₹7–₹18 lakhs)</td>
+<td>€0–€3,000/year (public); €10,000–€40,000/year (private, MBA)</td>
 </tr>
 <tr>
 <th>Living Expenses</th>
-<td>€7,000–€12,000/year (approx. ₹6–₹10 lakhs)</td>
+<td>€10,000–€12,000/year (~₹9–₹11 lakhs)</td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="accreditation-badges">
-<h5>Top Accreditations:</h5>
+<div class="mt-2">
+<span class="badge">FIBAA Accredited</span>
 <span class="badge">AACSB</span>
-<span class="badge">EQUIS</span>
 <span class="badge">AMBA</span>
+<span class="badge">EQUIS</span>
+</div>
 </div>
 </div>
 <!-- Top Business Schools -->
-<div class="spain-section">
-<h2 class="spain-title">Top Business Schools in Spain (2025–26)</h2>
+<div class="mb-4">
+<h4>Top Business Schools</h4>
 <div class="university-list">
 <ul class="list-unstyled">
-<li>• IE Business School, Madrid</li>
-<li>• ESADE Business School, Barcelona</li>
-<li>• IESE Business School, Barcelona</li>
-<li>• EAE Business School</li>
-<li>• EADA Business School, Barcelona</li>
-<li>• ESIC Business &amp; Marketing School</li>
-<li>• Universidad Católica De Murcia Business School</li>
-<li>• Universidad Carlos III de Madrid</li>
-<li>• Universitat Pompeu Fabra, Barcelona</li>
-<li>• Deusto Business School, Bilbao</li>
+<li>• Mannheim Business School</li>
+<li>• Frankfurt School of Finance &amp; Management</li>
+<li>• ESMT Berlin</li>
+<li>• WHU – Otto Beisheim School of Management</li>
+<li>• HHL Leipzig Graduate School of Management</li>
+<li>• LMU Munich</li>
+<li>• TUM School of Management</li>
+<li>• University of Cologne</li>
 </ul>
 </div>
 </div>
-<!-- Eligibility Criteria -->
-<div class="spain-section">
-<h2 class="spain-title">Eligibility Criteria</h2>
+<!-- Business Eligibility -->
+<div class="mb-4">
+<h4>Eligibility Criteria</h4>
 <div class="row">
 <div class="col-md-6">
-<h4>Undergraduate (Bachelor's)</h4>
+<h5>Undergraduate (Bachelor's)</h5>
 <ul>
-<li>Minimum 17 years old by start of course</li>
-<li>12th grade with good academic record (70%+ preferred)</li>
-<li>IELTS 6.0+ or TOEFL iBT 80+</li>
-<li>No entrance exam for most universities</li>
-<li>Some competitive programs may require SAT/essay/SOP</li>
+<li>12th grade with good GPA (75%+ recommended)</li>
+<li>IELTS 6.0+/TOEFL iBT 80+</li>
+<li>Minimum 17 years of age</li>
+<li>May require Studienkolleg</li>
 </ul>
 </div>
 <div class="col-md-6">
-<h4>Postgraduate (Master's/MBA)</h4>
+<h5>Postgraduate (Master's/MBA)</h5>
 <ul>
-<li>Bachelor's degree in any field (business-related preferred)</li>
-<li>GPA equivalent to 3.0/4.0 or 75%+</li>
-<li>IELTS 6.5–7.0 or TOEFL iBT 90+</li>
-<li>Work experience (2–3 years) preferred for MBA</li>
-<li>GMAT/GRE not always required but recommended</li>
+<li>Bachelor's degree in any field</li>
+<li>Minimum 70%+ or GPA 2.5/5</li>
+<li>IELTS 6.5+/TOEFL iBT 90+</li>
+<li>GMAT preferred for MBA (550+)</li>
+<li>2–3 years work experience for MBA</li>
 </ul>
 </div>
 </div>
 </div>
-<!-- Application Process -->
-<div class="spain-section">
-<h2 class="spain-title">How to Apply</h2>
+<!-- Business FAQ -->
+<div>
+<h4>Frequently Asked Questions</h4>
+<div class="faq-item">
+<div class="faq-question">What is the cost of studying Business in Germany?</div>
+<div class="faq-answer">
+<p>• Public universities: Tuition-free or nominal fee (~€250–€500/semester)</p>
+<p>• Private/MBA programs: €10,000–€40,000/year</p>
+<p>• Living expenses: €850–€1,000/month</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What are the job prospects after graduation?</div>
+<div class="faq-answer">
+<p>• Strong demand in Finance, Marketing, Operations, and Consulting</p>
+<p>• Starting salaries:</p>
+<ul>
+<li>Bachelor's graduates: €35,000–€50,000/year</li>
+<li>MBA graduates: €50,000–€90,000/year</li>
+</ul>
+<p>• 18-month job search visa after graduation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- How to Apply -->
+<div class="germany-section">
+<h2 class="germany-title">How to Apply</h2>
+<div class="row">
+<div class="col-md-6">
+<h5>For Engineering Programs</h5>
 <ol>
 <li>Research and shortlist universities &amp; programs</li>
-<li>Check eligibility and application deadlines (Fall intake preferred)</li>
-<li>Take required English proficiency test (IELTS/TOEFL)</li>
-<li>Prepare application documents:
-                                    <ul>
-<li>Academic transcripts &amp; certificates</li>
-<li>Statement of Purpose (SOP)</li>
-<li>Letters of Recommendation (2–3)</li>
-<li>Resume/CV (for Master's/MBA)</li>
-<li>Proof of English proficiency</li>
-<li>Passport copy</li>
-</ul>
-</li>
-<li>Submit online application</li>
-<li>Receive admission offer</li>
-<li>Apply for Spanish student visa</li>
-<li>Book travel and attend pre-departure orientation</li>
+<li>Check eligibility and language requirements</li>
+<li>Take IELTS/TOEFL or TestDaF as needed</li>
+<li>Apply through Uni-Assist or directly to universities</li>
+<li>Receive admission letter</li>
+<li>Apply for German Student Visa</li>
+<li>Open blocked account (€11,208/year)</li>
+<li>Book travel and enroll</li>
 </ol>
 </div>
-<!-- FAQ Section -->
-<div class="spain-section">
-<h2 class="spain-title">Frequently Asked Questions</h2>
-<div class="faq-item">
-<div class="faq-question">What is the cost of studying Business Management in Spain?</div>
-<div class="faq-answer">
-<p>• Bachelor's in Business: €8,000–€20,000/year (approx. ₹7–₹18 lakhs)</p>
-<p>• Master's/MBA: €15,000–€40,000/year (approx. ₹13–₹35 lakhs)</p>
-<p>• Living expenses: €7,000–€12,000/year (approx. ₹6–₹10 lakhs)</p>
-<p>• Scholarships and financial aid are available at most institutions</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">What are the job prospects after studying in Spain?</div>
-<div class="faq-answer">
-<p>Spain and the EU have a strong demand for management professionals in:</p>
-<ul>
-<li>Finance &amp; Banking</li>
-<li>Marketing &amp; Sales</li>
-<li>Consulting &amp; Strategy</li>
-<li>International Business</li>
-<li>Entrepreneurship</li>
-</ul>
-<p><strong>Post-Study Work Options:</strong></p>
-<p>• 1-year post-study visa to find employment</p>
-<p>• Opportunity to work in Spain or elsewhere in the EU</p>
-<p>• Average starting salaries: €25,000–€45,000/year for graduates</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">Is a Business degree from Spain recognized in India?</div>
-<div class="faq-answer">
-<p>✅ Yes — Degrees from accredited Spanish universities are globally recognized, including in India.</p>
-<p>✅ For government jobs or further studies in India, you may need an equivalence certificate from AIU.</p>
-<p>✅ Triple-accredited programs (AACSB, EQUIS, AMBA) are highly valued by employers worldwide.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">Do I need to know Spanish to study in Spain?</div>
-<div class="faq-answer">
-<p>• <strong>For English-taught programs:</strong> No Spanish is required for admission, but basic Spanish is recommended for daily life.</p>
-<p>• <strong>For Spanish-taught programs:</strong> DELE B2 or equivalent is typically required.</p>
-<p>• Many schools offer free Spanish language courses for international students.</p>
-<p>• Learning Spanish enhances your experience and job prospects in Spain.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">What is student life like in Spain?</div>
-<div class="faq-answer">
-<p>• Vibrant and social atmosphere with many cultural activities</p>
-<p>• Excellent weather and outdoor lifestyle</p>
-<p>• Rich cultural heritage and diverse international community</p>
-<p>• Affordable cost of living compared to other Western European countries</p>
-<p>• Well-connected to the rest of Europe for travel opportunities</p>
+<div class="col-md-6">
+<h5>For Business Programs</h5>
+<ol>
+<li>Shortlist programs (check DAAD.de for options)</li>
+<li>Take IELTS/TOEFL and GMAT (if required)</li>
+<li>Prepare application documents</li>
+<li>Apply through university portals</li>
+<li>Receive admission decision</li>
+<li>Apply for student visa and arrange finances</li>
+<li>Secure accommodation and health insurance</li>
+<li>Travel to Germany and enroll</li>
+</ol>
 </div>
 </div>
 </div>
@@ -859,19 +974,19 @@
 <div class="col-lg-2 col-6 footer-links">
 <h4>Popular Courses</h4>
 <ul>
+<li><a href="#">Engineering</a></li>
 <li><a href="#">Business Management</a></li>
-<li><a href="#">International Business</a></li>
-<li><a href="#">Marketing</a></li>
-<li><a href="#">Finance</a></li>
-<li><a href="#">MBA Programs</a></li>
+<li><a href="#">Computer Science</a></li>
+<li><a href="#">Medicine</a></li>
+<li><a href="#">Architecture</a></li>
 </ul>
 </div>
 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
 <h4>Contact Us</h4>
 <p>
-<strong>Address:</strong> 123 Education Street, Madrid, Spain<br/>
-<strong>Phone:</strong> +34 91 123 45 67<br/>
-<strong>Email:</strong> spain@studyabroad.com<br/>
+<strong>Address:</strong> 123 Education Street, City, Country<br/>
+<strong>Phone:</strong> +49 30 12345678<br/>
+<strong>Email:</strong> info@studyabroad.com<br/>
 </p>
 </div>
 </div>
@@ -903,6 +1018,14 @@
 <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
 <!-- Main JS File -->
 <script src="../assets/js/main.js"></script>
+<script>
+        // Initialize Bootstrap tabs
+        var firstTabEl = document.querySelector('#programTabs li:last-child a');
+        var firstTab = new bootstrap.Tab(firstTabEl);
+        
+        // Show first tab by default
+        firstTab.show();
+    </script>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Function to close all dropdowns except the current one

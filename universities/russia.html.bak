@@ -4,11 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Study MBBS in Kyrgyzstan | Kyrgyz Medical Universities</title>
-<meta content="Study MBBS in Kyrgyzstan for Indian students - Quality medical education at affordable costs, globally recognized degrees" name="description"/>
-<meta content="MBBS in Kyrgyzstan, Kyrgyz medical universities, study medicine in Kyrgyzstan, Kyrgyz medical colleges" name="keywords"/>
+<title>Kyx</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
 <!-- Favicons -->
-<link href="../assets/img/kxy-logo.png" rel="icon"/>
+<link href="../assets/img/favicon.png" rel="icon"/>
 <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -23,13 +23,13 @@
 <!-- Main CSS File -->
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
-        .kyrgyzstan-hero {
+        .russia-hero {
             background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
             padding: 60px 0 40px 0;
             text-align: center;
         }
 
-        .kyrgyzstan-section {
+        .russia-section {
             background: #fff;
             border-radius: 16px;
             box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
@@ -37,9 +37,58 @@
             margin-bottom: 32px;
         }
 
-        .kyrgyzstan-title {
+        .russia-title {
             color: #0d6efd;
             font-weight: 700;
+        }
+        
+        /* Countries Dropdown Styling */
+        .countries-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px !important;
+            min-width: 500px;
+        }
+        
+        .country-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .country-item {
+            flex: 1 1 calc(25% - 10px);
+            min-width: 120px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .country-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .country-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .country-item a:hover {
+            color: #0d6efd;
+        }
+        
+        .country-item a.active {
+            color: #0d6efd;
+            font-weight: 600;
         }
         
         /* Header and Navigation Styling */
@@ -93,7 +142,12 @@
         .logo {
             margin-right: 30px;
         }
-        
+
+        .russia-table th,
+        .russia-table td {
+            vertical-align: middle;
+        }
+
         /* Countries Dropdown Styling */
         .countries-list {
             display: flex;
@@ -101,6 +155,9 @@
             gap: 10px;
             padding: 15px !important;
             min-width: 500px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .country-group {
@@ -141,11 +198,6 @@
         .country-item a.active {
             color: #0d6efd;
             font-weight: 600;
-        }
-
-        .kyrgyzstan-table th,
-        .kyrgyzstan-table td {
-            vertical-align: middle;
         }
     
         /* Mobile Menu Toggle Button */
@@ -302,81 +354,9 @@
                 margin: 0 !important;
             }
         }
-        
-        /* Country-specific styles for Kyrgyzstan */
-        .country-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 100px 0 60px;
-            margin-top: 80px;
-        }
-        
-        .country-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-        }
-        
-        .country-section h2 {
-            color: #0d6efd;
-            font-weight: 700;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #e9ecef;
-        }
-        
-        .country-section ul, 
-        .country-section ol {
-            padding-left: 20px;
-        }
-        
-        .country-section li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .country-table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        
-        .country-table th, 
-        .country-table td {
-            padding: 12px 15px;
-            border: 1px solid #dee2e6;
-            text-align: left;
-        }
-        
-        .country-table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            border-left: 4px solid #0d6efd;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .country-hero {
-                padding: 80px 0 40px;
-                margin-top: 70px;
-                text-align: center;
-            }
-            
-            .country-section {
-                padding: 20px 15px;
-            }
-        }
         </style>
 </head>
-<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Kyrgyzstan</h1><p class="lead">Discover top medical universities in Kyrgyzstan with affordable fees and world-class education</p></div></div></div></section>
+<body class="index-page">
 <header class="header d-flex align-items-center fixed-top" id="header">
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 <a class="logo d-flex align-items-center" href="../index.html">
@@ -391,13 +371,13 @@
 <ul class="countries-list">
 <li class="country-group">
 <div class="country-item">
-<a href="russia.html" title="Russia">Russia</a>
+<a class="active" href="russia.html" title="Russia">Russia</a>
 </div>
 <div class="country-item">
 <a href="georgia.html" title="Georgia">Georgia</a>
 </div>
 <div class="country-item">
-<a class="active" href="kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
+<a href="kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
 </div>
 <div class="country-item">
 <a href="uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
@@ -429,38 +409,7 @@
 </li>
 </ul>
 </li>
-<!--                <li><a href="#contact">Contact</a></li>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="china.html" title="China">China</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="germany.html" title="Germany">Germany</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="italy.html" title="Italy">Italy</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="france.html" title="France">France</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="belarus.html" title="Belarus">Belarus</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="latvia.html" title="Latvia">Latvia</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="lithuania.html" title="Lithuania">Lithuania</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="hungary.html" title="Hungary">Hungary</a>-->
-<!--                            </div>-->
-<!--                            <div class="country-item">-->
-<!--                                <a href="study-in-germany.html" title="Germany">Study in Germany</a>-->
-<!--                            </div>-->
-<!-- -->
-<!--                        </ul>-->
-<!--                    </li>-->
-<li><a href="../index.html#contact">Contact</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
@@ -470,26 +419,28 @@
 <!-- Add space after header to prevent content collision -->
 <div style="height: 80px;"></div>
 <main class="main">
-<section class="about section country-section" id="about">
+<section class="about section" id="about">
 <div class="container" data-aos="fade-up">
 <div class="row gx-0">
 <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
 <div class="content">
 <div class="container my-5">
-<div class="kyrgyzstan-section">
-<h2>Why Choose MBBS in Kyrgyzstan?</h2>
+<div class="russia-section">
+<div class="col-lg-20 d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+<img alt="Study MBBS in Russia" class="img-fluid" src="../assets/img/hero-img-2.png"/>
 <ul>
-<li>Quality education with globally accredited medical universities</li>
+<li>High-quality education, globally recognized degrees (WHO, NMC, ECFMG, FAIMER)</li>
+<li>Affordable tuition and living costs</li>
 <li>English-medium instruction</li>
-<li>Affordable tuition fees (₹3-5 lakhs/year)</li>
-<li>Safe and welcoming environment</li>
-<li>Recognition by WHO and NAQAER</li>
-<li>Excellent academic standards</li>
+<li>No donation/capitation fees</li>
+<li>Strong clinical exposure and high FMGE pass rate</li>
 </ul>
 </div>
-<div class="kyrgyzstan-section">
+<h2 class="text-center mt-4">Why Choose Russia for MBBS?</h2>
+</div>
+<div class="russia-section">
 <h2>Quick Facts</h2>
-<table class="table table-bordered kyrgyzstan-table country-table table table-striped">
+<table class="table table-bordered russia-table">
 <tbody>
 <tr>
 <th>Course Duration</th>
@@ -500,16 +451,16 @@
 <td>English</td>
 </tr>
 <tr>
-<th>NAQAER-Approved Universities</th>
-<td>8+</td>
+<th>NMC-Approved Universities</th>
+<td>50+</td>
 </tr>
 <tr>
 <th>Tuition Fees</th>
-<td>₹3-5 lakhs/year</td>
+<td>₽200,000–₽600,000 per year (approx. ₹2.25–₹6.75 lakhs)</td>
 </tr>
 <tr>
 <th>Living Expenses</th>
-<td>₹15,000-20,000/month</td>
+<td>₽12,000–₽20,000/month (approx. ₹13,500–₹22,500)</td>
 </tr>
 <tr>
 <th>Eligibility</th>
@@ -517,14 +468,14 @@
 </tr>
 <tr>
 <th>Degree Recognition</th>
-<td>WHO, NAQAER</td>
+<td>WHO, ECFMG, FAIMER, NMC, etc.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="kyrgyzstan-section">
-<h2>Top Kyrgyz Medical Universities &amp; Fees (2025-26)</h2>
-<table class="table table-striped kyrgyzstan-table country-table table table-striped">
+<div class="russia-section">
+<h2>Top Russian Medical Universities &amp; Fees (2025–26)</h2>
+<table class="table table-striped russia-table">
 <thead>
 <tr>
 <th>#</th>
@@ -535,108 +486,345 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>Asian Medical Institute</td>
-<td>$2,500</td>
+<td>Altai State Medical University</td>
+<td>$3,900</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Bishkek International Medical University</td>
+<td>Bashkir State Medical University</td>
 <td>$3,500</td>
 </tr>
 <tr>
 <td>3</td>
-<td>International School of Medicine</td>
-<td>$5,000</td>
+<td>Chuvash State University</td>
+<td>$2,800</td>
 </tr>
 <tr>
 <td>4</td>
-<td>International Medical University</td>
-<td>$3,500</td>
+<td>Crimean Federal Medical University</td>
+<td>$3,000</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Jalal-Abad State Medical University</td>
-<td>$9,000</td>
+<td>First Moscow State Medical University</td>
+<td>$11,800</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Kyrgyz Russian Slavic University</td>
-<td>$5,400</td>
+<td>Far Eastern Federal University</td>
+<td>$4,700</td>
 </tr>
 <tr>
 <td>7</td>
-<td>Kyrgyz State Medical Academy</td>
-<td>$3,500</td>
+<td>Kazan Federal University</td>
+<td>$5,600</td>
 </tr>
 <tr>
 <td>8</td>
-<td>Osh State Medical University</td>
-<td>$3,500</td>
+<td>Kazan State Medical University</td>
+<td>$5,000</td>
 </tr>
+<tr>
+<td>9</td>
+<td>Kuban State Medical University</td>
+<td>$4,000</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Kursk State Medical University</td>
+<td>$3,200</td>
+</tr>
+<!-- Add more as needed -->
 </tbody>
 </table>
 </div>
-<div class="kyrgyzstan-section">
+<div class="russia-section">
 <h2>Eligibility Criteria</h2>
 <ul>
 <li>Minimum 17 years old by December 31 of admission year</li>
 <li>NEET qualification required</li>
-<li>50% in PCB (12th grade)</li>
+<li>50% in PCB (12th grade), 40% for reserved categories</li>
 <li>Valid Indian nationality certificate</li>
-<li>Good command of English</li>
 </ul>
 </div>
-<div class="kyrgyzstan-section">
+<div class="russia-section">
 <h2>How to Apply</h2>
 <ol>
 <li>Choose a university</li>
 <li>Check eligibility</li>
 <li>Submit application with required documents</li>
-<li>Appear for medical entrance test if required</li>
-<li>Attend interview</li>
 <li>Receive admission letter</li>
 <li>Apply for student visa</li>
-<li>Prepare for travel and accommodation</li>
+<li>Book travel and attend pre-departure orientation</li>
 </ol>
 </div>
-<div class="kyrgyzstan-section">
-<h2>Advantages of Studying MBBS in Kyrgyzstan</h2>
+<div class="russia-section">
 <ul>
-<li>Affordable education</li>
-<li>High-quality education</li>
-<li>English-medium programs</li>
-<li>Safe environment</li>
-<li>International recognition</li>
-<li>Modern facilities</li>
+<li>Russia has consistently ranked among the top destinations for Indian students aspiring to pursue MBBS abroad. Recognized for its high standards in medical education, Russia holds the 8th position globally in terms of quality, and is home to thousands of Indian alumni now working as respected medical professionals worldwide.</li>
+<li>One of the key advantages for Indian students is the strong bilateral relationship between India and Russia. Thanks to these friendly ties, the Russian government offers subsidized medical education, significantly reducing the financial burden on international students. This makes MBBS in Russia not only a high-quality academic option but also an affordable one.</li>
+<li>With over 25 globally recognized medical universities and a long-standing history of welcoming Indian students, Russia continues to be a trusted and rewarding destination for medical education.</li>
+<li><strong>Why Study MBBS in Russia for Indian Students?</strong>
+<ul>
+<li>Russia has become a top destination for Indian students seeking affordable, globally recognized medical education.</li>
+</ul>
+</li>
+<li><strong>Course Duration</strong>
+<ul>
+<li>MBBS in Russia is a 6-year program, including one year of clinical internship.</li>
+<li>Advanced curriculum integrating theoretical knowledge with hands-on training in leading hospitals.</li>
+</ul>
+</li>
+<li><strong>Part-Time Work Opportunities</strong>
+<ul>
+<li>Indian students with a valid student visa can work part-time while studying.</li>
+<li>Benefits:
+                <ul>
+<li>Practical work experience</li>
+<li>Better exposure to Russian language and culture</li>
+<li>Additional income for living expenses</li>
+</ul>
+</li>
+<li>Note: Work opportunities may vary by region and university policies.</li>
+</ul>
+</li>
+<li><strong>NMC-Approved Medical Universities</strong>
+<ul>
+<li>Over 50+ Russian medical universities are approved by the National Medical Commission (NMC) of India.</li>
+<li>Graduates are eligible to:
+                <ul>
+<li>Return to India</li>
+<li>Appear for the FMGE/NExT exam</li>
+<li>Practice as licensed doctors in India</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Eligibility Criteria for Indian Students</strong>
+<ul>
+<li>Qualify the NEET-UG exam</li>
+<li>Score at least 50% in PCB (Physics, Chemistry, Biology) in Class 12 (CBSE/ISC or equivalent)</li>
+<li>Be at least 17 years old by December 31st of the admission year</li>
+</ul>
+</li>
+<li><strong>Tuition Fees &amp; Living Costs</strong>
+<ul>
+<li>Estimated annual tuition fees: ₽200,000 to ₽600,000 (approx. ₹2.25 to ₹6.75 lakhs)</li>
+<li>Living expenses: ₽12,000–₽20,000/month (approx. ₹13,500 to ₹22,500) depending on city and lifestyle.</li>
+</ul>
+</li>
+<li><strong>FMGE / NExT Exam</strong>
+<ul>
+<li>To practice in India, MBBS graduates from Russia must:</li>
+<li>
+<ul>
+<li>Pass the Foreign Medical Graduate Examination (FMGE)</li>
+<li>Or appear for the upcoming National Exit Test (NExT), expected to replace FMGE soon</li>
+</ul>
+</li>
+<li>Russian universities provide solid academic preparation to help students clear these exams.</li>
+</ul>
+</li>
+<li><strong>Quick Facts</strong>
+<ul>
+<li>Course Duration: 6 years (including internship)</li>
+<li>Medium of Instruction: English</li>
+<li>NMC-Approved Universities: 50+</li>
+<li>Tuition Fees: ₽200,000–₽600,000 per year</li>
+<li>Living Expenses: ₽12,000–₽20,000/month</li>
+<li>Eligibility: NEET + 50% in PCB (12th grade)</li>
+<li>Degree Recognition: WHO, ECFMG, FAIMER, NMC, etc.</li>
+</ul>
+</li>
+<li><strong>MBBS in Russia – Fee Structure 2025–2026 for Indian Students</strong>
+<ul>
+<li>One of the most affordable and practical options for Indian students seeking world-class medical education abroad.</li>
+<li>Over 25 NMC-approved medical universities, globally recognized degrees, and low tuition fees.</li>
+</ul>
+</li>
+<li><strong>MBBS Fees in Russia – At a Glance</strong>
+<ul>
+<li>Annual Tuition Fees: ₽200,000 – ₽600,000</li>
+<li>Approx. USD Range: $2,000 – $11,800/year</li>
+<li>Course Duration: 6 Years (including internship)</li>
+<li>Medium of Instruction: English</li>
+<li>Recognition: NMC, WHO, ECFMG, FAIMER, etc.</li>
+</ul>
+</li>
+<li><strong>Top Russian Medical Universities &amp; Fee Structure (2025–26)</strong>
+<ul>
+<li>Comprehensive list of popular Russian medical universities with their latest tuition fee details for Indian students:</li>
+<li>
+<ul>
+<li>1. Altai State Medical University – $3,900</li>
+<li>2. Bashkir State Medical University – $3,500</li>
+<li>3. Chuvash State University – $2,800</li>
+<li>4. Crimean Federal Medical University – $3,000</li>
+<li>5. First Moscow State Medical University – $11,800</li>
+<li>6. Far Eastern Federal University – $4,700</li>
+<li>7. Kazan Federal University – $5,600</li>
+<li>8. Kazan State Medical University – $5,000</li>
+<li>9. Kuban State Medical University – $4,000</li>
+<li>10. Kursk State Medical University – $3,200</li>
+<li>11. Mari State University – $10,000</li>
+<li>12. Orenburg State Medical University – $6,000</li>
+<li>13. Peoples' Friendship University of Russia (RUDN) – $3,200</li>
+<li>14. Perm State Medical University – $5,500</li>
+<li>15. Pirogov Russian National Research Medical University – $3,100</li>
+<li>16. Rostov State Medical University – $5,100</li>
+<li>17. Saint Petersburg State Medical University – $4,100</li>
+<li>18. Smolensk State Medical University – $4,000</li>
+<li>19. Tver State Medical University – $2,800</li>
+<li>20. Volgograd State Medical University – $5,500</li>
+<li>21. Siberian State Medical University – $4,100</li>
+<li>22. South Ural State Medical University – $2,800</li>
+<li>23. Kemerovo State University – $2,000</li>
+<li>24. Kemerovo State Medical University – $2,700</li>
+<li>25. Kabardino-Balkarian State Medical University – $2,300</li>
+<li>26. North Caucasian State Medical Academy – $3,000</li>
+<li>27. Lobachevsky State Medical University – $3,300</li>
+<li>28. Samara State Medical University – $3,800</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Key Benefits of Studying MBBS in Russia</strong>
+<ul>
+<li>Affordable Tuition: Save up to 80% compared to Indian private medical colleges</li>
+<li>Globally Recognized Degrees</li>
+<li>English-Medium Instruction for Indian and international students</li>
+<li>No Donation / Capitation Fees Required</li>
+<li>Strong Clinical Exposure from 2nd or 3rd year onwards</li>
+<li>High FMGE Pass Rate from top universities</li>
+</ul>
+</li>
+<li><strong>Disclaimer</strong>
+<ul>
+<li>The tuition fees listed above are approximate figures and may vary based on university policies, exchange rates, or annual revisions.</li>
+<li>For the most accurate and up-to-date information regarding tuition fees, hostel charges, and the latest USD to INR conversion rates, we recommend reaching out to our expert team directly.</li>
+</ul>
+</li>
+<li><strong>Eligibility Criteria for MBBS in Russia (2025–2026)</strong>
+<ul>
+<li>The eligibility requirements for Indian students are simpler and more flexible compared to Indian medical colleges.</li>
+</ul>
+</li>
+<li><strong>Basic Eligibility Requirements</strong>
+<ul>
+<li>Age Limit: Minimum 17 years by December 31 of the admission year, Maximum: 25 years</li>
+<li>NEET Qualification: Mandatory as per NMC guidelines (no additional entrance exams required)</li>
+<li>Academic Requirements: Minimum 50% aggregate in PCB (Physics, Chemistry, Biology) in 12th standard, 40% for SC/ST/OBC categories</li>
+<li>Nationality: Must possess a valid Nationality Certificate or Indian citizenship proof</li>
+</ul>
+</li>
+<li><strong>Education Loans for Indian Students Pursuing MBBS Abroad</strong>
+<ul>
+<li>Loan Eligibility and Amount: Depends on academic credentials, course fees, and family financial profile.</li>
+<li>Required Documents: NEET scorecard, university admission/invitation letter, detailed fee structure.</li>
+<li>Financial Assessment: Parents’/guardians’ income, property, and assets are crucial for loan sanctioning.</li>
+</ul>
+</li>
+<li><strong>Additional Notes</strong>
+<ul>
+<li>No entrance exams for MBBS in Russia except NEET.</li>
+<li>Applicant should be 17 years by December 31 of the year of admission. Maximum age limit is 25 years.</li>
+<li>Aggregate 50% in PCB for general candidates and 40% for reserved category students.</li>
+<li>Applicants should submit their nationality certificate before applying for MBBS abroad.</li>
+</ul>
+</li>
+<li><strong>Frequently Asked Questions</strong>
+<ul>
+<li><strong>What Are the Eligibility Criteria for MBBS in Russia for Indian Students?</strong>
+<ul>
+<li>Completion of 10+2 (or equivalent) with Physics, Chemistry, Biology, and English as compulsory subjects.</li>
+<li>Minimum aggregate of 50% in 10+2 (40% for reserved categories) in these core science subjects.</li>
+<li>NEET qualification is mandatory.</li>
+</ul>
+</li>
+<li><strong>What is the Duration of the MBBS Program in Russia?</strong>
+<ul>
+<li>6 years (5 years academic study + 1-year mandatory internship).</li>
+</ul>
+</li>
+<li><strong>What Are the Tuition Fees for MBBS in Russia?</strong>
+<ul>
+<li>₹3 to ₹4 lakhs per year on average.</li>
+</ul>
+</li>
+<li><strong>How Can I Find a Job in Russia After Graduating from MBBS?</strong>
+<ul>
+<li>Job opportunities in Russia: Hospitals, clinics, research centers, healthcare institutions (fluency in Russian and licensing may be required).</li>
+<li>Career options in India: Clear the NMC Screening Test (FMGE) to register as a medical practitioner in India.</li>
+</ul>
+</li>
+<li><strong>What are top listed universities in Russia?</strong>
+<ul>
+<li>1. First Moscow State Medical University (Sechenov University)</li>
+<li>2. Pirogov Russian National Research Medical University</li>
+<li>3. Peoples' Friendship University of Russia (RUDN University)</li>
+<li>4. Kazan Federal University</li>
+<li>5. Kazan State Medical University</li>
+<li>6. Saint Petersburg State Pediatric Medical University</li>
+<li>7. Saint Petersburg State Medical University (Pavlov University)</li>
+<li>8. Crimean Federal Medical University</li>
+<li>9. Orenburg State Medical University</li>
+<li>10. Altai State Medical University</li>
+<li>11. Bashkir State Medical University</li>
+<li>12. Perm State Medical University</li>
+<li>13. Smolensk State Medical University</li>
+<li>14. Kursk State Medical University</li>
+<li>15. Volgograd State Medical University</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>How Can I Apply for MBBS in Russia?</strong>
+<ul>
+<li>Choose a University: Select an NMC-approved medical university in Russia that fits your academic and budget preferences.</li>
+<li>Check Eligibility: Ensure you meet the basic criteria – 10+2 with PCB, NEET qualified, and minimum age of 17 years.</li>
+<li>Submit Application: Apply to your chosen university with the required documents (passport, NEET scorecard, academic transcripts, etc.).</li>
+<li>Receive Admission Letter: Once your application is accepted, the university will issue an official admission or invitation letter.</li>
+<li>Apply for Student Visa: The consultancy will assist you in applying for a Russian student visa, including documentation and interview preparation.</li>
+<li>Book Travel &amp; Prepare for Departure: After visa approval, make travel arrangements and attend a pre-departure orientation session.</li>
+</ul>
+</li>
+<li><strong>Why Apply Through a Consultancy?</strong>
+<ul>
+<li>Expert guidance throughout the admission process</li>
+<li>Help with university selection and documentation</li>
+<li>Visa assistance and travel planning</li>
+<li>Support with accommodation, forex, and health insurance</li>
+</ul>
+</li>
+<li><strong>What Are the Living Costs for Students in Russia?</strong>
+<ul>
+<li>Average Monthly Living Expenses: ₹10,000 to ₹15,000 per month, covering:</li>
+<li>
+<ul>
+<li>Food &amp; Groceries – ₹4,000 to ₹6,000</li>
+<li>Hostel/Accommodation – ₹2,500 to ₹5,000 (subsidized university hostels)</li>
+<li>Transport – ₹500 to ₹1,000 (public transport is efficient and affordable)</li>
+<li>Mobile &amp; Internet – ₹300 to ₹700</li>
+<li>Personal Expenses – ₹2,000 to ₹3,000 (entertainment, supplies, etc.)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="kyrgyzstan-section">
-<h2>Disadvantages to Consider</h2>
-<ul>
-<li>Cultural adjustment needed</li>
-<li>Extreme climate conditions</li>
-<li>Language barriers outside classroom</li>
-</ul>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="content">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<!-- rest of the content -->
-</div></div></div></div></div></section>
-<div class="content">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
+<div class="page-title">
+<!-- Section Title -->
+<!-- Alt Features Section -->
+<!-- Services Section -->
+<!-- Faq Section -->
 <!-- Contact Section -->
+<section class="contact section" id="contact">
+<!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
 <h2>Contact</h2>
 <p>Contact Us</p>
-</div>
+</div><!-- End Section Title -->
 <div class="container" data-aos="fade-up" data-aos-delay="100">
 <div class="row gy-4">
 <div class="col-lg-6">
@@ -648,7 +836,7 @@
 <p>rajuvolu </p>
 <p>russian tuppalu, 535022</p>
 </div>
-</div>
+</div><!-- End Info Item -->
 <div class="col-md-6">
 <div class="info-item" data-aos="fade" data-aos-delay="300">
 <i class="bi bi-telephone"></i>
@@ -656,7 +844,7 @@
 <p>+91-6304705445</p>
 <p>+91-8125423017</p>
 </div>
-</div>
+</div><!-- End Info Item -->
 <div class="col-md-6">
 <div class="info-item" data-aos="fade" data-aos-delay="400">
 <i class="bi bi-envelope"></i>
@@ -664,7 +852,7 @@
 <p>projectk1international@gmail.com</p>
 <p>projectk1international@gmail.com</p>
 </div>
-</div>
+</div><!-- End Info Item -->
 <div class="col-md-6">
 <div class="info-item" data-aos="fade" data-aos-delay="500">
 <i class="bi bi-clock"></i>
@@ -672,7 +860,7 @@
 <p>Monday - Friday</p>
 <p>9:00AM - 05:00PM</p>
 </div>
-</div>
+</div><!-- End Info Item -->
 </div>
 </div>
 <div class="col-lg-6">
@@ -698,12 +886,14 @@
 </div>
 </div>
 </form>
+</div><!-- End Contact Form -->
 </div>
 </div>
-</div>
-</div></div></div></div></main>
+</section><!-- /Contact Section -->
+</div><!-- End Main Content -->
+</div></div></div></section></main>
 <!-- Contact Section -->
-<section class="contact section country-section" id="contact">
+<section class="contact section" id="contact">
 <!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
 <h2>Contact</h2>
@@ -775,17 +965,33 @@
 </div>
 </section><!-- /Contact Section -->
 <footer class="footer" id="footer">
+<!--    <div class="footer-newsletter">-->
+<!--        <div class="container">-->
+<!--            <div class="row justify-content-center text-center">-->
+<!--                <div class="col-lg-6">-->
+<!--                    <h4>Join Our Newsletter</h4>-->
+<!--                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>-->
+<!--                    <form action="forms/newsletter.php" method="post" class="php-email-form">-->
+<!--                        <div class="newsletter-form"><input type="email" name="email"><input type="submit"-->
+<!--                                                                                             value="Subscribe"></div>-->
+<!--                        <div class="loading">Loading</div>-->
+<!--                        <div class="error-message"></div>-->
+<!--                        <div class="sent-message">Your subscription request has been sent. Thank you!</div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 <div class="container footer-top">
 <div class="row gy-4">
 <div class="col-lg-4 col-md-6 footer-about">
-<a class="logo d-flex align-items-center" href="../index.html">
-<img alt="" height="200" src="../assets/img/kxy-logo.png" width="70"/>
+<a class="d-flex align-items-center" href="index.html">
+<span class="sitename">kyx</span>
 </a>
 <div class="footer-contact pt-3">
 <p>rajuvolu </p>
 <p>russian tuppalu</p>
 <p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
-<p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
 <p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
 <p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
 </div>
@@ -805,9 +1011,16 @@
 <div class="container copyright text-center mt-4">
 <p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
 </p>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you've purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+</div>
 </div>
 </footer>
-<a class="scroll-top d-flex align-items-center justify-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Scroll Top -->
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
 <!-- Vendor JS Files -->
 <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendor/php-email-form/validate.js"></script>
@@ -819,6 +1032,8 @@
 <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 <!-- Main JS File -->
 <script src="../assets/js/main.js"></script>
+
+
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Function to close all dropdowns except the current one

@@ -450,32 +450,28 @@ h6 {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
-  }
-
   .navmenu .dropdown ul {
     position: static;
     display: none;
-    z-index: 99;
-    padding: 10px 0;
     margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: var(--surface-color);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
 
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+  .navmenu .dropdown ul li,
+  .navmenu .listing-dropdown .countries-list .country-item {
+    min-width: 200px;
+    padding: 5px 0;
   }
 
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+  .navmenu .dropdown > a:after,
+  .navmenu .listing-dropdown > a .toggle-dropdown {
+    position: absolute;
+    right: 15px;
   }
 
   .mobile-nav-active {
@@ -485,22 +481,83 @@ h6 {
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
-    font-size: 32px;
     top: 15px;
     right: 15px;
-    margin-right: 0;
+    font-size: 28px;
     z-index: 9999;
   }
 
   .mobile-nav-active .navmenu {
     position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9997;
+    overflow-y: auto;
+  }
+  
+  .mobile-nav-active .navmenu ul {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px 20px 20px 20px;
+    margin: 0;
+    background: #fff;
+    overflow-y: auto;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(var(--heading-color-rgb), 0.8);
+    z-index: 9996;
+  }
+
+  /* Mobile dropdown styles */
+  .navmenu .listing-dropdown.active > a .toggle-dropdown {
+    transform: rotate(180deg);
+  }
+
+  .navmenu .listing-dropdown .countries-list {
+    display: none;
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 0 0 15px;
+  }
+
+  .navmenu .listing-dropdown.active .countries-list {
+    display: block;
+  }
+
+  .navmenu .country-group {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .navmenu .country-item {
+    flex: 1 1 100%;
+    min-width: 100%;
+    padding: 8px 0;
+  }
+}
+
+/* Ensure the mobile nav toggle is visible on mobile */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    display: block !important;
+  }
+
+  .navmenu ul {
+    display: none;
+  }
+
+  .mobile-nav-active .navmenu ul {
     display: block;
   }
 }

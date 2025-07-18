@@ -224,12 +224,8 @@
             }
 
             .listing-dropdown > a::after {
-                content: '\f282';
-                font-family: 'bootstrap-icons';
-                font-size: 12px;
-                margin-left: 8px;
-                transition: transform 0.3s ease;
-            }
+            display: none !important;
+        }
 
             .listing-dropdown.active > a::after {
                 transform: rotate(180deg);
@@ -451,7 +447,7 @@
 <a href="spain.html" title="Spain">Spain</a>
 </div>
 <div class="country-item">
-<a href="uk.html" title="United Kingdom">United Kingdom</a>
+<a href="uk.html" title="United Kingdom">UK</a>
 </div>
 <div class="country-item">
 <a href="usa.html" title="United States">United States</a>
@@ -472,7 +468,7 @@
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
-<a class="btn-getstarted flex-md-shrink-0" href="../index.html#about">Get Started</a>
+<!-- <a class="btn-getstarted flex-md-shrink-0" href="../index.html#about">Get Started</a> -->
 </div>
 </header>
 <main class="main">
@@ -845,7 +841,138 @@
                     closeOtherDropdowns(null);
                 }, 250);
             });
+            
+            // Mobile nav toggle functionality
+            console.log('Initializing mobile nav toggle...');
+            const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.getElementById('navmenu');
+            console.log('Mobile toggle button found:', mobileNavToggleBtn);
+            console.log('Nav menu found:', navMenu);
+            
+            function mobileNavToggle() {
+                console.log('Toggle function called');
+                const body = document.querySelector('body');
+                console.log('Body class before toggle:', body.className);
+                
+                // Toggle the mobile-nav-active class on the body
+                body.classList.toggle('mobile-nav-active');
+                console.log('Body class after toggle:', body.className);
+                
+                // Toggle the mobile nav menu
+                if (navMenu) {
+                    navMenu.classList.toggle('mobile-nav-active');
+                    console.log('Nav menu class after toggle:', navMenu.className);
+                }
+                
+                // Toggle the mobile toggle button icon
+                if (mobileNavToggleBtn) {
+                    console.log('Toggling icons...');
+                    mobileNavToggleBtn.classList.toggle('bi-list');
+                    mobileNavToggleBtn.classList.toggle('bi-x');
+                    console.log('Button classes after toggle:', mobileNavToggleBtn.className);
+                    
+                    // Toggle aria-expanded attribute for accessibility
+                    const isExpanded = mobileNavToggleBtn.getAttribute('aria-expanded') === 'true' || false;
+                    mobileNavToggleBtn.setAttribute('aria-expanded', !isExpanded);
+                } else {
+                    console.error('Mobile toggle button not found when toggling!');
+                }
+                
+                // Toggle overflow hidden on body to prevent scrolling when menu is open
+                if (body.classList.contains('mobile-nav-active')) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            }
+            
+            // Add click event to mobile nav toggle button
+            if (mobileNavToggleBtn) {
+                console.log('Adding click event listener to mobile toggle button');
+                mobileNavToggleBtn.addEventListener('click', function(e) {
+                    console.log('Mobile toggle button clicked!', e);
+                    e.preventDefault();
+                    e.stopPropagation();
+                    mobileNavToggle();
+                });
+                
+                // Add keyboard event for accessibility
+                mobileNavToggleBtn.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        mobileNavToggle();
+                    }
+                });
+            } else {
+                console.error('Mobile toggle button not found in DOM!');
+            }
+            
+            // Close mobile nav when clicking on a nav link or outside the menu
+            document.addEventListener('click', function(e) {
+                const isClickInsideNav = navMenu.contains(e.target) || mobileNavToggleBtn.contains(e.target);
+                
+                if (!isClickInsideNav && document.body.classList.contains('mobile-nav-active')) {
+                    console.log('Click outside menu detected, closing menu');
+                    mobileNavToggle();
+                }
+            });
+            
+            // Close mobile nav when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && document.body.classList.contains('mobile-nav-active')) {
+                    console.log('Escape key pressed, closing menu');
+                    mobileNavToggle();
+                }
+            });
         });
+        
+            // Simple dropdown toggle functionality
+            document.addEventListener('click', function(e) {
+                const dropdownToggle = e.target.closest('.listing-dropdown > a');
+                const dropdownMenu = document.querySelector('.countries-list');
+                
+                // If clicking the dropdown toggle
+                if (dropdownToggle) {
+                    e.preventDefault();
+                    const isActive = dropdownToggle.parentElement.classList.contains('active');
+                    
+                    // Close all dropdowns first
+                    document.querySelectorAll('.listing-dropdown').forEach(d => {
+                        d.classList.remove('active');
+                    });
+                    
+                    // Toggle current dropdown
+                    if (!isActive) {
+                        dropdownToggle.parentElement.classList.add('active');
+                        if (dropdownMenu) {
+                            dropdownMenu.style.display = 'flex';
+                            dropdownMenu.style.visibility = 'visible';
+                            dropdownMenu.style.opacity = '1';
+                        }
+                    }
+                    return;
+                }
+                
+                // If clicking a dropdown item
+                const dropdownItem = e.target.closest('.countries-list a');
+                if (dropdownItem) {
+                    e.stopPropagation();
+                    window.location.href = dropdownItem.getAttribute('href');
+                    return;
+                }
+                
+                // If clicking outside, close all dropdowns
+                document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                    const menu = dropdown.querySelector('.countries-list');
+                    if (menu) {
+                        menu.style.display = 'none';
+                        menu.style.visibility = 'hidden';
+                        menu.style.opacity = '0';
+                    }
+                });
+            });
+
         </script>
 </body>
 </html>

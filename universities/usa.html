@@ -273,12 +273,8 @@
             }
 
             .listing-dropdown > a::after {
-                content: '\f282';
-                font-family: 'bootstrap-icons';
-                font-size: 12px;
-                margin-left: 8px;
-                transition: transform 0.3s ease;
-            }
+            display: none !important;
+        }
 
             .listing-dropdown.active > a::after {
                 transform: rotate(180deg);
@@ -501,7 +497,7 @@
 <a href="spain.html" title="Spain">Spain</a>
 </div>
 <div class="country-item">
-<a href="uk.html" title="United Kingdom">United Kingdom</a>
+<a href="uk.html" title="United Kingdom">UK</a>
 </div>
 <div class="country-item">
 <a href="usa.html" title="United States">United States</a>
@@ -522,7 +518,7 @@
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
-<a class="btn-getstarted flex-md-shrink-0" href="../index.html#about">Get Started</a>
+<!-- <a class="btn-getstarted flex-md-shrink-0" href="../index.html#about">Get Started</a> -->
 </div>
 </header>
 <main class="main">
@@ -951,6 +947,54 @@
                 }, 250);
             });
         });
+        
+            // Simple dropdown toggle functionality
+            document.addEventListener('click', function(e) {
+                const dropdownToggle = e.target.closest('.listing-dropdown > a');
+                const dropdownMenu = document.querySelector('.countries-list');
+                
+                // If clicking the dropdown toggle
+                if (dropdownToggle) {
+                    e.preventDefault();
+                    const isActive = dropdownToggle.parentElement.classList.contains('active');
+                    
+                    // Close all dropdowns first
+                    document.querySelectorAll('.listing-dropdown').forEach(d => {
+                        d.classList.remove('active');
+                    });
+                    
+                    // Toggle current dropdown
+                    if (!isActive) {
+                        dropdownToggle.parentElement.classList.add('active');
+                        if (dropdownMenu) {
+                            dropdownMenu.style.display = 'flex';
+                            dropdownMenu.style.visibility = 'visible';
+                            dropdownMenu.style.opacity = '1';
+                        }
+                    }
+                    return;
+                }
+                
+                // If clicking a dropdown item
+                const dropdownItem = e.target.closest('.countries-list a');
+                if (dropdownItem) {
+                    e.stopPropagation();
+                    window.location.href = dropdownItem.getAttribute('href');
+                    return;
+                }
+                
+                // If clicking outside, close all dropdowns
+                document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                    const menu = dropdown.querySelector('.countries-list');
+                    if (menu) {
+                        menu.style.display = 'none';
+                        menu.style.visibility = 'hidden';
+                        menu.style.opacity = '0';
+                    }
+                });
+            });
+
         </script>
 </body>
 </html>

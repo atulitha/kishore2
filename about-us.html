@@ -1,49 +1,3 @@
-.about-box {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    margin-top: -20px;
-    position: relative;
-    z-index: 1;
-}
-
-.about-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.about-section {
-    margin-bottom: 30px;
-    padding: 25px;
-    background: #f8f9fa;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-}
-
-.about-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.about-section h3 {
-    color: #0d6efd;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.about-section p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.about-section:last-child {
-    margin-bottom: 0;
-}
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -70,257 +24,556 @@
 <link href="assets/css/main.css" rel="stylesheet"/>
 <link href="assets/css/dropdown-styles.css" rel="stylesheet"/>
 <style>
-        .about-container {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #f8fafc 60%, #e3e9f7 100%);
-            min-height: calc(100vh - 150px);
-            display: flex;
-            align-items: center;
-        }
-
-        .about-box {
-            background: #ffffff;
-            border-radius: 25px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-            padding: 3rem;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 0 auto;
-        }
-
-        .about-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
-        }
-
+    /* Typography and Readability Enhancements */
+    .about-content {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .about-content h1 {
+        color: #0d6efd;
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+    }
+    
+    .about-section {
+        margin-bottom: 2.5rem;
+    }
+    
+    .about-section:last-child {
+        margin-bottom: 0;
+    }
+    
+    .about-section h3 {
+        color: #2c3e50;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+        position: relative;
+        padding-bottom: 0.75rem;
+    }
+    
+    .about-section h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #0d6efd, #6c5ce7);
+        border-radius: 2px;
+    }
+    
+    .about-section p {
+        color: #4a5568;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+    }
+    
+    .about-section p:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
         .about-content {
-            max-width: 100%;
-            margin: 0;
-            width: 100%;
-        }
-
-        .about-section {
-            margin-bottom: 2rem;
             padding: 1.75rem;
-            background: #f8f9fa;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            border-left: 4px solid #0d6efd;
         }
-
-        .about-section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            border-color: rgba(0, 0, 0, 0.1);
+        
+        .about-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.75rem;
         }
-
+        
         .about-section h3 {
-            color: #0d6efd;
             font-size: 1.5rem;
-            margin-bottom: 1.25rem;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
-        .about-section h3:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: #0d6efd;
-            border-radius: 2px;
-        }
-
         .about-section p {
-            color: #444;
-            line-height: 1.9;
             font-size: 1rem;
-            margin-bottom: 20px;
+            line-height: 1.7;
         }
-
-        .about-section:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* Add space between menu items */
-        /* Improved menu styles */
-        /* Header and Navigation Styling */
-        #header {
-            background: rgba(255, 255, 255, 0.97);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-        }
-        
-        #header .container-fluid {
-            justify-content: space-between;
-        }
-        
-        #navmenu {
-            margin: 0 auto;
-            width: auto;
+    }
+    
+    /* Basic styles for the contact form */
+    .php-email-form .loading {
+      display: none;
+      background: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+    .php-email-form .loading:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px -6px 0;
+      border: 3px solid #0d6efd;
+      border-top-color: #eee;
+      animation: animate-loading 1s linear infinite;
+    }
+    @keyframes animate-loading {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Header and Navigation Styling */
+    #header {
+        background: rgba(255, 255, 255, 0.97);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        transition: all 0.3s ease;
+    }
+    
+    #header .container-fluid {
+        justify-content: space-between;
+    }
+    
+    #navmenu {
+        margin: 0 auto;
+        width: auto;
+    }
+    
+    #navmenu > ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 700px;
+    }
+    
+    #navmenu > ul > li {
+        position: relative;
+        white-space: nowrap;
+        padding: 10px 0;
+    }
+    
+    #navmenu > ul > li > a {
+        color: #2c3e50;
+        font-weight: 500;
+        font-size: 15px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    #navmenu > ul > li > a:hover,
+    #navmenu > ul > li > a.active {
+        color: #0d6efd;
+        background: rgba(13, 110, 253, 0.1);
+    }
+    
+    .logo {
+        margin-right: 30px;
+    }
+    
+    /* Countries Dropdown Styling */
+    .countries-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px !important;
+        min-width: 500px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .country-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .country-item {
+        flex: 1 1 calc(25% - 10px);
+        min-width: 120px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .country-item:hover {
+        background: #e9ecef;
+        transform: translateY(-2px);
+    }
+    
+    .country-item a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        display: block;
+        padding: 5px 0;
+    }
+    
+    .country-item a:hover {
+        color: #0d6efd;
+    }
+    
+    .country-item a.active {
+        color: #0d6efd;
+        font-weight: 600;
+    }
+    
+    /* Mobile menu styles */
+    @media (max-width: 1199.98px) {
+        .mobile-nav-toggle {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            color: #2c3e50;
+            cursor: pointer;
+            z-index: 1002;
         }
         
         #navmenu > ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            max-width: 700px;
-            list-style: none;
+            display: none !important;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 350px;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            padding: 80px 20px 30px;
+            transition: all 0.3s ease;
+            overflow-y: auto;
+            z-index: 1001;
+        }
+        
+        .mobile-nav-active #navmenu > ul {
+            right: 0;
+            display: flex !important;
         }
         
         #navmenu > ul > li {
-            position: relative;
-            white-space: nowrap;
-            padding: 10px 0;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        #navmenu > ul > li:last-child {
+            border-bottom: none;
         }
         
         #navmenu > ul > li > a {
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: #2c3e50;
-            font-weight: 500;
-            font-size: 15px;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
             text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
         
         #navmenu > ul > li > a:hover,
-        #navmenu > ul > li > a.active {
-            color: #0d6efd;
-            background: rgba(13, 110, 253, 0.1);
-        }
-
-        .navmenu > ul > li > a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: #0d6efd;
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-
-        .navmenu > ul > li > a:hover:after,
-        .navmenu > ul > li > a.active:after {
-            width: 100%;
-        }
-        
-        /* Countries Dropdown Styling */
-        .countries-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px !important;
-            min-width: 500px;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            display: none;
-        }
-        
-        .listing-dropdown:hover .countries-list {
-            display: flex;
-        }
-        
-        .country-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            width: 100%;
-        }
-        
-        .country-item {
-            flex: 1 1 calc(25% - 10px);
-            min-width: 120px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .country-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
-        
-        .country-item a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            display: block;
-            padding: 5px 0;
-            transition: color 0.2s ease;
-        }
-        
-        .country-item a:hover,
-        .country-item a.active {
+        #navmenu > ul > li > a:focus {
+            background-color: rgba(13, 110, 253, 0.05);
             color: #0d6efd;
         }
         
-        .country-item a:hover {
-            background-color: #f8f9fa;
-        }
-    
-        /* Mobile menu visibility fix */
-        .mobile-nav-toggle {
-            display: none !important; /* Hide by default */
-        }
-        
-        @media (max-width: 1199.98px) {
-            .mobile-nav-toggle {
-                display: flex !important; /* Show only on mobile */
-            }
-            
-            /* Ensure desktop menu is hidden on mobile */
-            #navmenu > ul {
-                display: none !important;
-            }
-            
-            /* Show menu when active */
-            .mobile-nav-active #navmenu > ul {
-                display: flex !important;
-            }
+        .listing-dropdown > a::after {
+            content: '\f282';
+            font-family: 'bootstrap-icons';
+            font-size: 12px;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
         }
         
-        /* Dropdown positioning fix */
-        .listing-dropdown {
-            position: relative;
+        .listing-dropdown.active > a::after {
+            transform: rotate(180deg);
         }
         
         .listing-dropdown .countries-list {
-            position: absolute;
-            right: 0;
-            left: auto;
-            min-width: 500px;
-            max-width: 90vw;
+            position: static !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+            padding: 0 0 0 15px !important;
+            min-width: auto !important;
+            display: none;
+            animation: fadeIn 0.3s ease-out;
+            background-color: #f8f9fa;
+            border-radius: 0 0 8px 8px;
         }
         
-        @media (max-width: 1199.98px) {
-            .listing-dropdown .countries-list {
-                position: static !important;
-                min-width: auto !important;
-                max-width: 100%;
-                padding: 0 15px !important;
-                margin: 0 !important;
-            }
+        .listing-dropdown.active .countries-list {
+            display: block;
+            padding: 10px 15px 10px 30px !important;
         }
+        
+        .country-group {
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
+        }
+    }
+    
+    /* Dropdown positioning fix */
+    .listing-dropdown {
+        position: relative;
+    }
+    
+    .listing-dropdown .countries-list {
+        position: absolute;
+        right: 0;
+        left: auto;
+        min-width: 500px;
+        max-width: 90vw;
+    }
+    
+    @media (max-width: 1199.98px) {
+        .listing-dropdown .countries-list {
+            position: static !important;
+            min-width: auto !important;
+            max-width: 100%;
+            padding: 0 15px !important;
+            margin: 0 !important;
+        }
+    }
+    
+
+    
+    /* Footer Block Styling */
+    .footer-about, .col-lg-4.col-md-12 {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .footer-about:hover, .col-lg-4.col-md-12:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .footer-about {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+    
+    .col-lg-4.col-md-12 {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+    
+    .footer-about h3, .col-lg-4.col-md-12 h4 {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #0d6efd;
+        display: inline-block;
+    }
+    
+    .footer-contact p {
+        margin-bottom: 10px;
+        color: #555;
+    }
+    
+    .footer-contact p strong {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+    
+    .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #f8f9fa;
+        border-radius: 50%;
+        margin-right: 10px;
+        color: #2c3e50;
+        transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        background: #0d6efd;
+        color: #fff;
+        transform: translateY(-3px);
+    }
+    
+    .copyright {
+        padding: 20px 0;
+        margin-top: 30px;
+        border-top: 1px solid #eee;
+    }
+    
+    @media (max-width: 768px) {
+        .footer-about, .col-lg-4.col-md-12 {
+            padding: 20px;
+        }
+    }
+</style>
+
+
         </style>
+
+    <style>
+    /* Dropdown menu styling */
+    .listing-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .listing-dropdown > a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #333;
+        position: relative;
+    }
+    
+    .listing-dropdown > a::after {
+        display: none; /* Hide default dropdown arrow */
+    }
+    
+    .listing-dropdown > a .bi-chevron-down {
+        transition: transform 0.3s ease;
+    }
+    
+    .listing-dropdown.active > a .bi-chevron-down {
+        transform: rotate(180deg);
+    }
+    
+    .countries-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        min-width: 240px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px 0;
+        z-index: 1000;
+        margin-top: 5px;
+    }
+    
+    .countries-list.show {
+        display: block;
+    }
+    
+    .country-group {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .country-item {
+        list-style: none;
+    }
+    
+    .country-item a {
+        display: block;
+        padding: 8px 20px;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    
+    .country-item a:hover {
+        background-color: #f8f9fa;
+        color: #0d6efd;
+        padding-left: 25px;
+    }
+    
+    /* Mobile menu styles */
+    @media (max-width: 1199.98px) {
+        .mobile-nav-toggle {
+            display: flex !important;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            z-index: 9999;
+            border: none;
+            background: none;
+            font-size: 28px;
+            padding: 0;
+            line-height: 1;
+            cursor: pointer;
+            color: #0d6efd;
+        }
+        
+        .mobile-nav-active #header {
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+        
+        #navmenu > ul {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 20px 0;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 998;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-nav-active #navmenu > ul {
+            display: flex;
+        }
+        
+        #navmenu > ul > li {
+            width: 100%;
+            padding: 0;
+        }
+        
+        #navmenu > ul > li > a {
+            padding: 12px 20px;
+            display: block;
+            width: 100%;
+        }
+        
+        .listing-dropdown .countries-list {
+            position: static;
+            box-shadow: none;
+            display: none;
+            padding: 0 0 0 20px;
+            margin: 0;
+        }
+        
+        .listing-dropdown.active .countries-list {
+            display: block;
+        }
+    }
+    </style>
+    
 </head>
 <body>
 <header class="header d-flex align-items-center fixed-top" id="header">
@@ -329,7 +582,7 @@
 <img alt="" height="200" src="assets/img/kxy-logo.png" width="70"/>
 </a>
 <nav class="navmenu" id="navmenu">
-<ul>
+<ul class="d-flex align-items-center">
 <li><a href="index.html">Home</a></li>
 <li><a class="active" href="about-us.html">About</a></li>
 <li class="listing-dropdown"><a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -357,7 +610,7 @@
 <a href="universities/spain.html" title="Spain">Spain</a>
 </div>
 <div class="country-item">
-<a href="universities/uk.html" title="United Kingdom">United Kingdom</a>
+<a href="universities/uk.html" title="United Kingdom">UK</a>
 </div>
 <div class="country-item">
 <a href="universities/usa.html" title="United States">United States</a>
@@ -378,160 +631,84 @@
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
-<a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
-</div>
-</header>
-<main class="main" style="padding-top: 100px;">
-<div class="about-container" style="padding-top: 20px;">
-<div class="container">
-<div class="about-box">
-<img alt="About Us Background" class="img-fluid w-100" src="assets/img/values-1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;  z-index: -1;"/>
-<div class="about-content">
-<h1 class="text-center mb-5">About us</h1>
-<div class="about-section">
-<h3>Mission Statement</h3>
-<p>KYX PROJECT K1 INTERNATIONAL is a trusted consulting firm dedicated to guiding
-                                students who aspire to pursue higher education abroad, particularly in the fields of
-                                Medicine, Engineering and Business Management with both Bachelor's &amp; Master's programs.
-                                As an authorized partner of reputable universities and colleges across Central Asia and
-                                European countries, the organization offers expert services in educational counselling,
-                                admission guidance, and documentation support.</p>
-</div>
-<div class="about-section">
-<h3>Our Experience</h3>
-<p>With years of experience in international higher education, KYX PROJECT K1 INTERNATIONAL has
-                                helped numerous students achieve their dreams of becoming doctors and engineers.</p>
-</div>
-<div class="about-section">
-<h3>Our Commitment</h3>
-<p>The company is committed to transparency, honesty, and delivering affordable, high-quality
-                                education options. Its team of professional and well-trained counsellors provides
-                                personalized advice, helping students choose the best-suited university and course according
-                                to their academic goals.</p>
-<p>Every step of the consulting process is handled with integrity and clarity, ensuring that
-                                students and their families are fully informed and confident in their decisions. By
-                                prioritizing honest communication and ethical practices, the company builds lasting trust
-                                with its clients.</p>
-<p>Its mission is to make international education accessible and attainable without
-                                compromising on quality. With a focus on student success, the company works diligently to
-                                match each individual with institutions that offer not only academic excellence but also
-                                financial feasibility, making the dream of studying abroad a reality for many.</p>
-</div>
-<div class="about-section">
-<h3>Our Expertise</h3>
-<p>With deep insights into academic structures, lifestyle, and socio-economic conditions in
-                                various countries, KYX PROJECT K1 INTERNATIONAL ensures a smooth transition and successful
-                                journey for students pursuing graduate and postgraduate medical studies (MBBS/MD/MS),
-                                engineering and business degrees abroad.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer class="footer" id="footer">
-<div class="container footer-top">
-<div class="row gy-4">
-<div class="col-lg-4 col-md-6 footer-about">
-<a class="d-flex align-items-center" href="index.html">
-<span class="sitename">kyx</span>
-</a>
-<div class="footer-contact pt-3">
-<p>rajuvolu </p>
-<p>russian tuppalu</p>
-<p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
-<p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
-<p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
-</div>
-</div>
-<div class="col-lg-4 col-md-12">
-<h4>Follow Us</h4>
-<p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-<div class="social-links d-flex">
-<a href="#"><i class="bi bi-twitter-x"></i></a>
-<a href="#"><i class="bi bi-facebook"></i></a>
-<a href="#"><i class="bi bi-instagram"></i></a>
-<a href="#"><i class="bi bi-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="container copyright text-center mt-4">
-<p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
-</p>
-<div class="credits">
-<!-- All the links in the footer should remain intact. -->
-<!-- You can delete the links only if you've purchased the pro version. -->
-<!-- Licensing information: https://bootstrapmade.com/license/ -->
-<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-</div>
-</div>
-</footer>
-<!-- Scroll Top -->
-<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to close all dropdowns except the current one
-            function closeOtherDropdowns(currentDropdown) {
-                document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
-                    if (dropdown !== currentDropdown) {
-                        dropdown.classList.remove('active');
-                        const menu = dropdown.querySelector('.countries-list');
-                        if (menu) menu.style.display = 'none';
-                    }
-                });
-            }
-            
-            // Update dropdown toggle functionality
-            document.querySelectorAll('.listing-dropdown > a').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const parent = this.parentElement;
-                    const isActive = parent.classList.contains('active');
-                    const dropdownMenu = parent.querySelector('.countries-list');
-                    
-                    // Close all other dropdowns first
-                    closeOtherDropdowns(parent);
-                    
-                    // Toggle current dropdown
-                    if (!isActive) {
-                        parent.classList.add('active');
-                        if (dropdownMenu) dropdownMenu.style.display = 'block';
-                    } else {
-                        parent.classList.remove('active');
-                        if (dropdownMenu) dropdownMenu.style.display = 'none';
-                    }
-                });
-            });
-            
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.listing-dropdown')) {
-                    closeOtherDropdowns(null);
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to close all dropdowns except the current one
+        function closeOtherDropdowns(currentDropdown) {
+            document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
+                if (dropdown !== currentDropdown) {
+                    dropdown.classList.remove('active');
+                    const menu = dropdown.querySelector('.countries-list');
+                    if (menu) menu.style.display = 'none';
                 }
             });
-            
-            // Close dropdowns on window resize
-            let resizeTimer;
-            window.addEventListener('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
-                    closeOtherDropdowns(null);
-                }, 250);
+        }
+        
+        // Update dropdown toggle functionality
+        document.querySelectorAll('.listing-dropdown > a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const parent = this.parentElement;
+                const isActive = parent.classList.contains('active');
+                const dropdownMenu = parent.querySelector('.countries-list');
+                
+                // Close all other dropdowns first
+                closeOtherDropdowns(parent);
+                
+                // Toggle current dropdown
+                if (!isActive) {
+                    parent.classList.add('active');
+                    if (dropdownMenu) dropdownMenu.style.display = 'block';
+                } else {
+                    parent.classList.remove('active');
+                    if (dropdownMenu) dropdownMenu.style.display = 'none';
+                }
             });
         });
-        </script>
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.listing-dropdown')) {
+                closeOtherDropdowns(null);
+            }
+        });
+        
+        // Close dropdowns on window resize
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                closeOtherDropdowns(null);
+            }, 250);
+        });
+        
+        // Mobile nav toggle functionality
+        const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+        
+        function mobileNavToggle() {
+            document.querySelector('body').classList.toggle('mobile-nav-active');
+            mobileNavToggleBtn.classList.toggle('bi-list');
+            mobileNavToggleBtn.classList.toggle('bi-x');
+        }
+        
+        if (mobileNavToggleBtn) {
+            mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
+        }
+        
+        // Close mobile nav when clicking on a nav link
+        document.querySelectorAll('#navmenu a').forEach(navmenu => {
+            navmenu.addEventListener('click', () => {
+                if (document.querySelector('.mobile-nav-active')) {
+                    mobileNavToggle();
+                }
+            });
+        });
+    });
+    </script>
+    
 </body>
 </html>

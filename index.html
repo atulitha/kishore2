@@ -2,7 +2,82 @@
 
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
+<meta charset="utf-8"/><!-- Remove the comment tags around the FAQ section -->
+<section id="faq" class="faq section">
+  <!-- ...FAQ content here... -->
+</section>
+
+<!-- Place the toggle script here -->
+<script>
+document.querySelectorAll('.faq-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+        var faqItem = this.closest('.faq-item');
+        faqItem.classList.toggle('faq-active');
+        var content = faqItem.querySelector('.faq-content');
+        if (faqItem.classList.contains('faq-active')) {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+});
+document.querySelectorAll('.faq-item').forEach(function(item) {
+    var content = item.querySelector('.faq-content');
+    if (!item.classList.contains('faq-active')) {
+        content.style.display = 'none';
+    }
+});
+</script><!-- Remove the comment tags around the FAQ section -->
+<section id="faq" class="faq section">
+  <!-- ...FAQ content here... -->
+</section>
+
+<!-- Place the toggle script here -->
+<script>
+document.querySelectorAll('.faq-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+        var faqItem = this.closest('.faq-item');
+        faqItem.classList.toggle('faq-active');
+        var content = faqItem.querySelector('.faq-content');
+        if (faqItem.classList.contains('faq-active')) {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+});
+document.querySelectorAll('.faq-item').forEach(function(item) {
+    var content = item.querySelector('.faq-content');
+    if (!item.classList.contains('faq-active')) {
+        content.style.display = 'none';
+    }
+});
+</script><!-- Remove the comment tags around the FAQ section -->
+<section id="faq" class="faq section">
+  <!-- ...FAQ content here... -->
+</section>
+
+<!-- Place the toggle script here -->
+<script>
+document.querySelectorAll('.faq-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+        var faqItem = this.closest('.faq-item');
+        faqItem.classList.toggle('faq-active');
+        var content = faqItem.querySelector('.faq-content');
+        if (faqItem.classList.contains('faq-active')) {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+});
+document.querySelectorAll('.faq-item').forEach(function(item) {
+    var content = item.querySelector('.faq-content');
+    if (!item.classList.contains('faq-active')) {
+        content.style.display = 'none';
+    }
+});
+</script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Kyx</title>
 <meta content="" name="description"/>
@@ -28,7 +103,28 @@
 <style type="text/css">
         /* Flag image styling */
         .portfolio-item img.img-fluid1 {
-            width: 200px;
+            width: 200px;<script>
+            document.querySelectorAll('.faq-toggle').forEach(function(toggle) {
+                toggle.addEventListener('click', function() {
+                    var faqItem = this.closest('.faq-item');
+                    faqItem.classList.toggle('faq-active');
+                    var content = faqItem.querySelector('.faq-content');
+                    if (faqItem.classList.contains('faq-active')) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+
+            // Optional: Hide all FAQ contents except active ones on page load
+            document.querySelectorAll('.faq-item').forEach(function(item) {
+                var content = item.querySelector('.faq-content');
+                if (!item.classList.contains('faq-active')) {
+                    content.style.display = 'none';
+                }
+            });
+            </script>
             height: 200px;
             object-fit: cover;
             border-radius: 0;
@@ -558,16 +654,81 @@
         @media (max-width: 1199.98px) {
             .mobile-nav-toggle {
                 display: flex !important; /* Show only on mobile */
+                position: absolute;
+                right: 15px;
+                top: 20px;
+                font-size: 24px;
+                cursor: pointer;
+                z-index: 1001;
             }
             
             /* Ensure desktop menu is hidden on mobile */
             #navmenu > ul {
                 display: none !important;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 80px 20px 20px;
+                margin: 0;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                z-index: 1000;
             }
             
             /* Show menu when active */
             .mobile-nav-active #navmenu > ul {
                 display: flex !important;
+                right: 0;
+            }
+            
+            /* Style for menu items */
+            #navmenu > ul > li {
+                width: 100%;
+                padding: 0;
+                margin: 5px 0;
+                text-align: left;
+            }
+            
+            #navmenu > ul > li > a {
+                display: block;
+                padding: 10px 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            /* Style for the dropdown menu */
+            .listing-dropdown .countries-list {
+                position: static !important;
+                min-width: 100% !important;
+                max-width: 100% !important;
+                padding: 10px 0 0 15px !important;
+                margin: 0 !important;
+                box-shadow: none;
+                border-left: 2px solid #f0f0f0;
+            }
+            
+            /* Add overlay when menu is open */
+            .mobile-nav-active::after {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                display: block;
+            }
+            
+            /* Adjust header for mobile */
+            #header {
+                padding: 10px 0;
             }
         }
         
@@ -590,12 +751,56 @@
                 min-width: auto !important;
                 max-width: 100%;
                 padding: 0 15px !important;
-                margin: 0 !important;
             }
-        }
+            
+            @media (max-width: 1199.98px) {
+                .listing-dropdown .countries-list {
+                    position: static !important;
+                    min-width: auto !important;
+                    max-width: 100%;
+                    padding: 0 15px !important;
+                    margin: 0 !important;
+                }
+            }
         </style>
 <noscript><style>.lazyload { display: none !important; }</style></noscript>
 <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('#navmenu > ul');
+        
+        if (mobileNavToggle) {
+            mobileNavToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Toggle the mobile-nav-active class on the body
+                document.body.classList.toggle('mobile-nav-active');
+                
+                // Toggle the icon between hamburger and close
+                this.classList.toggle('bi-list');
+                this.classList.toggle('bi-x');
+                
+                // Toggle the navigation menu
+                if (navMenu) {
+                    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+                }
+            });
+            
+            // Close menu when clicking on a nav link
+            document.querySelectorAll('#navmenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (document.body.classList.contains('mobile-nav-active')) {
+                        document.body.classList.remove('mobile-nav-active');
+                        mobileNavToggle.classList.remove('bi-x');
+                        mobileNavToggle.classList.add('bi-list');
+                        if (navMenu) navMenu.style.display = 'none';
+                    }
+                });
+            });
+        }
+    });
+    
     // Performance monitoring
     window.addEventListener('load', function() {
         // Log performance metrics
@@ -640,7 +845,119 @@
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
-</head>
+
+    <style>
+        /* Mobile Navigation Overlay */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        @media (max-width: 1199px) {
+            .mobile-nav-toggle {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                cursor: pointer;
+                z-index: 1001;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                border: none;
+                padding: 0;
+            }
+            
+            .mobile-nav-toggle i {
+                font-size: 24px;
+                color: #0d6efd;
+                transition: all 0.3s ease;
+            }
+            
+            #navmenu > ul {
+                display: none !important;
+                position: fixed;
+                top: 80px;
+                left: 15px;
+                right: 15px;
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+                padding: 15px 0;
+                z-index: 1000;
+                max-height: calc(100vh - 120px);
+                overflow-y: auto;
+                flex-direction: column;
+                gap: 0;
+                margin: 0;
+                list-style: none;
+            }
+            
+            .mobile-nav-active #navmenu > ul,
+            #navmenu > ul.mobile-nav-active {
+                display: flex !important;
+                animation: fadeInDown 0.3s ease-out;
+            }
+            
+            #navmenu > ul > li {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+            
+            #navmenu > ul > li:last-child {
+                border-bottom: none;
+            }
+            
+            #navmenu > ul > li > a {
+                padding: 14px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #2c3e50;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.2s ease;
+            }
+            
+            #navmenu > ul > li > a:hover,
+            #navmenu > ul > li > a:focus {
+                background-color: rgba(13, 110, 253, 0.05);
+                color: #0d6efd;
+            }
+            
+            /* Animation for dropdown */
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    </style>
+    </head>
 <body class="index-page">
 <header class="header d-flex align-items-center fixed-top" id="header">
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -649,13 +966,14 @@
 </a>
 <nav class="navmenu" id="navmenu">
 <ul>
-<li><a class="active" href="index.html">Home<br/></a></li>
+<li><a href="index.html">Home</a></li>
 <li><a href="about-us.html">About</a></li>
-<li class="listing-dropdown"><a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+<li class="listing-dropdown">
+<a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 <ul class="countries-list">
 <li class="country-group">
 <div class="country-item">
-<a class="active" href="universities/russia.html" title="Russia">Russia</a>
+<a href="universities/russia.html" title="Russia">Russia</a>
 </div>
 <div class="country-item">
 <a href="universities/georgia.html" title="Georgia">Georgia</a>
@@ -676,7 +994,7 @@
 <a href="universities/spain.html" title="Spain">Spain</a>
 </div>
 <div class="country-item">
-<a href="universities/uk.html" title="United Kingdom">United Kingdom</a>
+<a href="universities/uk.html" title="United Kingdom">UK</a>
 </div>
 <div class="country-item">
 <a href="universities/usa.html" title="United States">United States</a>
@@ -697,7 +1015,7 @@
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
-<a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
+<!-- <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a> -->
 </div>
 </header>
 <main class="main">
@@ -2215,7 +2533,7 @@
 </div>
 </div>
 <div class="container copyright text-center mt-4">
-<p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
+<p> <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
 </p>
 <div class="credits">
 <!-- All the links in the footer should remain intact. -->
@@ -2307,7 +2625,126 @@
                     closeOtherDropdowns(null);
                 }, 250);
             });
+            
+            // Mobile nav toggle functionality
+            const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+            
+            function mobileNavToggle() {
+                document.querySelector('body').classList.toggle('mobile-nav-active');
+                mobileNavToggleBtn.classList.toggle('bi-list');
+                mobileNavToggleBtn.classList.toggle('bi-x');
+                console.log('Mobile nav toggled'); // Debug log
+            }
+            
+            if (mobileNavToggleBtn) {
+                console.log('Mobile nav toggle button found'); // Debug log
+                mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
+            } else {
+                console.error('Mobile nav toggle button not found!'); // Debug log
+            }
+            
+            // Close mobile nav when clicking on a nav link
+            document.querySelectorAll('#navmenu a').forEach(navmenu => {
+                navmenu.addEventListener('click', () => {
+                    if (document.querySelector('.mobile-nav-active')) {
+                        mobileNavToggle();
+                    }
+                });
+            });
         });
         </script>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay"></div>
+    
+    <!-- Mobile Navigation Toggle Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle functionality
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const body = document.body;
+        const overlay = document.querySelector('.mobile-nav-overlay');
+        const navMenu = document.getElementById('navmenu');
+        
+        // Initialize mobile menu state
+        if (window.innerWidth < 1200) {
+            if (navMenu) navMenu.style.display = 'block';
+        }
+        
+        if (mobileNavToggle) {
+            mobileNavToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                body.classList.toggle('mobile-nav-active');
+                if (overlay) overlay.classList.toggle('active');
+                
+                // Toggle between hamburger and close icon
+                const icon = this.querySelector('i');
+                if (icon) {
+                    if (icon.classList.contains('bi-list')) {
+                        icon.classList.remove('bi-list');
+                        icon.classList.add('bi-x');
+                        if (navMenu) navMenu.style.right = '0';
+                    } else {
+                        icon.classList.remove('bi-x');
+                        icon.classList.add('bi-list');
+                        if (navMenu) navMenu.style.right = '-100%';
+                    }
+                }
+            });
+            
+            // Close menu when clicking on overlay
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    body.classList.remove('mobile-nav-active');
+                    this.classList.remove('active');
+                    const icon = mobileNavToggle.querySelector('i');
+                    if (icon && icon.classList.contains('bi-x')) {
+                        icon.classList.remove('bi-x');
+                        icon.classList.add('bi-list');
+                        if (navMenu) navMenu.style.right = '-100%';
+                    }
+                });
+            }
+            
+            // Close menu when clicking on a nav link
+            if (navMenu) {
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (body.classList.contains('mobile-nav-active')) {
+                            body.classList.remove('mobile-nav-active');
+                            if (overlay) overlay.classList.remove('active');
+                            const icon = mobileNavToggle.querySelector('i');
+                            if (icon && icon.classList.contains('bi-x')) {
+                                icon.classList.remove('bi-x');
+                                icon.classList.add('bi-list');
+                                if (navMenu) navMenu.style.right = '-100%';
+                            }
+                        }
+                    });
+                });
+            }
+        }
+        
+        // Close menu on window resize above mobile breakpoint
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                if (window.innerWidth >= 1200) {
+                    body.classList.remove('mobile-nav-active');
+                    if (overlay) overlay.classList.remove('active');
+                    const icon = mobileNavToggle ? mobileNavToggle.querySelector('i') : null;
+                    if (icon && icon.classList.contains('bi-x')) {
+                        icon.classList.remove('bi-x');
+                        icon.classList.add('bi-list');
+                    }
+                    if (navMenu) navMenu.style.right = '';
+                } else if (navMenu) {
+                    navMenu.style.display = 'block';
+                }
+            }, 250);
+        });
+    });
+    </script>
 </body>
 </html>

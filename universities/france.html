@@ -24,9 +24,11 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
         :root {
-            --france-blue: #002395;
-            --france-white: #FFFFFF;
-            --france-red: #ED2939;
+            --primary-blue: #0d6efd;
+            --light-gray: #f8f9fa;
+            --hover-gray: #e9ecef;
+            --text-dark: #333;
+            --white: #FFFFFF;
         }
         
         /* Header and Navigation Styling */
@@ -63,7 +65,7 @@
         }
         
         #navmenu > ul > li > a {
-            color: #2c3e50;
+            color: var(--primary-blue);
             font-weight: 500;
             font-size: 15px;
             padding: 8px 12px;
@@ -73,8 +75,8 @@
         
         #navmenu > ul > li > a:hover,
         #navmenu > ul > li > a.active {
-            color: var(--france-blue);
-            background: rgba(0, 35, 149, 0.1);
+            color: var(--primary-blue);
+            background: rgba(13, 110, 253, 0.1);
         }
         
         .logo {
@@ -122,19 +124,19 @@
         }
         
         .country-item a:hover {
-            color: var(--france-blue);
+            color: var(--primary-blue);
         }
         
         .country-item a.active {
-            color: var(--france-blue);
+            color: var(--primary-blue);
             font-weight: 600;
         }
         
         .france-hero {
-            background: linear-gradient(135deg, #f8f9fa 60%, #f0f0f0 100%);
+            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
             padding: 80px 0 50px 0;
             text-align: center;
-            border-bottom: 4px solid var(--france-blue);
+            border-bottom: 4px solid var(--primary-blue);
             position: relative;
             overflow: hidden;
         }
@@ -146,7 +148,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--france-red);
+            background: #ED2939;
         }
         
         .france-section {
@@ -155,11 +157,11 @@
             box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
             padding: 32px 28px;
             margin-bottom: 32px;
-            border-top: 3px solid var(--france-blue);
+            border-top: 3px solid var(--primary-blue);
         }
         
         .france-title {
-            color: var(--france-blue);
+            color: var(--primary-blue);
             font-weight: 700;
             margin-bottom: 20px;
             position: relative;
@@ -173,12 +175,12 @@
             bottom: 0;
             width: 60px;
             height: 4px;
-            background: var(--france-red);
+            background: #ED2939;
         }
         
         .highlight-box {
             background: #f8f9fa;
-            border-left: 4px solid var(--france-blue);
+            border-left: 4px solid var(--primary-blue);
             padding: 15px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
@@ -196,7 +198,7 @@
         
         .feature-list li:before {
             content: "✓";
-            color: var(--france-red);
+            color: #ED2939;
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -225,18 +227,18 @@
         
         .faq-question {
             font-weight: 600;
-            color: var(--france-blue);
+            color: var(--primary-blue);
             margin-bottom: 8px;
             font-size: 1.1rem;
         }
         
         .table th {
             background-color: #f8f9fa;
-            color: var(--france-blue);
+            color: var(--primary-blue);
         }
         
         .btn-france {
-            background-color: var(--france-blue);
+            background-color: var(--primary-blue);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -246,7 +248,7 @@
         }
         
         .btn-france:hover {
-            background-color: var(--france-red);
+            background-color: #ED2939;
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -254,7 +256,7 @@
         
         .badge {
             background-color: #f0f4f8;
-            color: var(--france-blue);
+            color: var(--primary-blue);
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -270,7 +272,7 @@
         }
         
         .accreditation-badges .badge {
-            background-color: var(--france-blue);
+            background-color: var(--primary-blue);
             color: white;
         }
     
@@ -337,7 +339,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                color: #2c3e50;
+                color: var(--primary-blue);
                 text-decoration: none;
                 font-weight: 500;
                 transition: all 0.2s ease;
@@ -441,7 +443,7 @@
         }
         
         .country-section h2 {
-            color: #0d6efd;
+            color: var(--primary-blue);
             font-weight: 700;
             margin-bottom: 24px;
             padding-bottom: 12px;
@@ -478,7 +480,7 @@
         
         .highlight-box {
             background: #f8f9fa;
-            border-left: 4px solid #0d6efd;
+            border-left: 4px solid var(--primary-blue);
             padding: 20px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;

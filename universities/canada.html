@@ -24,9 +24,11 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
         :root {
-            --canada-red: #d52b1e;
-            --canada-white: #FFFFFF;
-            --canada-light-red: #ffebee;
+            --primary-blue: #0d6efd;
+            --light-gray: #f8f9fa;
+            --hover-gray: #e9ecef;
+            --text-dark: #333;
+            --white: #FFFFFF;
         }
         
         /* Header and Navigation Styling */
@@ -73,8 +75,8 @@
         
         #navmenu > ul > li > a:hover,
         #navmenu > ul > li > a.active {
-            color: var(--canada-red);
-            background: rgba(213, 43, 30, 0.1);
+            color: var(--primary-blue);
+            background: rgba(13, 110, 253, 0.1);
         }
         
         .logo {
@@ -109,7 +111,7 @@
         }
         
         .country-item:hover {
-            background: #e9ecef;
+            background: var(--primary-blue);
             transform: translateY(-2px);
         }
         
@@ -122,19 +124,21 @@
         }
         
         .country-item a:hover {
-            color: var(--canada-red);
+            color: var(--primary-blue);
         }
         
         .country-item a.active {
-            color: var(--canada-red);
+            color: var(--primary-blue);
             font-weight: 600;
         }
         
         .canada-hero {
-            background: linear-gradient(135deg, #f8f9fa 60%, #ffebee 100%);
+            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
             padding: 80px 0 50px 0;
             text-align: center;
-            border-bottom: 4px solid #d52b1e;
+            border-bottom: 4px solid var(--primary-blue);
+            position: relative;
+            overflow: hidden;
         }
         
         .canada-section {
@@ -143,11 +147,11 @@
             box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
             padding: 32px 28px;
             margin-bottom: 32px;
-            border-top: 3px solid #d52b1e;
+            border-top: 3px solid var(--primary-blue);
         }
         
         .canada-title {
-            color: #d52b1e;
+            color: var(--primary-blue);
             font-weight: 700;
             margin-bottom: 20px;
             position: relative;
@@ -161,13 +165,13 @@
             bottom: 0;
             width: 60px;
             height: 4px;
-            background: #d52b1e;
+            background: var(--primary-blue);
         }
         
         .highlight-box {
-            background: #fff5f5;
-            border-left: 4px solid #d52b1e;
-            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-blue);
+            padding: 20px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
         }
@@ -184,7 +188,7 @@
         
         .feature-list li:before {
             content: "✓";
-            color: #d52b1e;
+            color: var(--primary-blue);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -213,18 +217,18 @@
         
         .faq-question {
             font-weight: 600;
-            color: #d52b1e;
+            color: var(--primary-blue);
             margin-bottom: 8px;
             font-size: 1.1rem;
         }
         
         .table th {
             background-color: #f8f9fa;
-            color: #d52b1e;
+            color: var(--primary-blue);
         }
         
         .btn-canada {
-            background-color: #d52b1e;
+            background-color: var(--primary-blue);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -234,7 +238,7 @@
         }
         
         .btn-canada:hover {
-            background-color: #b82219;
+            background-color: #0a58ca;
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);

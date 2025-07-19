@@ -24,9 +24,11 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
         :root {
-            --usa-blue: #0d6efd;
-            --usa-red: #dc3545;
-            --usa-white: #FFFFFF;
+            --primary-blue: #0d6efd;
+            --light-gray: #f8f9fa;
+            --hover-gray: #e9ecef;
+            --text-dark: #333;
+            --white: #FFFFFF;
         }
         
         /* Header and Navigation Styling */
@@ -73,7 +75,7 @@
         
         #navmenu > ul > li > a:hover,
         #navmenu > ul > li > a.active {
-            color: var(--usa-blue);
+            color: var(--primary-blue);
             background: rgba(13, 110, 253, 0.1);
         }
         
@@ -122,18 +124,21 @@
         }
         
         .country-item a:hover {
-            color: var(--usa-blue);
+            color: var(--primary-blue);
         }
         
         .country-item a.active {
-            color: var(--usa-blue);
+            color: var(--primary-blue);
             font-weight: 600;
         }
         
         .usa-hero {
-            background: linear-gradient(135deg, #f0f7ff 60%, #d6e7ff 100%);
+            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
             padding: 80px 0 50px 0;
             text-align: center;
+            border-bottom: 4px solid var(--primary-blue);
+            position: relative;
+            overflow: hidden;
         }
         
         .usa-section {
@@ -145,9 +150,11 @@
         }
         
         .usa-title {
-            color: #0d6efd;
+            color: var(--primary-blue);
             font-weight: 700;
             margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
         }
         
         .highlight-box {
@@ -248,7 +255,7 @@
                 width: 100%;
                 padding: 0;
                 margin: 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                border-top: 3px solid var(--primary-blue);
             }
 
             #navmenu > ul > li:last-child {
@@ -268,7 +275,7 @@
 
             #navmenu > ul > li > a:hover,
             #navmenu > ul > li > a:focus {
-                background-color: rgba(13, 110, 253, 0.05);
+                background-color: #0d6efd;
                 color: #0d6efd;
             }
 

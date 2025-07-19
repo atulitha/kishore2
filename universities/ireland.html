@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Study MBBS in Ireland | Kyx</title>
+    <link href="../assets/css/university-styles.css" rel="stylesheet"/>
 <meta content="Study Engineering &amp; Business Management in Ireland - World-class education, excellent career prospects, and a welcoming multicultural environment in the heart of Europe." name="description"/>
 <meta content="Study in Ireland, Engineering Ireland, Business Management Ireland, Irish universities, Study abroad Ireland" name="keywords"/>
 <!-- Favicons -->
@@ -23,12 +24,495 @@
 <!-- Main CSS File -->
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
-        :root {
-            --primary-blue: #0d6efd;
-            --light-gray: #f8f9fa;
-            --hover-gray: #e9ecef;
-            --text-dark: #333;
-            --white: #FFFFFF;
+        /* Hero Section */
+        .ireland-hero {
+            background: #ffffff;
+            padding: 120px 0 80px;
+            text-align: left;
+            position: relative;
+            margin-top: 80px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            border-top: 3px solid #0d6efd;
+        }
+        
+        .ireland-hero h1 {
+            color: #0d6efd;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .ireland-hero h1:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: #0d6efd;
+        }
+        
+        .ireland-hero .lead {
+            color: #495057;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .russia-hero h1 {
+            color: #0d6efd;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+        }
+        
+        .russia-hero .lead {
+            color: #495057;
+            font-size: 1.4rem;
+            font-weight: 400;
+            max-width: 800px;
+        }
+
+        /* Netherlands Section Styling */
+        .netherlands-section {
+            padding: 60px 0;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .netherlands-section .section-title {
+            color: #0d6efd;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .netherlands-section .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: #0d6efd;
+        }
+        
+        .netherlands-section p {
+            color: #495057;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        /* Russia section styles (keeping for reference) */
+        .content-section {
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+        
+        .content-section:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        .content-section h2.section-title {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        .russia-section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            padding: 32px 28px;
+            margin-bottom: 32px;
+        }
+        
+        .highlight-box {
+            background: #ffffff;
+            border-left: 4px solid #0d6efd;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(13, 110, 253, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .highlight-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15);
+        }
+        
+        .highlight-box h5 {
+            color: #0d6efd;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        
+        .feature-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #0d6efd;
+            position: absolute;
+            left: 0;
+            font-size: 0.9em;
+        }
+        
+        .accreditation-badges {
+            margin: 25px 0;
+        }
+        
+        .accreditation-badges h5 {
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .badge {
+            background-color: #e9f0ff;
+            color: #0d6efd;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(13, 110, 253, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .badge:hover {
+            background-color: #0d6efd;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+        }
+        
+        /* Countries Dropdown Styling */
+        .countries-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px !important;
+            min-width: 500px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .country-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .country-item {
+            flex: 1 1 calc(25% - 10px);
+            min-width: 120px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .country-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .country-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .country-item a:hover {
+            color: #0d6efd;
+        }
+        
+        .country-item a.active {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+        
+        /* Header and Navigation Styling */
+        #header {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        #header .container-fluid {
+            justify-content: space-between;
+        }
+        
+        #navmenu {
+            margin: 0 auto;
+            width: auto;
+        }
+        
+        #navmenu > ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 700px;
+        }
+        
+        #navmenu > ul > li {
+            position: relative;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+        
+        #navmenu > ul > li > a {
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        #navmenu > ul > li > a:hover,
+        #navmenu > ul > li > a.active {
+            color: #0d6efd;
+            background: rgba(13, 110, 253, 0.1);
+        }
+        
+        .logo {
+            margin-right: 30px;
+        }
+
+        .russia-table th,
+        .russia-table td {
+            vertical-align: middle;
+        }
+        
+        /* Mobile Menu Toggle Button */
+        .mobile-nav-toggle {
+            display: flex !important; /* Force display */
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            z-index: 1001;
+            position: relative;
+            background: rgba(13, 110, 253, 0.1);
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 1199px) {
+            .mobile-nav-toggle {
+                display: flex !important;
+            }
+
+            #navmenu > ul {
+                display: none !important;
+                position: fixed;
+                top: 80px;
+                left: 15px;
+                right: 15px;
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+                padding: 15px 0;
+                z-index: 1000;
+                max-height: calc(100vh - 120px);
+                overflow-y: auto;
+                flex-direction: column;
+                gap: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .mobile-nav-active #navmenu > ul,
+            #navmenu > ul.mobile-nav-active {
+                display: flex !important;
+                animation: fadeInDown 0.3s ease-out;
+            }
+
+            #navmenu > ul > li {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            #navmenu > ul > li:last-child {
+                border-bottom: none;
+            }
+
+            #navmenu > ul > li > a {
+                padding: 14px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #2c3e50;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.2s ease;
+            }
+
+            #navmenu > ul > li > a:hover,
+            #navmenu > ul > li > a:focus {
+                background-color: rgba(13, 110, 253, 0.05);
+                color: #0d6efd;
+            }
+
+            .listing-dropdown > a::after {
+                display: none !important;
+            }
+
+            .listing-dropdown.active > a::after {
+                transform: rotate(180deg);
+            }
+
+            .listing-dropdown .countries-list {
+                position: static !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 0 0 15px !important;
+                min-width: auto !important;
+                display: none;
+                animation: fadeIn 0.3s ease-out;
+                background-color: #f8f9fa;
+                border-radius: 0 0 8px 8px;
+            }
+
+            .listing-dropdown.active .countries-list {
+                display: block;
+                padding: 10px 15px 10px 30px !important;
+            }
+
+            .country-group {
+                flex-direction: column;
+                gap: 8px;
+                margin: 0;
+            }
+        }
+
+        /* Mobile menu visibility fix */
+        .mobile-nav-toggle {
+            display: none !important; /* Hide by default */
+        }
+        
+        @media (max-width: 1199.98px) {
+            .mobile-nav-toggle {
+                display: flex !important; /* Show only on mobile */
+            }
+            
+            /* Ensure desktop menu is hidden on mobile */
+            #navmenu > ul {
+                display: none !important;
+            }
+            
+            /* Show menu when active */
+            .mobile-nav-active #navmenu > ul {
+                display: flex !important;
+            }
+        }
+        
+        /* Dropdown positioning fix */
+        .listing-dropdown {
+            position: relative;
+        }
+        
+        .listing-dropdown .countries-list {
+            position: absolute;
+            right: 0;
+            left: auto;
+            min-width: 500px;
+            max-width: 90vw;
+        }
+        
+        @media (max-width: 1199.98px) {
+            .listing-dropdown .countries-list {
+                position: static !important;
+                min-width: auto !important;
+                max-width: 100%;
+                padding: 0 15px !important;
+                margin: 0 !important;
+            }
+        }
+        
+        /* Simple list styling with text overflow fixes */
+        .russia-section ul li {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Basic section headers */
+        .russia-section ul li strong {
+            display: block;
+            margin: 15px 0 8px;
+            color: #0d6efd;
+        }
+
+        /* Basic nested lists */
+        .russia-section ul li ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .russia-section ul li {
+                padding-right: 5px;
+            }
+        }
+        
+        /* Standard list styling for benefits */
+        .benefits-list {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .russia-title {
+            color: #0d6efd;
+            font-weight: 700;
+            margin-bottom: 24px;
         }
         
         /* Header and Navigation Styling */
@@ -132,50 +616,26 @@
             font-weight: 600;
         }
         
-        .ireland-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 80px 0 50px 0;
-            text-align: center;
-            border-bottom: 4px solid var(--primary-blue);
+        /* Benefits List Styling */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #333;
             position: relative;
-            overflow: hidden;
+            padding-left: 25px;
         }
-        
-        .ireland-hero:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--ireland-orange);
-        }
-        
-        .ireland-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-            border-top: 3px solid var(--primary-blue);
-        }
-        
-        .ireland-title {
-            color: var(--primary-blue);
-            font-weight: 700;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .ireland-title:after {
-            content: '';
+
+        .benefits-list li:before {
+            content: '•';
+            color: #0d6efd;
+            font-weight: bold;
             position: absolute;
             left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--ireland-orange);
         }
         
         .highlight-box {
@@ -565,7 +1025,215 @@ background-color: #0d6efd;
     }
     </style>
 </head>
-<body class="index-page"><section class="hero-section country-hero country-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><h1>Study in Ireland</h1><p class="lead">Discover top medical universities in Ireland with affordable fees and world-class education</p></div></div></div></section>
+<body class="index-page">
+<!-- Hero Section -->
+<section class="ireland-hero country-section russia-section mb-4">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Study in Ireland</h1>
+        <p class="lead">Discover world-class education in one of Europe's most welcoming destinations</p>
+        <a class="btn btn-ireland mt-3" href="#programs">Explore Programs</a>
+    </div>
+</section>
+
+<!-- Ireland Intro Section -->
+<section class="netherlands-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Introduction -->
+                <div class="content-section">
+                    <h2 class="section-title">Ireland: A Premier Education Destination</h2>
+                    <p>Ireland has emerged as one of the most sought-after destinations for international students, offering world-class education in medicine, engineering, and business. Known for its excellent academic standards, innovative research facilities, and strong industry connections, Ireland provides an ideal environment for students to excel in their chosen fields.</p>
+                    
+                    <div class="highlight-box">
+                        <h5>Why Choose Ireland for Higher Education?</h5>
+                        <ul class="feature-list">
+                            <li>Globally recognized degrees from top-ranked universities</li>
+                            <li>English-speaking country with a welcoming multicultural environment</li>
+                            <li>Strong focus on research and innovation across all disciplines</li>
+                            <li>Post-study work opportunities with the Third Level Graduate Scheme</li>
+                            <li>Home to numerous multinational companies offering excellent career prospects</li>
+                            <li>Rich cultural heritage and vibrant student life</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Quick Facts -->
+                <div class="netherlands-section" id="programs">
+                    <h2 class="section-title">Quick Facts</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Course Duration</th>
+                                    <td>4-6 years (Medicine), 3-4 years (Undergraduate), 1-2 years (Postgraduate)</td>
+                                </tr>
+                                <tr>
+                                    <th>Medium of Instruction</th>
+                                    <td>English</td>
+                                </tr>
+                                <tr>
+                                    <th>Top Universities</th>
+                                    <td>Trinity College Dublin, University College Dublin, National University of Ireland</td>
+                                </tr>
+                                <tr>
+                                    <th>Tuition Fees</th>
+                                    <td>€10,000–€25,000/year (varies by program and university)</td>
+                                </tr>
+                                <tr>
+                                    <th>Living Expenses</th>
+                                    <td>€7,000–€12,000/year (depending on location and lifestyle)</td>
+                                </tr>
+                            </tbody>
+                              </table>
+    </section>
+                    <div class="accreditation-badges text-center mb-5">
+                        <h3 class="mb-4">Global Recognition</h3>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <span class="badge bg-primary p-3 fs-6 fw-normal">
+                                <i class="bi bi-trophy-fill me-2"></i>QS Rankings
+                            </span>
+                            <span class="badge bg-primary p-3 fs-6 fw-normal">
+                                <i class="bi bi-award-fill me-2"></i>THE Rankings
+                            </span>
+                            <span class="badge bg-primary p-3 fs-6 fw-normal">
+                                <i class="bi bi-check-circle-fill me-2"></i>AACSB
+                            </span>
+                            <span class="badge bg-primary p-3 fs-6 fw-normal">
+                                <i class="bi bi-star-fill me-2"></i>AMBA
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        .accreditation-badges {
+                            margin: 40px 0;
+                        }
+                        .accreditation-badges h3 {
+                            color: #0d6efd;
+                            font-weight: 600;
+                            position: relative;
+                            display: inline-block;
+                            margin-bottom: 25px;
+                        }
+                        .accreditation-badges h3:after {
+                            content: '';
+                            position: absolute;
+                            width: 60%;
+                            height: 3px;
+                            background: #0d6efd;
+                            bottom: -10px;
+                            left: 20%;
+                            border-radius: 3px;
+                        }
+                        .badge {
+                            transition: all 0.3s ease;
+                            box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+                            background-color: #0d6efd !important;
+                        }
+                        .badge:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
+                            background-color: #0b5ed7 !important;
+                        }
+                    </style>
+                </div>
+                
+                <!-- Top Universities -->
+                <div class="netherlands-section">
+                    <h2 class="section-title">Top Irish Universities (2025–26)</h2>
+                    <div class="university-list">
+                        <ul class="feature-list">
+                            <li>Trinity College Dublin (TCD)</li>
+                            <li>University College Dublin (UCD)</li>
+                            <li>National University of Ireland, Galway (NUIG)</li>
+                            <li>University College Cork (UCC)</li>
+                            <li>Dublin City University (DCU)</li>
+                            <li>University of Limerick (UL)</li>
+                            <li>Maynooth University</li>
+                            <li>Royal College of Surgeons in Ireland (RCSI)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Program Details -->
+                <div class="netherlands-section">
+                    <h2 class="section-title">Program Details</h2>
+                    <div class="program-tabs">
+                        <ul class="nav nav-tabs" id="programTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="bachelor-tab" data-bs-toggle="tab" data-bs-target="#bachelor" type="button" role="tab" aria-controls="bachelor" aria-selected="true">Bachelor's Programs</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="master-tab" data-bs-toggle="tab" data-bs-target="#master" type="button" role="tab" aria-controls="master" aria-selected="false">Master's Programs</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content p-4 border border-top-0 rounded-bottom" id="programTabsContent">
+                            <!-- Bachelor's Tab -->
+                            <div class="tab-pane fade show active" id="bachelor" role="tabpanel" aria-labelledby="bachelor-tab">
+                                <h4>Bachelor's in Ireland</h4>
+                                <p>Irish universities offer a wide range of undergraduate programs with a strong emphasis on research and practical skills development.</p>
+                                
+                                <h5 class="mt-4">Popular Fields of Study:</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="feature-list">
+                                            <li>Medicine & Health Sciences</li>
+                                            <li>Engineering & Technology</li>
+                                            <li>Computer Science & IT</li>
+                                            <li>Business & Management</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="feature-list">
+                                            <li>Arts & Humanities</li>
+                                            <li>Science & Mathematics</li>
+                                            <li>Social Sciences</li>
+                                            <li>Law</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <h5 class="mt-4">Eligibility Criteria</h5>
+                                <ul class="feature-list">
+                                    <li>High school diploma or equivalent</li>
+                                    <li>English language proficiency (IELTS/TOEFL/PTE)</li>
+                                    <li>Minimum academic requirements vary by program</li>
+                                    <li>Some programs may require entrance exams or interviews</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Master's Tab -->
+                            <div class="tab-pane fade" id="master" role="tabpanel" aria-labelledby="master-tab">
+                                <h4>Master's in Ireland</h4>
+                                <p>Irish universities offer specialized master's programs designed to provide advanced knowledge and research opportunities.</p>
+                                
+                                <h5 class="mt-4">Program Highlights:</h5>
+                                <ul class="feature-list">
+                                    <li>1-2 year duration (varies by program)</li>
+                                    <li>Research and thesis-based options available</li>
+                                    <li>Industry-relevant curriculum</li>
+                                    <li>Opportunities for internships and industry projects</li>
+                                </ul>
+                                
+                                <h5 class="mt-4">Admission Requirements</h5>
+                                <ul class="feature-list">
+                                    <li>Bachelor's degree in relevant field</li>
+                                    <li>Minimum GPA requirements (varies by university)</li>
+                                    <li>English language proficiency (IELTS/TOEFL/PTE)</li>
+                                    <li>Letters of recommendation</li>
+                                    <li>Statement of purpose</li>
+                                    <li>CV/Resume</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Header -->
 <header class="header d-flex align-items-center fixed-top" id="header">
 <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -627,26 +1295,18 @@ background-color: #0d6efd;
 </div>
 </header>
 <main class="main">
-<!-- Hero Section -->
-<section class="ireland-hero country-section russia-section mb-4">
-<div class="container">
-<h1 class="display-4 fw-bold mb-4">Study in Ireland</h1>
-<p class="lead">World-class education in Engineering &amp; Business Management with excellent career prospects</p>
-<a class="btn btn-ireland mt-3" href="#programs">Explore Programs</a>
-</div>
-</section>
-<!-- Main Content -->
-<section class="section country-section russia-section mb-4">
+<!-- Main Content Section -->
+<section class="russia-section">
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
 <!-- Introduction -->
-<div class="ireland-section">
-<h2 class="ireland-title">Ireland: Excellence in Education</h2>
+<div class="russia-section">
+<h2 class="russia-title">Ireland: Excellence in Education</h2>
 <p>Ireland has rapidly emerged as one of the top destinations for international students pursuing Engineering and Business Management. Known for its high academic standards, innovation-driven economy, and globally connected campuses, Ireland is home to some of Europe's best universities and business schools, producing skilled engineers, managers, and entrepreneurs every year.</p>
 <div class="row mt-4">
 <div class="col-md-6">
-<div class="highlight-box">
+<div class="russia-section" style="background-color: #f8f9fa; border-left: 4px solid #0d6efd; margin: 15px 0; padding: 20px;">
 <h5>Why Choose Ireland for Engineering?</h5>
 <ul class="feature-list">
 <li>World-class research facilities and industry partnerships</li>
@@ -658,7 +1318,7 @@ background-color: #0d6efd;
 </div>
 </div>
 <div class="col-md-6">
-<div class="highlight-box">
+<div class="russia-section" style="background-color: #f8f9fa; border-left: 4px solid #0d6efd; margin: 15px 0; padding: 20px;">
 <h5>Why Choose Ireland for Business Management?</h5>
 <ul class="feature-list">
 <li>Globally recognized business schools</li>
@@ -672,10 +1332,10 @@ background-color: #0d6efd;
 </div>
 </div>
 <!-- Quick Facts -->
-<div class="ireland-section" id="programs">
-<h2 class="ireland-title">Quick Facts</h2>
+<div class="russia-section" id="programs">
+<h2 class="russia-title">Quick Facts</h2>
 <div class="table-responsive">
-<table class="table table-bordered country-table table table-striped">
+<table class="table table-hover table-bordered" style="border-radius: 8px; overflow: hidden;">
 <tbody>
 <tr>
 <th>Course Duration</th>
@@ -698,8 +1358,8 @@ background-color: #0d6efd;
 <td>€8,000–€12,000/year (approx. ₹7–₹10 lakhs)</td>
 </tr>
 </tbody>
-</table>
-</div>
+      </table>
+    </section>
 <div class="accreditation-badges">
 <h5>Top Accreditations:</h5>
 <span class="badge">Engineers Ireland</span>
@@ -709,35 +1369,36 @@ background-color: #0d6efd;
 </div>
 </div>
 <!-- Top Universities -->
-<div class="ireland-section">
-<h2 class="ireland-title">Top Irish Universities (2025–26)</h2>
+<div class="russia-section">
+<h2 class="russia-title">Top Irish Universities (2025–26)</h2>
 <div class="university-list">
-<ul class="list-unstyled">
-<li>• Trinity College Dublin</li>
-<li>• University College Dublin</li>
-<li>• University College Cork</li>
-<li>• National University of Ireland, Galway</li>
-<li>• Dublin City University</li>
-<li>• University of Limerick</li>
-<li>• Maynooth University</li>
-<li>• Technological University Dublin</li>
-<li>• Atlantic Technological University</li>
-<li>• Munster Technological University</li>
+<ul class="benefits-list">
+<li>Trinity College Dublin</li>
+<li>University College Dublin</li>
+<li>University College Cork</li>
+<li>National University of Ireland, Galway</li>
+<li>Dublin City University</li>
+<li>University of Limerick</li>
+<li>Maynooth University</li>
+<li>Technological University Dublin</li>
+<li>Atlantic Technological University</li>
+<li>Munster Technological University</li>
 </ul>
 </div>
 </div>
 <!-- Program Tabs -->
-<div class="ireland-section">
-<h2 class="ireland-title">Program Details</h2>
-<ul class="nav nav-tabs" id="programTabs" role="tablist">
+<div class="russia-section">
+<h2 class="russia-title">Program Details</h2>
+<div class="russia-section">
+<ul class="nav nav-tabs mb-4" id="programTabs" role="tablist">
 <li class="nav-item" role="presentation">
-<button aria-controls="engineering" aria-selected="true" class="nav-link active" data-bs-target="#engineering" data-bs-toggle="tab" id="engineering-tab" role="tab" type="button">Engineering</button>
+<button aria-controls="engineering" aria-selected="true" class="nav-link active px-4 py-2" data-bs-target="#engineering" data-bs-toggle="tab" id="engineering-tab" role="tab" type="button" style="border-radius: 8px 8px 0 0;">Engineering</button>
 </li>
 <li class="nav-item" role="presentation">
-<button aria-controls="business" aria-selected="false" class="nav-link" data-bs-target="#business" data-bs-toggle="tab" id="business-tab" role="tab" type="button">Business Management</button>
+<button aria-controls="business" aria-selected="false" class="nav-link px-4 py-2" data-bs-target="#business" data-bs-toggle="tab" id="business-tab" role="tab" type="button" style="border-radius: 8px 8px 0 0;">Business Management</button>
 </li>
 </ul>
-<div class="tab-content" id="programTabsContent">
+<div class="tab-content p-4" id="programTabsContent" style="border: 1px solid #dee2e6; border-radius: 0 8px 8px 8px;">
 <!-- Engineering Tab -->
 <div aria-labelledby="engineering-tab" class="tab-pane fade show active" id="engineering" role="tabpanel">
 <h4>Engineering Programs in Ireland</h4>
@@ -830,8 +1491,8 @@ background-color: #0d6efd;
 </div>
 </div>
 <!-- Application Process -->
-<div class="ireland-section">
-<h2 class="ireland-title">How to Apply</h2>
+<div class="russia-section">
+<h2 class="russia-title">How to Apply</h2>
 <ol>
 <li>Research and shortlist universities &amp; programs</li>
 <li>Check eligibility and application deadlines (Fall intake preferred)</li>
@@ -855,8 +1516,8 @@ background-color: #0d6efd;
 </ol>
 </div>
 <!-- FAQ Section -->
-<div class="ireland-section">
-<h2 class="ireland-title">Frequently Asked Questions</h2>
+<div class="russia-section">
+<h2 class="russia-title">Frequently Asked Questions</h2>
 <div class="faq-item">
 <div class="faq-question">What is the cost of studying in Ireland?</div>
 <div class="faq-answer">

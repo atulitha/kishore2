@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Kyx</title>
+    <link href="../assets/css/university-styles.css" rel="stylesheet"/>
 <meta content="" name="description"/>
 <meta content="" name="keywords"/>
 <!-- Favicons -->
@@ -23,18 +24,47 @@
 <!-- Main CSS File -->
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <style>
+        /* Hero Section */
         .russia-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 60px 0 40px 0;
-            text-align: center;
+            background: #ffffff;
+            padding: 120px 0 80px;
+            text-align: left;
+            position: relative;
+            margin-top: 80px;
+            border-radius: 16px;
+            border-top: 3px solid #0d6efd;
+        }
+        
+        .russia-hero h1 {
+            color: #0d6efd;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .russia-hero h1:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: #0d6efd;
+        }
+        
+        .russia-hero .lead {
+            color: #495057;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin-bottom: 1.5rem;
         }
 
         .russia-section {
             background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
+            padding: 60px 0;
+            margin: 30px 0;
+            border-radius: 8px;
         }
 
         .russia-title {
@@ -382,15 +412,91 @@
         
         /* Standard list styling for benefits */
         .benefits-list {
-            list-style: disc;
-            padding-left: 20px;
+            list-style: none;
+            padding-left: 0;
             margin: 15px 0;
         }
         
         .benefits-list li {
-            margin-bottom: 8px;
-            line-height: 1.5;
+            margin-bottom: 10px;
+            line-height: 1.6;
             color: #333;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "•";
+            color: #0d6efd;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Main content container */
+        .main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Content sections */
+        .content-section {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin: 1.5rem auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        
+        .content-section:hover {
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Center content */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Ensure proper spacing for mobile */
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+            
+            .main {
+                padding: 1rem 0.5rem;
+            }
+        }
+        
+        /* Table styling */
+        .table {
+            background: #fff !important;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .table th, .table td {
+            border-color: #e9ecef;
+            padding: 1rem;
+        }
+        
+        .table thead th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
         }
         </style>
 </head>
@@ -457,15 +563,10 @@
 <!-- Add space after header to prevent content collision -->
 <div style="height: 80px;"></div>
 <main class="main">
-<section class="about section" id="about">
-<div class="container" data-aos="fade-up">
-<div class="row gx-0">
-<div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
 <div class="content">
-<div class="container my-5">
-<div class="russia-section">
-<div class="col-lg-20 d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
-<div class="row">
+  <section class="content-section" data-aos="fade-up">
+    <section class="content-section" data-aos="fade-up">
+      <div class="row g-4">
   <div class="col-md-6">
     <img alt="Study MBBS in Russia" class="img-fluid" src="../assets/img/hero-img-2.png"/>
   </div>
@@ -480,11 +581,11 @@
     </ul>
   </div>
 </div>
+    </section>
+    <h2 class="text-center mt-4">Why Choose Russia for MBBS?</h2>
 </div>
-<h2 class="text-center mt-4">Why Choose Russia for MBBS?</h2>
-</div>
-<div class="russia-section">
-<h2>Quick Facts</h2>
+  <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="100">
+    <h2>Quick Facts</h2>
 <table class="table table-bordered russia-table">
 <tbody>
 <tr>
@@ -516,10 +617,10 @@
 <td>WHO, ECFMG, FAIMER, NMC, etc.</td>
 </tr>
 </tbody>
-</table>
-</div>
-<div class="russia-section">
-<h2>Top Russian Medical Universities &amp; Fees (2025–26)</h2>
+      </table>
+    </section>
+  <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="150">
+    <h2>Top Russian Medical Universities &amp; Fees (2025–26)</h2>
 <table class="table table-striped russia-table">
 <thead>
 <tr>
@@ -581,10 +682,10 @@
 </tr>
 <!-- Add more as needed -->
 </tbody>
-</table>
-</div>
-<div class="russia-section">
-<h2>Eligibility Criteria</h2>
+      </table>
+    </section>
+  <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="200">
+    <h2>Eligibility Criteria</h2>
 <ul>
 <li>Minimum 17 years old by December 31 of admission year</li>
 <li>NEET qualification required</li>
@@ -831,9 +932,11 @@
 </div>
 </section><!-- /Contact Section -->
 </div><!-- End Main Content -->
-</div></div></div></section></main>
+</div>
+  </section>
+</main>
 <!-- Contact Section -->
-<section class="contact section" id="contact">
+<section class="contact section" id="contact" style="display: flex; justify-content: center; align-items: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
 <!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
 <h2>Contact</h2>
@@ -904,7 +1007,7 @@
 </div>
 </div>
 </section><!-- /Contact Section -->
-<footer class="footer" id="footer">
+<footer id="footer" class="footer">
 <!--    <div class="footer-newsletter">-->
 <!--        <div class="container">-->
 <!--            <div class="row justify-content-center text-center">-->

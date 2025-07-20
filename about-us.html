@@ -24,41 +24,70 @@
 <link href="assets/css/main.css" rel="stylesheet"/>
 <link href="assets/css/dropdown-styles.css" rel="stylesheet"/>
 <style>
-    /* Typography and Readability Enhancements */
+    /* Modern Clean UI for About Page */
     .about-content {
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(10px);
-        border-radius: 16px;
-        padding: 2.5rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-        max-width: 1200px;
-        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 3rem 2.5rem;
+        max-width: 1140px;
+        margin: 2rem auto;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
     }
     
     .about-content h1 {
-        color: #0d6efd;
-        font-size: 2.8rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        letter-spacing: -0.5px;
+        color: #1a365d;
+        font-family: 'Nunito', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 2.5rem;
         line-height: 1.2;
+        text-align: center;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+    
+    .about-content h1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #0d6efd, #6c5ce7);
+        border-radius: 10px;
     }
     
     .about-section {
-        margin-bottom: 2.5rem;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: #f9fafc;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        border: 1px solid #edf2f7;
     }
     
-    .about-section:last-child {
-        margin-bottom: 0;
+    .about-section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     }
     
     .about-section h3 {
-        color: #2c3e50;
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin-bottom: 1.25rem;
+        color: #2d3748;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .about-section h3 i {
+        margin-right: 12px;
+        color: #0d6efd;
+        font-size: 1.8rem;
     }
     
     .about-section h3::after {
@@ -66,44 +95,80 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        width: 60px;
-        height: 4px;
+        width: 50px;
+        height: 3px;
         background: linear-gradient(90deg, #0d6efd, #6c5ce7);
-        border-radius: 2px;
+        border-radius: 3px;
     }
     
     .about-section p {
         color: #4a5568;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.8;
         margin-bottom: 1.5rem;
         font-weight: 400;
         letter-spacing: 0.01em;
     }
     
-    .about-section p:last-child {
-        margin-bottom: 0;
-    }
-    
     /* Responsive adjustments */
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         .about-content {
-            padding: 1.75rem;
+            padding: 2rem 1.5rem;
+            margin: 1rem;
         }
         
         .about-content h1 {
             font-size: 2.2rem;
-            margin-bottom: 1.75rem;
+            margin-bottom: 2rem;
+        }
+        
+        .about-section {
+            padding: 1.5rem;
+            margin-bottom: 2rem;
         }
         
         .about-section h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .about-section h3 i {
+            font-size: 1.6rem;
         }
         
         .about-section p {
             font-size: 1rem;
             line-height: 1.7;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .about-content {
+            padding: 1.5rem 1rem;
+            margin: 0.5rem;
+        }
+        
+        .about-content h1 {
+            font-size: 1.8rem;
+            padding-bottom: 0.75rem;
+        }
+        
+        .about-section {
+            padding: 1.25rem;
+        }
+        
+        .about-section h3 {
+            font-size: 1.4rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .about-section h3 i {
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-section h3::after {
+            margin-top: 0.75rem;
         }
     }
     
@@ -438,142 +503,6 @@
 
 
         </style>
-
-    <style>
-    /* Dropdown menu styling */
-    .listing-dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    
-    .listing-dropdown > a {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        padding: 10px 15px;
-        text-decoration: none;
-        color: #333;
-        position: relative;
-    }
-    
-    .listing-dropdown > a::after {
-        display: none; /* Hide default dropdown arrow */
-    }
-    
-    .listing-dropdown > a .bi-chevron-down {
-        transition: transform 0.3s ease;
-    }
-    
-    .listing-dropdown.active > a .bi-chevron-down {
-        transform: rotate(180deg);
-    }
-    
-    .countries-list {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: #fff;
-        min-width: 240px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 10px 0;
-        z-index: 1000;
-        margin-top: 5px;
-    }
-    
-    .countries-list.show {
-        display: block;
-    }
-    
-    .country-group {
-        padding: 0;
-        margin: 0;
-    }
-    
-    .country-item {
-        list-style: none;
-    }
-    
-    .country-item a {
-        display: block;
-        padding: 8px 20px;
-        color: #333;
-        text-decoration: none;
-        transition: all 0.2s ease;
-    }
-    
-    .country-item a:hover {
-        background-color: #f8f9fa;
-        color: #0d6efd;
-        padding-left: 25px;
-    }
-    
-    /* Mobile menu styles */
-    @media (max-width: 1199.98px) {
-        .mobile-nav-toggle {
-            display: flex !important;
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            z-index: 9999;
-            border: none;
-            background: none;
-            font-size: 28px;
-            padding: 0;
-            line-height: 1;
-            cursor: pointer;
-            color: #0d6efd;
-        }
-        
-        .mobile-nav-active #header {
-            overflow-y: auto;
-            max-height: 100vh;
-        }
-        
-        #navmenu > ul {
-            display: none;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            right: 0;
-            background: #fff;
-            padding: 20px 0;
-            flex-direction: column;
-            align-items: flex-start;
-            z-index: 998;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .mobile-nav-active #navmenu > ul {
-            display: flex;
-        }
-        
-        #navmenu > ul > li {
-            width: 100%;
-            padding: 0;
-        }
-        
-        #navmenu > ul > li > a {
-            padding: 12px 20px;
-            display: block;
-            width: 100%;
-        }
-        
-        .listing-dropdown .countries-list {
-            position: static;
-            box-shadow: none;
-            display: none;
-            padding: 0 0 0 20px;
-            margin: 0;
-        }
-        
-        .listing-dropdown.active .countries-list {
-            display: block;
-        }
-    }
-    </style>
-    
 </head>
 <body>
 <header class="header d-flex align-items-center fixed-top" id="header">
@@ -631,84 +560,295 @@
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
-
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Function to close all dropdowns except the current one
-        function closeOtherDropdowns(currentDropdown) {
-            document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
-                if (dropdown !== currentDropdown) {
-                    dropdown.classList.remove('active');
-                    const menu = dropdown.querySelector('.countries-list');
-                    if (menu) menu.style.display = 'none';
-                }
-            });
-        }
-        
-        // Update dropdown toggle functionality
-        document.querySelectorAll('.listing-dropdown > a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                const parent = this.parentElement;
-                const isActive = parent.classList.contains('active');
-                const dropdownMenu = parent.querySelector('.countries-list');
-                
-                // Close all other dropdowns first
-                closeOtherDropdowns(parent);
-                
-                // Toggle current dropdown
-                if (!isActive) {
-                    parent.classList.add('active');
-                    if (dropdownMenu) dropdownMenu.style.display = 'block';
-                } else {
-                    parent.classList.remove('active');
-                    if (dropdownMenu) dropdownMenu.style.display = 'none';
-                }
-            });
+<script>
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.getElementById('navmenu');
+    const body = document.querySelector('body');
+    
+    if (mobileNavToggle) {
+        mobileNavToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            body.classList.toggle('mobile-nav-active');
+            this.classList.toggle('bi-list');
+            this.classList.toggle('bi-x');
         });
-        
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.listing-dropdown')) {
-                closeOtherDropdowns(null);
+    }
+    
+    // Close mobile menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('#navmenu ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (body.classList.contains('mobile-nav-active')) {
+                body.classList.remove('mobile-nav-active');
+                const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+                if (mobileNavToggle) {
+                    mobileNavToggle.classList.toggle('bi-list');
+                    mobileNavToggle.classList.toggle('bi-x');
+                }
             }
         });
-        
-        // Close dropdowns on window resize
-        let resizeTimer;
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-                closeOtherDropdowns(null);
-            }, 250);
-        });
-        
-        // Mobile nav toggle functionality
-        const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-        
-        function mobileNavToggle() {
-            document.querySelector('body').classList.toggle('mobile-nav-active');
-            mobileNavToggleBtn.classList.toggle('bi-list');
-            mobileNavToggleBtn.classList.toggle('bi-x');
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navMenu.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+            if (body.classList.contains('mobile-nav-active')) {
+                body.classList.remove('mobile-nav-active');
+                mobileNavToggle.classList.toggle('bi-list');
+                mobileNavToggle.classList.toggle('bi-x');
+            }
         }
-        
-        if (mobileNavToggleBtn) {
-            mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
-        }
-        
-        // Close mobile nav when clicking on a nav link
-        document.querySelectorAll('#navmenu a').forEach(navmenu => {
-            navmenu.addEventListener('click', () => {
-                if (document.querySelector('.mobile-nav-active')) {
-                    mobileNavToggle();
-                }
-            });
+    });
+    
+    // Toggle dropdown menu on mobile
+    const dropdownToggles = document.querySelectorAll('.listing-dropdown > a');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth < 1200) { // Mobile view
+                e.preventDefault();
+                const parent = this.parentElement;
+                parent.classList.toggle('active');
+                
+                // Close other dropdowns
+                dropdownToggles.forEach(otherToggle => {
+                    if (otherToggle !== this) {
+                        otherToggle.parentElement.classList.remove('active');
+                    }
+                });
+            }
         });
     });
-    </script>
-    
+});
+</script>
+<!-- Get Started button removed as requested -->
+</div>
+</header>
+<main class="main" style="padding-top: 100px;">
+<div class="about-container" style="padding-top: 20px;">
+<div class="container">
+<div class="about-box">
+<img alt="About Us Background" class="img-fluid w-100" src="assets/img/values-1.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;  z-index: -1;"/>
+<div class="about-content">
+<h1>About Us</h1>
+<div class="about-section">
+<h3><i class="bi bi-bullseye"></i> Mission Statement</h3>
+<p>KYX PROJECT K1 INTERNATIONAL is a trusted consulting firm dedicated to guiding students who aspire to pursue higher education abroad, particularly in the fields of Medicine, Engineering, and Business Management with both Bachelor's and Master's programs.</p>
+<p>As an authorized partner of reputable universities and colleges across Central Asia and European countries, we offer expert services in educational counseling, admission guidance, and documentation support to help students achieve their academic dreams.</p>
+</div>
+
+<div class="about-section">
+<h3><i class="bi bi-award"></i> Our Experience</h3>
+<p>With years of experience in international higher education, KYX PROJECT K1 INTERNATIONAL has helped numerous students achieve their dreams of becoming doctors, engineers, and business leaders. Our proven track record and extensive network of partner institutions ensure that our students receive the best possible guidance and support throughout their academic journey.</p>
+</div>
+
+<div class="about-section">
+<h3><i class="bi bi-hand-thumbs-up"></i> Our Commitment</h3>
+<p>We are committed to transparency, honesty, and delivering affordable, high-quality education options. Our team of professional and well-trained counselors provides personalized advice, helping students choose the best-suited university and course according to their academic goals and aspirations.</p>
+
+<p>Every step of our consulting process is handled with integrity and clarity, ensuring that students and their families are fully informed and confident in their decisions. We prioritize honest communication and ethical practices, building lasting trust with our clients through consistent, reliable service.</p>
+
+<p>Our mission is to make international education accessible and attainable without compromising on quality. We work diligently to match each student with institutions that offer both academic excellence and financial feasibility, making the dream of studying abroad a reality for students from all backgrounds.</p>
+</div>
+
+<div class="about-section">
+<h3><i class="bi bi-lightbulb"></i> Our Expertise</h3>
+<p>With deep insights into academic structures, lifestyle considerations, and socio-economic conditions across various countries, KYX PROJECT K1 INTERNATIONAL ensures a smooth transition and successful academic journey for our students.</p>
+
+<p>We specialize in guiding students through the complexities of pursuing graduate and postgraduate studies abroad, including medical degrees (MBBS/MD/MS), engineering programs, and business administration courses. Our comprehensive support system addresses every aspect of the international education experience, from initial consultation to post-arrival assistance.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- ======= Contact Section ======= -->
+<section class="contact section" id="contact">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Contact Us</p>
+  </div>
+  <!-- End Section Title -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-lg-6">
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>rajuvolu</p>
+              <p>russian tuppalu, 535022</p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+91-6304705445</p>
+              <p>+91-8125423017</p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>projectk1international@gmail.com</p>
+              <p>projectk1international@gmail.com</p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+          <div class="col-md-6">
+            <div class="info-item" data-aos="fade" data-aos-delay="500">
+              <i class="bi bi-clock"></i>
+              <h3>Open Hours</h3>
+              <p>Monday - Friday</p>
+              <p>9:00AM - 05:00PM</p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
+            </div>
+            <div class="col-12">
+              <input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
+            </div>
+            <div class="col-12">
+              <textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <button type="submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- End Contact Form -->
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+<footer class="footer" id="footer">
+<div class="container footer-top">
+<div class="row gy-4">
+<div class="col-lg-4 col-md-6 footer-about">
+<a class="d-flex align-items-center" href="index.html">
+<span class="sitename">kyx</span>
+</a>
+<div class="footer-contact pt-3">
+<p>rajuvolu </p>
+<p>russian tuppalu</p>
+<p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
+<p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
+<p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<h4>Follow Us</h4>
+<p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+<div class="social-links d-flex">
+<a href="#"><i class="bi bi-twitter-x"></i></a>
+<a href="#"><i class="bi bi-facebook"></i></a>
+<a href="#"><i class="bi bi-instagram"></i></a>
+<a href="#"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="container copyright text-center mt-4">
+<p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
+</p>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you've purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+</div>
+</div>
+</footer>
+<!-- Scroll Top -->
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to close all dropdowns except the current one
+            function closeOtherDropdowns(currentDropdown) {
+                document.querySelectorAll('.listing-dropdown').forEach(dropdown => {
+                    if (dropdown !== currentDropdown) {
+                        dropdown.classList.remove('active');
+                        const menu = dropdown.querySelector('.countries-list');
+                        if (menu) menu.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Update dropdown toggle functionality
+            document.querySelectorAll('.listing-dropdown > a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const parent = this.parentElement;
+                    const isActive = parent.classList.contains('active');
+                    const dropdownMenu = parent.querySelector('.countries-list');
+                    
+                    // Close all other dropdowns first
+                    closeOtherDropdowns(parent);
+                    
+                    // Toggle current dropdown
+                    if (!isActive) {
+                        parent.classList.add('active');
+                        if (dropdownMenu) dropdownMenu.style.display = 'block';
+                    } else {
+                        parent.classList.remove('active');
+                        if (dropdownMenu) dropdownMenu.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.listing-dropdown')) {
+                    closeOtherDropdowns(null);
+                }
+            });
+            
+            // Close dropdowns on window resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    closeOtherDropdowns(null);
+                }, 250);
+            });
+        });
+        </script>
 </body>
 </html>

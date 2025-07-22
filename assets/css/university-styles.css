@@ -1,0 +1,252 @@
+/* University Pages Styling */
+:root {
+    /* Primary Colors */
+    --primary: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --primary-light: rgba(13, 110, 253, 0.1);
+    
+    /* Text Colors */
+    --text-primary: #2c3e50;
+    --text-secondary: #495057;
+    --text-muted: #6c757d;
+    
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-hover: #e9ecef;
+    
+    /* Borders & Shadows */
+    --border-color: #dee2e6;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius: 8px;
+    --border-radius-lg: 16px;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing: 1.5rem;
+    --spacing-lg: 2.5rem;
+}
+
+/* Base Styles */
+body {
+    color: var(--text-primary);
+    background-color: var(--bg-light);
+}
+
+/* Main content container */
+.main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--bg-white);
+    padding: 6rem 0 4rem;
+    text-align: left;
+    position: relative;
+    margin-top: 4rem;
+    border-radius: var(--border-radius-lg);
+    border-top: 3px solid var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-section h1 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.hero-section h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+}
+
+.hero-section .lead {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+/* Content sections */
+.content-section {
+    background: var(--bg-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-lg);
+    margin: var(--spacing) 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.content-section:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Tables */
+.table {
+    background: var(--bg-white) !important;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.table th, .table td {
+    border-color: var(--border-color);
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: var(--bg-light);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Badges */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+    border-radius: var(--border-radius-sm);
+}
+
+.badge.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* Lists */
+.benefits-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.benefits-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.benefits-list li:before {
+    content: "•";
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 5rem 0 3rem;
+        margin-top: 3rem;
+        text-align: center;
+    }
+    
+    .hero-section h1:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .content-section {
+        padding: var(--spacing);
+        margin: var(--spacing-sm) 0;
+        border-radius: var(--border-radius);
+    }
+    
+    .main {
+        padding: 1rem 0.5rem;
+    }
+    
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-section, .hero-section {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Utility Classes */
+.text-primary { color: var(--primary) !important; }
+.bg-light { background-color: var(--bg-light) !important; }
+.shadow-sm { box-shadow: var(--shadow-sm) !important; }
+.rounded { border-radius: var(--border-radius) !important; }

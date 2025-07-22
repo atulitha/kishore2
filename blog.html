@@ -22,6 +22,8 @@
 <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 <!-- Main CSS File -->
 <link href="assets/css/main.css" rel="stylesheet"/>
+<link href="./navbar.css" rel="stylesheet">
+<script src="./navbar.js" defer></script>
 <!-- =======================================================
     * Template Name: FlexStart
     * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
@@ -31,86 +33,66 @@
     ======================================================== -->
 </head>
 <body class="index-page">
-<header class="header d-flex align-items-center fixed-top" id="header">
-<div class="container-fluid container-xl position-relative d-flex align-items-center">
-<a class="logo d-flex align-items-center" href="index.html">
-<!-- Uncomment the line below if you also wish to use an image logo -->
-<img alt="" height="200" src="assets/img/kxy-logo.png" width="70"/> </a>
-<nav class="navmenu" id="navmenu">
-<ul>
-<li><a href="index.html">Home<br/></a></li>
-<li><a href="about-us.html">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#team">Team</a></li>
-<li><a class="active" href="blog.html">Blog</a></li>
-<li class="listing-dropdown"><a href="#"><span>Countries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-<ul class="countries-list">
-<li class="country-group">
-<div class="country-item">
-<a href="universities/russia.html" title="Russia">Russia</a>
-</div>
-<div class="country-item">
-<a href="universities/georgia.html" title="Georgia">Georgia</a>
-</div>
-<div class="country-item">
-<a href="universities/kyrgyzstan.html" title="Kyrgyzstan">Kyrgyzstan</a>
-</div>
-<div class="country-item">
-<a href="universities/uzbekistan.html" title="Uzbekistan">Uzbekistan</a>
-</div>
-</li>
-<!-- Commented out countries -->
-<!-- <li class="country-group">
-                            <div class="country-item">
-                                <a href="universities/kazakhstan.html" title="Kazakhstan">Kazakhstan</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/egypt.html" title="Egypt">Egypt</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/nepal.html" title="Nepal">Nepal</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/bangladesh.html" title="Bangladesh">Bangladesh</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/china.html" title="China">China</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/germany.html" title="Germany">Germany</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/italy.html" title="Italy">Italy</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/france.html" title="France">France</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/belarus.html" title="Belarus">Belarus</a>
-                            </div>
-                            <div class="country-item">
-                                <a href="universities/latvia.html" title="Latvia">Latvia</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="universities/lithuania.html" title="Lithuania">Lithuania</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="universities/hungary.html" title="Hungary">Hungary</a>
-                                </div>
-                                <div class="country-item">
-                                    <a href="study-in-germany.html" title="Germany">Study in Germany</a>
-                                </div>
-                            </li> -->
-</ul>
-</li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
-<a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
-</div>
-</header>
+    <header class="new-header container">
+        <a href="/index.html" class="new-logo-container">
+            <img src="./assets/img/kxy-logo.png" alt="" class="new-logo-img">
+        </a>
+        <nav class="new-navbar">
+            <ul class="new-nav-list new-desktop-navbar">
+                <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+                <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+                <li class="new-countries-dropdown">
+                    <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul class="new-country-group">
+                        <li class="new-country-item"><a href="/universities/russia.html">Russia</a></li>
+                        <li class="new-country-item"><a href="/universities/georgia.html">Georgia</a></li>
+                        <li class="new-country-item"><a href="/universities/kyrgyzstan.html">Kyrgyzstan</a></li>
+                        <li class="new-country-item"><a href="/universities/uzbekistan.html">Uzbekistan</a></li>
+                        <li class="new-country-item"><a href="/universities/ireland.html">Ireland</a></li>
+                        <li class="new-country-item"><a href="/universities/netherlands.html">Netherlands</a></li>
+                        <li class="new-country-item"><a href="/universities/spain.html">Spain</a></li>
+                        <li class="new-country-item"><a href="/universities/uK.html">UK</a></li>
+                        <li class="new-country-item"><a href="/universities/usa.html">United States</a></li>
+                        <li class="new-country-item"><a href="/universities/canada.html">Canada</a></li>
+                        <li class="new-country-item"><a href="/universities/france.html">France</a></li>
+                        <li class="new-country-item"><a href="/universities/germany.html">Germany</a></li>
+                    </ul>
+                </li>
+                <li><a href="/index..html#contact" class="new-nav-item">Contact</a></li>
+            </ul>
+            <div class="new-layer" id="new-layer">
+                <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
+                <ul class="new-nav-list new-mobile-navbar">
+                    <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+                    <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+                    <li class="new-countries-dropdown">
+                        <!-- <label for="new-countries">Hello world-class</label> -->
+                        <input type="checkbox" name="new-countries" id="new-countries" />
+                        <label for="new-countries">
+                            <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        </label>
+                            <ul class="new-country-group">
+                                <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                                <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                                <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                                <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                                <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                                <li class="new-country-item"><a href="uK.html">UK</a></li>
+                                <li class="new-country-item"><a href="usa.html">United States</a></li>
+                                <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                                <li class="new-country-item"><a href="france.html">France</a></li>
+                                <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="/index..html#contact" class="new-nav-item">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
+        
+    </header>
 <main class="main">
 <!-- Page Title -->
 <div class="page-title">

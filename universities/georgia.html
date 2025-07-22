@@ -23,6 +23,8 @@
 <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 <!-- Main CSS File -->
 <link href="../assets/css/main.css" rel="stylesheet"/>
+<link href="../navbar.css" rel="stylesheet">
+<script src="../navbar.js" defer></script>
 <style>
         /* Modern Hero Section */
         .georgia-hero {
@@ -236,7 +238,7 @@
             justify-content: space-between;
         }
         
-        #navmenu {
+        /* #navmenu {
             margin: 0 auto;
             width: auto;
         }
@@ -272,7 +274,7 @@
             color: #0d6efd;
             background: rgba(13, 110, 253, 0.1);
         }
-        
+         */
         .logo {
             margin-right: 30px;
         }
@@ -324,27 +326,37 @@
         
         .country-group {
             display: flex;
+            justify-content: space-between;
+            padding: 1rem;
             flex-wrap: wrap;
-            gap: 15px;
-            width: 100%;
+            gap: 1.5rem;
         }
         
         .country-item {
-            flex: 1 1 calc(20% - 12px);
+            flex: 0 1 20%;
+            min-width: 150px;
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            /* flex: 1 1 calc(20% - 12px);
             min-width: 150px;
             background: white;
             border-radius: 10px;
             transition: all 0.3s ease;
             padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border: 1px solid #edf2f7;
+            text-align: center; */
+            /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+            /* border: 1px solid #edf2f7; */
         }
         
         .country-item:hover {
-            transform: translateY(-3px);
+            /* transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(13, 110, 253, 0.1);
-            border-color: rgba(13, 110, 253, 0.2);
+            border-color: rgba(13, 110, 253, 0.2); */
+            background: #e9ecef;
+            transform: translateY(-2px);
         }
         
         .country-item a {
@@ -501,11 +513,7 @@
         }
 
         @media (max-width: 1199px) {
-            .mobile-nav-toggle {
-                display: flex !important;
-            }
-
-            #navmenu > ul {
+            #navmenu ul {
                 display: none !important;
                 position: fixed;
                 top: 80px;
@@ -523,6 +531,14 @@
                 margin: 0;
                 list-style: none;
             }
+
+            .mobile-nav-active .navmenu ul {
+                    display: block !important;
+            }
+            .mobile-nav-toggle {
+                display: flex !important;
+            }
+
 
             .mobile-nav-active #navmenu > ul,
             #navmenu > ul.mobile-nav-active {
@@ -559,8 +575,8 @@
             }
 
             .listing-dropdown > a::after {
-            display: none !important;
-        }
+                display: none !important;
+            }
 
             .listing-dropdown.active > a::after {
                 transform: rotate(180deg);
@@ -588,6 +604,17 @@
                 gap: 8px;
                 margin: 0;
             }
+            .country-group {
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                flex-wrap: wrap;
+                /* gap: 1.5rem; */
+            }
+            /* Show menu when active */
+            .mobile-nav-active #navmenu ul {
+                display: flex !important;
+            }
         }
 
         /* Mobile menu visibility fix */
@@ -601,18 +628,13 @@
             }
             
             /* Ensure desktop menu is hidden on mobile */
-            #navmenu > ul {
-                display: none !important;
-            }
             
-            /* Show menu when active */
-            .mobile-nav-active #navmenu > ul {
-                display: flex !important;
-            }
+            
+            
         }
         
         /* Dropdown positioning fix */
-        .listing-dropdown {
+        /* .listing-dropdown {
             position: relative;
         }
         
@@ -622,7 +644,7 @@
             left: auto;
             min-width: 500px;
             max-width: 90vw;
-        }
+        } */
         
         @media (max-width: 1199.98px) {
             .listing-dropdown .countries-list {
@@ -747,6 +769,66 @@
     </style>
 </head>
 <body class="index-page">
+    <header class="new-header container">
+        <div class="new-logo-container">
+            <img src="../assets/img/kxy-logo.png" alt="" class="new-logo-img">
+        </div>
+        <nav class="new-navbar">
+            <ul class="new-nav-list new-desktop-navbar">
+                <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+                <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+                <li class="new-countries-dropdown">
+                    <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul class="new-country-group">
+                        <li class="new-country-item"><a href="/universities/russia.html">Russia</a></li>
+                        <li class="new-country-item"><a href="/universities/georgia.html">Georgia</a></li>
+                        <li class="new-country-item"><a href="/universities/kyrgyzstan.html">Kyrgyzstan</a></li>
+                        <li class="new-country-item"><a href="/universities/uzbekistan.html">Uzbekistan</a></li>
+                        <li class="new-country-item"><a href="/universities/ireland.html">Ireland</a></li>
+                        <li class="new-country-item"><a href="/universities/netherlands.html">Netherlands</a></li>
+                        <li class="new-country-item"><a href="/universities/spain.html">Spain</a></li>
+                        <li class="new-country-item"><a href="/universities/uK.html">UK</a></li>
+                        <li class="new-country-item"><a href="/universities/usa.html">United States</a></li>
+                        <li class="new-country-item"><a href="/universities/canada.html">Canada</a></li>
+                        <li class="new-country-item"><a href="/universities/france.html">France</a></li>
+                        <li class="new-country-item"><a href="/universities/germany.html">Germany</a></li>
+                    </ul>
+                </li>
+                <li><a href="/index..html#contact" class="new-nav-item">Contact</a></li>
+            </ul>
+            <div class="new-layer" id="new-layer">
+                <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
+                <ul class="new-nav-list new-mobile-navbar">
+                    <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+                    <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+                    <li class="new-countries-dropdown">
+                        <!-- <label for="new-countries">Hello world-class</label> -->
+                        <input type="checkbox" name="new-countries" id="new-countries" />
+                        <label for="new-countries">
+                            <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        </label>
+                            <ul class="new-country-group">
+                                <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                                <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                                <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                                <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                                <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                                <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                                <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                                <li class="new-country-item"><a href="uK.html">UK</a></li>
+                                <li class="new-country-item"><a href="usa.html">United States</a></li>
+                                <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                                <li class="new-country-item"><a href="france.html">France</a></li>
+                                <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="/index..html#contact" class="new-nav-item">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
+        
+    </header>
     <!-- ======= Hero Section ======= -->
     <section class="georgia-hero">
         <div class="container">
@@ -758,59 +840,12 @@
                     <a href="#contact" class="hero-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="col-lg-4 d-none d-lg-block">
-                    <img src="../assets/img/georgia-flag.png" alt="Georgia Flag" class="img-fluid" style="max-height: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="../assets/img/flag/Georgia.jpg" alt="Georgia Flag" class="img-fluid" style="max-height: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </div>
     </section><!-- End Hero -->
     <!-- ======= Header ======= -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="../index.html" class="logo d-flex align-items-center">
-                <img src="../assets/img/kxy-logo.png" alt="Kyx Logo" class="img-fluid" style="max-height: 50px;">
-            </a>
-
-            <!-- Mobile Navigation Toggle -->
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-            <!-- Desktop Navigation -->
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="../index.html" class="active">Home</a></li>
-                    <li><a href="../about-us.html">About Us</a></li>
-                    <li class="dropdown has-dropdown">
-                        <a href="#"><span>Study Abroad</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul class="dd-box-shadow">
-                            <li class="dropdown">
-                                <a href="#"><span>MBBS Abroad</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="russia.html">MBBS in Russia</a></li>
-                                    <li><a href="georgia.html" class="active">MBBS in Georgia</a></li>
-                                    <li><a href="kyrgyzstan.html">MBBS in Kyrgyzstan</a></li>
-                                    <li><a href="uzbekistan.html">MBBS in Uzbekistan</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Other Courses</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="ireland.html">Study in Ireland</a></li>
-                                    <li><a href="netherlands.html">Study in Netherlands</a></li>
-                                    <li><a href="spain.html">Study in Spain</a></li>
-                                    <li><a href="uk.html">Study in UK</a></li>
-                                    <li><a href="usa.html">Study in USA</a></li>
-                                    <li><a href="canada.html">Study in Canada</a></li>
-                                    <li><a href="france.html">Study in France</a></li>
-                                    <li><a href="germany.html">Study in Germany</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <main class="main">
         <div class="content">
             <div class="container my-5">
@@ -954,151 +989,7 @@
         </div>
     </main>
     <!-- Contact Section -->
-    <section class="contact section country-section russia-section mb-4" id="contact">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p>Contact Us</p>
-        </div>
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row gy-4">
-                <div class="col-lg-6">
-                    <div class="row gy-4">
-                        <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                <i class="bi bi-geo-alt"></i>
-                                <h3>Address</h3>
-                                <p>rajuvolu </p>
-                                <p>russian tuppalu, 535022</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                <i class="bi bi-telephone"></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-5 col-md-12 footer-info">
-                <a href="index.html" class="logo d-flex align-items-center">
-                    <span>Kyx</span>
-                </a>
-                <p>Your trusted partner for international education. We help students achieve their dreams of studying abroad with expert guidance and support.</p>
-                <div class="social-links d-flex mt-4">
-                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-6 footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about-us.html">About us</a></li>
-                    <li><a href="#">Terms of service</a></li>
-                    <li><a href="#">Privacy policy</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-6 footer-links">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="#">University Selection</a></li>
-                    <li><a href="#">Admission Guidance</a></li>
-                    <li><a href="#">Visa Assistance</a></li>
-                    <li><a href="#">Pre-departure Briefing</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                <h4>Contact Us</h4>
-                <p>
-                    Rajuvolu <br>
-                    Russian Tuppalu, 535022<br>
-                    India <br><br>
-                    <strong>Phone:</strong> +91 63047 05445<br>
-                    <strong>Email:</strong> info@kyx.com<br>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-4">
-        <div class="copyright">
-            &copy; Copyright <strong><span>Kyx</span></strong>. All Rights Reserved
-        </div>
-    </div>
-</footer><!-- End Footer -->
-
-<!-- Scroll Top Button -->
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-</a>
-
-<!-- Preloader -->
-<div id="preloader"></div>
-<h3>Call Us</h3>
-<p>+91-6304705445</p>
-<p>+91-8125423017</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="400">
-<i class="bi bi-envelope"></i>
-<h3>Email Us</h3>
-<p>projectk1international@gmail.com</p>
-<p>projectk1international@gmail.com</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="500">
-<i class="bi bi-clock"></i>
-<h3>Open Hours</h3>
-<p>Monday - Friday</p>
-<p>9:00AM - 05:00PM</p>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
-<div class="row gy-4">
-<div class="col-md-6">
-<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
-</div>
-<div class="col-md-6">
-<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
-</div>
-<div class="col-12">
-<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
-</div>
-<div class="col-12">
-<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
-</div>
-<div class="col-12 text-center">
-<div class="loading">Loading</div>
-<div class="error-message"></div>
-<div class="sent-message">Your message has been sent. Thank you!</div>
-<button type="submit">Send Message</button>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</section>
-
+    
 <section class="russia-section">
 <h2 class="russia-title">Frequently Asked Questions</h2>
 <div class="accordion" id="faqAccordion">

@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="../assets/vendor/glightbox/css/glightbox.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     
+    <link href="../navbar.css" rel="stylesheet">
+    <script src="../navbar.js" defer></script>
+    
     <style>
         /* Modern Hero Section */
         .russia-hero {
@@ -1064,6 +1067,66 @@
         }
         </style>
 </head>
+<header class="new-header container">
+    <div class="new-logo-container">
+        <img src="../assets/img/kxy-logo.png" alt="" class="new-logo-img">
+    </div>
+    <nav class="new-navbar">
+        <ul class="new-nav-list new-desktop-navbar">
+            <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+            <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+            <li class="new-countries-dropdown">
+                <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul class="new-country-group">
+                    <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                    <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                    <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                    <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                    <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                    <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                    <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                    <li class="new-country-item"><a href="uK.html">UK</a></li>
+                    <li class="new-country-item"><a href="usa.html">United States</a></li>
+                    <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                    <li class="new-country-item"><a href="france.html">France</a></li>
+                    <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                </ul>
+            </li>
+            <li><a href="/index..html#contact" class="new-nav-item">Contact</a></li>
+        </ul>
+        <div class="new-layer" id="new-layer">
+            <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
+            <ul class="new-nav-list new-mobile-navbar">
+                <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+                <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+                <li class="new-countries-dropdown">
+                    <!-- <label for="new-countries">Hello world-class</label> -->
+                    <input type="checkbox" name="new-countries" id="new-countries" />
+                    <label for="new-countries">
+                        <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    </label>
+                        <ul class="new-country-group">
+                            <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                            <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                            <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                            <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                            <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                            <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                            <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                            <li class="new-country-item"><a href="uK.html">UK</a></li>
+                            <li class="new-country-item"><a href="usa.html">United States</a></li>
+                            <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                            <li class="new-country-item"><a href="france.html">France</a></li>
+                            <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                        </ul>
+                </li>
+                <li><a href="/index..html#contact" class="new-nav-item">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
+    
+</header>
     <!-- ======= Hero Section ======= -->
     <section class="russia-hero">
         <div class="container">
@@ -1239,53 +1302,6 @@
     </script>
     
     <!-- ======= Header ======= -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="../index.html" class="logo d-flex align-items-center">
-                <img src="../assets/img/kxy-logo.png" alt="Kyx Logo" class="img-fluid" style="max-height: 50px;">
-            </a>
-
-            <!-- Mobile Navigation Toggle -->
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-            <!-- Desktop Navigation -->
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about-us.html">About Us</a></li>
-                    <li class="dropdown has-dropdown">
-                        <a href="#" class="no-arrow"><span>Study Abroad</span></a>
-                        <ul class="dd-box-shadow">
-                            <li class="dropdown">
-                                <a href="#"><span>MBBS Abroad</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="russia.html" class="active">MBBS in Russia</a></li>
-                                    <li><a href="georgia.html">MBBS in Georgia</a></li>
-                                    <li><a href="kyrgyzstan.html">MBBS in Kyrgyzstan</a></li>
-                                    <li><a href="uzbekistan.html">MBBS in Uzbekistan</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#"><span>Other Courses</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="ireland.html">Study in Ireland</a></li>
-                                    <li><a href="netherlands.html">Study in Netherlands</a></li>
-                                    <li><a href="spain.html">Study in Spain</a></li>
-                                    <li><a href="uk.html">Study in UK</a></li>
-                                    <li><a href="usa.html">Study in USA</a></li>
-                                    <li><a href="canada.html">Study in Canada</a></li>
-                                    <li><a href="france.html">Study in France</a></li>
-                                    <li><a href="germany.html">Study in Germany</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 <main class="main">
 <div class="content">
   <section class="content-section" data-aos="fade-up">
@@ -1578,83 +1594,6 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="page-title">
-<!-- Section Title -->
-<!-- Alt Features Section -->
-<!-- Services Section -->
-<!-- Faq Section -->
-<section class="contact section" id="contact">
-<!-- Section Title -->
-<div class="container section-title" data-aos="fade-up">
-<h2>Contact</h2>
-<p>Contact Us</p>
-</div><!-- End Section Title -->
-<div class="container" data-aos="fade-up" data-aos-delay="100">
-<div class="row gy-4">
-<div class="col-lg-6">
-<div class="row gy-4">
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="200">
-<i class="bi bi-geo-alt"></i>
-<h3>Address</h3>
-<p>rajuvolu </p>
-<p>russian tuppalu, 535022</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="300">
-<i class="bi bi-telephone"></i>
-<h3>Call Us</h3>
-<p>+91-6304705445</p>
-<p>+91-8125423017</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="400">
-<i class="bi bi-envelope"></i>
-<h3>Email Us</h3>
-<p>projectk1international@gmail.com</p>
-<p>projectk1international@gmail.com</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="500">
-<i class="bi bi-clock"></i>
-<h3>Open Hours</h3>
-<p>Monday - Friday</p>
-<p>9:00AM - 05:00PM</p>
-</div>
-</div><!-- End Info Item -->
-</div>
-</div>
-<div class="col-lg-6">
-<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
-<div class="row gy-4">
-<div class="col-md-6">
-<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
-</div>
-<div class="col-md-6">
-<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
-</div>
-<div class="col-12">
-<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
-</div>
-<div class="col-12">
-<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
-</div>
-<div class="col-12 text-center">
-<div class="loading">Loading</div>
-<div class="error-message"></div>
-<div class="sent-message">Your message has been sent. Thank you!</div>
-<button type="submit">Send Message</button>
-</div>
-</div>
-</form>
-</div><!-- End Contact Form -->
-</div>
-</div>
-</section><!-- /Contact Section -->
 </div><!-- End Main Content -->
 </div>
   </section>

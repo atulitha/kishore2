@@ -29,8 +29,8 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #000000;  /* The default color of the main navmenu links */
-  --nav-hover-color: #000000; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #012970;  /* The default color of the main navmenu links */
+  --nav-hover-color: #4154f1; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -240,7 +240,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: #000000 !important; /* Forced black color for all menu items */
+    color: var(--nav-color);
     padding: 18px 12px;
     font-size: 15px;
     font-family: var(--nav-font);
@@ -267,7 +267,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: #000000 !important; /* Forced black color for hover and active states */
+    color: var(--nav-hover-color);
   }
 
   .navmenu .dropdown ul {
@@ -325,57 +325,6 @@ h6 {
     left: -100%;
     visibility: visible;
   }
-
-  /* Countries Dropdown Menu */
-  .countries-list {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    min-width: 220px;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-  }
-
-  .listing-dropdown:hover .countries-list {
-    opacity: 1;
-    visibility: visible;
-    top: 100%;
-  }
-
-  .country-group {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .country-item {
-    padding: 0;
-    margin: 0;
-  }
-
-  .country-item a {
-    display: block;
-    padding: 8px 20px;
-    color: var(--nav-dropdown-color);
-    font-size: 14px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-  }
-
-  .country-item a:hover,
-  .country-item a.active {
-    color: var(--nav-dropdown-hover-color);
-    background-color: rgba(65, 84, 241, 0.05);
-    padding-left: 25px;
-  }
 }
 
 /* Navmenu - Mobile */
@@ -411,7 +360,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: #000000 !important; /* Forced black color for mobile menu items */
+    color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 17px;
@@ -450,28 +399,32 @@ h6 {
     color: var(--nav-dropdown-hover-color);
   }
 
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
   .navmenu .dropdown ul {
     position: static;
     display: none;
-    margin: 10px 20px;
-    padding: 10px 0;
     z-index: 99;
-    opacity: 1;
-    visibility: visible;
-    background: var(--surface-color);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
   }
 
-  .navmenu .dropdown ul li,
-  .navmenu .listing-dropdown .countries-list .country-item {
-    min-width: 200px;
-    padding: 5px 0;
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown > a:after,
-  .navmenu .listing-dropdown > a .toggle-dropdown {
-    position: absolute;
-    right: 15px;
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
   }
 
   .mobile-nav-active {
@@ -481,83 +434,22 @@ h6 {
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
+    font-size: 32px;
     top: 15px;
     right: 15px;
-    font-size: 28px;
+    margin-right: 0;
     z-index: 9999;
   }
 
   .mobile-nav-active .navmenu {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 9997;
-    overflow-y: auto;
-  }
-  
-  .mobile-nav-active .navmenu ul {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 50px 20px 20px 20px;
-    margin: 0;
-    background: #fff;
-    overflow-y: auto;
-  }
-
-  .mobile-nav-active .navmenu:before {
-    content: "";
-    position: fixed;
+    overflow: hidden;
     inset: 0;
-    background: rgba(var(--heading-color-rgb), 0.8);
-    z-index: 9996;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
   }
 
-  /* Mobile dropdown styles */
-  .navmenu .listing-dropdown.active > a .toggle-dropdown {
-    transform: rotate(180deg);
-  }
-
-  .navmenu .listing-dropdown .countries-list {
-    display: none;
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    margin: 0;
-    padding: 0 0 0 15px;
-  }
-
-  .navmenu .listing-dropdown.active .countries-list {
-    display: block;
-  }
-
-  .navmenu .country-group {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .navmenu .country-item {
-    flex: 1 1 100%;
-    min-width: 100%;
-    padding: 8px 0;
-  }
-}
-
-/* Ensure the mobile nav toggle is visible on mobile */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    display: block !important;
-  }
-
-  .navmenu ul {
-    display: none;
-  }
-
-  .mobile-nav-active .navmenu ul {
+  .mobile-nav-active .navmenu>ul {
     display: block;
   }
 }
@@ -946,7 +838,7 @@ section,
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  /*background: url(../img/hero-bg.png) top center no-repeat;*/
+  background: url(../img/hero-bg.png) top center no-repeat;
   background-size: cover;
 }
 

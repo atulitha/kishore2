@@ -265,7 +265,7 @@
             }
             
             #navmenu > ul > li > a:hover,
-            #navmenu > ul > li > a:focus {
+            #navmenu > ul > li > a.active {
                 background-color: rgba(13, 110, 253, 0.05);
                 color: #0d6efd;
             }
@@ -293,7 +293,7 @@
             }
 
             #navmenu > ul > li > a:hover,
-            #navmenu > ul > li > a:focus {
+            #navmenu > ul > li > a.active {
                 background-color: rgba(13, 110, 253, 0.05);
                 color: #0d6efd;
             }
@@ -322,7 +322,7 @@
                 position: static !important;
                 box-shadow: none !important;
                 margin: 0 !important;
-                padding: 0 0 0 25px !important;
+                padding: 0 15px !important;
                 min-width: auto !important;
                 display: none;
                 animation: fadeIn 0.3s ease-out;
@@ -669,54 +669,53 @@
         </div>
         <nav class="new-navbar">
             <ul class="new-nav-list new-desktop-navbar">
-                <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
-                <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+                <li><a href="/" class="new-nav-item">Home</a></li>
+                <li><a href="/about.html" class="new-nav-item">About</a></li>
                 <li class="new-countries-dropdown">
                     <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul class="new-country-group">
-                        <li class="new-country-item"><a href="universities/russia.html">Russia</a></li>
-                        <li class="new-country-item"><a href="universities/georgia.html">Georgia</a></li>
-                        <li class="new-country-item"><a href="universities/kyrgyzstan.html">Kyrgyzstan</a></li>
-                        <li class="new-country-item"><a href="universities/uzbekistan.html">Uzbekistan</a></li>
-                        <li class="new-country-item"><a href="universities/ireland.html">Ireland</a></li>
-                        <li class="new-country-item"><a href="universities/netherlands.html">Netherlands</a></li>
-                        <li class="new-country-item"><a href="universities/spain.html">Spain</a></li>
-                        <li class="new-country-item"><a href="universities/uK.html">UK</a></li>
-                        <li class="new-country-item"><a href="universities/usa.html">United States</a></li>
-                        <li class="new-country-item"><a href="universities/canada.html">Canada</a></li>
-                        <li class="new-country-item"><a href="universities/france.html">France</a></li>
-                        <li class="new-country-item"><a href="universities/germany.html">Germany</a></li>
+                        <li class="new-country-item"><a href="/universities/russia.html">Russia</a></li>
+                        <li class="new-country-item"><a href="/universities/georgia.html">Georgia</a></li>
+                        <li class="new-country-item"><a href="/universities/kyrgyzstan.html">Kyrgyzstan</a></li>
+                        <li class="new-country-item"><a href="/universities/uzbekistan.html" class="active">Uzbekistan</a></li>
+                        <li class="new-country-item"><a href="/universities/ireland.html">Ireland</a></li>
+                        <li class="new-country-item"><a href="/universities/netherlands.html">Netherlands</a></li>
+                        <li class="new-country-item"><a href="/universities/spain.html">Spain</a></li>
+                        <li class="new-country-item"><a href="/universities/uk.html">UK</a></li>
+                        <li class="new-country-item"><a href="/universities/usa.html">United States</a></li>
+                        <li class="new-country-item"><a href="/universities/canada.html">Canada</a></li>
+                        <li class="new-country-item"><a href="/universities/france.html">France</a></li>
+                        <li class="new-country-item"><a href="/universities/germany.html">Germany</a></li>
                     </ul>
                 </li>
-                <li><a href="/index.html#contact" class="new-nav-item">Contact</a></li>
+                <li><a href="/#contact" class="new-nav-item">Contact</a></li>
             </ul>
             <div class="new-layer" id="new-layer">
                 <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
                 <ul class="new-nav-list new-mobile-navbar">
-                    <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
-                    <li><a href="/about-us.html" class="new-nav-item">About</a></li>
+                    <li><a href="/" class="new-nav-item">Home</a></li>
+                    <li><a href="/about.html" class="new-nav-item">About</a></li>
                     <li class="new-countries-dropdown">
-                        <!-- <label for="new-countries">Hello world-class</label> -->
                         <input type="checkbox" name="new-countries" id="new-countries" />
                         <label for="new-countries">
                             <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         </label>
-                            <ul class="new-country-group">
-                                <li class="new-country-item"><a href="russia.html">Russia</a></li>
-                                <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
-                                <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
-                                <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
-                                <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
-                                <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
-                                <li class="new-country-item"><a href="spain.html">Spain</a></li>
-                                <li class="new-country-item"><a href="uK.html">UK</a></li>
-                                <li class="new-country-item"><a href="usa.html">United States</a></li>
-                                <li class="new-country-item"><a href="canada.html">Canada</a></li>
-                                <li class="new-country-item"><a href="france.html">France</a></li>
-                                <li class="new-country-item"><a href="germany.html">Germany</a></li>
-                            </ul>
+                        <ul class="new-country-group">
+                            <li class="new-country-item"><a href="/universities/russia.html">Russia</a></li>
+                            <li class="new-country-item"><a href="/universities/georgia.html">Georgia</a></li>
+                            <li class="new-country-item"><a href="/universities/kyrgyzstan.html">Kyrgyzstan</a></li>
+                            <li class="new-country-item"><a href="/universities/uzbekistan.html" class="active">Uzbekistan</a></li>
+                            <li class="new-country-item"><a href="/universities/ireland.html">Ireland</a></li>
+                            <li class="new-country-item"><a href="/universities/netherlands.html">Netherlands</a></li>
+                            <li class="new-country-item"><a href="/universities/spain.html">Spain</a></li>
+                            <li class="new-country-item"><a href="/universities/uk.html">UK</a></li>
+                            <li class="new-country-item"><a href="/universities/usa.html">United States</a></li>
+                            <li class="new-country-item"><a href="/universities/canada.html">Canada</a></li>
+                            <li class="new-country-item"><a href="/universities/france.html">France</a></li>
+                            <li class="new-country-item"><a href="/universities/germany.html">Germany</a></li>
+                        </ul>
                     </li>
-                    <li><a href="/index.html#contact" class="new-nav-item">Contact</a></li>
+                    <li><a href="/#contact" class="new-nav-item">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -940,10 +939,6 @@
 </div>
 </div>
 </div>
-<div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
-<img alt="Study MBBS in Uzbekistan" class="img-fluid" src="../assets/img/uzbekistan-hero.jpg"/>
-</div>
-</div>
 </div>
 </section>
 <!-- Contact Section -->
@@ -991,7 +986,7 @@
 </div>
 </div>
 <div class="col-lg-6">
-<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
+<form action="../forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
 <div class="row gy-4">
 <div class="col-md-6">
 <input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
@@ -1037,7 +1032,7 @@
 <div class="container footer-top">
 <div class="row gy-4">
 <div class="col-lg-4 col-md-6 footer-about">
-<a class="d-flex align-items-center" href="index.html">
+<a class="d-flex align-items-center" href="/">
 <span class="sitename">kyx</span>
 </a>
 <div class="footer-contact pt-3">
@@ -1061,7 +1056,7 @@
 </div>
 </div>
 <div class="container copyright text-center mt-4">
-<p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
+<p> <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
 </p>
 <div class="credits">
 <!-- All the links in the footer should remain intact. -->
@@ -1071,7 +1066,7 @@
 </div>
 </div>
 </footer>
-<a class="scroll-top d-flex align-items-center justify-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
 <!-- Vendor JS Files -->
 <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendor/php-email-form/validate.js"></script>

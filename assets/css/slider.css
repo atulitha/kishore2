@@ -1,0 +1,234 @@
+/* Existing image styling */
+img.img-fluid1 {
+  border-radius: 300px;
+  display: block;
+  margin: 0 auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+.shadow-lg {
+  box-shadow: none !important;
+}
+
+/* Override: Do not apply border radius in hero slider section */
+.hero-slider img.img-fluid {
+  border-radius: 0 !important;
+}
+
+/* Hero section styling */
+.hero {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+}
+
+.swiper-wrapper {
+  padding: 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Countries dropdown styling */
+.countries-list {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.country-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.country-item {
+  flex: 0 1 20%;
+  min-width: 150px;
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.country-item:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.country-item a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.country-item a:hover {
+  color: #007bff;
+}
+
+.country-item a + a {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Commented out countries styling */
+.country-item a[title] {
+  opacity: 0.7;
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-us .feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-choose-us .feature-card:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+}
+
+.why-choose-us .icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0d6efd1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  font-size: 2.2rem;
+  color: #0d6efd;
+}
+
+.why-choose-us h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.why-choose-us p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive Utilities */
+@media (max-width: 991px) {
+  .why-choose-us .row > div {
+    margin-bottom: 1.5rem;
+  }
+
+  .country-item {
+    flex: 0 1 30%;
+  }
+
+  .swiper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-choose-us .feature-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .why-choose-us .icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .country-item {
+    flex: 0 1 45%;
+  }
+
+  .swiper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  .why-choose-us .row {
+    flex-direction: column;
+  }
+
+  .country-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .country-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  img.img-fluid1 {
+    height: 200px;
+    width: 200px;
+  }
+
+  .swiper {
+    height: 200px;
+  }
+}
+
+/* Popular Courses Section Styles */
+.popular-courses-section .course-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.popular-courses-section .course-box:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  transform: translateY(-8px) scale(1.04);
+  z-index: 2;
+}
+
+.popular-courses-section i {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 767px) {
+  .popular-courses-section .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}

@@ -23,6 +23,7 @@
 <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 <!-- Main CSS File -->
 <link href="../assets/css/main.css" rel="stylesheet"/>
+<link href="../assets/css/flag-styles.css" rel="stylesheet">
 <link href="../navbar.css" rel="stylesheet">
 <script src="../navbar.js" defer></script>
 <style>
@@ -571,58 +572,59 @@
 <body class="index-page">
 <!-- Header -->
 <header class="new-header container">
-    <div class="new-logo-container">
+    <a href="/index.html" class="new-logo-container">
         <img src="../assets/img/kxy-logo.png" alt="" class="new-logo-img">
-    </div>
+    </a>
     <nav class="new-navbar">
         <ul class="new-nav-list new-desktop-navbar">
-            <li><a href="/" class="new-nav-item">Home</a></li>
-            <li><a href="/about.html" class="new-nav-item">About</a></li>
+            <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+            <li><a href="/about-us.html" class="new-nav-item">About</a></li>
             <li class="new-countries-dropdown">
                 <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul class="new-country-group">
-                    <li class="new-country-item"><a href="/universities/russia.html">Russia</a></li>
-                    <li class="new-country-item"><a href="/universities/georgia.html">Georgia</a></li>
-                    <li class="new-country-item"><a href="/universities/kyrgyzstan.html">Kyrgyzstan</a></li>
-                    <li class="new-country-item"><a href="/universities/uzbekistan.html">Uzbekistan</a></li>
-                    <li class="new-country-item"><a href="/universities/ireland.html">Ireland</a></li>
-                    <li class="new-country-item"><a href="/universities/netherlands.html" class="active">Netherlands</a></li>
-                    <li class="new-country-item"><a href="/universities/spain.html">Spain</a></li>
-                    <li class="new-country-item"><a href="/universities/uk.html">UK</a></li>
-                    <li class="new-country-item"><a href="/universities/usa.html">United States</a></li>
-                    <li class="new-country-item"><a href="/universities/canada.html">Canada</a></li>
-                    <li class="new-country-item"><a href="/universities/france.html">France</a></li>
-                    <li class="new-country-item"><a href="/universities/germany.html">Germany</a></li>
+                    <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                    <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                    <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                    <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                    <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                    <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                    <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                    <li class="new-country-item"><a href="uK.html">UK</a></li>
+                    <li class="new-country-item"><a href="usa.html">United States</a></li>
+                    <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                    <li class="new-country-item"><a href="france.html">France</a></li>
+                    <li class="new-country-item"><a href="./germany.html">Germany</a></li>
                 </ul>
             </li>
-            <li><a href="/#contact" class="new-nav-item">Contact</a></li>
+            <li><a href="/index.html#contact" class="new-nav-item">Contact</a></li>
         </ul>
         <div class="new-layer" id="new-layer">
             <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
             <ul class="new-nav-list new-mobile-navbar">
-                <li><a href="/" class="new-nav-item">Home</a></li>
-                <li><a href="/about.html" class="new-nav-item">About</a></li>
+                <li><a href="/index.html" class="new-nav-item new-active">Home</a></li>
+                <li><a href="/about-us.html" class="new-nav-item">About</a></li>
                 <li class="new-countries-dropdown">
+                    <!-- <label for="new-countries">Hello world-class</label> -->
                     <input type="checkbox" name="new-countries" id="new-countries" />
                     <label for="new-countries">
                         <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     </label>
-                    <ul class="new-country-group">
-                        <li class="new-country-item"><a href="/universities/russia.html">Russia</a></li>
-                        <li class="new-country-item"><a href="/universities/georgia.html">Georgia</a></li>
-                        <li class="new-country-item"><a href="/universities/kyrgyzstan.html">Kyrgyzstan</a></li>
-                        <li class="new-country-item"><a href="/universities/uzbekistan.html">Uzbekistan</a></li>
-                        <li class="new-country-item"><a href="/universities/ireland.html">Ireland</a></li>
-                        <li class="new-country-item"><a href="/universities/netherlands.html" class="active">Netherlands</a></li>
-                        <li class="new-country-item"><a href="/universities/spain.html">Spain</a></li>
-                        <li class="new-country-item"><a href="/universities/uk.html">UK</a></li>
-                        <li class="new-country-item"><a href="/universities/usa.html">United States</a></li>
-                        <li class="new-country-item"><a href="/universities/canada.html">Canada</a></li>
-                        <li class="new-country-item"><a href="/universities/france.html">France</a></li>
-                        <li class="new-country-item"><a href="/universities/germany.html">Germany</a></li>
-                    </ul>
+                        <ul class="new-country-group">
+                            <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                            <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                            <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                            <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                            <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                            <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                            <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                            <li class="new-country-item"><a href="uK.html">UK</a></li>
+                            <li class="new-country-item"><a href="usa.html">United States</a></li>
+                            <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                            <li class="new-country-item"><a href="france.html">France</a></li>
+                            <li class="new-country-item"><a href="./germany.html">Germany</a></li>
+                        </ul>
                 </li>
-                <li><a href="/#contact" class="new-nav-item">Contact</a></li>
+                <li><a href="/index.html#contact" class="new-nav-item">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -639,7 +641,9 @@
                 <a href="#contact" class="hero-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
             </div>
             <div class="col-lg-4 d-none d-lg-block">
-                <img src="../assets/img/flag/O-Canada-O-flag-arts-entertainment-history-2010.jpg" alt="Georgia Flag" class="img-fluid" style="max-height: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="flag-container">
+                    <img src="../assets/img/flag/Netherlands.png" alt="Netherlands Flag" class="flag-image">
+                </div>
             </div>
         </div>
     </div>
@@ -809,6 +813,103 @@
 </div>
 </div>
 </div>
+<!-- Application Process -->
+<div class="netherlands-section">
+<h2 class="netherlands-title">How to Apply</h2>
+<ol>
+<li>Research and shortlist universities &amp; programs</li>
+<li>Check eligibility and deadlines (September intake preferred)</li>
+<li>Take required English proficiency test (IELTS/TOEFL)</li>
+<li>Prepare application documents:
+                                    <ul>
+<li>Academic transcripts &amp; certificates</li>
+<li>CV/Resume</li>
+<li>Motivation letter/Statement of Purpose</li>
+<li>Letters of Recommendation (2-3)</li>
+<li>Proof of English proficiency</li>
+<li>Passport copy</li>
+<li>GMAT/GRE scores (if required)</li>
+</ul>
+</li>
+<li>Submit online application through university portal</li>
+<li>Attend interview if required</li>
+<li>Receive admission offer</li>
+<li>Pay tuition deposit (if required)</li>
+<li>Apply for MVV visa and residence permit for study</li>
+<li>Arrange accommodation and book travel</li>
+<li>Attend orientation program</li>
+</ol>
+</div>
+<!-- FAQ Section -->
+<div class="netherlands-section">
+<h2 class="netherlands-title">Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-question">What is the cost of studying Business in the Netherlands?</div>
+<div class="faq-answer">
+<p><strong>Tuition Fees:</strong></p>
+<p>• Bachelor's: €8,000–€12,000/year (approx. ₹7–₹11 lakhs)</p>
+<p>• Master's: €12,000–€20,000/year (approx. ₹11–₹18 lakhs)</p>
+<p>• MBA: €15,000–€25,000/year (approx. ₹14–₹23 lakhs)</p>
+<p><strong>Living Expenses:</strong> €10,000–€12,000/year (approx. ₹9–₹11 lakhs)</p>
+<p>Scholarships (like Holland Scholarship) are available for international students.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What are the job prospects after graduation?</div>
+<div class="faq-answer">
+<p>The Netherlands has a thriving economy with strong demand in various business sectors:</p>
+<p><strong>Key Industries:</strong></p>
+<p>• Finance and Banking (Amsterdam is a major European financial hub)</p>
+<p>• Logistics and Supply Chain (Rotterdam has Europe's largest port)</p>
+<p>• Technology and Startups (Amsterdam is a growing tech hub)</p>
+<p>• Consulting and Professional Services</p>
+<p>• Marketing and E-commerce</p>
+<p>International graduates can apply for a 1-year "zoekjaar" (orientation year) residence permit to find work after graduation. After finding a job, you can switch to a work permit.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Are Dutch business degrees recognized in India?</div>
+<div class="faq-answer">
+<p>✅ Yes — Degrees from accredited Dutch universities are globally recognized, including in India.</p>
+<p>✅ For government jobs in India, you may need to get your degree evaluated by the Association of Indian Universities (AIU).</p>
+<p>✅ Professional accreditations (AACSB, EQUIS, AMBA) are recognized worldwide and add significant value to your degree.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Can I work while studying in the Netherlands?</div>
+<div class="faq-answer">
+<p>• <strong>During studies:</strong> Non-EU/EEA students can work up to 16 hours per week during the academic year, or full-time during June, July, and August</p>
+<p>• <strong>Minimum wage:</strong> €11.30 per hour (as of 2025) for employees aged 21 and over</p>
+<p>• <strong>Types of jobs:</strong> Part-time jobs are available in retail, hospitality, call centers, and on-campus positions</p>
+<p>• <strong>Internships:</strong> Many business programs include mandatory internships which can be paid or unpaid</p>
+<p>• <strong>Student services:</strong> Most universities have career centers that help students find part-time work</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What is the student life like in the Netherlands?</div>
+<div class="faq-answer">
+<p>• <strong>International environment:</strong> The Netherlands has one of the highest percentages of English speakers in Europe, making it easy to adapt</p>
+<p>• <strong>Student cities:</strong> Amsterdam, Rotterdam, Utrecht, and Maastricht are popular student cities with vibrant campus life</p>
+<p>• <strong>Student associations:</strong> Many business schools have active student associations that organize events, case competitions, and networking opportunities</p>
+<p>• <strong>Cultural activities:</strong> The Netherlands offers rich cultural experiences, from museums to music festivals</p>
+<p>• <strong>Travel opportunities:</strong> Excellent train connections make it easy to explore other European countries during breaks</p>
+<p>• <strong>Sports and recreation:</strong> Universities offer various sports facilities and student discounts for gyms and activities</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What is the "zoekjaar" (orientation year) visa?</div>
+<div class="faq-answer">
+<p>The orientation year permit (zoekjaar) is a residence permit for graduates to find work in the Netherlands after completing their studies. Key features include:</p>
+<p>• Valid for 1 year after graduation</p>
+<p>• No work permit needed during this period</p>
+<p>• Can work without salary requirements</p>
+<p>• Can be used to start your own business</p>
+<p>• After finding a job, you can switch to a work permit (highly skilled migrant visa if you meet the salary requirements)</p>
+<p>• Available to graduates from Dutch universities and international students who have completed a Master's or PhD in the Netherlands</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -951,7 +1052,7 @@
 </div>
 </div>
 <div class="container copyright text-center mt-4">
-<p> <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
+<p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
 </p>
 <div class="credits">
 <!-- All the links in the footer should remain intact. -->
@@ -1094,43 +1195,5 @@
             });
 
         </script>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileNavToggle = document.getElementById('new-menu');
-            const mobileNavClose = document.getElementById('new-cancel');
-            const mobileNav = document.getElementById('new-layer');
-            
-            if (mobileNavToggle && mobileNavClose && mobileNav) {
-                mobileNavToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    mobileNav.classList.add('active');
-                    document.body.classList.add('mobile-nav-active');
-                });
-                
-                mobileNavClose.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    mobileNav.classList.remove('active');
-                    document.body.classList.remove('mobile-nav-active');
-                });
-                
-                // Close mobile menu when clicking on a nav link
-                document.querySelectorAll('.new-mobile-navbar a').forEach(link => {
-                    link.addEventListener('click', function() {
-                        mobileNav.classList.remove('active');
-                        document.body.classList.remove('mobile-nav-active');
-                    });
-                });
-            }
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.new-navbar') && !e.target.closest('#new-menu')) {
-                    if (mobileNav) mobileNav.classList.remove('active');
-                    document.body.classList.remove('mobile-nav-active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

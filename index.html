@@ -43,16 +43,44 @@
 </head>
 
 <body class="index-page">
-    <header class="new-header container">
-        <a href="index.html" class="new-logo-container">
-            <img src="./assets/img/kxy-logo.png" alt="" class="new-logo-img">
-        </a>
-        <nav class="new-navbar">
-            <ul class="new-nav-list new-desktop-navbar">
+<header class="new-header container">
+    <a href="index.html" class="new-logo-container">
+        <img src="./assets/img/kxy-logo.png" alt="" class="new-logo-img">
+    </a>
+    <nav class="new-navbar">
+        <ul class="new-nav-list new-desktop-navbar">
+            <li><a href="index.html" class="new-nav-item new-active">Home</a></li>
+            <li><a href="about-us.html" class="new-nav-item">About</a></li>
+            <li class="new-countries-dropdown">
+                <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul class="new-country-group">
+                    <li class="new-country-item"><a href="universities/russia.html">Russia</a></li>
+                    <li class="new-country-item"><a href="universities/georgia.html">Georgia</a></li>
+                    <li class="new-country-item"><a href="universities/kyrgyzstan.html">Kyrgyzstan</a></li>
+                    <li class="new-country-item"><a href="universities/uzbekistan.html">Uzbekistan</a></li>
+                    <li class="new-country-item"><a href="universities/ireland.html">Ireland</a></li>
+                    <li class="new-country-item"><a href="universities/netherlands.html">Netherlands</a></li>
+                    <li class="new-country-item"><a href="universities/spain.html">Spain</a></li>
+                    <li class="new-country-item"><a href="universities/uk.html">UK</a></li>
+                    <li class="new-country-item"><a href="universities/usa.html">United States</a></li>
+                    <li class="new-country-item"><a href="universities/canada.html">Canada</a></li>
+                    <li class="new-country-item"><a href="universities/france.html">France</a></li>
+                    <li class="new-country-item"><a href="universities/germany.html">Germany</a></li>
+                </ul>
+            </li>
+            <li><a href="contact-us.html" class="new-nav-item">Contact</a></li>
+        </ul>
+        <div class="new-layer" id="new-layer">
+            <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
+            <ul class="new-nav-list new-mobile-navbar">
                 <li><a href="index.html" class="new-nav-item new-active">Home</a></li>
                 <li><a href="about-us.html" class="new-nav-item">About</a></li>
                 <li class="new-countries-dropdown">
-                    <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <!-- <label for="new-countries">Hello world-class</label> -->
+                    <input type="checkbox" name="new-countries" id="new-countries"/>
+                    <label for="new-countries">
+                        <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    </label>
                     <ul class="new-country-group">
                         <li class="new-country-item"><a href="universities/russia.html">Russia</a></li>
                         <li class="new-country-item"><a href="universities/georgia.html">Georgia</a></li>
@@ -70,40 +98,12 @@
                 </li>
                 <li><a href="contact-us.html" class="new-nav-item">Contact</a></li>
             </ul>
-            <div class="new-layer" id="new-layer">
-                <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
-                <ul class="new-nav-list new-mobile-navbar">
-                    <li><a href="index.html" class="new-nav-item new-active">Home</a></li>
-                    <li><a href="about-us.html" class="new-nav-item">About</a></li>
-                    <li class="new-countries-dropdown">
-                        <!-- <label for="new-countries">Hello world-class</label> -->
-                        <input type="checkbox" name="new-countries" id="new-countries" />
-                        <label for="new-countries">
-                            <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        </label>
-                            <ul class="new-country-group">
-                                <li class="new-country-item"><a href="universities/russia.html">Russia</a></li>
-                                <li class="new-country-item"><a href="universities/georgia.html">Georgia</a></li>
-                                <li class="new-country-item"><a href="universities/kyrgyzstan.html">Kyrgyzstan</a></li>
-                                <li class="new-country-item"><a href="universities/uzbekistan.html">Uzbekistan</a></li>
-                                <li class="new-country-item"><a href="universities/ireland.html">Ireland</a></li>
-                                <li class="new-country-item"><a href="universities/netherlands.html">Netherlands</a></li>
-                                <li class="new-country-item"><a href="universities/spain.html">Spain</a></li>
-                                <li class="new-country-item"><a href="universities/uk.html">UK</a></li>
-                                <li class="new-country-item"><a href="universities/usa.html">United States</a></li>
-                                <li class="new-country-item"><a href="universities/canada.html">Canada</a></li>
-                                <li class="new-country-item"><a href="universities/france.html">France</a></li>
-                                <li class="new-country-item"><a href="universities/germany.html">Germany</a></li>
-                            </ul>
-                    </li>
-                    <li><a href="contact-us.html" class="new-nav-item">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
-        
-    </header>
-    
+        </div>
+    </nav>
+    <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
+
+</header>
+
 <main class="main">
     <!-- Hero Section -->
     <section id="hero" class="hero section">
@@ -111,9 +111,19 @@
             <div class="row gy-4">
                 <div class="col-lg-12 order-1 order-lg-2 hero-img   align-items-center" data-aos="zoom-out">
                     <!-- Replace static image with slider -->
-                    <i class="bi  btn-overlay-material ">Your Gateway to Global Education – Trusted Guidance from Application to Arrival.</i>
-                    <a href="#contact" class="hero-cta btn-overlay">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
-                    <div class="swiper hero-slider">
+
+                    <i class="bi  btn-overlay-material ">Your Gateway to Global Education – Trusted Guidance from
+                        Application to Arrival.</i>
+                    <a href="#contact" class="hero-cta btn-overlay">Get Free Consultation <i
+                            class="bi bi-arrow-right"></i></a>
+                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+            <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites with Bootstrap</p>
+            <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+              <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div>
+                        <div class="swiper hero-slider">
 
                         <div class="swiper-wrapper">
 
@@ -130,11 +140,14 @@
                                 <img src="assets/countries-pics/GEORGIA.jpg" class="img-fluid animated" alt="Georgia">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/countries-pics/Uzbekistan.webp" class="img-fluid animated" alt="Uzbekistan">
+                                <img src="assets/countries-pics/Uzbekistan.webp" class="img-fluid animated"
+                                     alt="Uzbekistan">
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
+          </div>
+
                 </div>
                 <!--                <div class="col-lg-6 order-2 order-lg-10 d-flex flex-column justify-content-center">-->
                 <!--                    <div class="d-flex flex-column flex-md-row align-items-center gap-3" data-aos="fade-up"-->
@@ -157,6 +170,7 @@
                 <!--                        </div>-->
                 <!--                    </div>-->
                 <!--                </div>-->
+
             </div>
         </div>
         </div>
@@ -178,7 +192,8 @@
                         <p>
                             KYX PROJECT K1 INTERNATIONAL is a study abroad consultancy that focuses on helping
                             students
-                            gain admission to top medical universities in other Countries. Our goal is to provide complete
+                            gain admission to top medical universities in other Countries. Our goal is to provide
+                            complete
                             guidance and support throughout the entire process—from choosing the right university
                             and
                             program to handling applications, visa procedures, and pre-departure preparations. With
@@ -190,7 +205,7 @@
                             safe, reliable, and efficient manner.
                         </p>
                         <a href="#contact" class="hero-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
-                        
+
                         <div class="text-center text-lg-start">
                             <!--                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">-->
                             <!--                  <span>Read More</span>-->
@@ -223,7 +238,8 @@
                             <i class="bi bi-people"></i>
                         </div>
                         <h3>Expert Guidance</h3>
-                        <p>Our experienced counselors provide personalized advice to help you choose the right university and program based on your academic profile and career goals.</p>
+                        <p>Our experienced counselors provide personalized advice to help you choose the right
+                            university and program based on your academic profile and career goals.</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -232,7 +248,8 @@
                             <i class="bi bi-building"></i>
                         </div>
                         <h3>Wide University Network</h3>
-                        <p>We partner with top universities worldwide to offer you the best educational opportunities that match your aspirations and budget.</p>
+                        <p>We partner with top universities worldwide to offer you the best educational opportunities
+                            that match your aspirations and budget.</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
@@ -241,7 +258,8 @@
                             <i class="bi bi-headset"></i>
                         </div>
                         <h3>End-to-End Support</h3>
-                        <p>From application to visa processing and pre-departure briefings, we're with you at every step of your study abroad journey.</p>
+                        <p>From application to visa processing and pre-departure briefings, we're with you at every step
+                            of your study abroad journey.</p>
                     </div>
                 </div>
             </div>
@@ -283,8 +301,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-<!--            <h2>Our Values</h2>-->
-<!--            <p>Why Choose Us?<br></p>-->
+            <!--            <h2>Our Values</h2>-->
+            <!--            <p>Why Choose Us?<br></p>-->
         </div><!-- End Section Title -->
 
         <div class="container">
@@ -321,1305 +339,1318 @@
 
     </section><!-- /Values Section -->
     </div>
-<!-- Where would you like to study? Section -->
-<section class="study-countries-section py-5">
-<div class="container">
-<div class="section-title text-center mb-4">
-<h2>Where would you like to study?</h2>
-</div>
-<div class="row justify-content-center g-4">
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Canada" class="img-fluid mb-2" src="assets/img/flag/O-Canada-O-flag-arts-entertainment-history-2010.jpg" style="height:40px;"/>
-<div class="fw-semibold">Canada</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="France" class="img-fluid mb-2" src="assets/img/flag/france-country-flag.jpg" style="height:40px;"/>
-<div class="fw-semibold">France</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Georgia" class="img-fluid mb-2" src="assets/img/flag/Georgia.jpg" style="height:40px;"/>
-<div class="fw-semibold">Georgia</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Germany" class="img-fluid mb-2" src="assets/img/flag/Germany.jpg" style="height:40px;"/>
-<div class="fw-semibold">Germany</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Ireland" class="img-fluid mb-2" src="assets/img/flag/ireland_flag.jpg" style="height:40px;"/>
-<div class="fw-semibold">Ireland</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Kyrgyzstan" class="img-fluid mb-2" src="assets/img/flag/Kyrgyzstan.jpg" style="height:40px;"/>
-<div class="fw-semibold">Kyrgyzstan</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Netherlands" class="img-fluid mb-2" src="assets/img/flag/Netherlands.png" style="height:40px;"/>
-<div class="fw-semibold">Netherlands</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Russia" class="img-fluid mb-2" src="assets/img/flag/Russia.jpg" style="height:40px;"/>
-<div class="fw-semibold">Russia</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Spain" class="img-fluid mb-2" src="assets/img/flag/Spain-Flag.jpg" style="height:40px;"/>
-<div class="fw-semibold">Spain</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="UK" class="img-fluid mb-2" src="assets/img/flag/uk-country-flag.jpg" style="height:40px;"/>
-<div class="fw-semibold">UK</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="USA" class="img-fluid mb-2" src="assets/img/flag/USA.jpg" style="height:40px;"/>
-<div class="fw-semibold">USA</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-<div class="country-box text-center p-3 shadow-sm rounded h-100">
-<img alt="Uzbekistan" class="img-fluid mb-2" src="assets/img/flag/uzbekistan_png.png" style="height:40px;"/>
-<div class="fw-semibold">Uzbekistan</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<style>
-.study-countries-section .country-box {
-  transition: transform 0.2s, box-shadow 0.2s;
-  background: #fff;
-}
-.study-countries-section .country-box:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-}
-
-.study-countries-section .country-box img {
-  width: 64px;
-  height: 48px;
-  object-fit: cover;
-  background: #fff;
-  border-radius: 12px;
-  border: 2px solid #f1f1f1;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  transition: box-shadow 0.2s, transform 0.2s;
-  display: block;
-  margin: 0 auto 12px auto;
-}
-.study-countries-section .country-box:hover img {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.16);
-  transform: scale(1.08);
-}
-</style>
-
-        <!-- Features Section -->
-<!--        <section id="features" class="features section">-->
-
-<!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-<!--            <div class="container section-title" data-aos="fade-up">-->
-<!--                <h2>Features</h2>-->
-<!--                <p>Our Advacedd Features<br></p>-->
-<!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-
-<!--            <div class="container">-->
-
-<!--                <div class="row gy-5">-->
-
-<!--                    <div class="col-xl-6" data-aos="zoom-out" data-aos-delay="100">-->
-<!--                        <img src="assets/img/features.png" class="img-fluid" alt="">-->
-<!--                    </div>-->
-
-<!--                    <div class="col-xl-6 d-flex">-->
-<!--                        <div class="row align-self-center gy-4">-->
-
-<!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">-->
-<!--                                <div class="feature-box d-flex align-items-center">-->
-<!--                                    <i class="bi bi-check"></i>-->
-<!--                                    <h3>Eos aspernatur rem</h3>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">-->
-<!--                                <div class="feature-box d-flex align-items-center">-->
-<!--                                    <i class="bi bi-check"></i>-->
-<!--                                    <h3>Facilis neque ipsa</h3>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">-->
-<!--                                <div class="feature-box d-flex align-items-center">-->
-<!--                                    <i class="bi bi-check"></i>-->
-<!--                                    <h3>Volup amet volupt</h3>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">-->
-<!--                                <div class="feature-box d-flex align-items-center">-->
-<!--                                    <i class="bi bi-check"></i>-->
-<!--                                    <h3>Rerum omnis sint</h3>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">-->
-<!--                                <div class="feature-box d-flex align-items-center">-->
-<!--                                    <i class="bi bi-check"></i>-->
-<!--                                    <h3>Alias possimus</h3>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">-->
-<!--                                <div class="feature-box d-flex align-items-center">-->
-<!--                                    <i class="bi bi-check"></i>-->
-<!--                                    <h3>Repellendus molli</h3>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                </div>-->
-
-<!--            </div>-->
-
-<!--        </section>&lt;!&ndash; /Features Section &ndash;&gt;-->
-
-<!--        &lt;!&ndash; Alt Features Section &ndash;&gt;-->
-<!--        <section id="alt-features" class="alt-features section">-->
-
-<!--            <div class="container">-->
-
-<!--                <div class="row gy-5">-->
-
-<!--                    <div class="col-xl-7 d-flex order-2 order-xl-1" data-aos="fade-up" data-aos-delay="200">-->
-
-<!--                        <div class="row align-self-center gy-5">-->
-
-<!--                            <div class="col-md-6 icon-box">-->
-<!--                                <i class="bi bi-award"></i>-->
-<!--                                <div>-->
-<!--                                    <h4>Corporis voluptates sit</h4>-->
-<!--                                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut-->
-<!--                                        aliquip</p>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6 icon-box">-->
-<!--                                <i class="bi bi-card-checklist"></i>-->
-<!--                                <div>-->
-<!--                                    <h4>Ullamco laboris nisi</h4>-->
-<!--                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia-->
-<!--                                        deserunt</p>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6 icon-box">-->
-<!--                                <i class="bi bi-dribbble"></i>-->
-<!--                                <div>-->
-<!--                                    <h4>Labore consequatur</h4>-->
-<!--                                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis-->
-<!--                                        facere</p>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6 icon-box">-->
-<!--                                <i class="bi bi-filter-circle"></i>-->
-<!--                                <div>-->
-<!--                                    <h4>Beatae veritatis</h4>-->
-<!--                                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6 icon-box">-->
-<!--                                <i class="bi bi-lightning-charge"></i>-->
-<!--                                <div>-->
-<!--                                    <h4>Molestiae dolor</h4>-->
-<!--                                    <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                            <div class="col-md-6 icon-box">-->
-<!--                                <i class="bi bi-patch-check"></i>-->
-<!--                                <div>-->
-<!--                                    <h4>Explicabo consectetur</h4>-->
-<!--                                    <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>-->
-<!--                                </div>-->
-<!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
-
-<!--                        </div>-->
-
-<!--                    </div>-->
-
-<!--                    <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2" data-aos="fade-up"-->
-<!--                         data-aos-delay="100">-->
-<!--                        <img src="assets/img/alt-features.png" class="img-fluid" alt="">-->
-<!--                    </div>-->
-
-<!--                </div>-->
-
-<!--            </div>-->
-
-<!--        </section>&lt;!&ndash; /Alt Features Section &ndash;&gt;-->
-
-        <!-- Services Section -->
-        <section id="services" class="services section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Our Services</h2>
-                <p>Comprehensive Education Solutions for Your Global Journey<br></p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item item-cyan position-relative">
-                            <i class="bi bi-mortarboard icon"></i>
-                            <h3>University Admissions</h3>
-                            <p>Expert guidance for university selection and applications with a 98% success rate.</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item item-orange position-relative">
-                            <i class="bi bi-passport icon"></i>
-                            <h3>Visa Assistance</h3>
-                            <p>Complete visa support including document prep and interview coaching.</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item item-teal position-relative">
-                            <i class="bi bi-currency-dollar icon"></i>
-                            <h3>Scholarship Guidance</h3>
-                            <p>Access to exclusive scholarships and financial aid opportunities.</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-item item-red position-relative">
-                            <i class="bi bi-house-heart icon"></i>
-                            <h3>Accommodation Support</h3>
-                            <p>Help finding safe housing near your institution.</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-item item-indigo position-relative">
-                            <i class="bi bi-people icon"></i>
-                            <h3>Pre-Departure Briefing</h3>
-                            <p>Essential orientation for cultural adaptation and travel.</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-item item-pink position-relative">
-                            <i class="bi bi-headset icon"></i>
-                            <h3>24/7 Student Support</h3>
-                            <p>Round-the-clock assistance for all your needs.</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
+    <!-- Where would you like to study? Section -->
+    <section class="study-countries-section py-5">
+        <div class="container">
+            <div class="section-title text-center mb-4">
+                <h2>Where would you like to study?</h2>
+            </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Canada" class="img-fluid mb-2"
+                             src="assets/img/flag/O-Canada-O-flag-arts-entertainment-history-2010.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Canada</div>
+                    </div>
                 </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="France" class="img-fluid mb-2" src="assets/img/flag/france-country-flag.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">France</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Georgia" class="img-fluid mb-2" src="assets/img/flag/Georgia.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Georgia</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Germany" class="img-fluid mb-2" src="assets/img/flag/Germany.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Germany</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Ireland" class="img-fluid mb-2" src="assets/img/flag/ireland_flag.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Ireland</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Kyrgyzstan" class="img-fluid mb-2" src="assets/img/flag/Kyrgyzstan.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Kyrgyzstan</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Netherlands" class="img-fluid mb-2" src="assets/img/flag/Netherlands.png"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Netherlands</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Russia" class="img-fluid mb-2" src="assets/img/flag/Russia.jpg" style="height:40px;"/>
+                        <div class="fw-semibold">Russia</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Spain" class="img-fluid mb-2" src="assets/img/flag/Spain-Flag.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Spain</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="UK" class="img-fluid mb-2" src="assets/img/flag/uk-country-flag.jpg"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">UK</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="USA" class="img-fluid mb-2" src="assets/img/flag/USA.jpg" style="height:40px;"/>
+                        <div class="fw-semibold">USA</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="country-box text-center p-3 shadow-sm rounded h-100">
+                        <img alt="Uzbekistan" class="img-fluid mb-2" src="assets/img/flag/uzbekistan_png.png"
+                             style="height:40px;"/>
+                        <div class="fw-semibold">Uzbekistan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .study-countries-section .country-box {
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .study-countries-section .country-box:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+        }
+
+        .study-countries-section .country-box img {
+            width: 64px;
+            height: 48px;
+            object-fit: cover;
+            background: #fff;
+            border-radius: 12px;
+            border: 2px solid #f1f1f1;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.2s, transform 0.2s;
+            display: block;
+            margin: 0 auto 12px auto;
+        }
+
+        .study-countries-section .country-box:hover img {
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
+            transform: scale(1.08);
+        }
+    </style>
+
+    <!-- Features Section -->
+    <!--        <section id="features" class="features section">-->
+
+    <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+    <!--            <div class="container section-title" data-aos="fade-up">-->
+    <!--                <h2>Features</h2>-->
+    <!--                <p>Our Advacedd Features<br></p>-->
+    <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+
+    <!--            <div class="container">-->
+
+    <!--                <div class="row gy-5">-->
+
+    <!--                    <div class="col-xl-6" data-aos="zoom-out" data-aos-delay="100">-->
+    <!--                        <img src="assets/img/features.png" class="img-fluid" alt="">-->
+    <!--                    </div>-->
+
+    <!--                    <div class="col-xl-6 d-flex">-->
+    <!--                        <div class="row align-self-center gy-4">-->
+
+    <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">-->
+    <!--                                <div class="feature-box d-flex align-items-center">-->
+    <!--                                    <i class="bi bi-check"></i>-->
+    <!--                                    <h3>Eos aspernatur rem</h3>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">-->
+    <!--                                <div class="feature-box d-flex align-items-center">-->
+    <!--                                    <i class="bi bi-check"></i>-->
+    <!--                                    <h3>Facilis neque ipsa</h3>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">-->
+    <!--                                <div class="feature-box d-flex align-items-center">-->
+    <!--                                    <i class="bi bi-check"></i>-->
+    <!--                                    <h3>Volup amet volupt</h3>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">-->
+    <!--                                <div class="feature-box d-flex align-items-center">-->
+    <!--                                    <i class="bi bi-check"></i>-->
+    <!--                                    <h3>Rerum omnis sint</h3>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">-->
+    <!--                                <div class="feature-box d-flex align-items-center">-->
+    <!--                                    <i class="bi bi-check"></i>-->
+    <!--                                    <h3>Alias possimus</h3>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">-->
+    <!--                                <div class="feature-box d-flex align-items-center">-->
+    <!--                                    <i class="bi bi-check"></i>-->
+    <!--                                    <h3>Repellendus molli</h3>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                        </div>-->
+    <!--                    </div>-->
+
+    <!--                </div>-->
+
+    <!--            </div>-->
+
+    <!--        </section>&lt;!&ndash; /Features Section &ndash;&gt;-->
+
+    <!--        &lt;!&ndash; Alt Features Section &ndash;&gt;-->
+    <!--        <section id="alt-features" class="alt-features section">-->
+
+    <!--            <div class="container">-->
+
+    <!--                <div class="row gy-5">-->
+
+    <!--                    <div class="col-xl-7 d-flex order-2 order-xl-1" data-aos="fade-up" data-aos-delay="200">-->
+
+    <!--                        <div class="row align-self-center gy-5">-->
+
+    <!--                            <div class="col-md-6 icon-box">-->
+    <!--                                <i class="bi bi-award"></i>-->
+    <!--                                <div>-->
+    <!--                                    <h4>Corporis voluptates sit</h4>-->
+    <!--                                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut-->
+    <!--                                        aliquip</p>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6 icon-box">-->
+    <!--                                <i class="bi bi-card-checklist"></i>-->
+    <!--                                <div>-->
+    <!--                                    <h4>Ullamco laboris nisi</h4>-->
+    <!--                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia-->
+    <!--                                        deserunt</p>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6 icon-box">-->
+    <!--                                <i class="bi bi-dribbble"></i>-->
+    <!--                                <div>-->
+    <!--                                    <h4>Labore consequatur</h4>-->
+    <!--                                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis-->
+    <!--                                        facere</p>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6 icon-box">-->
+    <!--                                <i class="bi bi-filter-circle"></i>-->
+    <!--                                <div>-->
+    <!--                                    <h4>Beatae veritatis</h4>-->
+    <!--                                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6 icon-box">-->
+    <!--                                <i class="bi bi-lightning-charge"></i>-->
+    <!--                                <div>-->
+    <!--                                    <h4>Molestiae dolor</h4>-->
+    <!--                                    <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                            <div class="col-md-6 icon-box">-->
+    <!--                                <i class="bi bi-patch-check"></i>-->
+    <!--                                <div>-->
+    <!--                                    <h4>Explicabo consectetur</h4>-->
+    <!--                                    <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>-->
+    <!--                                </div>-->
+    <!--                            </div>&lt;!&ndash; End Feature Item &ndash;&gt;-->
+
+    <!--                        </div>-->
+
+    <!--                    </div>-->
+
+    <!--                    <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2" data-aos="fade-up"-->
+    <!--                         data-aos-delay="100">-->
+    <!--                        <img src="assets/img/alt-features.png" class="img-fluid" alt="">-->
+    <!--                    </div>-->
+
+    <!--                </div>-->
+
+    <!--            </div>-->
+
+    <!--        </section>&lt;!&ndash; /Alt Features Section &ndash;&gt;-->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Our Services</h2>
+            <p>Comprehensive Education Solutions for Your Global Journey<br></p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative">
+                        <i class="bi bi-mortarboard icon"></i>
+                        <h3>University Admissions</h3>
+                        <p>Expert guidance for university selection and applications with a 98% success rate.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item item-orange position-relative">
+                        <i class="bi bi-passport icon"></i>
+                        <h3>Visa Assistance</h3>
+                        <p>Complete visa support including document prep and interview coaching.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item item-teal position-relative">
+                        <i class="bi bi-currency-dollar icon"></i>
+                        <h3>Scholarship Guidance</h3>
+                        <p>Access to exclusive scholarships and financial aid opportunities.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item item-red position-relative">
+                        <i class="bi bi-house-heart icon"></i>
+                        <h3>Accommodation Support</h3>
+                        <p>Help finding safe housing near your institution.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-item item-indigo position-relative">
+                        <i class="bi bi-people icon"></i>
+                        <h3>Pre-Departure Briefing</h3>
+                        <p>Essential orientation for cultural adaptation and travel.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item item-pink position-relative">
+                        <i class="bi bi-headset icon"></i>
+                        <h3>24/7 Student Support</h3>
+                        <p>Round-the-clock assistance for all your needs.</p>
+                    </div>
+                </div><!-- End Service Item -->
 
             </div>
 
-        </section><!-- /Services Section -->
+        </div>
+
+    </section><!-- /Services Section -->
 
 
-        <!-- Faq Section -->
-        <!--        <section id="faq" class="faq section">-->
-        <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-        <!--            <div class="container section-title" data-aos="fade-up">-->
-        <!--                <h2>F.A.Q</h2>-->
-        <!--                <p>Frequently Asked Questions</p>-->
-        <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
-        <!--            <div class="container">-->
-        <!--                <div class="row">-->
-        <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">-->
-        <!--                        <div class="faq-container">-->
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What Are the Eligibility Criteria for MBBS in Russia for Indian Students?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
-        <!--                                        eligibility </P>-->
-        <!--                                    <P>requirements:</P>-->
-        <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
-        <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
-        <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
-        <!--                                        categories) in these core science subjects. </p>-->
-        <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
-        <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
-        <!--                                        medical universities abroad. </p>-->
-        <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
-        <!--                                        at-->
-        <!--                                        recognized medical universities in Russia. </p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+    <!-- Faq Section -->
+    <!--        <section id="faq" class="faq section">-->
+    <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+    <!--            <div class="container section-title" data-aos="fade-up">-->
+    <!--                <h2>F.A.Q</h2>-->
+    <!--                <p>Frequently Asked Questions</p>-->
+    <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+    <!--            <div class="container">-->
+    <!--                <div class="row">-->
+    <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">-->
+    <!--                        <div class="faq-container">-->
+    <!--                            <div class="faq-item faq-active">-->
+    <!--                                <h3>What Are the Eligibility Criteria for MBBS in Russia for Indian Students?</h3>-->
+    <!--                                <div class="faq-content">-->
+    <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
+    <!--                                        eligibility </P>-->
+    <!--                                    <P>requirements:</P>-->
+    <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
+    <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
+    <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
+    <!--                                        categories) in these core science subjects. </p>-->
+    <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
+    <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
+    <!--                                        medical universities abroad. </p>-->
+    <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
+    <!--                                        at-->
+    <!--                                        recognized medical universities in Russia. </p>-->
+    <!--                                </div>-->
+    <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+    <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What is the Duration of the MBBS Program in Russia?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>The MBBS program in Russia typically spans 6 years, which includes 5 years of-->
-        <!--                                        academic-->
-        <!--                                        study followed by a 1-year mandatory internship. This comprehensive structure-->
-        <!--                                        ensures-->
-        <!--                                        students gain both strong theoretical knowledge and practical clinical-->
-        <!--                                        experience, preparing-->
-        <!--                                        them to become competent medical professionals..</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+    <!--                            <div class="faq-item faq-active">-->
+    <!--                                <h3>What is the Duration of the MBBS Program in Russia?</h3>-->
+    <!--                                <div class="faq-content">-->
+    <!--                                    <p>The MBBS program in Russia typically spans 6 years, which includes 5 years of-->
+    <!--                                        academic-->
+    <!--                                        study followed by a 1-year mandatory internship. This comprehensive structure-->
+    <!--                                        ensures-->
+    <!--                                        students gain both strong theoretical knowledge and practical clinical-->
+    <!--                                        experience, preparing-->
+    <!--                                        them to become competent medical professionals..</p>-->
+    <!--                                </div>-->
+    <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+    <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What Are the Tuition Fees for MBBS in Russia?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Tuition fees for MBBS programs in Russia vary depending on the university and-->
-        <!--                                        city. On-->
-        <!--                                        average, Indian students can expect to pay between ₹3 to ₹4 lakhs per year,-->
-        <!--                                        making Russia-->
-        <!--                                        one of the most cost-effective destinations for quality medical education.</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+    <!--                            <div class="faq-item faq-active">-->
+    <!--                                <h3>What Are the Tuition Fees for MBBS in Russia?</h3>-->
+    <!--                                <div class="faq-content">-->
+    <!--                                    <p>Tuition fees for MBBS programs in Russia vary depending on the university and-->
+    <!--                                        city. On-->
+    <!--                                        average, Indian students can expect to pay between ₹3 to ₹4 lakhs per year,-->
+    <!--                                        making Russia-->
+    <!--                                        one of the most cost-effective destinations for quality medical education.</p>-->
+    <!--                                </div>-->
+    <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+    <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-        <!--                        </div>-->
+    <!--                        </div>-->
 
-        <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
+    <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
 
-        <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">-->
-        <!--                        <div class="faq-container">-->
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What are the requirements for MBBS in Georgia? </h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
-        <!--                                        eligibility </P>-->
-        <!--                                    <P>requirements:</P>-->
-        <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
-        <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
-        <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
-        <!--                                        categories) in these core science subjects. </p>-->
-        <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
-        <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
-        <!--                                        medical universities abroad. </p>-->
-        <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
-        <!--                                        at-->
-        <!--                                        recognized medical universities in Russia. </p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+    <!--                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">-->
+    <!--                        <div class="faq-container">-->
+    <!--                            <div class="faq-item faq-active">-->
+    <!--                                <h3>What are the requirements for MBBS in Georgia? </h3>-->
+    <!--                                <div class="faq-content">-->
+    <!--                                    <p>Indian students aspiring to pursue MBBS in Russia must fulfill the following-->
+    <!--                                        eligibility </P>-->
+    <!--                                    <P>requirements:</P>-->
+    <!--                                    <P> • Academic Qualification: Completion of 10+2 (or equivalent) with Physics,-->
+    <!--                                        Chemistry, Biology, and English as compulsory subjects.</p>-->
+    <!--                                    <P> • Minimum Marks: A minimum aggregate of 50% in 10+2 (40% for reserved-->
+    <!--                                        categories) in these core science subjects. </p>-->
+    <!--                                    <P> • NEET Qualification: Successful qualification in the NEET (National Eligibility-->
+    <!--                                        cum Entrance Test), which is mandatory for Indian students seeking admission to-->
+    <!--                                        medical universities abroad. </p>-->
+    <!--                                    <P>Meeting these criteria ensures that you are eligible to apply for MBBS programs-->
+    <!--                                        at-->
+    <!--                                        recognized medical universities in Russia. </p>-->
+    <!--                                </div>-->
+    <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+    <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>What are the requirements for MBBS in Georgia?</h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse-->
-        <!--                                        in-->
-        <!--                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl-->
-        <!--                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus-->
-        <!--                                        in</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
+    <!--                            <div class="faq-item faq-active">-->
+    <!--                                <h3>What are the requirements for MBBS in Georgia?</h3>-->
+    <!--                                <div class="faq-content">-->
+    <!--                                    <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse-->
+    <!--                                        in-->
+    <!--                                        est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl-->
+    <!--                                        suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus-->
+    <!--                                        in</p>-->
+    <!--                                </div>-->
+    <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+    <!--                            </div>&lt;!&ndash; End Faq item&ndash;&gt;-->
 
-        <!--                            <div class="faq-item faq-active">-->
-        <!--                                <h3>Is an MBBS from Georgia Recognized in India? </h3>-->
-        <!--                                <div class="faq-content">-->
-        <!--                                    <p>Yes, pursuing an MBBS degree in Georgia is recognized in India. The National-->
-        <!--                                        Medical </p>-->
-        <!--                                    <p>Commission (NMC)—formerly known as the Medical Council of India (MCI)—has-->
-        <!--                                        approved a number of medical universities in Georgia.</p>-->
-        <!--                                    <p>Graduates from these recognized institutions are eligible to return to India and-->
-        <!--                                        practice-->
-        <!--                                    <p>-->
-        <!--                                    <p>medicine, provided they meet the necessary requirements, such as passing the-->
-        <!--                                        Foreign</p>-->
-        <!--                                    <p>Medical Graduate Examination (FMGE) or NEXT, as applicable.-->
-        <!--                                        Before enrolling, students are advised to verify that the chosen university is-->
-        <!--                                        included in theofficial list of NMC-approved institutions to ensure eligibility-->
-        <!--                                        for future-->
-        <!--                                        medical practice in India.</p>-->
-        <!--                                </div>-->
-        <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
-        <!--                            </div>&lt;!&ndash; End Faq item &ndash;&gt;-->
+    <!--                            <div class="faq-item faq-active">-->
+    <!--                                <h3>Is an MBBS from Georgia Recognized in India? </h3>-->
+    <!--                                <div class="faq-content">-->
+    <!--                                    <p>Yes, pursuing an MBBS degree in Georgia is recognized in India. The National-->
+    <!--                                        Medical </p>-->
+    <!--                                    <p>Commission (NMC)—formerly known as the Medical Council of India (MCI)—has-->
+    <!--                                        approved a number of medical universities in Georgia.</p>-->
+    <!--                                    <p>Graduates from these recognized institutions are eligible to return to India and-->
+    <!--                                        practice-->
+    <!--                                    <p>-->
+    <!--                                    <p>medicine, provided they meet the necessary requirements, such as passing the-->
+    <!--                                        Foreign</p>-->
+    <!--                                    <p>Medical Graduate Examination (FMGE) or NEXT, as applicable.-->
+    <!--                                        Before enrolling, students are advised to verify that the chosen university is-->
+    <!--                                        included in theofficial list of NMC-approved institutions to ensure eligibility-->
+    <!--                                        for future-->
+    <!--                                        medical practice in India.</p>-->
+    <!--                                </div>-->
+    <!--                                <i class="faq-toggle bi bi-chevron-right"></i>-->
+    <!--                            </div>&lt;!&ndash; End Faq item &ndash;&gt;-->
 
-        <!--                        </div>-->
+    <!--                        </div>-->
 
-        <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
+    <!--                    </div>&lt;!&ndash; End Faq Column&ndash;&gt;-->
 
-        <!--                </div>-->
+    <!--                </div>-->
 
-        <!--            </div>-->
+    <!--            </div>-->
 
-        <!--        </section>&lt;!&ndash; /Faq Section &ndash;&gt;-->
+    <!--        </section>&lt;!&ndash; /Faq Section &ndash;&gt;-->
 
-<!--        &lt;!&ndash; Portfolio Section &ndash;&gt;-->
-<!--        <section id="portfolio" class="portfolio section">-->
+    <!--        &lt;!&ndash; Portfolio Section &ndash;&gt;-->
+    <!--        <section id="portfolio" class="portfolio section">-->
 
-<!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-<!--            <div class="container section-title" data-aos="fade-up">-->
-<!--                <h2>Portfolio</h2>-->
-<!--                <p>Our Global FootPrint </p>-->
-<!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+    <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+    <!--            <div class="container section-title" data-aos="fade-up">-->
+    <!--                <h2>Portfolio</h2>-->
+    <!--                <p>Our Global FootPrint </p>-->
+    <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
 
-<!--            <div class="container">-->
-<!--                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">-->
-<!--                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">-->
-<!--                        <li data-filter="*" class="filter-active">Contries</li>-->
-<!--                        &lt;!&ndash;                        <li data-filter=".filter-app">App</li>&ndash;&gt;-->
-<!--                        &lt;!&ndash;                        <li data-filter=".filter-product">Product</li>&ndash;&gt;-->
-<!--                        &lt;!&ndash;                        <li data-filter=".filter-branding">Branding</li>&ndash;&gt;-->
-<!--                        &lt;!&ndash;                        <li data-filter=".filter-books">Books</li>&ndash;&gt;-->
-<!--                    </ul>&lt;!&ndash; End Portfolio Filters &ndash;&gt;-->
+    <!--            <div class="container">-->
+    <!--                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">-->
+    <!--                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">-->
+    <!--                        <li data-filter="*" class="filter-active">Contries</li>-->
+    <!--                        &lt;!&ndash;                        <li data-filter=".filter-app">App</li>&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        <li data-filter=".filter-product">Product</li>&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        <li data-filter=".filter-branding">Branding</li>&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        <li data-filter=".filter-books">Books</li>&ndash;&gt;-->
+    <!--                    </ul>&lt;!&ndash; End Portfolio Filters &ndash;&gt;-->
 
-<!--                    <div class="row gy-4 isotope-container justify-content-center" data-aos="fade-up"-->
-<!--                         data-aos-delay="200">-->
+    <!--                    <div class="row gy-4 isotope-container justify-content-center" data-aos="fade-up"-->
+    <!--                         data-aos-delay="200">-->
 
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Russia.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Russia">-->
-<!--                            </div>-->
-<!--                        </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/albania_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Albania">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/am-flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Armenia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Bangladesh-Flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Bangladesh">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Belarus.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Belarus">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Belgium.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Belgium">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Bosnia_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Bosnia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/China.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="China">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/croatia_jpg.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Croatia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Cyprus.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Cyprus">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Denmark.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Denmark">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/download_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Download">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Egypt_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Egypt">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Estonia.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Estonia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Finland.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Finland">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Flag-Czech-Republic.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Czech Republic">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Flag-of-Poland.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Poland">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Flag_of_Malta_svg.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Malta">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/france-country-flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="France">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Georgia.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Georgia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Germany.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Germany">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Hungary_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Hungary">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/india-flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="India">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/ireland_flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Ireland">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Italy-Flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Italy">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Kazhakhsthan.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kazakhstan">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Kyrgyzstan.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kyrgyzstan">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Latvia_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Latvia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Lithuania_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Lithuania">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Malaysia.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Malaysia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/mauritius_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Mauritius">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/moldova-country-flags.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Moldova">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Nepal-Flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Nepal">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Netherlands.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Netherlands">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/New-Zealand.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="New Zealand">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/O-Canada-O-flag-arts-entertainment-history-2010.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Canada">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Phillippines.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Philippines">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Romainia_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Romania">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Slovakia_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Slovakia">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Spain-Flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Spain">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Sweden.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Sweden">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/Switzerland.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Switzerland">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/uk-country-flag.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="United Kingdom">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/United-Arab-Emirates.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary"-->
-<!--                                     alt="United Arab Emirates">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/USA.jpg"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="USA">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
-<!--                            <div class="portfolio-content h-100">-->
-<!--                                <img src="assets/img/flag/uzbekistan_png.png"-->
-<!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Uzbekistan">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>&lt;!&ndash; End Portfolio Container &ndash;&gt;-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Russia.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Russia">-->
+    <!--                            </div>-->
+    <!--                        </div>&lt;!&ndash; End Portfolio Item &ndash;&gt;-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/albania_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Albania">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/am-flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Armenia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Bangladesh-Flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Bangladesh">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Belarus.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Belarus">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Belgium.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Belgium">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Bosnia_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Bosnia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/China.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="China">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/croatia_jpg.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Croatia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Cyprus.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Cyprus">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Denmark.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Denmark">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/download_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Download">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Egypt_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Egypt">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Estonia.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Estonia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Finland.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Finland">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Flag-Czech-Republic.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Czech Republic">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Flag-of-Poland.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Poland">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Flag_of_Malta_svg.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Malta">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/france-country-flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="France">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Georgia.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Georgia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Germany.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Germany">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Hungary_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Hungary">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/india-flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="India">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/ireland_flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Ireland">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Italy-Flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Italy">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Kazhakhsthan.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kazakhstan">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Kyrgyzstan.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Kyrgyzstan">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Latvia_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Latvia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Lithuania_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Lithuania">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Malaysia.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Malaysia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/mauritius_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Mauritius">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/moldova-country-flags.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Moldova">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Nepal-Flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Nepal">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Netherlands.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Netherlands">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/New-Zealand.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="New Zealand">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/O-Canada-O-flag-arts-entertainment-history-2010.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Canada">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Phillippines.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Philippines">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Romainia_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Romania">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Slovakia_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Slovakia">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Spain-Flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Spain">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Sweden.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Sweden">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/Switzerland.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Switzerland">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/uk-country-flag.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="United Kingdom">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/United-Arab-Emirates.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary"-->
+    <!--                                     alt="United Arab Emirates">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/USA.jpg"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="USA">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">-->
+    <!--                            <div class="portfolio-content h-100">-->
+    <!--                                <img src="assets/img/flag/uzbekistan_png.png"-->
+    <!--                                     class="img-fluid1 shadow-lg border border-1 border-primary" alt="Uzbekistan">-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End Portfolio Container &ndash;&gt;-->
 
-<!--                </div>-->
+    <!--                </div>-->
 
-<!--            </div>-->
+    <!--            </div>-->
 
-<!--        </section>&lt;!&ndash; /Portfolio Section &ndash;&gt;-->
+    <!--        </section>&lt;!&ndash; /Portfolio Section &ndash;&gt;-->
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
 
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Testimonials</h2>
-                <p>What they are saying about us<br></p>
-            </div><!-- End Section Title -->
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Testimonials</h2>
+            <p>What they are saying about us<br></p>
+        </div><!-- End Section Title -->
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="swiper init-swiper">
-                    <script type="application/json" class="swiper-config">
-                        {
-                            "loop": true,
-                            "speed": 600,
-                            "autoplay": {
-                                "delay": 5000
+            <div class="swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+                    {
+                        "loop": true,
+                        "speed": 600,
+                        "autoplay": {
+                            "delay": 5000
+                        },
+                        "slidesPerView": "auto",
+                        "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                        },
+                        "breakpoints": {
+                            "320": {
+                                "slidesPerView": 1,
+                                "spaceBetween": 40
                             },
-                            "slidesPerView": "auto",
-                            "pagination": {
-                                "el": ".swiper-pagination",
-                                "type": "bullets",
-                                "clickable": true
-                            },
-                            "breakpoints": {
-                                "320": {
-                                    "slidesPerView": 1,
-                                    "spaceBetween": 40
-                                },
-                                "1200": {
-                                    "slidesPerView": 3,
-                                    "spaceBetween": 1
-                                }
+                            "1200": {
+                                "slidesPerView": 3,
+                                "spaceBetween": 1
                             }
                         }
-                    </script>
-                    <div class="swiper-wrapper">
+                    }
+                </script>
+                <div class="swiper-wrapper">
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
                             </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                </div>
+                            <p>
+                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                                risus at semper.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
+                                     alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Ceo &amp; Founder</h4>
                             </div>
-                        </div><!-- End testimonial item -->
+                        </div>
+                    </div><!-- End testimonial item -->
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam
-                                    duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
                             </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat
-                                    minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                    labore illum veniam.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                </div>
+                            <p>
+                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
+                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
+                                legam anim culpa.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
+                                     alt="">
+                                <h3>Sara Wilsson</h3>
+                                <h4>Designer</h4>
                             </div>
-                        </div><!-- End testimonial item -->
+                        </div>
+                    </div><!-- End testimonial item -->
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
-                                         alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
                             </div>
-                        </div><!-- End testimonial item -->
+                            <p>
+                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
+                                veniam
+                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
+                                     alt="">
+                                <h3>Jena Karlis</h3>
+                                <h4>Store Owner</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
 
-                    </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                                fugiat
+                                minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
+                                labore illum veniam.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
+                                     alt="">
+                                <h3>Matt Brandon</h3>
+                                <h4>Freelancer</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
+                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
+                                culpa fore nisi cillum quid.
+                            </p>
+                            <div class="profile mt-auto">
+                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                     alt="">
+                                <h3>John Larson</h3>
+                                <h4>Entrepreneur</h4>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+
                 </div>
-
+                <div class="swiper-pagination"></div>
             </div>
 
-        </section><!-- /Testimonials Section -->
+        </div>
 
-        <!-- Team Section -->
-<!--        <section id="team" class="team section">-->
+    </section><!-- /Testimonials Section -->
 
-<!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-<!--            <div class="container section-title" data-aos="fade-up">-->
-<!--                <h2>Team</h2>-->
-<!--                <p>Our hard working team</p>-->
-<!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+    <!-- Team Section -->
+    <!--        <section id="team" class="team section">-->
 
-<!--            <div class="container">-->
+    <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+    <!--            <div class="container section-title" data-aos="fade-up">-->
+    <!--                <h2>Team</h2>-->
+    <!--                <p>Our hard working team</p>-->
+    <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
 
-<!--                <div class="row gy-4">-->
+    <!--            <div class="container">-->
 
-<!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">-->
-<!--                        <div class="team-member">-->
-<!--                            <div class="member-img">-->
-<!--                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="social">-->
-<!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="member-info">-->
-<!--                                <h4>Walter White</h4>-->
-<!--                                <span>Chief Executive Officer</span>-->
-<!--                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.-->
-<!--                                    Ipsum-->
-<!--                                    exercitationem iure minima enim corporis et voluptate.</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
+    <!--                <div class="row gy-4">-->
 
-<!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">-->
-<!--                        <div class="team-member">-->
-<!--                            <div class="member-img">-->
-<!--                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="social">-->
-<!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="member-info">-->
-<!--                                <h4>Sarah Jhonson</h4>-->
-<!--                                <span>Product Manager</span>-->
-<!--                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima-->
-<!--                                    suscipit-->
-<!--                                    corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
+    <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">-->
+    <!--                        <div class="team-member">-->
+    <!--                            <div class="member-img">-->
+    <!--                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">-->
+    <!--                                <div class="social">-->
+    <!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <div class="member-info">-->
+    <!--                                <h4>Walter White</h4>-->
+    <!--                                <span>Chief Executive Officer</span>-->
+    <!--                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.-->
+    <!--                                    Ipsum-->
+    <!--                                    exercitationem iure minima enim corporis et voluptate.</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
 
-<!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">-->
-<!--                        <div class="team-member">-->
-<!--                            <div class="member-img">-->
-<!--                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="social">-->
-<!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="member-info">-->
-<!--                                <h4>William Anderson</h4>-->
-<!--                                <span>CTO</span>-->
-<!--                                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt.-->
-<!--                                    Voluptates-->
-<!--                                    enim aut architecto porro aspernatur molestiae modi.</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
+    <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">-->
+    <!--                        <div class="team-member">-->
+    <!--                            <div class="member-img">-->
+    <!--                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">-->
+    <!--                                <div class="social">-->
+    <!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <div class="member-info">-->
+    <!--                                <h4>Sarah Jhonson</h4>-->
+    <!--                                <span>Product Manager</span>-->
+    <!--                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima-->
+    <!--                                    suscipit-->
+    <!--                                    corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
 
-<!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">-->
-<!--                        <div class="team-member">-->
-<!--                            <div class="member-img">-->
-<!--                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">-->
-<!--                                <div class="social">-->
-<!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
-<!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="member-info">-->
-<!--                                <h4>Amanda Jepson</h4>-->
-<!--                                <span>Accountant</span>-->
-<!--                                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut-->
-<!--                                    aliquid-->
-<!--                                    doloremque ut possimus ipsum officia.</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
+    <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">-->
+    <!--                        <div class="team-member">-->
+    <!--                            <div class="member-img">-->
+    <!--                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">-->
+    <!--                                <div class="social">-->
+    <!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <div class="member-info">-->
+    <!--                                <h4>William Anderson</h4>-->
+    <!--                                <span>CTO</span>-->
+    <!--                                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt.-->
+    <!--                                    Voluptates-->
+    <!--                                    enim aut architecto porro aspernatur molestiae modi.</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
 
-<!--                </div>-->
+    <!--                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">-->
+    <!--                        <div class="team-member">-->
+    <!--                            <div class="member-img">-->
+    <!--                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">-->
+    <!--                                <div class="social">-->
+    <!--                                    <a href=""><i class="bi bi-twitter-x"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-facebook"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-instagram"></i></a>-->
+    <!--                                    <a href=""><i class="bi bi-linkedin"></i></a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                            <div class="member-info">-->
+    <!--                                <h4>Amanda Jepson</h4>-->
+    <!--                                <span>Accountant</span>-->
+    <!--                                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut-->
+    <!--                                    aliquid-->
+    <!--                                    doloremque ut possimus ipsum officia.</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End Team Member &ndash;&gt;-->
 
-<!--            </div>-->
+    <!--                </div>-->
 
-<!--        </section>&lt;!&ndash; /Team Section &ndash;&gt;-->
+    <!--            </div>-->
 
-        <!-- Clients Section -->
-        <!--        <section id="clients" class="clients section">-->
+    <!--        </section>&lt;!&ndash; /Team Section &ndash;&gt;-->
 
-        <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-        <!--            <div class="container section-title" data-aos="fade-up">-->
-        <!--                <h2>Clients</h2>-->
-        <!--                <p>We work with best clients<br></p>-->
-        <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+    <!-- Clients Section -->
+    <!--        <section id="clients" class="clients section">-->
 
-        <!--            <div class="container" data-aos="fade-up" data-aos-delay="100">-->
+    <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+    <!--            <div class="container section-title" data-aos="fade-up">-->
+    <!--                <h2>Clients</h2>-->
+    <!--                <p>We work with best clients<br></p>-->
+    <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
 
-        <!--                <div class="swiper init-swiper">-->
-        <!--                    <script type="application/json" class="swiper-config">-->
-        <!--                        {-->
-        <!--                            "loop": true,-->
-        <!--                            "speed": 600,-->
-        <!--                            "autoplay": {-->
-        <!--                                "delay": 5000-->
-        <!--                            },-->
-        <!--                            "slidesPerView": "auto",-->
-        <!--                            "pagination": {-->
-        <!--                                "el": ".swiper-pagination",-->
-        <!--                                "type": "bullets",-->
-        <!--                                "clickable": true-->
-        <!--                            },-->
-        <!--                            "breakpoints": {-->
-        <!--                                "320": {-->
-        <!--                                    "slidesPerView": 2,-->
-        <!--                                    "spaceBetween": 40-->
-        <!--                                },-->
-        <!--                                "480": {-->
-        <!--                                    "slidesPerView": 3,-->
-        <!--                                    "spaceBetween": 60-->
-        <!--                                },-->
-        <!--                                "640": {-->
-        <!--                                    "slidesPerView": 4,-->
-        <!--                                    "spaceBetween": 80-->
-        <!--                                },-->
-        <!--                                "992": {-->
-        <!--                                    "slidesPerView": 6,-->
-        <!--                                    "spaceBetween": 120-->
-        <!--                                }-->
-        <!--                            }-->
-        <!--                        }-->
-        <!--                    </script>-->
-        <!--                    <div class="swiper-wrapper align-items-center">
+    <!--            <div class="container" data-aos="fade-up" data-aos-delay="100">-->
 
-                        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-                        </div>
+    <!--                <div class="swiper init-swiper">-->
+    <!--                    <script type="application/json" class="swiper-config">-->
+    <!--                        {-->
+    <!--                            "loop": true,-->
+    <!--                            "speed": 600,-->
+    <!--                            "autoplay": {-->
+    <!--                                "delay": 5000-->
+    <!--                            },-->
+    <!--                            "slidesPerView": "auto",-->
+    <!--                            "pagination": {-->
+    <!--                                "el": ".swiper-pagination",-->
+    <!--                                "type": "bullets",-->
+    <!--                                "clickable": true-->
+    <!--                            },-->
+    <!--                            "breakpoints": {-->
+    <!--                                "320": {-->
+    <!--                                    "slidesPerView": 2,-->
+    <!--                                    "spaceBetween": 40-->
+    <!--                                },-->
+    <!--                                "480": {-->
+    <!--                                    "slidesPerView": 3,-->
+    <!--                                    "spaceBetween": 60-->
+    <!--                                },-->
+    <!--                                "640": {-->
+    <!--                                    "slidesPerView": 4,-->
+    <!--                                    "spaceBetween": 80-->
+    <!--                                },-->
+    <!--                                "992": {-->
+    <!--                                    "slidesPerView": 6,-->
+    <!--                                    "spaceBetween": 120-->
+    <!--                                }-->
+    <!--                            }-->
+    <!--                        }-->
+    <!--                    </script>-->
+    <!--                    <div class="swiper-wrapper align-items-center">
+
+                    <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+                    </div>
                 </div>
-
+                <div class="swiper-pagination"></div>
             </div>
 
-        </section>&lt;!&ndash; /Clients Section &ndash;&gt;-->
+        </div>
 
-        <!-- Recent Posts Section -->
-        <!--        <section id="recent-posts" class="recent-posts section">-->
+    </section>&lt;!&ndash; /Clients Section &ndash;&gt;-->
 
-        <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
-        <!--            <div class="container section-title" data-aos="fade-up">-->
-        <!--                <h2>Recent Posts</h2>-->
-        <!--                <p>Recent posts form our Blog</p>-->
-        <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+    <!-- Recent Posts Section -->
+    <!--        <section id="recent-posts" class="recent-posts section">-->
 
-        <!--            <div class="container">-->
+    <!--            &lt;!&ndash; Section Title &ndash;&gt;-->
+    <!--            <div class="container section-title" data-aos="fade-up">-->
+    <!--                <h2>Recent Posts</h2>-->
+    <!--                <p>Recent posts form our Blog</p>-->
+    <!--            </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
 
-        <!--                <div class="row gy-5">-->
+    <!--            <div class="container">-->
 
-        <!--                    <div class="col-xl-4 col-md-6">-->
-        <!--                        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">-->
+    <!--                <div class="row gy-5">-->
 
-        <!--                            <div class="post-img position-relative overflow-hidden">-->
-        <!--                                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">-->
-        <!--                                <span class="post-date">December 12</span>-->
-        <!--                            </div>-->
+    <!--                    <div class="col-xl-4 col-md-6">-->
+    <!--                        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">-->
 
-        <!--                            <div class="post-content d-flex flex-column">-->
+    <!--                            <div class="post-img position-relative overflow-hidden">-->
+    <!--                                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">-->
+    <!--                                <span class="post-date">December 12</span>-->
+    <!--                            </div>-->
 
-        <!--                                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>-->
+    <!--                            <div class="post-content d-flex flex-column">-->
 
-        <!--                                <div class="meta d-flex align-items-center">-->
-        <!--                                    <div class="d-flex align-items-center">-->
-        <!--                                        <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>-->
-        <!--                                    </div>-->
-        <!--                                    <span class="px-3 text-black-50">/</span>-->
-        <!--                                    <div class="d-flex align-items-center">-->
-        <!--                                        <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
+    <!--                                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>-->
 
-        <!--                                <hr>-->
+    <!--                                <div class="meta d-flex align-items-center">-->
+    <!--                                    <div class="d-flex align-items-center">-->
+    <!--                                        <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>-->
+    <!--                                    </div>-->
+    <!--                                    <span class="px-3 text-black-50">/</span>-->
+    <!--                                    <div class="d-flex align-items-center">-->
+    <!--                                        <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
 
-        <!--                                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i-->
-        <!--                                        class="bi bi-arrow-right"></i></a>-->
+    <!--                                <hr>-->
 
-        <!--                            </div>-->
+    <!--                                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i-->
+    <!--                                        class="bi bi-arrow-right"></i></a>-->
 
-        <!--                        </div>-->
-        <!--                    </div>&lt;!&ndash; End post item &ndash;&gt;-->
+    <!--                            </div>-->
 
-        <!--                    <div class="col-xl-4 col-md-6">-->
-        <!--                        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End post item &ndash;&gt;-->
 
-        <!--                            <div class="post-img position-relative overflow-hidden">-->
-        <!--                                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">-->
-        <!--                                <span class="post-date">July 17</span>-->
-        <!--                            </div>-->
+    <!--                    <div class="col-xl-4 col-md-6">-->
+    <!--                        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">-->
 
-        <!--                            <div class="post-content d-flex flex-column">-->
+    <!--                            <div class="post-img position-relative overflow-hidden">-->
+    <!--                                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">-->
+    <!--                                <span class="post-date">July 17</span>-->
+    <!--                            </div>-->
 
-        <!--                                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>-->
+    <!--                            <div class="post-content d-flex flex-column">-->
 
-        <!--                                <div class="meta d-flex align-items-center">-->
-        <!--                                    <div class="d-flex align-items-center">-->
-        <!--                                        <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>-->
-        <!--                                    </div>-->
-        <!--                                    <span class="px-3 text-black-50">/</span>-->
-        <!--                                    <div class="d-flex align-items-center">-->
-        <!--                                        <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
+    <!--                                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>-->
 
-        <!--                                <hr>-->
+    <!--                                <div class="meta d-flex align-items-center">-->
+    <!--                                    <div class="d-flex align-items-center">-->
+    <!--                                        <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>-->
+    <!--                                    </div>-->
+    <!--                                    <span class="px-3 text-black-50">/</span>-->
+    <!--                                    <div class="d-flex align-items-center">-->
+    <!--                                        <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
 
-        <!--                                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i-->
-        <!--                                        class="bi bi-arrow-right"></i></a>-->
+    <!--                                <hr>-->
 
-        <!--                            </div>-->
+    <!--                                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i-->
+    <!--                                        class="bi bi-arrow-right"></i></a>-->
 
-        <!--                        </div>-->
-        <!--                    </div>&lt;!&ndash; End post item &ndash;&gt;-->
+    <!--                            </div>-->
 
-        <!--                    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">-->
-        <!--                        <div class="post-item position-relative h-100">-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End post item &ndash;&gt;-->
 
-        <!--                            <div class="post-img position-relative overflow-hidden">-->
-        <!--                                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">-->
-        <!--                                <span class="post-date">September 05</span>-->
-        <!--                            </div>-->
+    <!--                    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">-->
+    <!--                        <div class="post-item position-relative h-100">-->
 
-        <!--                            <div class="post-content d-flex flex-column">-->
+    <!--                            <div class="post-img position-relative overflow-hidden">-->
+    <!--                                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">-->
+    <!--                                <span class="post-date">September 05</span>-->
+    <!--                            </div>-->
 
-        <!--                                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>-->
+    <!--                            <div class="post-content d-flex flex-column">-->
 
-        <!--                                <div class="meta d-flex align-items-center">-->
-        <!--                                    <div class="d-flex align-items-center">-->
-        <!--                                        <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>-->
-        <!--                                    </div>-->
-        <!--                                    <span class="px-3 text-black-50">/</span>-->
-        <!--                                    <div class="d-flex align-items-center">-->
-        <!--                                        <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
+    <!--                                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>-->
 
-        <!--                                <hr>-->
+    <!--                                <div class="meta d-flex align-items-center">-->
+    <!--                                    <div class="d-flex align-items-center">-->
+    <!--                                        <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>-->
+    <!--                                    </div>-->
+    <!--                                    <span class="px-3 text-black-50">/</span>-->
+    <!--                                    <div class="d-flex align-items-center">-->
+    <!--                                        <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
 
-        <!--                                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i-->
-        <!--                                        class="bi bi-arrow-right"></i></a>-->
+    <!--                                <hr>-->
 
-        <!--                            </div>-->
+    <!--                                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i-->
+    <!--                                        class="bi bi-arrow-right"></i></a>-->
 
-        <!--                        </div>-->
-        <!--                    </div>&lt;!&ndash; End post item &ndash;&gt;-->
+    <!--                            </div>-->
 
-        <!--                </div>-->
+    <!--                        </div>-->
+    <!--                    </div>&lt;!&ndash; End post item &ndash;&gt;-->
 
-        <!--            </div>-->
+    <!--                </div>-->
 
-        <!--        </section>&lt;!&ndash; /Recent Posts Section &ndash;&gt;-->
+    <!--            </div>-->
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
+    <!--        </section>&lt;!&ndash; /Recent Posts Section &ndash;&gt;-->
 
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Contact Us</p>
-            </div><!-- End Section Title -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Contact Us</p>
+        </div><!-- End Section Title -->
 
-                <div class="row gy-4">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                    <div class="col-lg-6">
+            <div class="row gy-4">
 
+                <div class="col-lg-6">
+
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="200">
+                                <i class="bi bi-geo-alt"></i>
+                                <h3>Address</h3>
+                                <p>rajuvolu </p>
+                                <p>russian tuppalu, 535022</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="300">
+                                <i class="bi bi-telephone"></i>
+                                <h3>Call Us</h3>
+                                <p>+91-6304705445</p>
+                                <p>+91-8125423017</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="400">
+                                <i class="bi bi-envelope"></i>
+                                <h3>Email Us</h3>
+                                <p>projectk1international@gmail.com</p>
+                                <p>projectk1international@gmail.com</p>
+
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-md-6">
+                            <div class="info-item" data-aos="fade" data-aos-delay="500">
+                                <i class="bi bi-clock"></i>
+                                <h3>Open Hours</h3>
+                                <p>Monday - Friday</p>
+                                <p>9:00AM - 05:00PM</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                          data-aos-delay="200">
                         <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p>rajuvolu </p>
-                                    <p>russian tuppalu, 535022</p>
-                                </div>
-                            </div><!-- End Info Item -->
 
                             <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>+91-6304705445</p>
-                                    <p>+91-8125423017</p>
-                                </div>
-                            </div><!-- End Info Item -->
+                                <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                       required="">
+                            </div>
 
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>projectk1international@gmail.com</p>
-                                    <p>projectk1international@gmail.com</p>
+                            <div class="col-md-6 ">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                       required="">
+                            </div>
 
-                                </div>
-                            </div><!-- End Info Item -->
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject"
+                                       required="">
+                            </div>
 
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday</p>
-                                    <p>9:00AM - 05:00PM</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                              data-aos-delay="200">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                           required="">
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                           required="">
-                                </div>
-
-                                <div class="col-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                           required="">
-                                </div>
-
-                                <div class="col-12">
+                            <div class="col-12">
                                 <textarea class="form-control" name="message" rows="6" placeholder="Message"
                                           required=""></textarea>
-                                </div>
-
-                                <div class="col-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
                             </div>
-                        </form>
-                    </div><!-- End Contact Form -->
 
-                </div>
+                            <div class="col-12 text-center">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                <button type="submit">Send Message</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div><!-- End Contact Form -->
 
             </div>
-        </section><!-- /Contact Section -->
+
+        </div>
+    </section><!-- /Contact Section -->
     </div><!-- End Main Content -->
 
 
@@ -1705,19 +1736,19 @@
 <!-- Add slider initialization below -->
 <script>
     var heroSwiper = new Swiper('.hero-slider', {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
     });
 </script>
 </body>

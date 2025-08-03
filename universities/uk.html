@@ -26,910 +26,261 @@
 <!-- <link href="../assets/css/flag-styles.css" rel="stylesheet"> -->
 <link href="../navbar.css" rel="stylesheet">
 <script src="../navbar.js" defer></script>
-<style>
-        :root {
-            --primary-blue: #0d6efd;
-            --light-gray: #f8f9fa;
-            --hover-gray: #e9ecef;
-            --text-dark: #333;
-            --white: #FFFFFF;
-        }
-        
-        /* Header and Navigation Styling */
-        #header {
-            background: rgba(255, 255, 255, 0.97);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-        }
-        
-        #header .container-fluid {
-            justify-content: space-between;
-        }
-        
-        #navmenu {
-            margin: 0 auto;
-            width: auto;
-        }
-        
-        #navmenu > ul {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            white-space: nowrap;
-        }
-        
-        #navmenu > ul > li {
-            position: relative;
-            white-space: nowrap;
-            padding: 10px 0;
-        }
-        
-        #navmenu > ul > li > a {
-            color: #2c3e50;
-            font-weight: 500;
-            font-size: 15px;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        #navmenu > ul > li > a:hover,
-        #navmenu > ul > li > a.active {
-            color: var(--primary-blue);
-            background: rgba(13, 110, 253, 0.1);
-        }
-        
-        .logo {
-            margin-right: 30px;
-        }
-        
-        /* Countries Dropdown Styling */
-        .countries-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px !important;
-            min-width: 500px;
-        }
-        
-        .country-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            width: 100%;
-        }
-        
-        .country-item {
-            flex: 1 1 calc(25% - 10px);
-            min-width: 120px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .country-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
-        
-        .country-item a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            display: block;
-            padding: 5px 0;
-        }
-        
-        .country-item a:hover {
-            color: var(--primary-blue);
-        }
-        
-        .country-item a.active {
-            color: var(--primary-blue);
-            font-weight: 600;
-        }
-        
-        .uk-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 80px 0 50px 0;
-            text-align: center;
-            border-bottom: 4px solid var(--primary-blue);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .uk-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-            border-top: 3px solid var(--primary-blue);
-        }
-        
-        .uk-title {
-            color: var(--primary-blue);
-            font-weight: 700;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .uk-title:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--primary-blue);
-        }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            border-left: 4px solid var(--primary-blue);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .feature-list li {
-            padding: 8px 0 8px 30px;
-            position: relative;
-        }
-        
-        .feature-list li:before {
-            content: "✓";
-            color: var(--primary-blue);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .university-list {
-            column-count: 2;
-            column-gap: 20px;
-        }
-        
-        @media (max-width: 768px) {
-            .university-list {
-                column-count: 1;
-            }
-        }
-        
-        .faq-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-        
-        .table th {
-            background-color: #f8f9fa;
-            color: var(--primary-blue);
-        }
-        
-        .btn-uk {
-            background-color: var(--primary-blue);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        
-        .btn-uk:hover {
-            background-color: #0d6efd;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .accreditation-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .badge {
-            background-color: #f0f4f8;
-            color: #012169;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid #dee2e6;
-        }
-    
-        /* Mobile Menu Toggle Button */
-        .mobile-nav-toggle {
-            display: flex !important; /* Force display */
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-            z-index: 1001;
-            position: relative;
-            background: rgba(13, 110, 253, 0.1);
-            border: none;
-            border-radius: 4px;
-            padding: 10px;
-            transition: 0.3s;
-        }
 
-        @media (max-width: 1199px) {
-            .mobile-nav-toggle {
-                display: flex !important;
-            }
-
-            #navmenu > ul {
-                display: none !important;
-                position: fixed;
-                top: 80px;
-                left: 15px;
-                right: 15px;
-                background: #fff;
-                border-radius: 12px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-                padding: 15px 0;
-                z-index: 1000;
-                max-height: calc(100vh - 120px);
-                overflow-y: auto;
-                flex-direction: column;
-                gap: 0;
-                margin: 0;
-                list-style: none;
-            }
-
-            .mobile-nav-active #navmenu > ul,
-            #navmenu > ul.mobile-nav-active {
-                display: flex !important;
-                animation: fadeInDown 0.3s ease-out;
-            }
-
-            #navmenu > ul > li {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-
-            #navmenu > ul > li:last-child {
-                border-bottom: none;
-            }
-
-            #navmenu > ul > li > a {
-                padding: 14px 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                color: #2c3e50;
-                text-decoration: none;
-                font-weight: 500;
-                transition: all 0.2s ease;
-            }
-
-            #navmenu > ul > li > a:hover,
-            #navmenu > ul > li > a:focus {
-                background-color: rgba(13, 110, 253, 0.05);
-                color: #0d6efd;
-            }
-
-            .listing-dropdown > a::after {
-            display: none !important;
-        }
-
-            .listing-dropdown.active > a::after {
-                transform: rotate(180deg);
-            }
-
-            .listing-dropdown .countries-list {
-                position: static !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                padding: 0 0 0 15px !important;
-                min-width: auto !important;
-                display: none;
-                animation: fadeIn 0.3s ease-out;
-                background-color: #f8f9fa;
-                border-radius: 0 0 8px 8px;
-            }
-
-            .listing-dropdown.active .countries-list {
-                display: block;
-                padding: 10px 15px 10px 30px !important;
-            }
-
-            .country-group {
-                flex-direction: column;
-                gap: 8px;
-                margin: 0;
-            }
-        }
-
-        /* Mobile menu visibility fix */
-        .mobile-nav-toggle {
-            display: none !important; /* Hide by default */
-        }
-        
-        @media (max-width: 1199.98px) {
-            .mobile-nav-toggle {
-                display: flex !important; /* Show only on mobile */
-            }
-            
-            /* Ensure desktop menu is hidden on mobile */
-            #navmenu > ul {
-                display: none !important;
-            }
-            
-            /* Show menu when active */
-            .mobile-nav-active #navmenu > ul {
-                display: flex !important;
-            }
-        }
-        
-        /* Dropdown positioning fix */
-        .listing-dropdown {
-            position: relative;
-        }
-        
-        .listing-dropdown .countries-list {
-            position: absolute;
-            right: 0;
-            left: auto;
-            min-width: 500px;
-            max-width: 90vw;
-        }
-        
-        @media (max-width: 1199.98px) {
-            .listing-dropdown .countries-list {
-                position: static !important;
-                min-width: auto !important;
-                max-width: 100%;
-                padding: 0 15px !important;
-                margin: 0 !important;
-            }
-        }
-        
-        /* Country-specific styles for Uk */
-        .country-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 100px 0 60px;
-            margin-top: 80px;
-        }
-        
-        .country-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-        }
-        
-        .country-section h2 {
-            color: #0d6efd;
-            font-weight: 700;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #e9ecef;
-        }
-        
-        .country-section ul, 
-        .country-section ol {
-            padding-left: 20px;
-        }
-        
-        .country-section li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .country-table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        
-        .country-table th, 
-        .country-table td {
-            padding: 12px 15px;
-            border: 1px solid #dee2e6;
-            text-align: left;
-        }
-        
-        .country-table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            border-left: 4px solid #0d6efd;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .country-hero {
-                padding: 80px 0 40px;
-                margin-top: 70px;
-                text-align: center;
-            }
-            
-            .country-section {
-                padding: 20px 15px;
-            }
-        }
-        
-    .russia-hero {
-        background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-        padding: 100px 0 60px 0;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-    .russia-section {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-        padding: 32px 28px;
-        margin-bottom: 32px;
-    }
-    
-    .russia-title {
-        color: #0d6efd;
-        font-weight: 700;
-        margin-bottom: 24px;
-    }
-    
-    /* Card hover effect */
-    .russia-section:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(13, 110, 253, 0.15);
-        transition: all 0.3s ease;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .russia-hero {
-            padding: 80px 0 40px 0;
-        }
-        .russia-section {
-            padding: 24px 16px;
-            margin-bottom: 24px;
-        }
-    }
-    </style>
     <link rel="stylesheet" href="../assets/css/banner.css">
 </head>
 <body class="index-page">
 <!-- Header -->
-<header class="new-header container">
-    <a href="../index.html" class="new-logo-container">
-        <img src="../assets/img/kxy-logo.png" alt="" class="new-logo-img">
-    </a>
-    <nav class="new-navbar">
-        <ul class="new-nav-list new-desktop-navbar">
-            <li><a href="../index.html" class="new-nav-item">Home</a></li>
-            <li><a href="../about-us.html" class="new-nav-item">About</a></li>
-            <li class="new-countries-dropdown">
-                <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul class="new-country-group">
-                    <li class="new-country-item"><a href="russia.html">Russia</a></li>
-                        <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
-                        <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
-                        <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
-                        <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
-                        <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
-                        <li class="new-country-item"><a href="spain.html">Spain</a></li>
-                        <li class="new-country-item"><a href="uk.html">UK</a></li>
-                        <li class="new-country-item"><a href="usa.html">United States</a></li>
-                        <li class="new-country-item"><a href="canada.html">Canada</a></li>
-                        <li class="new-country-item"><a href="france.html">France</a></li>
-                        <li class="new-country-item"><a href="germany.html">Germany</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact" class="new-nav-item">Contact</a></li>
-        </ul>
-            <div class="new-layer" id="new-layer">
-                <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
-                <ul class="new-nav-list new-mobile-navbar">
-                    <li><a href="index.html" class="new-nav-item new-active">Home</a></li>
-                    <li><a href="about-us.html" class="new-nav-item">About</a></li>
-                    <li class="new-countries-dropdown">
-                        <!-- <label for="new-countries">Hello world-class</label> -->
-                        <input type="checkbox" name="new-countries" id="new-countries" />
-                        <label for="new-countries">
-                            <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        </label>
-                            <ul class="new-country-group">
-                                <li class="new-country-item"><a href="russia.html">Russia</a></li>
-                        <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
-                        <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
-                        <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
-                        <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
-                        <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
-                        <li class="new-country-item"><a href="spain.html">Spain</a></li>
-                        <li class="new-country-item"><a href="uk.html">UK</a></li>
-                        <li class="new-country-item"><a href="usa.html">United States</a></li>
-                        <li class="new-country-item"><a href="canada.html">Canada</a></li>
-                        <li class="new-country-item"><a href="france.html">France</a></li>
-                        <li class="new-country-item"><a href="germany.html">Germany</a></li>
-                            </ul>
-                    </li>
-                    <li><a href="#contact" class="new-nav-item">Contact</a></li>
-                </ul>
-            </div>
+    <header class="new-header container">
+        <a href="../index.html" class="new-logo-container">
+            <img src="../assets/img/kxy-logo.png" alt="" class="new-logo-img">
+        </a>
+        <nav class="new-navbar">
+            <ul class="new-nav-list new-desktop-navbar">
+                <li><a href="../index.html" class="new-nav-item">Home</a></li>
+                <li><a href="../about-us.html" class="new-nav-item">About</a></li>
+                <li class="new-countries-dropdown">
+                    <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul class="new-country-group">
+                        <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                            <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                            <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                            <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                            <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                            <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                            <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                            <li class="new-country-item"><a href="uk.html">UK</a></li>
+                            <li class="new-country-item"><a href="usa.html">United States</a></li>
+                            <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                            <li class="new-country-item"><a href="france.html">France</a></li>
+                            <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact-us.html" class="new-nav-item">Contact</a></li>
+            </ul>
+                <div class="new-layer" id="new-layer">
+                    <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
+                    <ul class="new-nav-list new-mobile-navbar">
+                        <li><a href="index.html" class="new-nav-item new-active">Home</a></li>
+                        <li><a href="about-us.html" class="new-nav-item">About</a></li>
+                        <li class="new-countries-dropdown">
+                            <!-- <label for="new-countries">Hello world-class</label> -->
+                            <input type="checkbox" name="new-countries" id="new-countries" />
+                            <label for="new-countries">
+                                <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            </label>
+                                <ul class="new-country-group">
+                                    <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                            <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                            <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                            <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                            <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                            <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                            <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                            <li class="new-country-item"><a href="uk.html">UK</a></li>
+                            <li class="new-country-item"><a href="usa.html">United States</a></li>
+                            <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                            <li class="new-country-item"><a href="france.html">France</a></li>
+                            <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="../contact-us.html" class="new-nav-item">Contact</a></li>
+                    </ul>
+                </div>
 
-    </nav>
-    <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
-    
-</header>
-<section class="georgia-hero russia-hero">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <span class="hero-badge">MBBS in UK</span>
-                <h1>Study MBBS in UK - Top Medical Universities</h1>
-                <p class="lead">Pursue your dream of becoming a doctor with world-class medical education in UK. Get direct admission to MCI/NMC approved universities with affordable fees and global recognition.</p>
-                <a href="#contact" class="hero-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
-            </div>
-            <div class="col-lg-4 d-none d-lg-block">
-                <div class="flag-container">
-                    <img src="../assets/img/flag/uk-country-flag.jpg" alt="UK Flag" class="flag-image">
+        </nav>
+        <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
+        
+    </header>
+    <section class="georgia-hero russia-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="hero-badge">MBBS in UK</span>
+                    <h1>Study MBBS in UK - Top Medical Universities</h1>
+                    <p class="lead">Pursue your dream of becoming a doctor with world-class medical education in UK. Get direct admission to MCI/NMC approved universities with affordable fees and global recognition.</p>
+                    <a href="#contact" class="hero-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="flag-container">
+                        <img src="../assets/img/flag/uk-country-flag.jpg" alt="UK Flag" class="flag-image">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<main class="main">
-<!-- Hero Section -->
-<section class="uk-hero country-section russia-section mb-4">
-<div class="container">
-<h1 class="display-4 fw-bold mb-4">Engineering in the UK</h1>
-<p class="lead">Pursue world-class engineering education with centuries of academic excellence and global recognition</p>
-<a class="btn btn-uk mt-3" href="#contact">Start Your Application</a>
-</div>
-</section>
-<!-- Main Content -->
-<section class="section country-section russia-section mb-4">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<!-- Introduction -->
-<div class="uk-section">
-<h2 class="uk-title">UK: A Premier Destination for Engineering Education</h2>
-<p>The United Kingdom has consistently ranked among the top destinations for students aspiring to pursue engineering abroad. Renowned for its centuries-old universities, cutting-edge research, and globally respected teaching standards, the UK offers some of the best engineering education opportunities worldwide.</p>
-<p>One of the key advantages for international students is the UK's shorter course durations, post-study work opportunities, and strong academic-industry connections. UK universities actively welcome international students and offer merit-based scholarships and placements, making it a cost-effective and career-oriented choice.</p>
-<p>With over 50 globally ranked engineering schools, excellent infrastructure, and a multicultural environment, the UK continues to be a trusted and prestigious destination for engineering education.</p>
-<div class="highlight-box">
-<h4>Why Choose UK for Engineering?</h4>
-<ul class="feature-list">
-<li>High-quality, globally recognized education with centuries of legacy</li>
-<li>Degrees accredited by professional bodies like Engineering Council UK (ECUK) and ABET-equivalent standards</li>
-<li>Shorter duration: Master's completed in 1 year</li>
-<li>Post-Study Work (PSW) visa: 2 years for international graduates</li>
-<li>Diverse, safe, and multicultural student communities</li>
-<li>Strong industry links and placement opportunities</li>
-</ul>
-</div>
-<div class="accreditation-badges">
-<span class="badge">ECUK Accredited</span>
-<span class="badge">IET Recognized</span>
-<span class="badge">ICE Approved</span>
-<span class="badge">IMECHE Certified</span>
-</div>
-</div>
-<!-- Quick Facts -->
-<div class="uk-section">
-<h2 class="uk-title">Quick Facts</h2>
-<div class="table-responsive">
-<table class="table table-bordered country-table table table-striped">
-<tbody>
-<tr>
-<th>Course Duration</th>
-<td>3–4 years (Bachelor's), 1 year (Master's)</td>
-</tr>
-<tr>
-<th>Medium of Instruction</th>
-<td>English</td>
-</tr>
-<tr>
-<th>Top Accreditation</th>
-<td>ECUK, IET, ICE, IMECHE, etc.</td>
-</tr>
-<tr>
-<th>Tuition Fees</th>
-<td>£15,000–£35,000/year (approx. ₹15–₹35 lakhs)</td>
-</tr>
-<tr>
-<th>Living Expenses</th>
-<td>£9,000–£12,000/year (approx. ₹9–₹12 lakhs)</td>
-</tr>
-<tr>
-<th>Eligibility (UG)</th>
-<td>12th grade with PCM, high GPA</td>
-</tr>
-<tr>
-<th>Eligibility (PG)</th>
-<td>Bachelor's degree in engineering or related field, IELTS</td>
-</tr>
-<tr>
-<th>Degree Recognition</th>
-<td>Globally recognized, accredited by professional bodies</td>
-</tr>
-</tbody>
-      </table>
     </section>
-<div class="mt-4">
-<p><strong>Professional Bodies &amp; Standardized Tests:</strong></p>
-<p>ECUK (Engineering Council United Kingdom), IET (Institution of Engineering and Technology), ICE (Institution of Civil Engineers), IMECHE (Institution of Mechanical Engineers), SAT, ACT, GRE, TOEFL, IELTS</p>
-</div>
-</div>
-<!-- Top Universities -->
-<div class="uk-section">
-<h2 class="uk-title">Top UK Engineering Schools (2025–26)</h2>
-<div class="university-list">
-<ul class="list-unstyled">
-<li>• University of Manchester</li>
-<li>• University of Edinburgh</li>
-<li>• University of Birmingham</li>
-<li>• University of Nottingham</li>
-<li>• University of Southampton</li>
-<li>• University of Glasgow</li>
-<li>• University of Newcastle</li>
-<li>• University of Kent</li>
-<li>• University of Greenwich</li>
-<li>• University of London</li>
-<li>• University of Northumbria</li>
-<li>• Oxford Brookes University</li>
-<li>• University of Sunderland</li>
-<li>• University of Roehampton</li>
-<li>• University of West London</li>
-</ul>
-</div>
-</div>
-<!-- Eligibility Criteria -->
-<div class="uk-section">
-<h2 class="uk-title">Eligibility Criteria</h2>
-<div class="mb-4">
-<h5>📌 Undergraduate (Bachelor's in Engineering)</h5>
-<ul>
-<li>Minimum 17 years old by start of course</li>
-<li>12th grade with Physics, Chemistry, and Mathematics (PCM), with high marks (75%+ recommended)</li>
-<li>IELTS/TOEFL for English proficiency (IELTS 6.0–6.5)</li>
-<li>UCAS application required</li>
-</ul>
-</div>
-<div>
-<h5>📌 Postgraduate (Master's in Engineering/MSc)</h5>
-<ul>
-<li>Bachelor's degree in engineering or closely related field</li>
-<li>Strong academic record (equivalent of UK 2:1 or 60–70%+)</li>
-<li>IELTS/TOEFL (IELTS 6.5–7.0 or equivalent)</li>
-<li>Relevant work or research experience (optional but beneficial)</li>
-</ul>
-</div>
-</div>
-<!-- How to Apply -->
-<div class="uk-section">
-<h2 class="uk-title">How to Apply</h2>
-<ol>
-<li>Research and shortlist universities &amp; programs</li>
-<li>Check eligibility criteria and deadlines (September/January intake)</li>
-<li>Take IELTS/TOEFL if required</li>
-<li>Apply via UCAS (for UG) or directly to universities (for PG) with transcripts, SOP, LORs, resume, and passport copy</li>
-<li>Receive Conditional/Unconditional Offer</li>
-<li>Apply for UK Student Visa (Tier-4)</li>
-<li>Arrange travel, housing, and attend pre-departure orientation</li>
-</ol>
-</div>
-<!-- FAQ Section -->
-<div class="uk-section">
-<h2 class="uk-title">Frequently Asked Questions</h2>
-<div class="faq-item">
-<div class="faq-question">💰 What is the cost of studying Engineering in the UK?</div>
-<div class="faq-answer">
-<p>• Bachelor's in Engineering (BEng/MEng): £15,000–£35,000/year (approx. ₹15–₹35 lakhs)</p>
-<p>• Master's in Engineering (MSc): £16,000–£30,000/year (approx. ₹16–₹30 lakhs)</p>
-<p>• Scholarships and part-time jobs can help manage expenses. Living costs vary by city but average £9,000–£12,000/year.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">🔎 What are the job prospects for Engineering graduates in the UK?</div>
-<div class="faq-answer">
-<p>• The UK has a strong demand for engineers in fields like civil, electrical, mechanical, software, and environmental engineering.</p>
-<p>• Graduates can work under the Post-Study Work (PSW) visa for 2 years after completing studies.</p>
-<p>• Many graduates secure roles in leading global companies or pursue chartered engineer status in the UK.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">📝 How can I apply for Engineering programs in the UK?</div>
-<div class="faq-answer">
-<p><strong>Application Requirements:</strong></p>
-<ul>
-<li>Academic transcripts (10th &amp; 12th for UG; bachelor's transcripts for PG)</li>
-<li>IELTS/TOEFL for English proficiency</li>
-<li>Letters of Recommendation (2–3)</li>
-<li>Statement of Purpose (SOP)</li>
-<li>Resume/CV (for Master's)</li>
-<li>UCAS Application (UG) or Direct Application (PG)</li>
-<li>Valid Passport &amp; Photographs</li>
-</ul>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">🌏 Is an Engineering degree from the UK recognized in India?</div>
-<div class="faq-answer">
-<p>✅ Yes — Degrees from accredited UK universities are globally recognized, including in India.</p>
-<p>✅ AIU equivalence certificate may be required for certain government or academic positions in India.</p>
-<p>✅ Professional licensure in the UK (Chartered Engineer) follows a separate pathway if you wish to practice there.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">🏫 Which are the top Engineering universities in the UK?</div>
-<div class="faq-answer">
-<ol>
-<li>University of Cambridge</li>
-<li>Imperial College London</li>
-<li>University of Oxford</li>
-<li>University of Manchester</li>
-<li>University of Edinburgh</li>
-<li>University of Bristol</li>
-<li>University of Leeds</li>
-<li>University of Sheffield</li>
-<li>University of Nottingham</li>
-<li>University of Southampton</li>
-</ol>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">💵 What is the tuition fee for top Engineering programs?</div>
-<div class="faq-answer">
-<p>• Bachelor's: £25,000–£36,000/year</p>
-<p>• Master's: £16,000–£30,000/year</p>
-<p>• Public universities often offer competitive fees with scholarships, and the shorter Master's program (1 year) makes it more affordable than some other countries.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">🚀 What is the admission process for Engineering in the UK?</div>
-<div class="faq-answer">
-<ol>
-<li>Shortlist programs &amp; universities.</li>
-<li>Take IELTS/TOEFL and prepare transcripts, SOP, LORs.</li>
-<li>Apply via UCAS (UG) or directly (PG).</li>
-<li>Receive and accept offer letter.</li>
-<li>Apply for UK Student Visa (Tier-4).</li>
-<li>Book accommodation, travel, and attend orientation.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
-<section class="russia-section">
-<h2 class="russia-title">Frequently Asked Questions</h2>
-<div class="accordion" id="faqAccordion">
-<div class="accordion-item">
-<h3 class="accordion-header" id="headingOne">
-<button aria-controls="collapseOne" aria-expanded="true" class="accordion-button" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
-                            What are the admission requirements for studying in Uk?
-                        </button>
-</h3>
-<div aria-labelledby="headingOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="collapseOne">
-<div class="accordion-body">
-                            Admission requirements typically include a high school diploma, English proficiency test scores (like IELTS/TOEFL),
-                            and meeting the minimum academic requirements set by the university.
-                        </div>
-</div>
-</div>
-<!-- Add more FAQ items as needed -->
-</div>
-</section>
-</main>
-<!-- Contact Section -->
-<section class="contact section country-section" id="contact">
-<!-- Section Title -->
-<div class="container section-title" data-aos="fade-up">
-<h2>Contact</h2>
-<p>Contact Us</p>
-</div><!-- End Section Title -->
-<div class="container" data-aos="fade-up" data-aos-delay="100">
-<div class="row gy-4">
-<div class="col-lg-6">
-<div class="row gy-4">
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="200">
-<i class="bi bi-geo-alt"></i>
-<h3>Address</h3>
-<p>rajuvolu</p>
-<p>russian tuppalu, 535022</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="300">
-<i class="bi bi-telephone"></i>
-<h3>Call Us</h3>
-<p>+91-6304705445</p>
-<p>+91-8125423017</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="400">
-<i class="bi bi-envelope"></i>
-<h3>Email Us</h3>
-<p>projectk1international@gmail.com</p>
-<p>projectk1international@gmail.com</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="500">
-<i class="bi bi-clock"></i>
-<h3>Open Hours</h3>
-<p>Monday - Friday</p>
-<p>9:00AM - 05:00PM</p>
-</div>
-</div><!-- End Info Item -->
-</div>
-</div>
-<div class="col-lg-6">
-<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
-<div class="row gy-4">
-<div class="col-md-6">
-<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
-</div>
-<div class="col-md-6">
-<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
-</div>
-<div class="col-12">
-<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
-</div>
-<div class="col-12">
-<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
-</div>
-<div class="col-12 text-center">
-<div class="loading">Loading</div>
-<div class="error-message"></div>
-<div class="sent-message">Your message has been sent. Thank you!</div>
-<button type="submit">Send Message</button>
-</div>
-</div>
-</form>
-</div><!-- End Contact Form -->
-</div>
-</div>
-</section><!-- /Contact Section -->
+    <main class="main">
+        <div class="content" data-aos="fade-up">
+            <section class="content-section" data-aos="fade-up">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <img alt="Study MBBS in Russia" class="img-fluid" src="../assets/img/hero-img-2.png"/>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mb-4">Key Benefits</h3>
+                        <ul class="benefits-list">
+                            <li>High-quality, globally recognized education with centuries of legacy</li>
+                            <li>Degrees accredited by professional bodies like Engineering Council UK (ECUK) and ABET-equivalent standards</li>
+                            <li>Shorter duration: Master's completed in 1 year</li>
+                            <li>Post-Study Work (PSW) visa: 2 years for international graduates</li>
+                            <li>Diverse, safe, and multicultural student communities</li>
+                            <li>Strong industry links and placement opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+                
+        </div>
+
+        <h2 class="text-center mt-4" data-aos="fade-up">Why Choose UK for Engineering?</h2>
+        <section class="content-section mt-4">
+            <h2 data-aos="fade-up">Quick Facts</h2>
+            <table data-aos="fade-up" class="table table-bordered georgia-table country-table table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Course Duration</th>
+                        <td>3–4 years (Bachelor's), 1 year (Master's)</td>
+                    </tr>
+                    <tr>
+                        <th>Medium of Instruction</th>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <th>Top Accreditation</th>
+                        <td>ECUK, IET, ICE, IMECHE, etc.</td>
+                    </tr>
+                    <tr>
+                        <th>Tuition Fees</th>
+                        <td>£15,000–£35,000/year (approx. ₹15–₹35 lakhs)</td>
+                    </tr>
+                    <tr>
+                        <th>Living Expenses</th>
+                        <td>£9,000–£12,000/year (approx. ₹9–₹12 lakhs)</td>
+                    </tr>
+                    <tr>
+                        <th>Eligibility (UG)</th>
+                        <td>12th grade with PCM, high GPA</td>
+                    </tr>
+                    <tr>
+                        <th>Eligibility (PG)</th>
+                        <td>Bachelor's degree in engineering or related field, IELTS</td>
+                    </tr>
+                    <tr>
+                        <th>Degree Recognition</th>
+                        <td>Globally recognized, accredited by professional bodies</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="content-section mt-4">
+            <h2  data-aos="fade-up">Top UK Engineering Schools (2025–26)</h2>
+            <table data-aos="fade-up" class="country-table table table-striped russia-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>University Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>University of Manchester</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>University of Edinburgh</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>University of Birmingham</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>University of Nottingham</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>University of Southampton</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>University of Glasgow</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>University of Newcastle</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>University of Kent</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>University of Greenwich</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>University of London</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>University of Northumbria</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Oxford Brookes University</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>University of Sunderland</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>University of Roehampton</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>University of West London</td>
+                    </tr>
+                <!-- Add more as needed -->
+                </tbody>
+            </table>
+        </section>
+        <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="200">
+            <h2 data-aos="fade-up">Eligibility Criteria</h2>
+            <div class="russia-section" id="bachelors-container">
+                <h4 data-aos="fade-up">Undergraduate (Bachelor's in Engineering)</h4>
+                <ul data-aos="fade-up">
+                    <li>Minimum 17 years old by start of course</li>
+                    <li>12th grade with Physics, Chemistry, and Mathematics (PCM), with high marks (75%+ recommended)</li>
+                    <li>IELTS/TOEFL for English proficiency (IELTS 6.0–6.5)</li>
+                    <li>UCAS application required</li>
+                </ul>
+                <h4 data-aos="fade-up">Postgraduate (Master's in Engineering/MSc)</h4>
+                <ul data-aos="fade-up" class="feature-list">
+                    <li>Bachelor's degree in engineering or closely related field</li>
+                    <li>Strong academic record (equivalent of UK 2:1 or 60–70%+)</li>
+                    <li>IELTS/TOEFL (IELTS 6.5–7.0 or equivalent)</li>
+                    <li>Relevant work or research experience (optional but beneficial)</li>
+                </ul>
+            </div>
+            <div data-aos="fade-up" class="russia-section" id="masters-container">
+                <h2>How to Apply</h2>
+                <ol>
+                    <li>Research and shortlist universities &amp; programs</li>
+                    <li>Check eligibility criteria and deadlines (September/January intake)</li>
+                    <li>Take IELTS/TOEFL if required</li>
+                    <li>Apply via UCAS (for UG) or directly to universities (for PG) with transcripts, SOP, LORs, resume, and passport copy</li>
+                    <li>Receive Conditional/Unconditional Offer</li>
+                    <li>Apply for UK Student Visa (Tier-4)</li>
+                    <li>Arrange travel, housing, and attend pre-departure orientation</li>
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
 <!-- Footer -->
 <footer class="footer" id="footer">
 <!--    <div class="footer-newsletter">-->
@@ -949,32 +300,32 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-<div class="container footer-top">
-<div class="row gy-4">
-<div class="col-lg-4 col-md-6 footer-about">
-<a class="d-flex align-items-center" href="index.html">
-<span class="sitename">kyx</span>
-</a>
-<div class="footer-contact pt-3">
-<p>rajuvolu </p>
-<p>russian tuppalu</p>
-<p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
-<p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
-<p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
-</div>
-</div>
-<div class="col-lg-4 col-md-12">
-<h4>Follow Us</h4>
-<p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-<div class="social-links d-flex">
-<a href=""><i class="bi bi-twitter-x"></i></a>
-<a href=""><i class="bi bi-facebook"></i></a>
-<a href=""><i class="bi bi-instagram"></i></a>
-<a href=""><i class="bi bi-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
+    <div class="container footer-top">
+        <div class="row gy-4">
+            <div data-aos="fade-up" class="col-lg-4 col-md-6 footer-about">
+            <a class="d-flex align-items-center" href="index.html">
+            <span class="sitename">kyx</span>
+            </a>
+            <div class="footer-contact pt-3">
+            <p>rajuvolu </p>
+            <p>russian tuppalu</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
+            <p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
+            </div>
+            </div>
+            <div data-aos="fade-up" class="col-lg-4 col-md-12">
+                <h4>Follow Us</h4>
+                <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                <div class="social-links d-flex">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="container copyright text-center mt-4">
 <p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
 </p>

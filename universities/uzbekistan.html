@@ -26,642 +26,7 @@
 <!-- <link href="../assets/css/flag-styles.css" rel="stylesheet"> -->
 <link href="../navbar.css" rel="stylesheet">
 <script src="../navbar.js" defer></script>
-<style>
-        .uzbekistan-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 60px 0 40px 0;
-            text-align: center;
-        }
 
-        .uzbekistan-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-        }
-
-        .uzbekistan-title {
-            color: #0d6efd;
-            font-weight: 700;
-        }
-        
-        /* Countries Dropdown Styling */
-        .countries-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px !important;
-            min-width: 500px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: absolute;
-            left: 0;
-            top: 100%;
-            z-index: 1000;
-            margin-top: 5px;
-        }
-        
-        .country-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            width: 100%;
-        }
-        
-        .country-item {
-            flex: 1 1 calc(25% - 10px);
-            min-width: 120px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .country-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
-        
-        .country-item a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            display: block;
-            padding: 5px 0;
-        }
-        
-        .country-item a:hover {
-            color: #0d6efd;
-        }
-        
-        .country-item a.active {
-            color: #0d6efd;
-            font-weight: 600;
-        }
-        
-        /* Header and Navigation Styling */
-        #header {
-            background: rgba(255, 255, 255, 0.97);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-        }
-        
-        #header .container-fluid {
-            justify-content: space-between;
-        }
-        
-        #navmenu {
-            margin: 0 auto;
-            width: auto;
-        }
-        
-        #navmenu > ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            max-width: 700px;
-        }
-        
-        #navmenu > ul > li {
-            position: relative;
-            white-space: nowrap;
-            padding: 10px 0;
-        }
-        
-        #navmenu > ul > li > a {
-            color: #2c3e50;
-            font-weight: 500;
-            font-size: 15px;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        #navmenu > ul > li > a:hover,
-        #navmenu > ul > li > a.active {
-            color: #0d6efd;
-            background: rgba(13, 110, 253, 0.1);
-        }
-        
-        .logo {
-            margin-right: 30px;
-        }
-
-        .uzbekistan-table th,
-        .uzbekistan-table td {
-            vertical-align: middle;
-        }
-        
-        /* Countries Dropdown Styling */
-        .listing-dropdown {
-            position: relative;
-        }
-        
-        /* Hide the default Bootstrap dropdown arrow */
-        .listing-dropdown > a::after {
-            display: none !important;
-        }
-        
-        .listing-dropdown > a {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            position: relative;
-            padding-right: 18px;
-        }
-        
-        .listing-dropdown .bi-chevron-down {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.3s ease;
-            font-size: 0.8em;
-        }
-        
-        .listing-dropdown:hover .bi-chevron-down {
-            transform: translateY(-50%) rotate(180deg);
-        }
-        
-        /* Mobile Menu Toggle Button - Hidden by default */
-        .mobile-nav-toggle {
-            display: none;
-            color: #0d6efd;
-            font-size: 28px;
-            cursor: pointer;
-            line-height: 1;
-            z-index: 1001;
-            padding: 10px;
-            border-radius: 4px;
-            background: rgba(13, 110, 253, 0.1);
-            position: fixed;
-            top: 20px;
-            right: 20px;
-        }
-
-        @media (max-width: 1199px) {
-            /* Show mobile toggle button */
-            .mobile-nav-toggle {
-                display: flex !important;
-                align-items: center;
-                justify-content: center;
-                width: 44px;
-                height: 44px;
-            }
-            
-            /* Hide regular nav on mobile */
-            #navmenu > ul {
-                display: none;
-                position: fixed;
-                top: 80px;
-                left: 15px;
-                right: 15px;
-                background: #fff;
-                border-radius: 12px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-                padding: 15px 0;
-                z-index: 1000;
-                max-height: calc(100vh - 120px);
-                overflow-y: auto;
-                flex-direction: column;
-                gap: 0;
-                margin: 0;
-                list-style: none;
-            }
-            
-            /* Show menu when mobile-nav-active class is present */
-            body.mobile-nav-active #navmenu > ul {
-                display: flex !important;
-            }
-            
-            /* Ensure nav menu items are displayed correctly */
-            #navmenu > ul > li {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-            
-            #navmenu > ul > li:last-child {
-                border-bottom: none;
-            }
-            
-            #navmenu > ul > li > a {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 20px;
-                color: #2c3e50;
-                text-decoration: none;
-                font-weight: 500;
-                transition: all 0.2s ease;
-            }
-            
-            #navmenu > ul > li > a:hover,
-            #navmenu > ul > li > a:focus {
-                background-color: rgba(13, 110, 253, 0.05);
-                color: #0d6efd;
-            }
-
-            #navmenu > ul > li {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-
-            #navmenu > ul > li:last-child {
-                border-bottom: none;
-            }
-
-            #navmenu > ul > li > a {
-                padding: 14px 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                color: #2c3e50;
-                text-decoration: none;
-                font-weight: 500;
-                transition: all 0.2s ease;
-            }
-
-            #navmenu > ul > li > a:hover,
-            #navmenu > ul > li > a:focus {
-                background-color: rgba(13, 110, 253, 0.05);
-                color: #0d6efd;
-            }
-
-            /* Remove the mobile dropdown arrow since we're using a custom one */
-            .listing-dropdown > a::after {
-                display: none !important;
-            }
-            
-            /* Ensure the custom arrow is properly positioned in mobile */
-            .listing-dropdown .bi-chevron-down {
-                position: relative;
-                right: auto;
-                top: auto;
-                transform: none;
-                margin-left: 5px;
-                transition: transform 0.3s ease;
-            }
-            
-            .listing-dropdown.active .bi-chevron-down {
-                transform: rotate(180deg);
-            }
-
-            /* Countries dropdown in mobile menu */
-            .listing-dropdown .countries-list {
-                position: static !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                padding: 0 0 0 25px !important;
-                min-width: auto !important;
-                display: none;
-                animation: fadeIn 0.3s ease-out;
-                background-color: transparent;
-                border-radius: 0;
-                border-left: 2px solid #e9ecef;
-            }
-            
-            /* Show countries list when active */
-            .listing-dropdown.active .countries-list {
-                display: block !important;
-                padding: 10px 0 10px 25px !important;
-            }
-
-            .listing-dropdown.active .countries-list {
-                display: block;
-                padding: 10px 15px 10px 30px !important;
-            }
-
-            .country-group {
-                flex-direction: column;
-                gap: 8px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-
-            .country-item {
-                margin: 0;
-                padding: 0;
-                background: none;
-                border-left: none;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-            }
-
-            .country-item:last-child {
-                border-bottom: none;
-            }
-
-            .country-item a {
-                display: block;
-                padding: 10px 0;
-                color: #495057;
-                text-decoration: none;
-                font-weight: 400;
-                transition: all 0.2s ease;
-            }
-
-            .country-item a:hover,
-            .country-item a:focus {
-                color: #0d6efd;
-                padding-left: 5px;
-            }
-
-            .country-item a.active {
-                color: #0d6efd;
-                font-weight: 500;
-            }
-
-            @keyframes fadeInDown {
-                from {
-                    opacity: 0;
-                    transform: translateY(-15px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-        } /* Close @media (max-width: 1199px) */
-        
-        /* Mobile menu visibility - Show toggle on mobile */
-        @media (max-width: 1199.98px) {
-            .mobile-nav-toggle {
-                display: flex !important;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .uzbekistan-hero {
-                margin-top: 0;
-                padding-top: 120px;
-            }
-            
-            /* Ensure desktop menu is hidden on mobile */
-            #navmenu > ul {
-                display: none !important;
-            }
-            
-            /* Show menu when active */
-            .mobile-nav-active #navmenu > ul {
-                display: flex !important;
-            }
-        }
-        
-        /* Dropdown positioning fix */
-        .listing-dropdown {
-            position: relative;
-        }
-        
-        .listing-dropdown .countries-list {
-            position: absolute;
-            right: 0;
-            left: auto;
-            min-width: 500px;
-            max-width: 90vw;
-        }
-        
-        @media (max-width: 1199.98px) {
-            .listing-dropdown .countries-list {
-                position: static !important;
-                min-width: auto !important;
-                max-width: 100%;
-                padding: 0 15px !important;
-                margin: 0 !important;
-            }
-        } /* Close @media (max-width: 1199.98px) */
-        
-        /* Fix for content spacing below fixed header */
-        
-        
-        .uzbekistan-hero {
-            margin-top: -80px; /* Counteract the body padding */
-            padding-top: 140px; /* Increased from 60px */
-            padding-bottom: 60px;
-        }
-        
-        /* Country-specific styles for Uzbekistan */
-        .country-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 100px 0 60px;
-            margin-top: 80px;
-        }
-        
-        .country-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-        }
-        
-        .country-section h2 {
-            color: #0d6efd;
-            font-weight: 700;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #e9ecef;
-        }
-        
-        .country-section ul, 
-        .country-section ol {
-            padding-left: 20px;
-        }
-        
-        .country-section li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .country-table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        
-        .country-table th, 
-        .country-table td {
-            padding: 12px 15px;
-            border: 1px solid #dee2e6;
-            text-align: left;
-        }
-        
-        .country-table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            border-left: 4px solid #0d6efd;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .country-hero {
-                padding: 80px 0 40px;
-                margin-top: 70px;
-                text-align: center;
-            }
-            
-            .country-section {
-                padding: 20px 15px;
-            }
-        }
-        </style>
-<style>
-        .uzbekistan-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 60px 0 40px 0;
-            text-align: center;
-        }
-
-        .uzbekistan-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-        }
-
-        .uzbekistan-title {
-            color: #0d6efd;
-            font-weight: 700;
-        }
-        
-        /* Header and Navigation Styling */
-        #header {
-            background: rgba(255, 255, 255, 0.97);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-        }
-        
-        #header .container-fluid {
-            justify-content: space-between;
-        }
-        
-        #navmenu {
-            margin: 0 auto;
-            width: auto;
-        }
-        
-        #navmenu > ul {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            white-space: nowrap;
-        }
-        
-        #navmenu > ul > li {
-            white-space: nowrap;
-            padding: 10px 0;
-            flex-shrink: 0;
-        }
-        
-        #navmenu > ul > li > a {
-            color: #2c3e50;
-            font-weight: 500;
-            font-size: 15px;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        #navmenu > ul > li > a:hover,
-        #navmenu > ul > li > a.active {
-            color: #0d6efd;
-            background: rgba(13, 110, 253, 0.1);
-        }
-        
-        .logo {
-            margin-right: 30px;
-        }
-        
-        /* Countries Dropdown Styling */
-        .countries-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px !important;
-            min-width: 500px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: absolute;
-            left: 0;
-            top: 100%;
-            z-index: 1000;
-            margin-top: 5px;
-        }
-        
-        .country-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            width: 100%;
-        }
-        
-        .country-item {
-            flex: 1 1 calc(25% - 10px);
-            min-width: 120px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .country-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
-        
-        .country-item a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            display: block;
-            padding: 5px 0;
-        }
-        
-        .country-item a:hover {
-            color: #0d6efd;
-        }
-        
-        .country-item a.active {
-            color: #0d6efd;
-            font-weight: 600;
-        }
-
-        .uzbekistan-table th,
-        .uzbekistan-table td {
-            vertical-align: middle;
-        }
-    </style>
     <link rel="stylesheet" href="../assets/css/banner.css">
 </head>
 <body class="index-page">
@@ -690,7 +55,7 @@
                         <li class="new-country-item"><a href="germany.html">Germany</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact" class="new-nav-item">Contact</a></li>
+                <li><a href="../contact-us.html" class="new-nav-item">Contact</a></li>
             </ul>
             <div class="new-layer" id="new-layer">
                 <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
@@ -729,7 +94,7 @@
                                 <li class="new-country-item"><a href="germany.html">Germany</a></li>
                             </ul>
                     </li>
-                    <li><a href="#contact" class="new-nav-item">Contact</a></li>
+                    <li><a href="../contact-us.html" class="new-nav-item">Contact</a></li>
                 </ul>
             </div>
 
@@ -757,276 +122,214 @@
 <!-- Add space after header to prevent content collision -->
 <!-- <div style="height: 80px;"></div> -->
 <main class="main">
-<div class="content">
-<div class="container my-5">
-<div class="uzbekistan-section">
-<h2>Why Choose MBBS in Uzbekistan?</h2>
-<ul>
-<li>Affordable tuition fees (₹15-20 lakhs total)</li>
-<li>Globally recognized degrees (WHO, MCI/NMC)</li>
-<li>English-medium instruction</li>
-<li>Safe and student-friendly environment</li>
-<li>Simple admission process</li>
-<li>Cultural familiarity with India</li>
-</ul>
-</div>
-<div class="uzbekistan-section">
-<h2>Quick Facts</h2>
-<table class="table table-bordered uzbekistan-table country-table table table-striped">
-<tbody>
-<tr>
-<th>Course Duration</th>
-<td>6 years (including internship)</td>
-</tr>
-<tr>
-<th>Medium of Instruction</th>
-<td>English</td>
-</tr>
-<tr>
-<th>NAQAER-Approved Universities</th>
-<td>8+</td>
-</tr>
-<tr>
-<th>Tuition Fees</th>
-<td>₹15-25 lakhs (total)</td>
-</tr>
-<tr>
-<th>Living Expenses</th>
-<td>₹20,000-30,000/month</td>
-</tr>
-<tr>
-<th>Eligibility</th>
-<td>NEET + 50% in PCB (12th grade)</td>
-</tr>
-<tr>
-<th>Degree Recognition</th>
-<td>WHO, MCI/NMC</td>
-</tr>
-</tbody>
-      </table>
+    <div class="content">
+        <section data-aos="fade-up" class="content-section" data-aos="fade-up">
+            <div class="row g-4" data-aos="fade-up" >
+                <div class="col-md-6">
+                    <img alt="Study MBBS in Russia" class="img-fluid" src="../assets/img/hero-img-2.png"/>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-4">Key Benefits</h3>
+                    <ul class="benefits-list">
+                        <li>World-class medical universities recognized by NMC, WHO, and other international bodies</li>
+                        <li>No IELTS/TOEFL required for many universities</li>
+                        <li>Modern infrastructure and research facilities</li>
+                        <li>Student-friendly academic environment with 1:20 teacher-student ratio</li>
+                        <li>95% literacy rate reflecting strong academic excellence</li>
+                        <li>English-medium programs eliminating language barriers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+            
+    </div>
+
+    <h2 class="text-center mt-4" data-aos="fade-up" >Why Choose MBBS in Uzbekistan?</h2>
+    <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="100">
+        <h2 data-aos="fade-up" >Quick Facts</h2>
+        <table data-aos="fade-up" class="table table-bordered georgia-table country-table table table-striped">
+            <tbody>
+                <tr>
+                    <th>Course Duration</th>
+                    <td>6 years (including internship)</td>
+                </tr>
+                <tr>
+                    <th>Medium of Instruction</th>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <th>NAQAER-Approved Universities</th>
+                    <td>8+</td>
+                </tr>
+                <tr>
+                    <th>Tuition Fees</th>
+                    <td>₹15-25 lakhs (total)</td>
+                </tr>
+                <tr>
+                    <th>Living Expenses</th>
+                    <td>₹20,000-30,000/month</td>
+                </tr>
+                <tr>
+                    <th>Eligibility</th>
+                    <td>NEET + 50% in PCB (12th grade)</td>
+                </tr>
+                <tr>
+                    <th>Degree Recognition</th>
+                    <td>WHO, MCI/NMC</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
-<div class="uzbekistan-section">
-<h2>Top Medical Universities in Uzbekistan (2025-26)</h2>
-<div class="table-responsive">
-<table class="table table-striped uzbekistan-table country-table table table-striped">
-<thead>
-<tr>
-<th>#</th>
-<th>University Name</th>
-<th>Location</th>
-<th>Tuition Fees / Year (USD)</th>
-<th>Recognition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Tashkent Medical Academy</td>
-<td>Tashkent</td>
-<td>$3,800</td>
-<td>WHO, NMC, ECFMG, FAIMER</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Samarkand State Medical University</td>
-<td>Samarkand</td>
-<td>$3,600</td>
-<td>WHO, NMC, ECFMG</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Bukhara State Medical Institute</td>
-<td>Bukhara</td>
-<td>$3,200</td>
-<td>WHO, NMC</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Andijan State Medical Institute</td>
-<td>Andijan</td>
-<td>$3,400</td>
-<td>WHO, NMC</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Namangan State Medical Institute</td>
-<td>Namangan</td>
-<td>$3,500</td>
-<td>WHO, NMC</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Tashkent Pediatric Medical Institute</td>
-<td>Tashkent</td>
-<td>$3,700</td>
-<td>WHO, NMC</td>
-</tr>
-</tbody>
-      </table>
+    <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="150">
+        <h2 data-aos="fade-up">Top Medical Universities in Uzbekistan (2025-26)</h2>
+        <table data-aos="fade-up" class="country-table table table-striped russia-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>University Name</th>
+                    <th>Location</th>
+                    <th>Tuition Fees / Year (USD)</th>
+                    <th>Recognition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tashkent Medical Academy</td>
+                    <td>Tashkent</td>
+                    <td>$3,800</td>
+                    <td>WHO, NMC, ECFMG, FAIMER</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Samarkand State Medical University</td>
+                    <td>Samarkand</td>
+                    <td>$3,600</td>
+                    <td>WHO, NMC, ECFMG</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bukhara State Medical Institute</td>
+                    <td>Bukhara</td>
+                    <td>$3,200</td>
+                    <td>WHO, NMC</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Andijan State Medical Institute</td>
+                    <td>Andijan</td>
+                    <td>$3,400</td>
+                    <td>WHO, NMC</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Namangan State Medical Institute</td>
+                    <td>Namangan</td>
+                    <td>$3,500</td>
+                    <td>WHO, NMC</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Tashkent Pediatric Medical Institute</td>
+                    <td>Tashkent</td>
+                    <td>$3,700</td>
+                    <td>WHO, NMC</td>
+                </tr>
+            <!-- Add more as needed -->
+            </tbody>
+        </table>
     </section>
-</div>
-<div class="uzbekistan-section">
-<h2>Eligibility Criteria for MBBS in Uzbekistan (for Indian Students)</h2>
-<h4>Academic Qualification</h4>
-<ul>
-<li>Must have completed 12th grade with at least 50% marks in Physics, Chemistry, and Biology (PCB)</li>
-<li>Must have studied English as a compulsory subject</li>
-</ul>
-<h4>NEET Qualification</h4>
-<ul>
-<li>Must have cleared the NEET exam, as mandated by the National Medical Commission (NMC) for studying MBBS abroad</li>
-<li>NEET qualification is essential for appearing in the Foreign Medical Graduates Examination (FMGE) in India after completing MBBS</li>
-</ul>
-<h4>Age Requirement</h4>
-<ul>
-<li>Must be 17 years or older on or before December 31st of the year of admission</li>
-<li>No upper age limit for MBBS in Uzbekistan</li>
-</ul>
-<h4>Additional Requirements</h4>
-<ul>
-<li>Valid passport with minimum 18 months validity</li>
-<li>Medical fitness certificate</li>
-<li>No criminal record</li>
-<li>HIV test report (may be required for visa)</li>
-</ul>
-</div>
-<div class="uzbekistan-section">
-<h2>How to Apply</h2>
-<ol>
-<li>Choose a university</li>
-<li>Check eligibility</li>
-<li>Submit application with required documents</li>
-<li>Appear for medical entrance test if required</li>
-<li>Attend interview</li>
-<li>Receive admission letter</li>
-<li>Apply for student visa</li>
-<li>Prepare for travel and accommodation</li>
-</ol>
-</div>
-<div class="uzbekistan-section">
-<h2>Advantages of Studying MBBS in Uzbekistan</h2>
-<ul>
-<li>Affordable education</li>
-<li>High-quality education</li>
-<li>English-medium programs</li>
-<li>Cultural exposure</li>
-<li>Safe and student-friendly</li>
-<li>MCI/NMC recognition</li>
-</ul>
-</div>
-<div class="uzbekistan-section">
-<h2>Language Requirements</h2>
-<h4>Is it necessary to learn Uzbek to study MBBS in Uzbekistan?</h4>
-<p>While the medium of instruction at most medical universities in Uzbekistan is English, students may encounter language challenges outside the classroom. The official language is Uzbek, and many locals have limited English proficiency. This can affect daily communication and community integration.</p>
-<h5>Key Points:</h5>
-<ul>
-<li><strong>Medium of Instruction:</strong> English (for international students)</li>
-<li><strong>Local Language:</strong> Uzbek (Cyrillic script)</li>
-<li><strong>Language Support:</strong>
-<ul>
-<li>Most universities offer Uzbek/Russian language classes for international students</li>
-<li>Basic knowledge of Uzbek/Russian is helpful for daily life and clinical rotations</li>
-<li>English-speaking staff available at international student offices</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="uzbekistan-section">
-<h2>Safety for Indian Students</h2>
-<h4>Is it safe for Indian students to study MBBS in Uzbekistan?</h4>
-<p>Uzbekistan is considered a safe country for Indian students, with low crime rates and a friendly, supportive local community. A vibrant Indian diaspora also offers additional support and a sense of familiarity.</p>
-<h5>Safety Features:</h5>
-<ul>
-<li><strong>Low Crime Rate:</strong> Uzbekistan has a relatively low crime rate compared to many other countries</li>
-<li><strong>Friendly Locals:</strong> Uzbeks are known for their hospitality towards international students</li>
-<li><strong>Indian Community:</strong> Significant Indian student population in major cities</li>
-<li><strong>University Support:</strong> Dedicated international student offices provide assistance and support</li>
-<li><strong>24/7 Security:</strong> Most university campuses have round-the-clock security</li>
-<li><strong>Emergency Services:</strong> Accessible emergency numbers for police, medical, and other services</li>
-</ul>
-<h5>Tips for Students:</h5>
-<ul>
-<li>Register with the Indian Embassy upon arrival</li>
-<li>Keep important documents safe and make copies</li>
-<li>Be aware of local laws and customs</li>
-<li>Use university transportation or reliable taxi services</li>
-<li>Stay connected with the Indian student community</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="contact section country-section" id="contact">
-<div class="container section-title" data-aos="fade-up">
-<h2>Contact</h2>
-<p>Contact Us</p>
-</div>
-<div class="container" data-aos="fade-up" data-aos-delay="100">
-<div class="row gy-4">
-<div class="col-lg-6">
-<div class="row gy-4">
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="200">
-<i class="bi bi-geo-alt"></i>
-<h3>Address</h3>
-<p>rajuvolu </p>
-<p>russian tuppalu, 535022</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="300">
-<i class="bi bi-telephone"></i>
-<h3>Call Us</h3>
-<p>+91-6304705445</p>
-<p>+91-8125423017</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="400">
-<i class="bi bi-envelope"></i>
-<h3>Email Us</h3>
-<p>projectk1international@gmail.com</p>
-<p>projectk1international@gmail.com</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="500">
-<i class="bi bi-clock"></i>
-<h3>Open Hours</h3>
-<p>Monday - Friday</p>
-<p>9:00AM - 05:00PM</p>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
-<div class="row gy-4">
-<div class="col-md-6">
-<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
-</div>
-<div class="col-md-6">
-<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
-</div>
-<div class="col-12">
-<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
-</div>
-<div class="col-12">
-<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
-</div>
-<div class="col-12 text-center">
-<div class="loading">Loading</div>
-<div class="error-message"></div>
-<div class="sent-message">Your message has been sent. Thank you!</div>
-<button type="submit">Send Message</button>
-</div>
-</div>
-</form>
+    <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="200">
+        
+        <div data-aos="fade-up" class="russia-section">
+            <h2>Eligibility Criteria for MBBS in Uzbekistan (for Indian Students)</h2>
+            <h4>Academic Qualification</h4>
+            <ul>
+                <li>Must have completed 12th grade with at least 50% marks in Physics, Chemistry, and Biology (PCB)</li>
+                <li>Must have studied English as a compulsory subject</li>
+            </ul>
+            <h4>NEET Qualification</h4>
+            <ul>
+                <li>Must have cleared the NEET exam, as mandated by the National Medical Commission (NMC) for studying MBBS abroad</li>
+                <li>NEET qualification is essential for appearing in the Foreign Medical Graduates Examination (FMGE) in India after completing MBBS</li>
+            </ul>
+            <h4>Age Requirement</h4>
+            <ul>
+                <li>Must be 17 years or older on or before December 31st of the year of admission</li>
+                <li>No upper age limit for MBBS in Uzbekistan</li>
+            </ul>
+            <h4>Additional Requirements</h4>
+            <ul>
+                <li>Valid passport with minimum 18 months validity</li>
+                <li>Medical fitness certificate</li>
+                <li>No criminal record</li>
+                <li>HIV test report (may be required for visa)</li>
+            </ul>
+        </div>
+        <div data-aos="fade-up" class="russia-section">
+            <h2>How to Apply</h2>
+            <ol>
+                <li>Choose a university</li>
+                <li>Check eligibility</li>
+                <li>Submit application with required documents</li>
+                <li>Appear for medical entrance test if required</li>
+                <li>Attend interview</li>
+                <li>Receive admission letter</li>
+                <li>Apply for student visa</li>
+                <li>Prepare for travel and accommodation</li>
+            </ol>
+        </div>
+        <div data-aos="fade-up" class="russia-section">
+            <h2>Advantages of Studying MBBS in Uzbekistan</h2>
+            <ol>
+                <li>Affordable education</li>
+                <li>High-quality education</li>
+                <li>English-medium programs</li>
+                <li>Cultural exposure</li>
+                <li>Safe and student-friendly</li>
+                <li>MCI/NMC recognition</li>
+            </ol>
+        </div>
+        <div data-aos="fade-up" class="russia-section">
+            <h2>Language Requirements</h2>
+            <h4>Is it necessary to learn Uzbek to study MBBS in Uzbekistan?</h4>
+            <p>While the medium of instruction at most medical universities in Uzbekistan is English, students may encounter language challenges outside the classroom. The official language is Uzbek, and many locals have limited English proficiency. This can affect daily communication and community integration.</p>
+            <h5>Key Points:</h5>
+            <ol>
+                <li><strong>Medium of Instruction:</strong> English (for international students)</li>
+                <li><strong>Local Language:</strong> Uzbek (Cyrillic script)</li>
+                <li><strong>Language Support:</strong>
+                    <ol>
+                        <li>Most universities offer Uzbek/Russian language classes for international students</li>
+                        <li>Basic knowledge of Uzbek/Russian is helpful for daily life and clinical rotations</li>
+                        <li>English-speaking staff available at international student offices</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div data-aos="fade-up" class="russia-section">
+            <h2>Safety for Indian Students</h2>
+            <h4>Is it safe for Indian students to study MBBS in Uzbekistan?</h4>
+            <p>Uzbekistan is considered a safe country for Indian students, with low crime rates and a friendly, supportive local community. A vibrant Indian diaspora also offers additional support and a sense of familiarity.</p>
+            <h5>Safety Features:</h5>
+            <ol>
+                <li><strong>Low Crime Rate:</strong> Uzbekistan has a relatively low crime rate compared to many other countries</li>
+                <li><strong>Friendly Locals:</strong> Uzbeks are known for their hospitality towards international students</li>
+                <li><strong>Indian Community:</strong> Significant Indian student population in major cities</li>
+                <li><strong>University Support:</strong> Dedicated international student offices provide assistance and support</li>
+                <li><strong>24/7 Security:</strong> Most university campuses have round-the-clock security</li>
+                <li><strong>Emergency Services:</strong> Accessible emergency numbers for police, medical, and other services</li>
+            </ol>
+            <h5>Tips for Students:</h5>
+            <ol>
+                <li>Register with the Indian Embassy upon arrival</li>
+                <li>Keep important documents safe and make copies</li>
+                <li>Be aware of local laws and customs</li>
+                <li>Use university transportation or reliable taxi services</li>
+                <li>Stay connected with the Indian student community</li>
+            </ol>
+        </div>
     </section>
-</div>
 </main>
 <footer class="footer" id="footer">
 <!--    <div class="footer-newsletter">-->

@@ -27,1037 +27,384 @@
 <link href="../navbar.css" rel="stylesheet">
 <script src="../navbar.js" defer></script>
 <link rel="stylesheet" href="../assets/css/banner.css">
-<style>
-        :root {
-            --primary-blue: #0d6efd;
-            --light-gray: #f8f9fa;
-            --hover-gray: #e9ecef;
-            --text-dark: #333;
-            --white: #FFFFFF;
-            --germany-red: #DD0000;
-            --germany-gold: #FFCC00;
-        }
-        
-        /* Header and Navigation Styling */
-        #header {
-            background: rgba(255, 255, 255, 0.97);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-        }
-        
-        #header .container-fluid {
-            justify-content: space-between;
-        }
-        
-        #navmenu {
-            margin: 0 auto;
-            width: auto;
-        }
-        
-        #navmenu > ul {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            white-space: nowrap;
-        }
-        
-        #navmenu > ul > li {
-            position: relative;
-            white-space: nowrap;
-            padding: 10px 0;
-        }
-        
-        #navmenu > ul > li > a {
-            color: #2c3e50;
-            font-weight: 500;
-            font-size: 15px;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        #navmenu > ul > li > a:hover,
-        #navmenu > ul > li > a.active {
-            color: var(--primary-blue);
-            background: rgba(13, 110, 253, 0.1);
-        }
-        
-        .logo {
-            margin-right: 30px;
-        }
-        
-        /* Countries Dropdown Styling */
-        .countries-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px !important;
-            min-width: 500px;
-        }
-        
-        .country-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            width: 100%;
-        }
-        
-        .country-item {
-            flex: 1 1 calc(25% - 10px);
-            min-width: 120px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .country-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-        }
-        
-        .country-item a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            display: block;
-            padding: 5px 0;
-        }
-        
-        .country-item a:hover {
-            color: var(--primary-blue);
-        }
-        
-        .country-item a.active {
-            color: var(--primary-blue);
-            font-weight: 600;
-        }
-        
-        .germany-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 80px 0 50px 0;
-            text-align: center;
-            border-bottom: 4px solid var(--primary-blue);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .germany-hero:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--primary-blue);
-        }
-        
-        .germany-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-            border-top: 3px solid var(--germany-gold);
-        }
-        
-        .germany-title {
-            color: var(--primary-blue);
-            font-weight: 700;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .germany-title:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--primary-blue);
-        }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            border-left: 4px solid var(--primary-blue);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .feature-list li {
-            padding: 8px 0 8px 30px;
-            position: relative;
-        }
-        
-        .feature-list li:before {
-            content: "✓";
-            color: var(--germany-red);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .university-list {
-            column-count: 2;
-            column-gap: 20px;
-        }
-        
-        @media (max-width: 768px) {
-            .university-list {
-                column-count: 1;
-            }
-        }
-        
-        .faq-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-        
-        .table th {
-            background-color: #f8f9fa;
-            color: var(--primary-blue);
-        }
-        
-        .btn-germany {
-            background-color: var(--primary-blue);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        
-        .btn-germany:hover {
-            background-color: var(--germany-red);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .program-tabs {
-            margin: 30px 0;
-        }
-        
-        .nav-tabs .nav-link {
-            color: var(--primary-blue);
-            font-weight: 600;
-            border: none;
-            padding: 12px 25px;
-            margin-right: 5px;
-            border-radius: 5px 5px 0 0;
-        }
-        
-        .nav-tabs .nav-link.active {
-            background-color: var(--germany-red);
-            color: white;
-            border: none;
-        }
-        
-        .tab-content {
-            padding: 20px;
-            border: 1px solid #dee2e6;
-            border-top: none;
-            border-radius: 0 0 5px 5px;
-        }
-        
-        .badge {
-            background-color: #f0f4f8;
-            color: var(--primary-blue);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid #dee2e6;
-            margin-right: 8px;
-            margin-bottom: 8px;
-            display: inline-block;
-        }
-    
-        /* Mobile Menu Toggle Button */
-        .mobile-nav-toggle {
-            display: flex !important; /* Force display */
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-            z-index: 1001;
-            position: relative;
-            background: rgba(13, 110, 253, 0.1);
-            border: none;
-            border-radius: 4px;
-            padding: 10px;
-            transition: 0.3s;
-        }
-
-        @media (max-width: 1199px) {
-            .mobile-nav-toggle {
-                display: flex !important;
-            }
-
-            #navmenu > ul {
-                display: none !important;
-                position: fixed;
-                top: 80px;
-                left: 15px;
-                right: 15px;
-                background: #fff;
-                border-radius: 12px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-                padding: 15px 0;
-                z-index: 1000;
-                max-height: calc(100vh - 120px);
-                overflow-y: auto;
-                flex-direction: column;
-                gap: 0;
-                margin: 0;
-                list-style: none;
-            }
-
-            .mobile-nav-active #navmenu > ul,
-            #navmenu > ul.mobile-nav-active {
-                display: flex !important;
-                animation: fadeInDown 0.3s ease-out;
-            }
-
-            #navmenu > ul > li {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-
-            #navmenu > ul > li:last-child {
-                border-bottom: none;
-            }
-
-            #navmenu > ul > li > a {
-                padding: 14px 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                color: #2c3e50;
-                text-decoration: none;
-                font-weight: 500;
-                transition: all 0.2s ease;
-            }
-
-            #navmenu > ul > li > a:hover,
-            #navmenu > ul > li > a:focus {
-                background-color: rgba(13, 110, 253, 0.05);
-                color: #0d6efd;
-            }
-
-            .listing-dropdown > a::after {
-            display: none !important;
-        }
-
-            .listing-dropdown.active > a::after {
-                transform: rotate(180deg);
-            }
-
-            .listing-dropdown .countries-list {
-                position: static !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                padding: 0 0 0 15px !important;
-                min-width: auto !important;
-                display: none;
-                animation: fadeIn 0.3s ease-out;
-                background-color: #f8f9fa;
-                border-radius: 0 0 8px 8px;
-            }
-
-            .listing-dropdown.active .countries-list {
-                display: block;
-                padding: 10px 15px 10px 30px !important;
-            }
-
-            .country-group {
-                flex-direction: column;
-                gap: 8px;
-                margin: 0;
-            }
-        }
-
-        /* Mobile menu visibility fix */
-        .mobile-nav-toggle {
-            display: none !important; /* Hide by default */
-        }
-        
-        @media (max-width: 1199.98px) {
-            .mobile-nav-toggle {
-                display: flex !important; /* Show only on mobile */
-            }
-            
-            /* Ensure desktop menu is hidden on mobile */
-            #navmenu > ul {
-                display: none !important;
-            }
-            
-            /* Show menu when active */
-            .mobile-nav-active #navmenu > ul {
-                display: flex !important;
-            }
-        }
-        
-        /* Dropdown positioning fix */
-        .listing-dropdown {
-            position: relative;
-        }
-        
-        .listing-dropdown .countries-list {
-            position: absolute;
-            right: 0;
-            left: auto;
-            min-width: 500px;
-            max-width: 90vw;
-        }
-        
-        @media (max-width: 1199.98px) {
-            .listing-dropdown .countries-list {
-                position: static !important;
-                min-width: auto !important;
-                max-width: 100%;
-                padding: 0 15px !important;
-                margin: 0 !important;
-            }
-        }
-        
-        /* Country-specific styles for Germany */
-        .country-hero {
-            background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-            padding: 100px 0 60px;
-            margin-top: 80px;
-        }
-        
-        .country-section {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-            padding: 32px 28px;
-            margin-bottom: 32px;
-        }
-        
-        .country-section h2 {
-            color: #0d6efd;
-            font-weight: 700;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #e9ecef;
-        }
-        
-        .country-section ul, 
-        .country-section ol {
-            padding-left: 20px;
-        }
-        
-        .country-section li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .country-table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        
-        .country-table th, 
-        .country-table td {
-            padding: 12px 15px;
-            border: 1px solid #dee2e6;
-            text-align: left;
-        }
-        
-        .country-table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            border-left: 4px solid #0d6efd;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .country-hero {
-                padding: 80px 0 40px;
-                margin-top: 70px;
-                text-align: center;
-            }
-            
-            .country-section {
-                padding: 20px 15px;
-            }
-        }
-        
-    /* .russia-hero {
-        background: linear-gradient(135deg, #e3e9f7 60%, #c7d2fe 100%);
-        padding: 100px 0 60px 0;
-        text-align: center;
-        margin-bottom: 40px;
-    } */
-    
-    .russia-section {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-        padding: 32px 28px;
-        margin-bottom: 32px;
-    }
-    
-    /* .russia-title {
-        color: #0d6efd;
-        font-weight: 700;
-        margin-bottom: 24px;
-    } */
-    
-    /* Card hover effect */
-    .russia-section:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(13, 110, 253, 0.15);
-        transition: all 0.3s ease;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .russia-hero {
-            padding: 80px 0 40px 0;
-        }
-        .russia-section {
-            padding: 24px 16px;
-            margin-bottom: 24px;
-        }
-    }
-    </style>
 </head>
 <body class="index-page">
-<!-- Header -->
-<header class="new-header container">
-    <a href="../index.html" class="new-logo-container">
-        <img src="../assets/img/kxy-logo.png" alt="" class="new-logo-img">
-    </a>
-    <nav class="new-navbar">
-        <ul class="new-nav-list new-desktop-navbar">
-            <li><a href="../index.html" class="new-nav-item new-active">Home</a></li>
-            <li><a href="../about-us.html" class="new-nav-item">About</a></li>
-            <li class="new-countries-dropdown">
-                <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul class="new-country-group">
-                    <li class="new-country-item"><a href="russia.html">Russia</a></li>
-                        <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
-                        <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
-                        <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
-                        <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
-                        <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
-                        <li class="new-country-item"><a href="spain.html">Spain</a></li>
-                        <li class="new-country-item"><a href="uk.html">UK</a></li>
-                        <li class="new-country-item"><a href="usa.html">United States</a></li>
-                        <li class="new-country-item"><a href="canada.html">Canada</a></li>
-                        <li class="new-country-item"><a href="france.html">France</a></li>
-                        <li class="new-country-item"><a href="germany.html">Germany</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact" class="new-nav-item">Contact</a></li>
-        </ul>
-            <div class="new-layer" id="new-layer">
-                <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
-                <ul class="new-nav-list new-mobile-navbar">
-                    <li><a href="index.html" class="new-nav-item new-active">Home</a></li>
-                    <li><a href="about-us.html" class="new-nav-item">About</a></li>
-                    <li class="new-countries-dropdown">
-                        <!-- <label for="new-countries">Hello world-class</label> -->
-                        <input type="checkbox" name="new-countries" id="new-countries" />
-                        <label for="new-countries">
-                            <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        </label>
-                            <ul class="new-country-group">
-                                <li class="new-country-item"><a href="russia.html">Russia</a></li>
-                                <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
-                                <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
-                                <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
-                                <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
-                                <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
-                                <li class="new-country-item"><a href="spain.html">Spain</a></li>
-                                <li class="new-country-item"><a href="uk.html">UK</a></li>
-                                <li class="new-country-item"><a href="usa.html">United States</a></li>
-                                <li class="new-country-item"><a href="canada.html">Canada</a></li>
-                                <li class="new-country-item"><a href="france.html">France</a></li>
-                                <li class="new-country-item"><a href="germany.html">Germany</a></li>
-                            </ul>
-                    </li>
-                    <li><a href="#contact" class="new-nav-item">Contact</a></li>
-                </ul>
-            </div>
+    <!-- Header -->
+    <header class="new-header container">
+        <a href="../index.html" class="new-logo-container">
+            <img src="../assets/img/kxy-logo.png" alt="" class="new-logo-img">
+        </a>
+        <nav class="new-navbar">
+            <ul class="new-nav-list new-desktop-navbar">
+                <li><a href="../index.html" class="new-nav-item new-active">Home</a></li>
+                <li><a href="../about-us.html" class="new-nav-item">About</a></li>
+                <li class="new-countries-dropdown">
+                    <a href="#" class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul class="new-country-group">
+                        <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                            <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                            <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                            <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                            <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                            <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                            <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                            <li class="new-country-item"><a href="uk.html">UK</a></li>
+                            <li class="new-country-item"><a href="usa.html">United States</a></li>
+                            <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                            <li class="new-country-item"><a href="france.html">France</a></li>
+                            <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact-us.html" class="new-nav-item">Contact</a></li>
+            </ul>
+                <div class="new-layer" id="new-layer">
+                    <i id="new-cancel" class="new-mobile-nav-toggle new-cancel d-xl-none bi bi-x"></i>
+                    <ul class="new-nav-list new-mobile-navbar">
+                        <li><a href="index.html" class="new-nav-item new-active">Home</a></li>
+                        <li><a href="about-us.html" class="new-nav-item">About</a></li>
+                        <li class="new-countries-dropdown">
+                            <!-- <label for="new-countries">Hello world-class</label> -->
+                            <input type="checkbox" name="new-countries" id="new-countries" />
+                            <label for="new-countries">
+                                <a class="new-nav-item">Countries <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            </label>
+                                <ul class="new-country-group">
+                                    <li class="new-country-item"><a href="russia.html">Russia</a></li>
+                                    <li class="new-country-item"><a href="georgia.html">Georgia</a></li>
+                                    <li class="new-country-item"><a href="kyrgyzstan.html">Kyrgyzstan</a></li>
+                                    <li class="new-country-item"><a href="uzbekistan.html">Uzbekistan</a></li>
+                                    <li class="new-country-item"><a href="ireland.html">Ireland</a></li>
+                                    <li class="new-country-item"><a href="netherlands.html">Netherlands</a></li>
+                                    <li class="new-country-item"><a href="spain.html">Spain</a></li>
+                                    <li class="new-country-item"><a href="uk.html">UK</a></li>
+                                    <li class="new-country-item"><a href="usa.html">United States</a></li>
+                                    <li class="new-country-item"><a href="canada.html">Canada</a></li>
+                                    <li class="new-country-item"><a href="france.html">France</a></li>
+                                    <li class="new-country-item"><a href="germany.html">Germany</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="../contact-us.html" class="new-nav-item">Contact</a></li>
+                    </ul>
+                </div>
 
-    </nav>
-    <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
-    
-</header>
+        </nav>
+        <i class="new-mobile-nav-toggle d-xl-none bi bi-list" id="new-menu"></i>
+        
+    </header>
 
-<section class="georgia-hero russia-hero">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <span class="hero-badge">MBBS in Germany</span>
-                <h1>Study MBBS in Germany - Top Medical Universities</h1>
-                <p class="lead">Pursue your dream of becoming a doctor with world-class medical education in Germany. Get direct admission to MCI/NMC approved universities with affordable fees and global recognition.</p>
-                <a href="#contact" class="hero-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
-            </div>
-            <div class="col-lg-4 d-none d-lg-block">
-                <div class="flag-container">
-                    <img src="../assets/img/flag/Germany.jpg" alt="Germany Flag" class="flag-image">
+    <section class="georgia-hero russia-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="hero-badge">MBBS in Germany</span>
+                    <h1>Study MBBS in Germany - Top Medical Universities</h1>
+                    <p class="lead">Pursue your dream of becoming a doctor with world-class medical education in Germany. Get direct admission to MCI/NMC approved universities with affordable fees and global recognition.</p>
+                    <a href="#contact" class="hero-cta">Get Free Consultation <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="flag-container">
+                        <img src="../assets/img/flag/Germany.jpg" alt="Germany Flag" class="flag-image">
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <main class="main">
+        <div class="content" data-aos="fade-up">
+            <section class="content-section" data-aos="fade-up">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <img alt="Study MBBS in Russia" class="img-fluid" src="../assets/img/hero-img-2.png"/>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mb-4">Key Benefits</h3>
+                        <ul class="benefits-list">
+                            <li>Low or no tuition fees at public universities</li>
+                            <li>Globally recognized, high-quality education</li>
+                            <li>Strong research and internship opportunities</li>
+                            <li>18-month post-study job seeker visa</li>
+                            <li>Pathway to EU Blue Card &amp; permanent residency</li>
+                            <li>Affordable education at public universities</li>
+                            <li>Degrees recognized globally by employers</li>
+                            <li>Strong connections with German industries</li>
+                            <li>18-month post-study work visa</li>
+                            <li>Europe's largest economy with diverse opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+                
+        </div>
+
+        <h2 class="text-center mt-4" data-aos="fade-up">Why Choose Germany for Higher Education?</h2>
+        <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="200">
+            <h2 data-aos="fade-up">Programs in Germany</h2>
+            <button id="engineering-button" class="tab-toggler active-tab" onclick="toggleTabs('engineering-container','business-container','engineering-button', 'business-button')">Engineering</button>
+            <button id="business-button" class="tab-toggler" onclick="toggleTabs('business-container','engineering-container', 'engineering-button', 'business-button')">Business Management</button>
+            <div class="russia-section" id="engineering-container">
+                <h3 class="mt-4" data-aos="fade-up">Top Engineering Universities</h3>
+                <table data-aos="fade-up" class="country-table table table-striped russia-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>University Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Technical University of Munich (TUM)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>RWTH Aachen University</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Karlsruhe Institute of Technology (KIT)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Technical University of Berlin</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>University of Stuttgart</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Hamburg University of Technology (TUHH)</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Technical University of Darmstadt</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>TU Dresden</td>
+                        </tr>
+                    <!-- Add more as needed -->
+                    </tbody>
+                </table>
+                <h3 class="mt-4" data-aos="fade-up">Eligibility Criteria</h3>
+                <h5 data-aos="fade-up">Undergraduate (Bachelor's)</h5>
+                <ul data-aos="fade-up" class="feature-list">
+                    <li>Minimum 17 years old</li>
+                    <li>12th grade with PCM (75%+ recommended)</li>
+                    <li>IELTS 6.0+/TOEFL or German proficiency</li>
+                    <li>May require Studienkolleg</li>
+                </ul>
+                <h5 data-aos="fade-up">Postgraduate (Master's)</h5>
+                <ul data-aos="fade-up" class="feature-list">
+                    <li>Bachelor's in engineering or related field</li>
+                    <li>GPA equivalent to 2.5/5 or ~70%+</li>
+                    <li>IELTS 6.5+/TOEFL or German proficiency</li>
+                    <li>GRE not mandatory but recommended</li>
+                </ul>
+            </div>
+            <div class="russia-section d-none" id="business-container">
+                <h3 class="mt-4" data-aos="fade-up">Quick Facts</h3>
+                <table data-aos="fade-up" class="table table-bordered georgia-table country-table table table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Course Duration</th>
+                            <td>3–4 years (Bachelor's), 1–2 years (Master's/MBA)</td>
+                        </tr>
+                        <tr>
+                            <th>Medium of Instruction</th>
+                            <td>English or German</td>
+                        </tr>
+                        <tr>
+                            <th>Top Accreditations</th>
+                            <td>FIBAA, AACSB, AMBA, EQUIS</td>
+                        </tr>
+                        <tr>
+                            <th>Tuition Fees</th>
+                            <td>€0–€3,000/year (public); €10,000–€40,000/year (private, MBA)</td>
+                        </tr>
+                        <tr>
+                            <th>Living Expenses</th>
+                            <td>€10,000–€12,000/year (~₹9–₹11 lakhs)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="mt-4" data-aos="fade-up">Top Business Schools</h3>
+                <table data-aos="fade-up" class="country-table table table-striped russia-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>University Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mannheim Business School</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Frankfurt School of Finance &amp; Management</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>ESMT Berlin</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>WHU – Otto Beisheim School of Management</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>HHL Leipzig Graduate School of Management</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>LMU Munich</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>TUM School of Management</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>University of Cologne</td>
+                        </tr>
+                    <!-- Add more as needed -->
+                    </tbody>
+                </table>
+                
+                <h3 class="mt-4" data-aos="fade-up">Eligibility Criteria</h3>
+                <h5 data-aos="fade-up">Undergraduate (Bachelor's)</h5>
+                <ul data-aos="fade-up" class="feature-list">
+                    <li>12th grade with good GPA (75%+ recommended)</li>
+                    <li>IELTS 6.0+/TOEFL iBT 80+</li>
+                    <li>Minimum 17 years of age</li>
+                    <li>May require Studienkolleg</li>
+                </ul>
+                <h5 data-aos="fade-up">Postgraduate (Master's)</h5>
+                <ul data-aos="fade-up" class="feature-list">
+                    <li>Bachelor's degree in any field</li>
+                    <li>Minimum 70%+ or GPA 2.5/5</li>
+                    <li>IELTS 6.5+/TOEFL iBT 90+</li>
+                    <li>GMAT preferred for MBA (550+)</li>
+                    <li>2–3 years work experience for MBA</li>
+                </ul>
+            </div>
+            <!-- <div data-aos="fade-up" class="russia-section" id="masters-container">
+                <h2>How to Apply</h2>
+                <ol>
+                    <li>Research and shortlist universities &amp; programs (check CampusFrance.org)</li>
+                    <li>Check eligibility and application deadlines (most programs have Fall intakes)</li>
+                    <li>Take IELTS/TOEFL or DELF/DALF if required</li>
+                    <li>Prepare application documents:
+                        <ol>
+                            <li>Academic transcripts &amp; certificates</li>
+                            <li>Statement of Purpose (SOP)/Motivation Letter</li>
+                            <li>Letters of Recommendation (2–3)</li>
+                            <li>Resume/CV (mandatory for MBA)</li>
+                            <li>Proof of language proficiency</li>
+                            <li>Passport &amp; photograph</li>
+                            <li>Proof of Funds (~€7,500/year minimum)</li>
+                        </ol>
+                    </li>
+                    <li>Submit applications before deadlines</li>
+                    <li>Receive admission letter</li>
+                    <li>Apply for French Student Visa (VLS-TS)</li>
+                    <li>Arrange housing &amp; travel</li>
+                    <li>Attend pre-departure briefing</li>
+                </ol>
+            </div> -->
+        </section>
+        <section class="content-section mt-4" data-aos="fade-up" data-aos-delay="200">
+            <h2>How to Apply</h2>
+            <div data-aos="fade-up" class="russia-section" id="masters-container">
+                <h4>For Engineering Programs</h4>
+                <ol>
+                    <li>Research and shortlist universities &amp; programs</li>
+                    <li>Check eligibility and language requirements</li>
+                    <li>Take IELTS/TOEFL or TestDaF as needed</li>
+                    <li>Apply through Uni-Assist or directly to universities</li>
+                    <li>Receive admission letter</li>
+                    <li>Apply for German Student Visa</li>
+                    <li>Open blocked account (€11,208/year)</li>
+                    <li>Book travel and enroll</li>
+                </ol>
+            </div>
+            <div data-aos="fade-up" class="russia-section" id="masters-container">
+                <h4>For Business Programs</h4>
+                <ol>
+                    <li>Shortlist programs (check DAAD.de for options)</li>
+                    <li>Take IELTS/TOEFL and GMAT (if required)</li>
+                    <li>Prepare application documents</li>
+                    <li>Apply through university portals</li>
+                    <li>Receive admission decision</li>
+                    <li>Apply for student visa and arrange finances</li>
+                    <li>Secure accommodation and health insurance</li>
+                    <li>Travel to Germany and enroll</li>
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+    <!--    <div class="footer-newsletter">-->
+    <!--        <div class="container">-->
+    <!--            <div class="row justify-content-center text-center">-->
+    <!--                <div class="col-lg-6">-->
+    <!--                    <h4>Join Our Newsletter</h4>-->
+    <!--                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>-->
+    <!--                    <form action="forms/newsletter.php" method="post" class="php-email-form">-->
+    <!--                        <div class="newsletter-form"><input type="email" name="email"><input type="submit"-->
+    <!--                                                                                             value="Subscribe"></div>-->
+    <!--                        <div class="loading">Loading</div>-->
+    <!--                        <div class="error-message"></div>-->
+    <!--                        <div class="sent-message">Your subscription request has been sent. Thank you!</div>-->
+    <!--                    </form>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <div class="container footer-top">
+    <div class="row gy-4">
+    <div class="col-lg-4 col-md-6 footer-about">
+    <a class="d-flex align-items-center" href="index.html">
+    <span class="sitename">kyx</span>
+    </a>
+    <div class="footer-contact pt-3">
+    <p>rajuvolu </p>
+    <p>russian tuppalu</p>
+    <p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
+    <p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
+    <p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
     </div>
-</section>
-
-<main class="main">
-<!-- Hero Section -->
-<section class="germany-hero country-section russia-section mb-4">
-<div class="container">
-<h1 class="display-4 fw-bold mb-4">Study in Germany</h1>
-<p class="lead">World-class education in Engineering &amp; Business Management with low tuition fees</p>
-<a class="btn btn-germany mt-3" href="#programs">Explore Programs</a>
-</div>
-</section>
-<!-- Main Content -->
-<section class="section country-section russia-section mb-4">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<!-- Introduction -->
-<div class="germany-section">
-<h2 class="germany-title">Germany: Excellence in Higher Education</h2>
-<p>Germany has consistently ranked among the top destinations for international students, offering world-class education, cutting-edge research facilities, and strong industry connections. Known for its engineering prowess and business innovation, Germany provides an ideal environment for academic and professional growth.</p>
-<div class="row mt-4">
-<div class="col-md-6">
-<div class="highlight-box">
-<h5>Why Study Engineering in Germany?</h5>
-<ul class="feature-list">
-<li>Low or no tuition fees at public universities</li>
-<li>Globally recognized, high-quality education</li>
-<li>Strong research and internship opportunities</li>
-<li>18-month post-study job seeker visa</li>
-<li>Pathway to EU Blue Card &amp; permanent residency</li>
-</ul>
-</div>
-</div>
-<div class="col-md-6">
-<div class="highlight-box">
-<h5>Why Study Business in Germany?</h5>
-<ul class="feature-list">
-<li>Affordable education at public universities</li>
-<li>Degrees recognized globally by employers</li>
-<li>Strong connections with German industries</li>
-<li>18-month post-study work visa</li>
-<li>Europe's largest economy with diverse opportunities</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- Program Tabs -->
-<div class="germany-section" id="programs">
-<h2 class="germany-title">Programs in Germany</h2>
-<ul class="nav nav-tabs" id="programTabs" role="tablist">
-<li class="nav-item" role="presentation">
-<button aria-controls="engineering" aria-selected="true" class="nav-link active" data-bs-target="#engineering" data-bs-toggle="tab" id="engineering-tab" role="tab" type="button">Engineering</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="business" aria-selected="false" class="nav-link" data-bs-target="#business" data-bs-toggle="tab" id="business-tab" role="tab" type="button">Business Management</button>
-</li>
-</ul>
-<div class="tab-content" id="programTabsContent">
-<!-- Engineering Tab -->
-<div aria-labelledby="engineering-tab" class="tab-pane fade show active" id="engineering" role="tabpanel">
-<!-- Engineering Quick Facts -->
-
-<!-- Top Engineering Universities -->
-<div class="mb-4">
-<h4>Top Engineering Universities</h4>
-<div class="university-list">
-<ul class="list-unstyled">
-<li>• Technical University of Munich (TUM)</li>
-<li>• RWTH Aachen University</li>
-<li>• Karlsruhe Institute of Technology (KIT)</li>
-<li>• Technical University of Berlin</li>
-<li>• University of Stuttgart</li>
-<li>• Hamburg University of Technology (TUHH)</li>
-<li>• Technical University of Darmstadt</li>
-<li>• TU Dresden</li>
-</ul>
-</div>
-</div>
-<!-- Engineering Eligibility -->
-<div class="mb-4">
-<h4>Eligibility Criteria</h4>
-<div class="row">
-<div class="col-md-6">
-<h5>Undergraduate (Bachelor's)</h5>
-<ul>
-<li>Minimum 17 years old</li>
-<li>12th grade with PCM (75%+ recommended)</li>
-<li>IELTS 6.0+/TOEFL or German proficiency</li>
-<li>May require Studienkolleg</li>
-</ul>
-</div>
-<div class="col-md-6">
-<h5>Postgraduate (Master's)</h5>
-<ul>
-<li>Bachelor's in engineering or related field</li>
-<li>GPA equivalent to 2.5/5 or ~70%+</li>
-<li>IELTS 6.5+/TOEFL or German proficiency</li>
-<li>GRE not mandatory but recommended</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Engineering FAQ -->
-<div>
-<h4>Frequently Asked Questions</h4>
-<div class="faq-item">
-<div class="faq-question">What is the cost of studying Engineering in Germany?</div>
-<div class="faq-answer">
-<p>• Public universities: Tuition-free or nominal semester fee (€250–500/semester)</p>
-<p>• Private universities: €10,000–€20,000/year</p>
-<p>• Living costs: €850–€1,000/month</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">What are the job prospects for Engineering graduates?</div>
-<div class="faq-answer">
-<p>• High demand in mechanical, automotive, electrical, civil, and IT fields</p>
-<p>• 18-month job search visa after graduation</p>
-<p>• Starting salaries: €45,000–€55,000 annually</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Business Management Tab -->
-<div aria-labelledby="business-tab" class="tab-pane fade" id="business" role="tabpanel">
-<!-- Business Quick Facts -->
-<div class="mb-4">
-<h4>Business Management in Germany - Quick Facts</h4>
-<div class="table-responsive">
-<table class="table table-bordered country-table table table-striped">
-<tbody>
-<tr>
-<th>Course Duration</th>
-<td>3–4 years (Bachelor's), 1–2 years (Master's/MBA)</td>
-</tr>
-<tr>
-<th>Medium of Instruction</th>
-<td>English or German</td>
-</tr>
-<tr>
-<th>Top Accreditations</th>
-<td>FIBAA, AACSB, AMBA, EQUIS</td>
-</tr>
-<tr>
-<th>Tuition Fees</th>
-<td>€0–€3,000/year (public); €10,000–€40,000/year (private, MBA)</td>
-</tr>
-<tr>
-<th>Living Expenses</th>
-<td>€10,000–€12,000/year (~₹9–₹11 lakhs)</td>
-</tr>
-</tbody>
-</table>
-<div class="mt-2">
-<span class="badge">FIBAA Accredited</span>
-<span class="badge">AACSB</span>
-<span class="badge">AMBA</span>
-<span class="badge">EQUIS</span>
-</div>
-</div>
-</div>
-<!-- Top Business Schools -->
-<div class="mb-4">
-<h4>Top Business Schools</h4>
-<div class="university-list">
-<ul class="list-unstyled">
-<li>• Mannheim Business School</li>
-<li>• Frankfurt School of Finance &amp; Management</li>
-<li>• ESMT Berlin</li>
-<li>• WHU – Otto Beisheim School of Management</li>
-<li>• HHL Leipzig Graduate School of Management</li>
-<li>• LMU Munich</li>
-<li>• TUM School of Management</li>
-<li>• University of Cologne</li>
-</ul>
-</div>
-</div>
-<!-- Business Eligibility -->
-<div class="mb-4">
-<h4>Eligibility Criteria</h4>
-<div class="row">
-<div class="col-md-6">
-<h5>Undergraduate (Bachelor's)</h5>
-<ul>
-<li>12th grade with good GPA (75%+ recommended)</li>
-<li>IELTS 6.0+/TOEFL iBT 80+</li>
-<li>Minimum 17 years of age</li>
-<li>May require Studienkolleg</li>
-</ul>
-</div>
-<div class="col-md-6">
-<h5>Postgraduate (Master's/MBA)</h5>
-<ul>
-<li>Bachelor's degree in any field</li>
-<li>Minimum 70%+ or GPA 2.5/5</li>
-<li>IELTS 6.5+/TOEFL iBT 90+</li>
-<li>GMAT preferred for MBA (550+)</li>
-<li>2–3 years work experience for MBA</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Business FAQ -->
-<div>
-<h4>Frequently Asked Questions</h4>
-<div class="faq-item">
-<div class="faq-question">What is the cost of studying Business in Germany?</div>
-<div class="faq-answer">
-<p>• Public universities: Tuition-free or nominal fee (~€250–€500/semester)</p>
-<p>• Private/MBA programs: €10,000–€40,000/year</p>
-<p>• Living expenses: €850–€1,000/month</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">What are the job prospects after graduation?</div>
-<div class="faq-answer">
-<p>• Strong demand in Finance, Marketing, Operations, and Consulting</p>
-<p>• Starting salaries:</p>
-<ul>
-<li>Bachelor's graduates: €35,000–€50,000/year</li>
-<li>MBA graduates: €50,000–€90,000/year</li>
-</ul>
-<p>• 18-month job search visa after graduation</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- How to Apply -->
-<div class="germany-section">
-<h2 class="germany-title">How to Apply</h2>
-<div class="row">
-<div class="col-md-6">
-<h5>For Engineering Programs</h5>
-<ol>
-<li>Research and shortlist universities &amp; programs</li>
-<li>Check eligibility and language requirements</li>
-<li>Take IELTS/TOEFL or TestDaF as needed</li>
-<li>Apply through Uni-Assist or directly to universities</li>
-<li>Receive admission letter</li>
-<li>Apply for German Student Visa</li>
-<li>Open blocked account (€11,208/year)</li>
-<li>Book travel and enroll</li>
-</ol>
-</div>
-<div class="col-md-6">
-<h5>For Business Programs</h5>
-<ol>
-<li>Shortlist programs (check DAAD.de for options)</li>
-<li>Take IELTS/TOEFL and GMAT (if required)</li>
-<li>Prepare application documents</li>
-<li>Apply through university portals</li>
-<li>Receive admission decision</li>
-<li>Apply for student visa and arrange finances</li>
-<li>Secure accommodation and health insurance</li>
-<li>Travel to Germany and enroll</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="russia-section">
-<h2 class="russia-title">Frequently Asked Questions</h2>
-<div class="accordion" id="faqAccordion">
-<div class="accordion-item">
-<h3 class="accordion-header" id="headingOne">
-<button aria-controls="collapseOne" aria-expanded="true" class="accordion-button" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
-                            What are the admission requirements for studying in Germany?
-                        </button>
-</h3>
-<div aria-labelledby="headingOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="collapseOne">
-<div class="accordion-body">
-                            Admission requirements typically include a high school diploma, English proficiency test scores (like IELTS/TOEFL),
-                            and meeting the minimum academic requirements set by the university.
-                        </div>
-</div>
-</div>
-<!-- Add more FAQ items as needed -->
-</div>
-</section>
-</main>
-<!-- Contact Section -->
-<section class="contact section country-section" id="contact">
-<!-- Section Title -->
-<div class="container section-title" data-aos="fade-up">
-<h2>Contact</h2>
-<p>Contact Us</p>
-</div><!-- End Section Title -->
-<div class="container" data-aos="fade-up" data-aos-delay="100">
-<div class="row gy-4">
-<div class="col-lg-6">
-<div class="row gy-4">
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="200">
-<i class="bi bi-geo-alt"></i>
-<h3>Address</h3>
-<p>rajuvolu</p>
-<p>russian tuppalu, 535022</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="300">
-<i class="bi bi-telephone"></i>
-<h3>Call Us</h3>
-<p>+91-6304705445</p>
-<p>+91-8125423017</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="400">
-<i class="bi bi-envelope"></i>
-<h3>Email Us</h3>
-<p>projectk1international@gmail.com</p>
-<p>projectk1international@gmail.com</p>
-</div>
-</div><!-- End Info Item -->
-<div class="col-md-6">
-<div class="info-item" data-aos="fade" data-aos-delay="500">
-<i class="bi bi-clock"></i>
-<h3>Open Hours</h3>
-<p>Monday - Friday</p>
-<p>9:00AM - 05:00PM</p>
-</div>
-</div><!-- End Info Item -->
-</div>
-</div>
-<div class="col-lg-6">
-<form action="forms/contact.php" class="php-email-form" data-aos="fade-up" data-aos-delay="200" method="post">
-<div class="row gy-4">
-<div class="col-md-6">
-<input class="form-control" name="name" placeholder="Your Name" required="" type="text"/>
-</div>
-<div class="col-md-6">
-<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
-</div>
-<div class="col-12">
-<input class="form-control" name="subject" placeholder="Subject" required="" type="text"/>
-</div>
-<div class="col-12">
-<textarea class="form-control" name="message" placeholder="Message" required="" rows="6"></textarea>
-</div>
-<div class="col-12 text-center">
-<div class="loading">Loading</div>
-<div class="error-message"></div>
-<div class="sent-message">Your message has been sent. Thank you!</div>
-<button type="submit">Send Message</button>
-</div>
-</div>
-</form>
-</div><!-- End Contact Form -->
-</div>
-</div>
-</section><!-- /Contact Section -->
-<!-- Footer -->
-<footer class="footer" id="footer">
-<!--    <div class="footer-newsletter">-->
-<!--        <div class="container">-->
-<!--            <div class="row justify-content-center text-center">-->
-<!--                <div class="col-lg-6">-->
-<!--                    <h4>Join Our Newsletter</h4>-->
-<!--                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>-->
-<!--                    <form action="forms/newsletter.php" method="post" class="php-email-form">-->
-<!--                        <div class="newsletter-form"><input type="email" name="email"><input type="submit"-->
-<!--                                                                                             value="Subscribe"></div>-->
-<!--                        <div class="loading">Loading</div>-->
-<!--                        <div class="error-message"></div>-->
-<!--                        <div class="sent-message">Your subscription request has been sent. Thank you!</div>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<div class="container footer-top">
-<div class="row gy-4">
-<div class="col-lg-4 col-md-6 footer-about">
-<a class="d-flex align-items-center" href="index.html">
-<span class="sitename">kyx</span>
-</a>
-<div class="footer-contact pt-3">
-<p>rajuvolu </p>
-<p>russian tuppalu</p>
-<p class="mt-3"><strong>Phone:</strong> <span>+91-8125423017</span></p>
-<p class="mt-3"><strong>Phone:</strong> <span>++91-6304705445</span></p>
-<p><strong>Email:</strong> <span>projectk1international@gmail.com</span></p>
-</div>
-</div>
-<div class="col-lg-4 col-md-12">
-<h4>Follow Us</h4>
-<p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-<div class="social-links d-flex">
-<a href=""><i class="bi bi-twitter-x"></i></a>
-<a href=""><i class="bi bi-facebook"></i></a>
-<a href=""><i class="bi bi-instagram"></i></a>
-<a href=""><i class="bi bi-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="container copyright text-center mt-4">
-<p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
-</p>
-<div class="credits">
-<!-- All the links in the footer should remain intact. -->
-<!-- You can delete the links only if you've purchased the pro version. -->
-<!-- Licensing information: https://bootstrapmade.com/license/ -->
-<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-</div>
-</div>
-</footer>
+    </div>
+    <div class="col-lg-4 col-md-12">
+    <h4>Follow Us</h4>
+    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+    <div class="social-links d-flex">
+    <a href=""><i class="bi bi-twitter-x"></i></a>
+    <a href=""><i class="bi bi-facebook"></i></a>
+    <a href=""><i class="bi bi-instagram"></i></a>
+    <a href=""><i class="bi bi-linkedin"></i></a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">kyx</strong> <span>All Rights Reserved</span>
+    </p>
+    <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you've purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+    </div>
+    </div>
+    </footer>
 <!-- Scroll Top -->
 <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top">
 <i class="bi bi-arrow-up-short"></i>

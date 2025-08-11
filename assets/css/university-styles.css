@@ -96,10 +96,10 @@ body {
     border: 1px solid var(--border-color);
 }
 
-.content-section:hover {
+/* .content-section:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
-}
+} */
 
 .section-title {
     color: var(--primary);

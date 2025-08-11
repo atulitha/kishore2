@@ -53,7 +53,8 @@
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px); 
+            -webkit-backdrop-filter: blur(5px);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -113,7 +114,7 @@
         /* Modern Section Styling */
         .russia-section {
             background: #fff;
-            padding: 80px 0;
+            padding: 80px 20px;
             position: relative;
             overflow: hidden;
         }
@@ -805,6 +806,7 @@
         .russia-section ul li {
             word-wrap: break-word;
             overflow-wrap: break-word;
+            -webkit-hyphens: auto;
             hyphens: auto;
             margin-bottom: 8px;
             line-height: 1.6;
@@ -902,7 +904,7 @@
         /* Modern List Styling */
         .russia-section ul {
             list-style: none;
-            padding: 0;
+            padding: 0 20px;
             margin: 0 0 2rem 0;
         }
 
@@ -934,13 +936,20 @@
         /* Basic nested lists */
         .russia-section ul li ul {
             margin-top: 5px;
-            padding-left: 20px;
+            /* padding-left: 20px; */
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .russia-section ul li {
                 padding-right: 5px;
+                padding-left: 20px;
+            }
+            .russia-section li,.content-section li, td,th{
+                font-size: 12px !important;
+            }
+            .russia-section ul {
+                padding: 0;
             }
         }
 

@@ -263,6 +263,12 @@
 .country-table tbody tr{
     transition: all 0.3s ease;
 }
+li {
+    transition: 0.5s;
+}
+li:hover{
+    transform: translateX(5px);
+}
 .country-table tbody tr:hover {
     background-color: #f1f5ff;
     transform: translateX(5px);
@@ -276,8 +282,14 @@ ol li{
     padding: 8px 16px;
     border-radius: 8px ;
     transition: 0.5s;
+    margin-bottom: 20px;
 }
 .tab-toggler:hover,.active-tab{
     background-color: #00000005;
     color: #0d6efd;
 }
+.tab-toggler:hover{
+    transform: scale(1.04);
+    background-color: #f1f5ff;
+}
+
